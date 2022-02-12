@@ -1,9 +1,9 @@
 {
-  "name": "zoomkoding.com",
+  "name": "mungdologs",
   "private": false,
-  "description": "A neat blog theme for developers",
-  "version": "2.0.0",
-  "author": "zoomkoding <zoomkoding@gmail.com>",
+  "description": "mungdo's logs",
+  "version": "1.0.0",
+  "author": "mungdo <annmungdo@gmail.com>",
   "dependencies": {
     "@mui/icons-material": "^5.1.0",
     "@mui/material": "^5.1.0",
@@ -58,9 +58,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/zoomkoding/zoomkoding-gatsby-blog"
+    "url": "https://github.com/mungdo/blog"
   },
   "bugs": {
-    "url": "https://github.com/zoomkoding/zoomkoding-gatsby-blog/issues"
+    "url": "https://github.com/mungdo/blog/issues"
   }
 }

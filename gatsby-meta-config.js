@@ -1,8 +1,8 @@
 module.exports = {
-  title: `zoomkoding.com`,
-  description: `줌코딩의 개발일기`,
+  title: `mungdologs.com`,
+  description: `문주의 기록들`,
   language: `ko`, // `ko`, `en` => currently support versions for Korean and English
-  siteUrl: `https://www.zoomkoding.com`,
+  siteUrl: `https://mungdologs.com`,
   ogImage: `/og-image.png`, // Path to your in the 'static' folder
   comments: {
     utterances: {
@@ -11,11 +11,11 @@ module.exports = {
   },
   ga: '0', // Google Analytics Tracking ID
   author: {
-    name: `정진혁`,
+    name: `안문주`,
     bio: {
-      role: `개발자`,
-      description: ['사람에 가치를 두는', '능동적으로 일하는', '이로운 것을 만드는'],
-      thumbnail: 'sample.png', // Path to the image in the 'asset' folder
+      role: `데이터 사이언티스트`,
+      description: ['새로운 가치를 찾는', '매사에 진심인', '꾸준함이 답이라고 여기는'],
+      thumbnail: 'mungdo_icon.png', // Path to the image in the 'asset' folder
     },
     social: {
       github: ``, // `https://github.com/zoomKoding`,
