@@ -6,7 +6,10 @@ module.exports = {
   ogImage: `/og-image.png`, // Path to your in the 'static' folder
   comments: {
     utterances: {
-      repo: `mungdo.github.io/zoomkoding-gatsby-blog`,
+      src:"https://utteranc.es/client.js",
+      repo: `mungdo/mungdo.github.io`,
+      theme:"github-light",
+      crossorigin:"anonymous",
     },
   },
   ga: '0', // Google Analytics Tracking ID
