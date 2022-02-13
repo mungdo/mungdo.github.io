@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-category-template-js",
+    "path": "/posts/til",
+    "result": {"pageContext":{"currentCategory":"til","categories":["All","blog","til"],"edges":[{"node":{"id":"d2e280bd-c76a-5294-ad41-2abf11204745","excerpt":"👋 매일 공부 기록하기 기록해야 남는것. 매일 공부할게요. 🚀 20220214 👋 매일 공부 기록하기 🚀 20220214","fields":{"slug":"/TIL/"},"frontmatter":{"categories":"til","title":"TIL","date":"February 13, 2022"}},"next":null,"previous":{"fields":{"slug":"/gatsby-starter-zoomkoding-introduction/"}}}]}},
+    "staticQueryHashes": ["1073350324","1956554647","2938748437"]}
