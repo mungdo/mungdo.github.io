@@ -1,0 +1,3 @@
+User-agent: *
+Sitemap: https://mungdo.github.io/sitemap/sitemap-index.xml
+Host: https://mungdo.github.io
