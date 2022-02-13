@@ -1,8 +1,8 @@
 module.exports = {
-  title: `mungdologs.com`,
+  title: `mungdologs`,
   description: `문주의 기록들`,
   language: `ko`, // `ko`, `en` => currently support versions for Korean and English
-  siteUrl: `https://mungdologs.com`,
+  siteUrl: `https://mungdo.github.io`,
   ogImage: `/og-image.png`, // Path to your in the 'static' folder
   comments: {
     utterances: {
