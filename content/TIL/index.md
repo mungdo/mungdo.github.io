@@ -8,13 +8,14 @@ categories: til
 ---
 
 
-## 👋 매일 공부 기록하기
+__👋 매일 공부 기록__
 
-기록해야 남는것. 매일 공부할게요. 
 
-### 🚀 20220214
+## 🚀 20220214
 
-#### 프로젝트 시작 : 코로나로 인한 기업의 근무환경 변화
+### <프로젝트 개요 정리>
+
+__코로나로 인한 기업의 근무환경 변화__
 
 1. 프로젝트 배경 
 > 코로나 이전부터 기업의 근무환경은 변화하고 있었다고 하지만, 코로나로 인해 그 변화과 더 커지고 있다고 판단했다. 실제로 이러한 변화가 일어났는지 데이터를 바탕으로 살펴보고자 한다.
@@ -29,7 +30,7 @@ categories: til
         - [서울시 지하철 선별 역별 승하차 인원 정보](https://data.seoul.go.kr/dataList/OA-12914/S/1/datasetView.do#)
         - [서울시 버스노선별 정류장별 시간대별 승하차 인원 정보](http://data.seoul.go.kr/dataList/OA-12913/S/1/datasetView.do#)
     2. 관찰 대상 지역 공실률 분석
-    - 서울시 오피스빌딩 임대료·공실률 및 수익률 (2013년 이후) 통계 ****(****[https://data.seoul.go.kr/dataList/10613/S/2/datasetView.do](https://data.seoul.go.kr/dataList/10613/S/2/datasetView.do))
+        - [서울시 오피스빌딩 임대료·공실률 및 수익률 (2013년 이후) 통계](https://data.seoul.go.kr/dataList/10613/S/2/datasetView.do)
 
 5. 데이터 수집 및 분석 시스템 구축
 
@@ -50,18 +51,24 @@ categories: til
     - 지하철, 버스의 연도별 이동량
     - 지하철, 버스의 시간대별 이동량
     - 시각화 홈페이지 Django outline 만들기 (layout)
+  
+  
 
 
-
-#### 버스 정류장별 승하차 인원 정보 raw data 정리하기
+### <버스 정류장별 승하차 인원 정보 raw data 정리하기>
 
 1. 1월~12월 csv 데이터 읽어와서 concat()
 2. 필요한 index 선별 후 정리
 3. pivot_table() 사용해서 원하는 시간대 승하차 정보 합치기(sum)
 4. 해당 내용 to_csv()
-
+  
 
 ---
+
+## 🔭 20220215
+
+
+
 
 ```toc
 
