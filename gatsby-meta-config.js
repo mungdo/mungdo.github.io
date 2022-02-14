@@ -116,10 +116,10 @@ module.exports = {
         description:
           '진행중',
         techStack: ['python', 'crawling'],
-        thumbnailUrl: 'blog.png',
+        thumbnailUrl: 'mungdo_icon.png',
         links: {
-          post: '/gatsby-starter-zoomkoding-introduction',
-          github: 'https://github.com/zoomkoding/zoomkoding-gatsby-blog',
+          post: '/TIL',
+          github: 'https://github.com/mungdo',
           demo: '',
         },
       },
