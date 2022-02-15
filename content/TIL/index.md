@@ -69,9 +69,10 @@ __코로나로 인한 기업의 근무환경 변화__
 
 ### <dataframe 조작하기>
 
-왜 어렵지.. 컬럼명 바꾸고 자리 뒤집고 하는거 맨날 햇갈려서 고생중
+왜 어렵지.. 컬럼명 바꾸고 자리 뒤집고 맨날 하면서 맨날 헷갈려서 고생중
 
 1.
+
 ```python
 df.drop(['Unnamed: 0','Unnamed: 0.1', '정류장_ID'], axis=1)
 ```
@@ -80,9 +81,76 @@ df.drop(['Unnamed: 0','Unnamed: 0.1', '정류장_ID'], axis=1)
 > > axis는 열기준, 행기준 지정
 > > read_csv() 에서 index_col 미리 지정해주기 : 인덱스로 지정할 열이름 / False (인덱스 한칸 밀려있는 상황일 때, 자체적으로 인덱스 만들어서 0~n 생성)
 
+2.
+
+여러 변수 출력 코드
+
+```python
+from IPython.core.interactiveshell import InteractiveShell
+InteractiveShell.ast_node_interactivity="all"
+```
 
 
 
+3. 
+
+거리를 측정하는 haversine 모듈
+
+```python
+from haversine import haversine
+haversine((경도, 위도), (경도, 위도)) #km
+```
+
+
+
+4. 
+
+진척상황을 알려주는 tqdm 모듈
+
+```python
+from tqdm import tqdm
+for i in tqdm(range(100)):
+	...
+```
+
+
+
+5.
+
+피봇테이블 : 특정 기준으로 총 합계나, 평균 등을 계산하고 싶을때
+
+```python
+pd_table = pd.pivot_table(df, index=[...], aggfunc='...')
+pd_table.reset_index(inplace = True)
+
+```
+
+
+
+### <지도 시각화>
+
+```folium``` 을 사용한 지도 시각화
+
+```python
+import folium
+# 지도 그리기
+m = folium.Map(location=[경도, 위도], zoom_start=n)
+# 마커 추가
+folium.Marker(location=[경도, 위도],
+             icon=folium.Icon(...),
+             popup='...').add_to(m)
+# 실행
+m
+# 저장하기(html)
+m.save('new_map.html')
+```
+
+
+
+
+---
+
+## 🧩 20220216
 
 
 
