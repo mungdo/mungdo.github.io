@@ -154,9 +154,7 @@
 <h2 id="-20220215" style="position:relative;"><a href="#-20220215" aria-label=" 20220215 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>🔭 20220215</h2>
 <h3 id="dataframe-조작하기" style="position:relative;"><a href="#dataframe-%EC%A1%B0%EC%9E%91%ED%95%98%EA%B8%B0" aria-label="dataframe 조작하기 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>&#x3C;dataframe 조작하기></h3>
 <p>왜 어렵지.. 컬럼명 바꾸고 자리 뒤집고 맨날 하면서 맨날 헷갈려서 고생중</p>
-<ol>
-<li></li>
-</ol>
+<p><strong>1</strong>.</p>
 <div class="gatsby-highlight" data-language="python"><pre class="language-python"><code class="language-python">df<span class="token punctuation">.</span>drop<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'Unnamed: 0'</span><span class="token punctuation">,</span><span class="token string">'Unnamed: 0.1'</span><span class="token punctuation">,</span> <span class="token string">'정류장_ID'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> axis<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span></code></pre></div>
 <blockquote>
 <p>데이터 프레임 생성하면 자꾸 새로운 인덱스가 추가됨. 그거 삭제하는 방법 drop.</p>
@@ -165,28 +163,20 @@
 read_csv() 에서 index_col 미리 지정해주기 : 인덱스로 지정할 열이름 / False (인덱스 한칸 밀려있는 상황일 때, 자체적으로 인덱스 만들어서 0~n 생성)</p>
 </blockquote>
 </blockquote>
-<ol start="2">
-<li></li>
-</ol>
+<p><strong>2.</strong></p>
 <p>여러 변수 출력 코드</p>
 <div class="gatsby-highlight" data-language="python"><pre class="language-python"><code class="language-python"><span class="token keyword">from</span> IPython<span class="token punctuation">.</span>core<span class="token punctuation">.</span>interactiveshell <span class="token keyword">import</span> InteractiveShell
 InteractiveShell<span class="token punctuation">.</span>ast_node_interactivity<span class="token operator">=</span><span class="token string">"all"</span></code></pre></div>
-<ol start="3">
-<li></li>
-</ol>
+<p><strong>3.</strong></p>
 <p>거리를 측정하는 haversine 모듈</p>
 <div class="gatsby-highlight" data-language="python"><pre class="language-python"><code class="language-python"><span class="token keyword">from</span> haversine <span class="token keyword">import</span> haversine
 haversine<span class="token punctuation">(</span><span class="token punctuation">(</span>경도<span class="token punctuation">,</span> 위도<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>경도<span class="token punctuation">,</span> 위도<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">#km</span></code></pre></div>
-<ol start="4">
-<li></li>
-</ol>
+<p><strong>4.</strong></p>
 <p>진척상황을 알려주는 tqdm 모듈</p>
 <div class="gatsby-highlight" data-language="python"><pre class="language-python"><code class="language-python"><span class="token keyword">from</span> tqdm <span class="token keyword">import</span> tqdm
 <span class="token keyword">for</span> i <span class="token keyword">in</span> tqdm<span class="token punctuation">(</span><span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
 	<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span></code></pre></div>
-<ol start="5">
-<li></li>
-</ol>
+<p><strong>5.</strong></p>
 <p>피봇테이블 : 특정 기준으로 총 합계나, 평균 등을 계산하고 싶을때</p>
 <div class="gatsby-highlight" data-language="python"><pre class="language-python"><code class="language-python">pd_table <span class="token operator">=</span> pd<span class="token punctuation">.</span>pivot_table<span class="token punctuation">(</span>df<span class="token punctuation">,</span> index<span class="token operator">=</span><span class="token punctuation">[</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">]</span><span class="token punctuation">,</span> aggfunc<span class="token operator">=</span><span class="token string">'...'</span><span class="token punctuation">)</span>
 pd_table<span class="token punctuation">.</span>reset_index<span class="token punctuation">(</span>inplace <span class="token operator">=</span> <span class="token boolean">True</span><span class="token punctuation">)</span>
@@ -206,6 +196,34 @@ m
 m<span class="token punctuation">.</span>save<span class="token punctuation">(</span><span class="token string">'new_map.html'</span><span class="token punctuation">)</span></code></pre></div>
 <hr>
 <h2 id="-20220216" style="position:relative;"><a href="#-20220216" aria-label=" 20220216 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>🧩 20220216</h2>
+<p>이상하다.. 나 안놀았는데 기록할게 없네.. 오늘은 팀프로젝트에서 파일 내 결측치를 보고 채울 수 있는 내용 채우고, 그로 인해서 발생하는 수정사항을 반영해 데이터를 정리했다. 중구난방인 데이터 다 열어서 컬럼 확인하고 정리도 했다. PPT 초안도 만들었다.</p>
+<h3 id="지도-시각화-1" style="position:relative;"><a href="#%EC%A7%80%EB%8F%84-%EC%8B%9C%EA%B0%81%ED%99%94-1" aria-label="지도 시각화 1 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>&#x3C;지도 시각화></h3>
+<p><strong>1.</strong></p>
+<p>boxplot 그려보기</p>
+<div class="gatsby-highlight" data-language="python"><pre class="language-python"><code class="language-python">fig<span class="token punctuation">,</span> ax <span class="token operator">=</span> plt<span class="token punctuation">.</span>subplots<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> figsize<span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+ax<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>boxplot<span class="token punctuation">(</span>data<span class="token operator">=</span>df<span class="token punctuation">,</span> x<span class="token operator">=</span><span class="token string">'출근'</span><span class="token punctuation">)</span>
+ax<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>boxplot<span class="token punctuation">(</span>data<span class="token operator">=</span>df<span class="token punctuation">,</span> x<span class="token operator">=</span><span class="token string">'퇴근'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span> </code></pre></div>
+<blockquote>
+<p>subplots로 나눠서 한 화면에 2가지 그래프를 보여줄 수 있음.</p>
+</blockquote>
+<p><strong>2.</strong></p>
+<p>quantile</p>
+<div class="gatsby-highlight" data-language="python"><pre class="language-python"><code class="language-python">df<span class="token punctuation">.</span>quantile<span class="token punctuation">(</span>q<span class="token operator">=</span><span class="token number">0.5</span><span class="token punctuation">)</span> <span class="token comment"># 2분위수(50%)에 해당하는 값을 찾을 수 있음</span></code></pre></div>
+<p><strong>3.</strong></p>
+<p>groupby</p>
+<div class="gatsby-highlight" data-language="python"><pre class="language-python"><code class="language-python">df<span class="token punctuation">.</span>groupby<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'사용년월'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>as_index<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token builtin">sum</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment"># df에 사용년월 행을 기준으로 그룹화</span></code></pre></div>
+<h3 id="통계-공부" style="position:relative;"><a href="#%ED%86%B5%EA%B3%84-%EA%B3%B5%EB%B6%80" aria-label="통계 공부 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>&#x3C;통계 공부></h3>
+<p><strong>1.</strong> 이산형 확률변수</p>
+<ul>
+<li>확률질량함수(확률함수)</li>
+<li>확률분포</li>
+<li>확률의 성질 : 모든 확률은 0 이상이며 합하면 1이 된다.</li>
+<li>기댓값 : 확률변수의 평균. 기댓값은 선형성이 성립함.</li>
+</ul>
+<hr>
+<h2 id="-20220217" style="position:relative;"><a href="#-20220217" aria-label=" 20220217 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>🙈 20220217</h2>
 <div class="table-of-contents">
 <ul>
 <li>
@@ -224,6 +242,13 @@ m<span class="token punctuation">.</span>save<span class="token punctuation">(</
 </li>
 <li>
 <p><a href="#-20220216">🧩 20220216</a></p>
+<ul>
+<li><a href="#%EC%A7%80%EB%8F%84-%EC%8B%9C%EA%B0%81%ED%99%94-1">&#x3C;지도 시각화></a></li>
+<li><a href="#%ED%86%B5%EA%B3%84-%EA%B3%B5%EB%B6%80">&#x3C;통계 공부></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#-20220217">🙈 20220217</a></p>
 </li>
 </ul>
 </div></div></div><div class="post-navigator"><div class="post-navigator-card-wrapper"></div><div class="post-navigator-card-wrapper"></div></div><div class="utterances"></div></main><footer class="page-footer-wrapper"><p class="page-footer">© <!-- -->2022<!-- --> <a href="https://github.com/mungdo">안문주</a> powered by<a href="https://github.com/zoomKoding/zoomkoding-gatsby-blog"> zoomkoding-gatsby-blog</a></p></footer><div class="dark-mode-button-wrapper"><button class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium dark-mode-button css-1yxmbwk" tabindex="0" type="button"><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeLarge dark-mode-icon css-6flbmm" focusable="false" viewBox="0 0 24 24" aria-hidden="true" data-testid="DarkModeIcon"><path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9c0-.46-.04-.92-.1-1.36-.98 1.37-2.58 2.26-4.4 2.26-2.98 0-5.4-2.42-5.4-5.4 0-1.81.89-3.42 2.26-4.4-.44-.06-.9-.1-1.36-.1z"></path></svg></button></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/TIL/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-0616fad1f708e5420168.js"],"app":["/app-889f0644be3e8780fa3b.js"],"component---cache-caches-gatsby-plugin-offline-app-shell-js":["/component---cache-caches-gatsby-plugin-offline-app-shell-js-5f4d6e6517138b0667ff.js"],"component---src-pages-404-js":["/component---src-pages-404-js-0f892ebcd010b6f91108.js"],"component---src-pages-about-js":["/component---src-pages-about-js-8d3b5b5f011b48040aeb.js"],"component---src-pages-index-js":["/component---src-pages-index-js-66fa20e8773286f91373.js"],"component---src-templates-blog-template-js":["/component---src-templates-blog-template-js-7e0f67ebc752626855c1.js"],"component---src-templates-category-template-js":["/component---src-templates-category-template-js-ed70fe8a3875146c144e.js"]};/*]]>*/</script><script src="/polyfill-0616fad1f708e5420168.js" nomodule=""></script><script src="/component---src-templates-blog-template-js-7e0f67ebc752626855c1.js" async=""></script><script src="/f9d3028dbef90a6e9b8db85387d63dd9f4edf538-852cf68f9be39a5a4bc9.js" async=""></script><script src="/app-889f0644be3e8780fa3b.js" async=""></script><script src="/framework-91ebf51d003c3c6f38be.js" async=""></script><script src="/webpack-runtime-f5f3382f227c26345aa2.js" async=""></script></body></html>
