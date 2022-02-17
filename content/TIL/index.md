@@ -211,6 +211,93 @@ __1.__ 이산형 확률변수
 
 ## 🙈 20220217
 
+### <dataframe 조작하기>
+
+__1.__
+
+첫번째 행을 column으로 지정하기
+
+```python
+df.rename(columns=df.iloc[0]).drop(df.index[0])
+# rename으로 column이름 변경 후 첫번째 index를 drop해 제거
+```
+
+
+
+__2.__
+
+컬럼명을 바꾸고 싶을 때는 rename 
+
+```python
+df.rename(columns={"정류장_ID":"표준버스정류장ID"}, inplace=True)
+```
+
+
+
+__3.__
+
+맥에서 그래프 그릴때 한글 깨짐 복구
+
+```python
+from matplotlib import rc
+plt.rcParams["axes.unicode_minus"] = False 
+rc("font", family="Arial Unicode MS") # Windows: Malgun Gothic 
+# %matplotlib inline 
+get_ipython().run_line_magic("matplotlib", "inline")
+```
+
+
+
+__4.__ 날짜 데이터
+
+* 날짜 데이터를 Datetime 형태로 변환 : pd.to_datetime
+* 요일로 변환 : datetime.day_name()
+
+
+
+__5.__
+
+인덱스 순서를 조정하고 싶다? reindex
+
+```python
+df.reindex(index=['순서대로','작성한','인덱스'])
+```
+
+
+
+__6.__
+
+데이터 열들 중 중복된 항목 제거하고 싶다면 ```df.drop_duplicates```
+
+
+
+### <시각화>
+
+__1.__ ```heatmap```
+
+```python
+plt.figure(figsize=(30,5))
+sns.heatmap(data = df, 
+            cmap='YlGnBu', # 색 테마
+            annot=True, # 안에 데이터 표기할까?
+            fmt = '.3f', # 얼마까지 보여줘(포매팅)
+            vmin=0, # 최소값
+            vmax=2200) #최대값
+plt.show()
+```
+
+
+
+__2.__ 지도시각화 ```folium```
+
+```python
+folium.Circle(location=(lat , lng),
+              radius=100, # 반경
+              fill=True, 
+              color='blue',
+              popup=folium.Popup(name, max_width=100)) # 클릭하면 나오게 할 문구
+```
+
 
 
 
