@@ -300,6 +300,67 @@ folium.Circle(location=(lat , lng),
 
 
 
+---
+
+
+
+## 🍕 20220218
+
+
+
+### <시각화>
+
+__1.__ Line plot
+
+```python
+fig = plt.figure(figsize=(10,5))
+ax = fig.add_subplot()
+
+ax.plot(X1, Y1, label='first')
+ax.plot(X2, Y2, label='second')
+ax.plot(X3, Y3, label='third')
+
+ax.legend()
+
+plt.title('Title', fontsize=15)
+plt.show()
+```
+
+
+
+### <git 환경 구성>
+
+1. git clone
+2. git branch
+3. git merge
+
+
+
+### <Django 웹 구현>
+
+1. views.py
+
+    파일에 들어가서 함수 정의
+
+   ```python
+   def 함수명(request): 
+       return render(request, '본인이 만든 파일명.html')
+   ```
+
+2. *urls.py* 파일에 들어가서 `path('주소', views.함수명)` 한 줄 추가
+
+3. index.html
+
+   파일에 들어가서
+
+   ```html
+   <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">...<... 
+   ```
+
+   해당 a태그 href에 주소값 넣기
+
+4. `python manage.py runserver` 실행 후 정상 실행 되는 경우에만 push
+
 
 
 
