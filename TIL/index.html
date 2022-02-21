@@ -265,6 +265,59 @@ plt<span class="token punctuation">.</span>show<span class="token punctuation">(
               fill<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">,</span> 
               color<span class="token operator">=</span><span class="token string">'blue'</span><span class="token punctuation">,</span>
               popup<span class="token operator">=</span>folium<span class="token punctuation">.</span>Popup<span class="token punctuation">(</span>name<span class="token punctuation">,</span> max_width<span class="token operator">=</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment"># 클릭하면 나오게 할 문구</span></code></pre></div>
+<hr>
+<h2 id="-20220218" style="position:relative;"><a href="#-20220218" aria-label=" 20220218 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>🍕 20220218</h2>
+<h3 id="시각화-1" style="position:relative;"><a href="#%EC%8B%9C%EA%B0%81%ED%99%94-1" aria-label="시각화 1 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>&#x3C;시각화></h3>
+<p><strong>1.</strong> Line plot</p>
+<div class="gatsby-highlight" data-language="python"><pre class="language-python"><code class="language-python">fig <span class="token operator">=</span> plt<span class="token punctuation">.</span>figure<span class="token punctuation">(</span>figsize<span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+ax <span class="token operator">=</span> fig<span class="token punctuation">.</span>add_subplot<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+ax<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>X1<span class="token punctuation">,</span> Y1<span class="token punctuation">,</span> label<span class="token operator">=</span><span class="token string">'first'</span><span class="token punctuation">)</span>
+ax<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>X2<span class="token punctuation">,</span> Y2<span class="token punctuation">,</span> label<span class="token operator">=</span><span class="token string">'second'</span><span class="token punctuation">)</span>
+ax<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>X3<span class="token punctuation">,</span> Y3<span class="token punctuation">,</span> label<span class="token operator">=</span><span class="token string">'third'</span><span class="token punctuation">)</span>
+
+ax<span class="token punctuation">.</span>legend<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+plt<span class="token punctuation">.</span>title<span class="token punctuation">(</span><span class="token string">'Title'</span><span class="token punctuation">,</span> fontsize<span class="token operator">=</span><span class="token number">15</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre></div>
+<h3 id="git-환경-구성" style="position:relative;"><a href="#git-%ED%99%98%EA%B2%BD-%EA%B5%AC%EC%84%B1" aria-label="git 환경 구성 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>&#x3C;git 환경 구성></h3>
+<ol>
+<li>git clone</li>
+<li>git branch</li>
+<li>git merge</li>
+</ol>
+<h3 id="django-웹-구현" style="position:relative;"><a href="#django-%EC%9B%B9-%EA%B5%AC%ED%98%84" aria-label="django 웹 구현 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>&#x3C;Django 웹 구현></h3>
+<ol>
+<li>
+<p>views.py</p>
+<p>파일에 들어가서 함수 정의</p>
+<div class="gatsby-highlight" data-language="python"><pre class="language-python"><code class="language-python"><span class="token keyword">def</span> 함수명<span class="token punctuation">(</span>request<span class="token punctuation">)</span><span class="token punctuation">:</span> 
+    <span class="token keyword">return</span> render<span class="token punctuation">(</span>request<span class="token punctuation">,</span> <span class="token string">'본인이 만든 파일명.html'</span><span class="token punctuation">)</span></code></pre></div>
+</li>
+<li>
+<p><em>urls.py</em> 파일에 들어가서 <code class="language-text">path('주소', views.함수명)</code> 한 줄 추가</p>
+</li>
+<li>
+<p>index.html</p>
+<p>파일에 들어가서</p>
+<div class="gatsby-highlight" data-language="html"><pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>list-group-item list-group-item-action list-group-item-light p-3<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#!<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>...&lt;... </code></pre></div>
+<p>해당 a태그 href에 주소값 넣기</p>
+</li>
+<li>
+<p><code class="language-text">python manage.py runserver</code> 실행 후 정상 실행 되는 경우에만 push</p>
+</li>
+</ol>
+<hr>
+<h2 id="-20220221" style="position:relative;"><a href="#-20220221" aria-label=" 20220221 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>🤨 20220221</h2>
+<h3 id="알고리즘" style="position:relative;"><a href="#%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98" aria-label="알고리즘 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>&#x3C;알고리즘></h3>
+<ul>
+<li>선택 정렬 : 맨 앞 번호와 그 외 번호들 중 가장 작은 값의 자리를 바꿔나가기</li>
+<li>삽입 정렬 : 맨 앞(기준)을 중심으로 그 다음번호들이 기준보다 작으면 왼쪽에, 크면 오른쪽에</li>
+<li>퀵 정렬 : 맨 앞(기준)을 두고 그 다음 번호들의 양 끝단 끼리 비교. 비교 대상을 가운데쪽으로 옮겨가면서 비교</li>
+<li>계수 정렬 : (범위가 좁고, 반복이 잦은 수를 정렬할 때) 해당 숫자를 포함하는 최소값~최대값의 인덱스를 갖는 리스트를 생성하고 해당 번호가 나올 때 마다 +1해둠. 출력시 앞에부터 + 되어 있는 개수만큼 출력해줌.</li>
+</ul>
+<p><a href="https://mungdo-log.tistory.com/376">블로그 포스팅</a>
+<a href="https://github.com/mungdo/mungdo/tree/main/study/algorithm">깃허브 링크</a></p>
 <div class="table-of-contents">
 <ul>
 <li>
@@ -293,6 +346,20 @@ plt<span class="token punctuation">.</span>show<span class="token punctuation">(
 <ul>
 <li><a href="#dataframe-%EC%A1%B0%EC%9E%91%ED%95%98%EA%B8%B0-1">&#x3C;dataframe 조작하기></a></li>
 <li><a href="#%EC%8B%9C%EA%B0%81%ED%99%94">&#x3C;시각화></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#-20220218">🍕 20220218</a></p>
+<ul>
+<li><a href="#%EC%8B%9C%EA%B0%81%ED%99%94-1">&#x3C;시각화></a></li>
+<li><a href="#git-%ED%99%98%EA%B2%BD-%EA%B5%AC%EC%84%B1">&#x3C;git 환경 구성></a></li>
+<li><a href="#django-%EC%9B%B9-%EA%B5%AC%ED%98%84">&#x3C;Django 웹 구현></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#-20220221">🤨 20220221</a></p>
+<ul>
+<li><a href="#%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98">&#x3C;알고리즘></a></li>
 </ul>
 </li>
 </ul>
