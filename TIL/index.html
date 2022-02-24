@@ -325,20 +325,11 @@ plt<span class="token punctuation">.</span>show<span class="token punctuation">(
 <li>templates에 시각화 html 페이지 완성 후</li>
 <li>views.py 파일에 들어가서 함수 정의</li>
 </ol>
-<blockquote>
-<p>def 함수명(request):</p>
-<blockquote>
-<p>return render(request, ‘본인이 만든 파일명.html’)</p>
-</blockquote>
-</blockquote>
-<ol start="3">
-<li>urls.py 파일에 들어가서 path(‘주소’, views.함수명) 한 줄 추가</li>
-<li>index.html 파일에 들어가서</li>
-</ol>
-<blockquote>
-<p><a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">…&#x3C;… ```</p>
-</blockquote>
-<p>해당 a태그 href에 주소값 넣기
+<p><code class="language-text"> def 함수명(request): return render(request, '본인이 만든 파일명.html')</code>
+3. urls.py 파일에 들어가서 path(‘주소’, views.함수명) 한 줄 추가
+4. index.html 파일에 들어가서
+<code class="language-text">&lt;a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">...&lt;... </code>
+해당 a태그 href에 주소값 넣기
 5. python manage.py runserver 실행 후 정상 실행 되는 경우에만 push
 6. push 후 공유!</p>
 <h3 id="체크박스-만들기--선택취소-버튼까지-" style="position:relative;"><a href="#%EC%B2%B4%ED%81%AC%EB%B0%95%EC%8A%A4-%EB%A7%8C%EB%93%A4%EA%B8%B0--%EC%84%A0%ED%83%9D%EC%B7%A8%EC%86%8C-%EB%B2%84%ED%8A%BC%EA%B9%8C%EC%A7%80-" aria-label="체크박스 만들기  선택취소 버튼까지  permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>&#x3C;체크박스 만들기 : 선택/취소 버튼까지 ></h3>
@@ -404,7 +395,7 @@ plt<span class="token punctuation">.</span>show<span class="token punctuation">(
         chks<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>checked <span class="token operator">=</span> <span class="token string">''</span>
         <span class="token punctuation">}</span>
     <span class="token punctuation">}</span></code></pre></div>
-<p><img src="https://user-images.githubusercontent.com/82261307/155433942-45202573-e394-423c-9d3d-d99e4f817805.png" alt="스크린샷 2022-02-24 오전 9 29 40">{: width=“70%” height=“70%“}</p>
+<p><img src="https://user-images.githubusercontent.com/82261307/155433942-45202573-e394-423c-9d3d-d99e4f817805.png" alt="스크린샷 2022-02-24 오전 9 29 40"></p>
 <div class="table-of-contents">
 <ul>
 <li>
