@@ -389,11 +389,10 @@ plt.show()
 
 1. templates에 시각화 html 페이지 완성 후
 2. views.py 파일에 들어가서 함수 정의
-> def 함수명(request): 
-> > return render(request, '본인이 만든 파일명.html')
+ ``` def 함수명(request): return render(request, '본인이 만든 파일명.html')```
 3. urls.py 파일에 들어가서 path('주소', views.함수명) 한 줄 추가
 4. index.html 파일에 들어가서
-> <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">...<... ```
+```<a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">...<... ```
 해당 a태그 href에 주소값 넣기
 5. python manage.py runserver 실행 후 정상 실행 되는 경우에만 push
 6. push 후 공유!
@@ -463,7 +462,7 @@ plt.show()
     }
 ```
 
-![스크린샷 2022-02-24 오전 9 29 40](https://user-images.githubusercontent.com/82261307/155433942-45202573-e394-423c-9d3d-d99e4f817805.png){: width="70%" height="70%"}
+![스크린샷 2022-02-24 오전 9 29 40](https://user-images.githubusercontent.com/82261307/155433942-45202573-e394-423c-9d3d-d99e4f817805.png)
 
 
 
