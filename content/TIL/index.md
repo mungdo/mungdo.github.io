@@ -379,6 +379,91 @@ plt.show()
 [깃허브 링크](https://github.com/mungdo/mungdo/tree/main/study/algorithm)
 
 
+---
+
+## 🤨 20220223
+
+
+
+### <django 웹 구현 순서>
+
+1. templates에 시각화 html 페이지 완성 후
+2. views.py 파일에 들어가서 함수 정의
+> def 함수명(request): 
+> > return render(request, '본인이 만든 파일명.html')
+3. urls.py 파일에 들어가서 path('주소', views.함수명) 한 줄 추가
+4. index.html 파일에 들어가서
+> <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">...<... ```
+해당 a태그 href에 주소값 넣기
+5. python manage.py runserver 실행 후 정상 실행 되는 경우에만 push
+6. push 후 공유!
+
+
+### <체크박스 만들기 : 선택/취소 버튼까지 >
+
+> 체크 박스가 체크 되어 있는 경우만 화면에 띄우기
+
+1. HTML
+```html
+    <h1 class="mt-4">코로나 전후 시간대별-요일별 지하철 이용자 추이</h1>
+    <div style="font-size:15pt">
+        <input type="checkbox" name="chk" value="18년_요일_시간_히트맵">2018년 요일 시간 히트맵<br>
+        <input type="checkbox" name="chk" value="19년_요일_시간_히트맵">2019년 요일 시간 히트맵<br>
+        <input type="checkbox" name="chk" value="20년_요일_시간_히트맵">2020년 요일 시간 히트맵<br>
+        <input type="checkbox" name="chk" value="21년_요일_시간_히트맵">2021년 요일 시간 히트맵<br>
+        <input type="checkbox" name="chk" value="코로나_전_요일_시간_히트맵">코로나 전/후 평일 출근시간 이용객 추이<br>
+        <input type="checkbox" name="chk" value="코로나_후_요일_시간_히트맵">코로나 전/후 평일 퇴근시간 이용객 추이<br>
+    </div>
+    <div>
+        <input type="button" value="선택" onclick="selectImg();">
+        <input type="button" value="취소" onclick="clearDiv();">
+    </div>
+    <span>
+        <img style="display:none;" src="/static/images/time_week_sub/18년_요일_시간_히트맵.png">
+    </span>
+    <span>
+        <img style="display:none;" src="/static/images/time_week_sub/19년_요일_시간_히트맵.png">
+    </span>
+    <span>
+        <img style="display:none;" src="/static/images/time_week_sub/20년_요일_시간_히트맵.png">
+    </span>
+    <span>
+        <img style="display:none;" src="/static/images/time_week_sub/21년_요일_시간_히트맵.png">
+    </span>
+    <span>
+        <img style="display:none;" src="/static/images/time_week_sub/코로나_전_요일_시간_히트맵.png">
+    </span>
+    <span>
+        <img style="display:none;" src="/static/images/time_week_sub/코로나_후_요일_시간_히트맵.png">
+    </span>
+```
+2. Javascript
+```javascript
+    function selectImg(){
+        var chks = document.getElementsByName("chk");
+        var imgs = document.getElementsByTagName("img")
+        console.log(imgs, chks)
+        for (var i = 0; i < chks.length; i++){
+            if (chks[i].checked){
+                imgs[i].style.display = 'inline'
+            } else {
+                imgs[i].style.display = 'none'
+            }
+        }
+    }
+    function clearDiv(){
+        var chks = document.getElementsByName("chk")
+        var imgs = document.getElementsByTagName("img")
+        for (var i = 0; i < chks.length; i++){
+        imgs[i].style.display = 'none'
+        }
+        for (var i = 0; i < chks.length; i++){
+        chks[i].checked = ''
+        }
+    }
+```
+
+![스크린샷 2022-02-24 오전 9 29 40](https://user-images.githubusercontent.com/82261307/155433942-45202573-e394-423c-9d3d-d99e4f817805.png){: width="70%" height="70%"}
 
 
 
