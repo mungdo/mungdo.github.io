@@ -1,6 +1,6 @@
 ---
 emoji: 🖥
-title: 202202
+title: "202202"
 date: '2022-02-13 16:30:00'
 author: mungdo
 tags: til
