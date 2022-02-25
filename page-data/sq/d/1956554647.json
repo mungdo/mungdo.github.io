@@ -1,1 +1,1 @@
-{"data":{"allMarkdownRemark":{"edges":[{"node":{"frontmatter":{"title":202202,"categories":"til"},"fields":{"slug":"/TIL/"}}}]}}}
+{"data":{"allMarkdownRemark":{"edges":[{"node":{"frontmatter":{"title":"공공데이터 시각화 프로젝트 (코로나19 확산으로 재택근무가 늘었는가)","categories":"project"},"fields":{"slug":"/project/\bheap_pop/"}}},{"node":{"frontmatter":{"title":"202202","categories":"til"},"fields":{"slug":"/TIL/"}}}]}}}
