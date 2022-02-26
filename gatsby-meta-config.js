@@ -114,12 +114,12 @@ module.exports = {
       {
         title: '데이터 시각화 프로젝트',
         description:
-          '진행중',
-        techStack: ['python', 'crawling'],
-        thumbnailUrl: 'mungdo_icon.png',
+          '코로나 전 후의 출퇴근 교통 이용자 수, 사무실 공실률 등 다양한 지표를 통해 실제 재택근무 변화를 관찰하고자 한다.',
+        techStack: ['python', 'django', 'html', 'css'],
+        thumbnailUrl: 'heap_pop.gif',
         links: {
-          post: '/TIL',
-          github: 'https://github.com/mungdo',
+          post: 'https://mungdo.github.io/project/heap_pop',
+          github: 'https://github.com/mungdo/heap_pop',
           demo: '',
         },
       },
