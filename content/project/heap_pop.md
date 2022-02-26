@@ -108,6 +108,28 @@ __본 프로젝트는 팀 활동으로 진행 되었고, 프로젝트 상에서 
 
 ## 👩‍💻  &nbsp;데이터를 보여줄 웹 구현
 
+### 1. Django를 이용한 웹 구현
+
+* 프로젝트 생성 및 settings.py에 app 추가
+
+* index 페이지 생성
+
+### 2. 웹 협업을 위한 깃 환경 구성 : [깃허브 주소](https://github.com/mungdo/heap_pop)
+
+* Readme.md 작성 (협업에 필요한 가이드 내용 작성)
+
+* master 브랜치만 merge 가능하도록 설정하고 merge 진행
+
+### 3. 페이지 생성 후 작업
+
+* [지하철 요일별, 시간별 변화 살펴보기]()
+
+* [대중교통 코로나 전 후 총 이동량 지도 시각화]()
+
+### 4. 발표용 PPT 작성
+
+![ppt 페이지(1)](./heap_pop_imgs/ppt_1page.png)
+![ppt 페이지(2)](./heap_pop_imgs/ppt_2page.png)
 
 
 
