@@ -135,11 +135,33 @@
 <h2 id="-20220303" style="position:relative;"><a href="#-20220303" aria-label=" 20220303 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>🤭 20220303</h2>
 <p><strong>&#x3C;머신러닝 : 지도학습 Decision Tree(회귀, 분류)></strong></p>
 <ul>
+<li>dataframe 다루기
+<ul>
+<li><code class="language-text">apply</code> 함수</li>
+</ul>
+</li>
+</ul>
+<div class="gatsby-highlight" data-language="python"><pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">label_name</span><span class="token punctuation">(</span>label<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">if</span> label <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">:</span>
+        name <span class="token operator">=</span> iris_Tname<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+    <span class="token keyword">elif</span> label <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">:</span>
+        name <span class="token operator">=</span> iris_Tname<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
+    <span class="token keyword">elif</span> label <span class="token operator">==</span> <span class="token number">2</span><span class="token punctuation">:</span>
+        name <span class="token operator">=</span> iris_Tname<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span>
+    <span class="token keyword">return</span> name
+
+iris_df2<span class="token punctuation">[</span><span class="token string">'label_name'</span><span class="token punctuation">]</span> <span class="token operator">=</span> iris_df2<span class="token punctuation">.</span><span class="token builtin">apply</span><span class="token punctuation">(</span><span class="token keyword">lambda</span> x<span class="token punctuation">:</span> label_name<span class="token punctuation">(</span>x<span class="token punctuation">[</span><span class="token string">'label'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">,</span> axis<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span>
+iris_df2 <span class="token comment"># iris_df2에 label_name이라는 column이 추가되어 있음.</span></code></pre></div>
+<h1 id="-4" style="position:relative;"><a href="#-4" aria-label=" 4 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h1>
+<ul>
 <li>sklearn.datasets
 <ul>
 <li><code class="language-text">load_iris</code> 붓꽃 품종 분류</li>
 </ul>
 </li>
+</ul>
+<h1 id="-5" style="position:relative;"><a href="#-5" aria-label=" 5 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h1>
+<ul>
 <li>DT
 <ul>
 <li>모듈 불러오기 : <code class="language-text">from sklearn.tree import DecisionTreeClassifier</code></li>
@@ -151,30 +173,244 @@
 <li>회귀 : <em>아직 수업 전</em></li>
 </ul>
 </li>
-<li>모델 검증 - k-fold 교차 검증
+</ul>
+<h1 id="-6" style="position:relative;"><a href="#-6" aria-label=" 6 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h1>
 <ul>
-<li>kXk개 폴드세트 나눠서 k번 교차 검증함</li>
-<li><code class="language-text">from sklearn.model_selection import KFold</code></li>
-<li><code class="language-text">kfold.split(iris.data)</code> (iterable 객체로 for문 돌려 사용 <code class="language-text">for train_index, val_index in kfold.split(iris.data):</code>)</li>
+<li>모델 교차 검증 - k-fold 교차 검증
+<ul>
+<li>kXk개 폴드 세트 나눠서 k번 교차 검증함</li>
+</ul>
+<ol>
+<li><code class="language-text">from sklearn.model_selection import KFold</code> : 수치 예측 모형에 사용
+<ul>
+<li><code class="language-text">kfold = KFOLD(n_splits=)</code></li>
+<li><code class="language-text">kfold.split(iris.data)</code></li>
+<li>iterable 객체로 for문 돌려 사용 <code class="language-text">for train_index, val_index in kfold.split(iris.data):</code></li>
 </ul>
 </li>
+<li><code class="language-text">from sklearn.model_selection import StratifiedKFold</code>
+<ul>
+<li>층화 k겹 교차검증 : 분류 문제 적용시 균열한 샘플링을 위해서 시행</li>
+<li><code class="language-text">st_kfold = StratifiedKFold(n_splits=)</code></li>
+<li><code class="language-text">for train_index, val_index in st_kfold.split(iris_df, iris_df['label']):</code> : X, y를 인수로 입력</li>
+<li>교차검증을 보다 간편하게 : <code class="language-text">cross_val_score</code>
+<ul>
+<li><code class="language-text">score = cross_val_score(모델, X, y, scoring='accuracy', cv=3) </code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<h1 id="-7" style="position:relative;"><a href="#-7" aria-label=" 7 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h1>
+<ul>
+<li>교차 검증 + 하이퍼 파라미터(최적의 훈련 모델을 구현하기 위해 모델에 설정하는 변수. k값) 한번에 : <code class="language-text">GridSearchCV</code> 클래스</li>
+</ul>
+<div class="gatsby-highlight" data-language="python"><pre class="language-python"><code class="language-python"><span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>model_selection <span class="token keyword">import</span> GridSearchCV<span class="token punctuation">,</span> train_test_split
+<span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>tree <span class="token keyword">import</span> DecisionTreeClassifier
+<span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>metrics <span class="token keyword">import</span> accuracy_score
+<span class="token keyword">import</span> pandas <span class="token keyword">as</span> pd
+
+X_train<span class="token punctuation">,</span> X_test<span class="token punctuation">,</span> y_train<span class="token punctuation">,</span> y_test <span class="token operator">=</span> train_test_split<span class="token punctuation">(</span>X<span class="token punctuation">,</span> y<span class="token punctuation">,</span> test_size <span class="token operator">=</span> <span class="token number">0.2</span><span class="token punctuation">,</span> random_state<span class="token operator">=</span><span class="token number">10</span><span class="token punctuation">)</span>
+dt_clf <span class="token operator">=</span> DecisionTreeClassifier<span class="token punctuation">(</span><span class="token punctuation">)</span>
+params <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">'max_depth'</span> <span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token string">'min_samples_split'</span> <span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">}</span>
+grid_tree <span class="token operator">=</span> GridSearchCV<span class="token punctuation">(</span>dt_clf<span class="token punctuation">,</span> param_grid<span class="token operator">=</span>params<span class="token punctuation">,</span> scoring<span class="token operator">=</span><span class="token string">'accuracy'</span><span class="token punctuation">,</span> cv<span class="token operator">=</span><span class="token number">3</span><span class="token punctuation">,</span> refit<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">,</span> return_train_score<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+
+grid_tree<span class="token punctuation">.</span>fit<span class="token punctuation">(</span>X_train<span class="token punctuation">,</span> y_train<span class="token punctuation">)</span>
+scores_df <span class="token operator">=</span> pd<span class="token punctuation">.</span>Dataframe<span class="token punctuation">(</span>grid_tree<span class="token punctuation">.</span>cv_results_<span class="token punctuation">)</span>
+
+scores_df<span class="token punctuation">.</span>columns<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment"># ['mean_fit_time', 'std_fit_time', 'mean_score_time', 'std_score_time', </span>
+                <span class="token comment"># 'param_max_depth', 'param_min_samples_split', 'params', 'split0_test_score', </span>
+                <span class="token comment"># 'split1_test_score', 'split2_test_score', 'mean_test_score', 'std_test_score', </span>
+                <span class="token comment"># 'rank_test_score', 'split0_train_score', 'split1_train_score', 'split2_train_score', </span>
+                <span class="token comment"># 'mean_train_score', 'std_train_score']</span>
+
+grid_tree<span class="token punctuation">.</span>best_params_ <span class="token comment"># 하이퍼 파라미터</span>
+
+<span class="token comment"># 최적의 파라미터 적용</span>
+best_dt <span class="token operator">=</span> grid_tree<span class="token punctuation">.</span>best_estimator_
+
+<span class="token comment"># GridSearchCV 객체의 생성 파라미터로 refit=True로 설정된 경우(디폴트)</span>
+pred <span class="token operator">=</span> best_dt<span class="token punctuation">.</span>predict<span class="token punctuation">(</span>X_test<span class="token punctuation">)</span>
+accuracy_score<span class="token punctuation">(</span>y_test<span class="token punctuation">,</span> pred<span class="token punctuation">)</span>
+</code></pre></div>
+<h1 id="-8" style="position:relative;"><a href="#-8" aria-label=" 8 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h1>
+<ul>
 <li>예측 정확도 평가 <code class="language-text">from sklearn.metrics import accuracy_score</code>
 <ul>
 <li><code class="language-text">accuracy_score(test_target, pred)</code></li>
 </ul>
 </li>
 </ul>
-<h1 id="-4" style="position:relative;"><a href="#-4" aria-label=" 4 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h1>
-<h1 id="-5" style="position:relative;"><a href="#-5" aria-label=" 5 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h1>
+<h1 id="-9" style="position:relative;"><a href="#-9" aria-label=" 9 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h1>
+<ul>
+<li>데이터 전처리
+<ul>
+<li>데이터 정제
+<ul>
+<li>결측값 처리
+<ul>
+<li>완전 제거법</li>
+<li>수작업으로 채워 넣기 or 특정값 사용</li>
+<li>핫덱 대체법 : 동일 조사의 유사한 관측값으로 얻은 자료로 대체</li>
+<li>평균값 사용 : 표준오차 과소추정 발생할 수 있음</li>
+<li>가능성이 높은 값으로 사용 (회귀분석, 보간법 등)</li>
+</ul>
+</li>
+<li>이상치 처리</li>
+<li>잡음 제거</li>
+<li>데이터 형식 변환 = <a href="#%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%9D%B8%EC%BD%94%EB%94%A9--code-classlanguage-textlabelencodercode">데이터 인코딩</a> (특정 분석 방법을 사용할 때 필요)
+<ul>
+<li>문자열 -> 숫자로 코드화</li>
+<li>범주형자료 -> 수치화</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>데이터 결합 (join)</li>
+<li>데이터 변환
+<ul>
+<li>Normalization (정규화)</li>
+<li>scaling</li>
+</ul>
+</li>
+<li>차원 축소
+<ul>
+<li>Feature selection
+<ul>
+<li>filter</li>
+<li>wrapper</li>
+<li>embedded</li>
+</ul>
+</li>
+<li>Feature extraction
+<ul>
+<li>PCA</li>
+<li>SVD</li>
+<li>FA</li>
+<li>NMF</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="데이터-인코딩--code-classlanguage-textlabelencodercode" style="position:relative;"><a href="#%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%9D%B8%EC%BD%94%EB%94%A9--code-classlanguage-textlabelencodercode" aria-label="데이터 인코딩  code classlanguage textlabelencodercode permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>데이터 인코딩 : <code class="language-text">LabelEncoder</code></h4>
+<div class="gatsby-highlight" data-language="python"><pre class="language-python"><code class="language-python"><span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>preprocessing <span class="token keyword">import</span> LabelEncoder <span class="token comment"># preprocession : 전처리에 필요한 모듈</span>
+
+items <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'TV'</span><span class="token punctuation">,</span> <span class="token string">'냉장고'</span><span class="token punctuation">,</span> <span class="token string">'전자렌지'</span><span class="token punctuation">,</span> <span class="token string">'컴퓨터'</span><span class="token punctuation">,</span> <span class="token string">'선풍기'</span><span class="token punctuation">,</span> <span class="token string">'선풍기'</span><span class="token punctuation">,</span> <span class="token string">'믹서'</span><span class="token punctuation">,</span> <span class="token string">'믹서'</span><span class="token punctuation">]</span>
+
+encoder <span class="token operator">=</span> LabelEncoder<span class="token punctuation">(</span><span class="token punctuation">)</span>
+encoder<span class="token punctuation">.</span>fit<span class="token punctuation">(</span>items<span class="token punctuation">)</span>
+labels <span class="token operator">=</span> encoder<span class="token punctuation">.</span>transform<span class="token punctuation">(</span>items<span class="token punctuation">)</span>
+labels <span class="token comment"># array([0, 1, 4, 5, 3, 3, 2, 2])</span>
+
+<span class="token comment"># 인코딩 전 원래의 값 확인 : encoder.classes_ 속성</span>
+encoder<span class="token punctuation">.</span>classes_
+
+<span class="token comment"># 인코딩된 값 디코딩</span>
+encoder<span class="token punctuation">.</span>inverse_transform<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span></code></pre></div>
+<h1 id="-10" style="position:relative;"><a href="#-10" aria-label=" 10 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h1>
+<p><strong>원-핫 인코딩</strong> : 범주형 더미 변수 생성 (해당하는 컬럼에만 1)</p>
+<ol>
+<li>OneHotEncoder 모듈 사용</li>
+</ol>
+<div class="gatsby-highlight" data-language="python"><pre class="language-python"><code class="language-python"><span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>preprocessing <span class="token keyword">import</span> OneHotEncoder
+
+<span class="token comment"># 1. LabelEncoder로 변환 (위에서 완료)</span>
+labels <span class="token comment"># array([0, 1, 4, 5, 3, 3, 2, 2])</span>
+
+<span class="token comment"># 2. 2차원 데이터로 변환</span>
+labels <span class="token operator">=</span> labels<span class="token punctuation">.</span>reshape<span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token comment"># -1 : 모든 행, 1: 열 하나</span>
+labels <span class="token comment"># array([[0],[1],[4],[5],[3],[3],[2],[2]])</span>
+
+<span class="token comment"># 3. 원-핫 인코딩 적용 </span>
+one_encoder <span class="token operator">=</span> OneHotEncoder<span class="token punctuation">(</span><span class="token punctuation">)</span>
+one_encoder<span class="token punctuation">.</span>fit<span class="token punctuation">(</span>labels<span class="token punctuation">)</span>
+one_labels <span class="token operator">=</span> one_encoder<span class="token punctuation">.</span>transform<span class="token punctuation">(</span>labels<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>one_labels<span class="token punctuation">)</span> <span class="token comment"># 공간 절약을 위해서 0 값은 제외하고 보여줌</span>
+
+<span class="token comment"># 2차원 형태로 출력</span>
+one_labels<span class="token punctuation">.</span>toarray<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment"># array([[1., 0., 0., 0., 0., 0.],</span>
+<span class="token comment">#        [0., 1., 0., 0., 0., 0.],</span>
+<span class="token comment">#        [0., 0., 0., 0., 1., 0.],</span>
+<span class="token comment">#        [0., 0., 0., 0., 0., 1.],</span>
+<span class="token comment">#        [0., 0., 0., 1., 0., 0.],</span>
+<span class="token comment">#        [0., 0., 0., 1., 0., 0.],</span>
+<span class="token comment">#        [0., 0., 1., 0., 0., 0.],</span>
+<span class="token comment">#        [0., 0., 1., 0., 0., 0.]])</span></code></pre></div>
+<h1 id="-11" style="position:relative;"><a href="#-11" aria-label=" 11 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h1>
+<ol start="2">
+<li>pandas api <code class="language-text">get_dummies()</code> 메서드 사용</li>
+</ol>
+<div class="gatsby-highlight" data-language="python"><pre class="language-python"><code class="language-python">df <span class="token operator">=</span> pd<span class="token punctuation">.</span>DataFrame<span class="token punctuation">(</span>items<span class="token punctuation">,</span> columns<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">'item'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+<span class="token comment"># Pandas 데이터프레임을 NumPy 배열로 변환</span>
+pd<span class="token punctuation">.</span>get_dummies<span class="token punctuation">(</span>df<span class="token punctuation">)</span><span class="token punctuation">.</span>to_numpy<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment"># array([[1, 0, 0, 0, 0, 0],</span>
+<span class="token comment">#        [0, 1, 0, 0, 0, 0],</span>
+<span class="token comment">#        [0, 0, 0, 0, 1, 0],</span>
+<span class="token comment">#        [0, 0, 0, 0, 0, 1],</span>
+<span class="token comment">#        [0, 0, 0, 1, 0, 0],</span>
+<span class="token comment">#        [0, 0, 0, 1, 0, 0],</span>
+<span class="token comment">#        [0, 0, 1, 0, 0, 0],</span>
+<span class="token comment">#        [0, 0, 1, 0, 0, 0]], dtype=uint8)</span>
+
+pd<span class="token punctuation">.</span>get_dummies<span class="token punctuation">(</span>df<span class="token punctuation">)</span> <span class="token comment"># 하단 이미지</span></code></pre></div>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 512px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 43.333333333333336%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAAAsTAAALEwEAmpwYAAABRklEQVQoz42R227CMBBE8zdAiHN3HHKnKRBo1ZZSqf//JVPN2gZVfenDKuvZ8e7xJuinM56XK9pxwTi/4nC5YV6uaIYTns+fonnP6eULzXDE0/Edx8tN6t20YD594Pz2jbLeI8irEUW9R24mCYqmOyDTg+i6mZHRYybR6aevcL7c2DPzVA8IonSHMDZyCJMaG1UhzltEWSM5dXrWSiMuOgnqjKTsofIWa1WJJyl6BGzCYHETG9uw6LBNajFSD11OnYPWrqHKGmxlGBs2UHmHgDQsEJtfTsqryV5mbiYh5gCuIS170RmZHpE4Hz0xG8ozY3N/iicRqkjf81WkhcaTr1yNmtSSnTw/oPgfQtlR2Vuiu28UbetrZf8g5EItof5FyMthbAmV+1nU/xCmnlDe3so05fdZ2d0w5848od8hdUbmCB/0PX4A0lokAls0gFQAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="더미"
+        title="더미"
+        src="/static/7bb5f3c7553e59fe60821cc948eb95e5/01e7c/one_hot_encoding.png"
+        srcset="/static/7bb5f3c7553e59fe60821cc948eb95e5/e9ff0/one_hot_encoding.png 180w,
+/static/7bb5f3c7553e59fe60821cc948eb95e5/f21e7/one_hot_encoding.png 360w,
+/static/7bb5f3c7553e59fe60821cc948eb95e5/01e7c/one_hot_encoding.png 512w"
+        sizes="(max-width: 512px) 100vw, 512px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<h1 id="-12" style="position:relative;"><a href="#-12" aria-label=" 12 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h1>
+<h1 id="-13" style="position:relative;"><a href="#-13" aria-label=" 13 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h1>
 <p><em>&#x3C;proDS 강의></em></p>
 <ol>
 <li><a href="https://mungdo-log.tistory.com/380">데이터 전처리 2</a> : 변환, 결합</li>
 <li><a href="https://mungdo-log.tistory.com/381">베이즈 정리</a></li>
 </ol>
+<hr>
+<h2 id="20220304" style="position:relative;"><a href="#20220304" aria-label="20220304 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>20220304</h2>
 <div class="table-of-contents">
 <ul>
-<li><a href="#-20220301">🥺 20220301</a></li>
-<li><a href="#%EF%B8%8F-20220302">⚙️ 20220302</a></li>
-<li><a href="#-20220303">🤭 20220303</a></li>
+<li>
+<p><a href="#-20220301">🥺 20220301</a></p>
+</li>
+<li>
+<p><a href="#%EF%B8%8F-20220302">⚙️ 20220302</a></p>
+</li>
+<li>
+<p><a href="#-20220303">🤭 20220303</a></p>
+<ul>
+<li>
+<ul>
+<li><a href="#%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%9D%B8%EC%BD%94%EB%94%A9--labelencoder">데이터 인코딩 : <code class="language-text">LabelEncoder</code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#20220304">20220304</a></p>
+</li>
 </ul>
 </div></div></div><div class="post-navigator"><div class="post-navigator-card-wrapper"><a class="post-card prev" href="/TIL/202202/"><div class="direction">이전 글</div><div class="title">202202</div></a></div><div class="post-navigator-card-wrapper"></div></div><div class="utterances"></div></main><footer class="page-footer-wrapper"><p class="page-footer">© <!-- -->2022<!-- --> <a href="https://github.com/mungdo">안문주</a> powered by<a href="https://github.com/zoomKoding/zoomkoding-gatsby-blog"> zoomkoding-gatsby-blog</a></p></footer><div class="dark-mode-button-wrapper"><button class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium dark-mode-button css-1yxmbwk" tabindex="0" type="button"><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeLarge dark-mode-icon css-6flbmm" focusable="false" viewBox="0 0 24 24" aria-hidden="true" data-testid="DarkModeIcon"><path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9c0-.46-.04-.92-.1-1.36-.98 1.37-2.58 2.26-4.4 2.26-2.98 0-5.4-2.42-5.4-5.4 0-1.81.89-3.42 2.26-4.4-.44-.06-.9-.1-1.36-.1z"></path></svg></button></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/TIL/202203/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-0616fad1f708e5420168.js"],"app":["/app-889f0644be3e8780fa3b.js"],"component---cache-caches-gatsby-plugin-offline-app-shell-js":["/component---cache-caches-gatsby-plugin-offline-app-shell-js-5f4d6e6517138b0667ff.js"],"component---src-pages-404-js":["/component---src-pages-404-js-0f892ebcd010b6f91108.js"],"component---src-pages-about-js":["/component---src-pages-about-js-8d3b5b5f011b48040aeb.js"],"component---src-pages-index-js":["/component---src-pages-index-js-66fa20e8773286f91373.js"],"component---src-templates-blog-template-js":["/component---src-templates-blog-template-js-7e0f67ebc752626855c1.js"],"component---src-templates-category-template-js":["/component---src-templates-category-template-js-ed70fe8a3875146c144e.js"]};/*]]>*/</script><script src="/polyfill-0616fad1f708e5420168.js" nomodule=""></script><script src="/component---src-templates-blog-template-js-7e0f67ebc752626855c1.js" async=""></script><script src="/f9d3028dbef90a6e9b8db85387d63dd9f4edf538-852cf68f9be39a5a4bc9.js" async=""></script><script src="/app-889f0644be3e8780fa3b.js" async=""></script><script src="/framework-91ebf51d003c3c6f38be.js" async=""></script><script src="/webpack-runtime-f5f3382f227c26345aa2.js" async=""></script></body></html>
