@@ -124,7 +124,7 @@
 </ul>
 <h1 id="" style="position:relative;"><a href="#" aria-label=" permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h1>
 <h1 id="-1" style="position:relative;"><a href="#-1" aria-label=" 1 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h1>
-<p><em>&#x3C;proDS 강의></em></p>
+<p><strong>&#x3C;proDS 강의></strong></p>
 <ol>
 <li><a href="https://mungdo-log.tistory.com/380">데이터 전처리</a> : 생성, 정제</li>
 <li><a href="https://mungdo-log.tistory.com/381">확률 개념과 특징</a></li>
@@ -390,7 +390,328 @@ pd<span class="token punctuation">.</span>get_dummies<span class="token punctuat
 <li><a href="https://mungdo-log.tistory.com/381">베이즈 정리</a></li>
 </ol>
 <hr>
-<h2 id="20220304" style="position:relative;"><a href="#20220304" aria-label="20220304 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>20220304</h2>
+<h2 id="-20220304" style="position:relative;"><a href="#-20220304" aria-label=" 20220304 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>😵‍💫 20220304</h2>
+<p><strong>&#x3C;머신러닝 순서></strong></p>
+<ol>
+<li>데이터 전처리
+<ol>
+<li>EDA : 분포 확인</li>
+<li>결측치 처리 : <code class="language-text">isnull</code> <code class="language-text">fillna</code></li>
+<li>구간화 (binning)</li>
+<li>인코딩 : 문자열 -> 숫자형으로 변환</li>
+<li>(필요 없는 열) 삭제</li>
+</ol>
+</li>
+<li>학습 데이터와 테스트 데이터 분류 <code class="language-text">model_selection > train_test_split</code></li>
+<li>모델을 활용한 학습 <code class="language-text">fit</code> / 예측 <code class="language-text">predict</code> / 평가(정확도) <code class="language-text">accuracy_score()</code></li>
+<li>교차 검증을 통한 모델 성능 향상 <code class="language-text">model_selection</code>
+<ol>
+<li><code class="language-text">cross_val_score()</code> : stratified Kfold 교차검증 빠르게 수행</li>
+<li><code class="language-text">GridSearchCV</code> : 하이퍼 파라미터 튜닝</li>
+</ol>
+</li>
+</ol>
+<ul>
+<li>모델 만들기 : <code class="language-text">BaseEstimator</code></li>
+</ul>
+<h1 id="-14" style="position:relative;"><a href="#-14" aria-label=" 14 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h1>
+<p><strong>&#x3C;평가 지표></strong></p>
+<blockquote>
+<p>정확도만 사용해 검증해봤는데, 그 외에도 여러 평가 지표가 있음</p>
+</blockquote>
+<ul>
+<li>
+<p>분류 모델의 평가 지표 : 범주형 데이터 예측</p>
+<ul>
+<li>정확도(Accuracy)</li>
+<li>재현율(Recall)</li>
+<li>정밀도(Precision)</li>
+<li>F1 measure 등 …</li>
+</ul>
+</li>
+<li>
+<p>회귀 모델의 평가 지표 : 수치형 데이터 예측</p>
+<ul>
+<li>MSE(Mean Square Error)</li>
+<li>RMSE(Root Mean Square Error)</li>
+<li>MAE(Mean Absolute Error)</li>
+<li>MAPE(Mean Absolute Percentage Error)</li>
+<li>$ R^2 $</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="-20220305" style="position:relative;"><a href="#-20220305" aria-label=" 20220305 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>🤨 20220305</h2>
+<p><strong>&#x3C;알고리즘></strong></p>
+<blockquote>
+<p>이것이 취업을 위한 코딩테스트다</p>
+</blockquote>
+<ul>
+<li>그리디 알고리즘
+<ul>
+<li><a href="https://github.com/mungdo/mungdo/blob/main/algorithm/thisiscodingtest/%EA%B7%B8%EB%A6%AC%EB%94%94/%EB%AC%B8%EC%9E%90%EC%97%B4_%EB%92%A4%EC%A7%91%EA%B8%B0.py">문자열 뒤집기</a></li>
+<li><a href="https://github.com/mungdo/mungdo/blob/main/algorithm/thisiscodingtest/%EA%B7%B8%EB%A6%AC%EB%94%94/%EB%AA%A8%ED%97%98%EA%B0%80_%EA%B8%B8%EB%93%9C.py">모험가 길드</a></li>
+<li><a href="https://github.com/mungdo/mungdo/blob/main/algorithm/thisiscodingtest/%EA%B7%B8%EB%A6%AC%EB%94%94/%EB%A7%8C%EB%93%A4_%EC%88%98_%EC%97%86%EB%8A%94_%EA%B8%88%EC%95%A1.py">만들 수 없는 금액</a></li>
+</ul>
+</li>
+</ul>
+<h1 id="-15" style="position:relative;"><a href="#-15" aria-label=" 15 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h1>
+<hr>
+<h1 id="-16" style="position:relative;"><a href="#-16" aria-label=" 16 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h1>
+<h2 id="-20220307" style="position:relative;"><a href="#-20220307" aria-label=" 20220307 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>🌝 20220307</h2>
+<p><strong>&#x3C;머신러닝 : 분류 모델의 성능 평가 지표></strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th>예측</th>
+<th>예측</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td>Positive</td>
+<td>Negative</td>
+</tr>
+<tr>
+<td>실제</td>
+<td>Positive</td>
+<td>TP</td>
+<td>FN</td>
+</tr>
+<tr>
+<td>실제</td>
+<td>Negative</td>
+<td>FP</td>
+<td>TN</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>정확도 : <code class="language-text">accuracy_score(y_test, pred)</code>
+<ul>
+<li>(TP + TN) / (TP + FN + FP + TN)</li>
+</ul>
+</li>
+<li>정밀도 : <code class="language-text">precision_score(y_test, pred)</code>
+<ul>
+<li>TP / (TP + FN)</li>
+</ul>
+</li>
+<li>재현율 : <code class="language-text">recall_score(y_test, pred)</code>
+<ul>
+<li>TP / (TP + FN)</li>
+</ul>
+</li>
+<li>f1 score : <code class="language-text">f1_score(y_test, pred)</code>
+<ul>
+<li>정확도와 재현율의 조화평균</li>
+</ul>
+</li>
+<li>G measure : $G = \sqrt{Precision × Recall}$</li>
+<li>ROC curve : 민감도와 특이도 별 그래프
+<ul>
+<li>민감도 : TP / (TP + FP)</li>
+<li>특이도 : TN / (FP + TN)</li>
+<li>민감도와 특이도 차이가 크다면 올바른 방식이 아님.</li>
+<li>AUC(ROU curve 아래 면적)가 1에 가까울 수록 좋은 모형.</li>
+</ul>
+</li>
+</ol>
+<h1 id="-17" style="position:relative;"><a href="#-17" aria-label=" 17 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h1>
+<p><strong>&#x3C;머신러닝 : 교차검증></strong></p>
+<blockquote>
+<p>고정된 학습 데이터와 테스트 데이터로 평가하다보면 과도하게 최적화 될 수 있음(과적합). 이러한 문제를 해결하기 위해서 교차 검증 시행</p>
+</blockquote>
+<ul>
+<li><code class="language-text">GridSearchCV</code> : 교차 검증과 최적 하이퍼 파라미터 튜닝을 한번에
+<ul>
+<li>params (파라미터)를 딕셔너리 형태로 지정</li>
+<li>cv : 교차 검증 수(k-fold)</li>
+<li>refit : 최적 파라미터로 재학습 (best_estimator_에 저장되어 있음)</li>
+<li>작성 예시</li>
+</ul>
+</li>
+</ul>
+<div class="gatsby-highlight" data-language="python"><pre class="language-python"><code class="language-python">dtree <span class="token operator">=</span> DecisionTreeClassifier<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+params <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">'max_depth'</span><span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token string">'min_samples_split'</span><span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">}</span>
+grid_dtree <span class="token operator">=</span> GridSearchCV<span class="token punctuation">(</span>dtree<span class="token punctuation">,</span> param_grid<span class="token operator">=</span>params<span class="token punctuation">,</span> cv<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">,</span> refit<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+
+grid_dtree<span class="token punctuation">.</span>fit<span class="token punctuation">(</span>X_train<span class="token punctuation">,</span> y_train<span class="token punctuation">)</span>
+
+grid_dtree<span class="token punctuation">.</span>cv_results_ <span class="token comment">#결과 전체</span>
+grid_dtree<span class="token punctuation">.</span>best_params_ <span class="token comment">#최고 정확도</span></code></pre></div>
+<ul>
+<li>
+<p>predict() 함수와 predict_proba() 함수</p>
+<ul>
+<li>predict() : 각 예측된 값들 반환</li>
+<li>predict_proba() : 각 예측된 확률 (예를들어 0, 1 이진분류의 경우 각각 0일 확률, 1일 확률) 반환</li>
+</ul>
+</li>
+<li>
+<p>임계값 조정 : 분류 결정 임계값이 낮을수록 positive로 예측할 확률 증가(재현율 증가) &#x3C;-> 임계값 높을수록 정밀도가 증가</p>
+</li>
+</ul>
+<div class="gatsby-highlight" data-language="python"><pre class="language-python"><code class="language-python">thresholds <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">0.3</span><span class="token punctuation">,</span> <span class="token number">0.33</span><span class="token punctuation">,</span> <span class="token number">0.36</span><span class="token punctuation">,</span> <span class="token number">0.39</span><span class="token punctuation">,</span> <span class="token number">0.42</span><span class="token punctuation">,</span> <span class="token number">0.45</span><span class="token punctuation">,</span> <span class="token number">0.48</span><span class="token punctuation">,</span> <span class="token number">0.50</span><span class="token punctuation">]</span>
+
+<span class="token comment"># predict_proba(X_test)[:, 1] : 이진분류에서 1(positive) 결과 값만 가져오기</span>
+pred_proba <span class="token operator">=</span> lr_clf<span class="token punctuation">.</span>predict_proba<span class="token punctuation">(</span>X_test<span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>reshape<span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span> 
+get_eval_by_thresholds<span class="token punctuation">(</span>y_test<span class="token punctuation">,</span> pred_proba<span class="token punctuation">,</span> thresholds<span class="token punctuation">)</span>
+
+<span class="token keyword">for</span> c <span class="token keyword">in</span> thresholds<span class="token punctuation">:</span>
+    bina <span class="token operator">=</span> Binarizer<span class="token punctuation">(</span>threshold<span class="token operator">=</span>c<span class="token punctuation">)</span>
+    bina<span class="token punctuation">.</span>fit<span class="token punctuation">(</span>pred_proba<span class="token punctuation">)</span>
+    pred <span class="token operator">=</span> bina<span class="token punctuation">.</span>transform<span class="token punctuation">(</span>pred_proba<span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'thresholds: '</span><span class="token punctuation">,</span>c<span class="token punctuation">)</span>
+    <span class="token comment"># ~ 모델 성능평가 ~</span></code></pre></div>
+<h1 id="-18" style="position:relative;"><a href="#-18" aria-label=" 18 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h1>
+<hr>
+<h1 id="-19" style="position:relative;"><a href="#-19" aria-label=" 19 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h1>
+<h2 id="-20220308" style="position:relative;"><a href="#-20220308" aria-label=" 20220308 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>💦 20220308</h2>
+<p><strong>&#x3C;머신러닝 : 의사결정나무 Decision Tree></strong></p>
+<ul>
+<li>의사결정나무(DT) 타입
+<ul>
+<li>분류 (범주형 변수 기준으로 나눔. 끝마디의 자료 범주가 결과 값이 됨) <code class="language-text">DecisionTreeClassifier</code></li>
+<li>회귀 (연속형 변수 기준으로 나눔. 끝마디 자료 평균이 회귀 값이 됨) <code class="language-text">DecisionTreeRegressor</code></li>
+</ul>
+</li>
+<li>DT에서 중요한 이슈 : 많은 규칙 -> 과적합 가능성 높아짐.
+<ul>
+<li><strong>어떻게</strong> 트리를 분할할 것인가? -> 과적합 방지로 가지치기(pruning) 필요</li>
+</ul>
+</li>
+<li>불순도(&#x3C;-> 균일도)가 낮은(&#x3C;-> 높은) 데이터 세트를 먼저 선택할 수 있도록
+<ul>
+<li>불순도 지표 : 엔트로피 지수, 지니 계수</li>
+</ul>
+</li>
+<li>DT 피처 중요도 확인 : <code class="language-text">feature_importances_</code> 속성으로 중요도 높은 순으로 확인 가능.</li>
+<li>tree 시각화
+<ul>
+<li><code class="language-text">sklearn.tree -> plot_tree</code> 사용</li>
+<li><code class="language-text">sklearn.tree -> export_graphviz</code> 사용해서 .dot 파일로 export 할 수 있음.</li>
+</ul>
+</li>
+</ul>
+<div class="gatsby-highlight" data-language="python"><pre class="language-python"><code class="language-python">export_graphviz<span class="token punctuation">(</span>tr_clf<span class="token punctuation">,</span> out_file<span class="token operator">=</span><span class="token string">'tree1.dot'</span><span class="token punctuation">,</span> class_names<span class="token operator">=</span>iris_df<span class="token punctuation">.</span>target_names<span class="token punctuation">,</span> feature_names<span class="token operator">=</span>iris_df<span class="token punctuation">.</span>feature_names<span class="token punctuation">,</span> impurity<span class="token punctuation">(</span>불순도<span class="token punctuation">)</span><span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">,</span> filled<span class="token punctuation">(</span>노드색상표시<span class="token punctuation">)</span><span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span></code></pre></div>
+<ul>
+<li><code class="language-text">Graphviz</code> 패키지 사용 : .dot 파일 읽어와서 Source로 보여주기</li>
+</ul>
+<div class="gatsby-highlight" data-language="python"><pre class="language-python"><code class="language-python"><span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">'tree1.dot'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> f<span class="token punctuation">:</span>
+    dot_graph <span class="token operator">=</span> f<span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+graphviz<span class="token punctuation">.</span>Source<span class="token punctuation">(</span>dot_graph<span class="token punctuation">)</span>
+
+<span class="token comment"># 생성된 .dot 파일을 .png 파일로 변환해서 저장 후 출력</span>
+<span class="token keyword">from</span> subprocess <span class="token keyword">import</span> call
+
+call<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'dot'</span><span class="token punctuation">,</span> <span class="token string">'-Tpng'</span><span class="token punctuation">,</span> <span class="token string">'tree1.dot'</span><span class="token punctuation">,</span> <span class="token string">'-o'</span><span class="token punctuation">,</span> <span class="token string">'decision_tree1.png'</span><span class="token punctuation">,</span> <span class="token string">'-Gdpi=600'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+<span class="token keyword">from</span> IPython<span class="token punctuation">.</span>display <span class="token keyword">import</span> Image
+
+Image<span class="token punctuation">(</span>filename<span class="token operator">=</span><span class="token string">'decision_tree1.png'</span><span class="token punctuation">)</span></code></pre></div>
+<ul>
+<li>DT 하이퍼 파라미터 튜닝 -> <code class="language-text">GridSearchCV</code> 이용 가능
+<ul>
+<li>max_depth : 최대 깊이</li>
+<li>min_samples_split : 노드를 분할하기 위한 최소한의 샘플 데이터수</li>
+<li>min_samples_leaf : 리프노드가 되기 위해 필요한 최소한의 샘플 데이터수</li>
+</ul>
+</li>
+</ul>
+<h1 id="-20" style="position:relative;"><a href="#-20" aria-label=" 20 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h1>
+<hr>
+<h1 id="-21" style="position:relative;"><a href="#-21" aria-label=" 21 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h1>
+<h2 id="-20220309" style="position:relative;"><a href="#-20220309" aria-label=" 20220309 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>😵 20220309</h2>
+<p><strong>&#x3C;알고리즘 : 그리디></strong></p>
+<ul>
+<li><a href="https://github.com/mungdo/mungdo/blob/main/algorithm/thisiscodingtest/%EA%B7%B8%EB%A6%AC%EB%94%94/1%EC%9D%B4_%EB%90%A0_%EB%95%8C%EA%B9%8C%EC%A7%80.py">1이 될 때까지</a></li>
+<li><a href="https://github.com/mungdo/mungdo/blob/main/algorithm/thisiscodingtest/%EA%B7%B8%EB%A6%AC%EB%94%94/%EA%B3%B1%ED%95%98%EA%B8%B0_%ED%98%B9%EC%9D%80_%EB%8D%94%ED%95%98%EA%B8%B0.py">곱하기 혹은 더하기</a></li>
+<li><a href="https://github.com/mungdo/mungdo/blob/main/algorithm/thisiscodingtest/%EA%B7%B8%EB%A6%AC%EB%94%94/%EB%B3%BC%EB%A7%81%EA%B3%B5_%EA%B3%A0%EB%A5%B4%EA%B8%B0.py">볼링공 고르기</a></li>
+<li><a href="https://github.com/mungdo/mungdo/blob/main/algorithm/thisiscodingtest/%EA%B7%B8%EB%A6%AC%EB%94%94/%EC%88%AB%EC%9E%90_%EC%B9%B4%EB%93%9C_%EA%B2%8C%EC%9E%84.py">숫자 카드 게임</a></li>
+<li><a href="https://github.com/mungdo/mungdo/blob/main/algorithm/thisiscodingtest/%EA%B7%B8%EB%A6%AC%EB%94%94/%EB%AC%B4%EC%A7%80%EC%9D%98_%EB%A8%B9%EB%B0%A9_%EB%9D%BC%EC%9D%B4%EB%B8%8C.py">무지의 먹방 라이브 (미완)</a></li>
+</ul>
+<h1 id="-22" style="position:relative;"><a href="#-22" aria-label=" 22 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h1>
+<hr>
+<h1 id="-23" style="position:relative;"><a href="#-23" aria-label=" 23 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h1>
+<h2 id="-20220310" style="position:relative;"><a href="#-20220310" aria-label=" 20220310 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>😓 20220310</h2>
+<p><strong>&#x3C;머신러닝 : 앙상블 학습></strong></p>
+<ul>
+<li>앙상블 : 여러 개의 분류기를 사용해서 예측 결합해 보다 정확한 최종 예측 도출</li>
+<li>앙상블 유형
+<ul>
+<li>보팅 : 서로 다른 알고리즘으로 학습시켜 최종적으로 투표해 예측결정을 함</li>
+<li>배깅 : 서로 같은 알고리즘으로(데이터 무작위 샘플링으로 표본을 달리하여) 학습시켜 최종적으로 투표해 예측결정을 함 (결정트리 기반)
+<ul>
+<li>랜덤 포레스트 : DT가 여러개 있는 것. 하나씩 랜덤하게 뽑아진 DT를 estimator라고 함.
+<ul>
+<li>관련 하이퍼 파라미터 : n_estimators, max_features</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>부스팅 : 오분류된 것에 가중치. 이전의 학습 결과를 이후의 학습에 전달하여 학습 성능 향상을 꽤하는 직렬적 학습 방식을 의미함.
+<ul>
+<li>그래디언트 부스팅 (GBM) : 경사하강법(Gradient Descent) 이용</li>
+<li>XGB</li>
+<li>LightGBM</li>
+</ul>
+</li>
+<li>스태킹 : 여러 가지 다른 모델의 예측 결과값을 다시 학습 데이터로 만들어 다른 모델(메타 모델)로 재학습시켜 결과를 예측함</li>
+</ul>
+</li>
+</ul>
+<h1 id="-24" style="position:relative;"><a href="#-24" aria-label=" 24 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h1>
+<hr>
+<h1 id="-25" style="position:relative;"><a href="#-25" aria-label=" 25 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h1>
+<h2 id="-20220311" style="position:relative;"><a href="#-20220311" aria-label=" 20220311 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>🥵 20220311</h2>
+<p><strong>&#x3C;머신러닝 : 회귀분석></strong></p>
+<ul>
+<li>
+<p>OLS 회귀분석</p>
+<ul>
+<li>Ordinary Least Square (최소제곱법) : |근사적으로 구하려는 해 - 실제 해| 오차의 제곱근의 합이 최소가 되는 해를 구하는 방법.</li>
+<li>종류
+<ul>
+<li>단순회귀분석</li>
+<li>다중회귀분석 : 독립변수가 2개 이상</li>
+<li>다항회귀분석 : 독립변수가 2차 이상</li>
+<li>다변량회귀분석 : 종속변수가 2개 이상</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>선형 회귀 : 실제 값과 예측 값의 차이를 최소화하는 직선형 회귀선을 최적화하는 방식</p>
+<ul>
+<li>주요 가정 : 선형성, 정규성, 등분산성, (독립변수간의) 독립성</li>
+<li>모델
+<ul>
+<li>일반 선형 회귀</li>
+<li><em>규제</em> : 일반적인 선형 회귀의 과적합 문제를 해결하기 위해서 회계 계수에 패널티 값을 적용하는 것
+<ul>
+<li>라쏘 : MSE에 L1 규제항을 더함. 가중치를 0으로, 특성 무력화</li>
+<li>릿지 : MSE에 L2 규제항을 더함. 가중치를 0에 가깝게, 특성들의 영향력 감소</li>
+<li>엘라스틱넷 : L1, L2 규제를 함께 결합한 모델</li>
+</ul>
+</li>
+<li>로지스틱 회귀 : 분류에서 사용되는 선형 모델</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>경사하강법 : 비용함수(손실함수)가 최소가 되는 지점의 w를 계산</p>
+</li>
+</ul>
+<h1 id="-26" style="position:relative;"><a href="#-26" aria-label=" 26 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h1>
+<hr>
 <div class="table-of-contents">
 <ul>
 <li>
@@ -410,7 +731,25 @@ pd<span class="token punctuation">.</span>get_dummies<span class="token punctuat
 </ul>
 </li>
 <li>
-<p><a href="#20220304">20220304</a></p>
+<p><a href="#-20220304">😵‍💫 20220304</a></p>
+</li>
+<li>
+<p><a href="#-20220305">🤨 20220305</a></p>
+</li>
+<li>
+<p><a href="#-20220307">🌝 20220307</a></p>
+</li>
+<li>
+<p><a href="#-20220308">💦 20220308</a></p>
+</li>
+<li>
+<p><a href="#-20220309">😵 20220309</a></p>
+</li>
+<li>
+<p><a href="#-20220310">😓 20220310</a></p>
+</li>
+<li>
+<p><a href="#-20220311">🥵 20220311</a></p>
 </li>
 </ul>
 </div></div></div><div class="post-navigator"><div class="post-navigator-card-wrapper"><a class="post-card prev" href="/TIL/202202/"><div class="direction">이전 글</div><div class="title">202202</div></a></div><div class="post-navigator-card-wrapper"></div></div><div class="utterances"></div></main><footer class="page-footer-wrapper"><p class="page-footer">© <!-- -->2022<!-- --> <a href="https://github.com/mungdo">안문주</a> powered by<a href="https://github.com/zoomKoding/zoomkoding-gatsby-blog"> zoomkoding-gatsby-blog</a></p></footer><div class="dark-mode-button-wrapper"><button class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium dark-mode-button css-1yxmbwk" tabindex="0" type="button"><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeLarge dark-mode-icon css-6flbmm" focusable="false" viewBox="0 0 24 24" aria-hidden="true" data-testid="DarkModeIcon"><path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9c0-.46-.04-.92-.1-1.36-.98 1.37-2.58 2.26-4.4 2.26-2.98 0-5.4-2.42-5.4-5.4 0-1.81.89-3.42 2.26-4.4-.44-.06-.9-.1-1.36-.1z"></path></svg></button></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/TIL/202203/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-0616fad1f708e5420168.js"],"app":["/app-889f0644be3e8780fa3b.js"],"component---cache-caches-gatsby-plugin-offline-app-shell-js":["/component---cache-caches-gatsby-plugin-offline-app-shell-js-5f4d6e6517138b0667ff.js"],"component---src-pages-404-js":["/component---src-pages-404-js-0f892ebcd010b6f91108.js"],"component---src-pages-about-js":["/component---src-pages-about-js-8d3b5b5f011b48040aeb.js"],"component---src-pages-index-js":["/component---src-pages-index-js-66fa20e8773286f91373.js"],"component---src-templates-blog-template-js":["/component---src-templates-blog-template-js-7e0f67ebc752626855c1.js"],"component---src-templates-category-template-js":["/component---src-templates-category-template-js-ed70fe8a3875146c144e.js"]};/*]]>*/</script><script src="/polyfill-0616fad1f708e5420168.js" nomodule=""></script><script src="/component---src-templates-blog-template-js-7e0f67ebc752626855c1.js" async=""></script><script src="/f9d3028dbef90a6e9b8db85387d63dd9f4edf538-852cf68f9be39a5a4bc9.js" async=""></script><script src="/app-889f0644be3e8780fa3b.js" async=""></script><script src="/framework-91ebf51d003c3c6f38be.js" async=""></script><script src="/webpack-runtime-f5f3382f227c26345aa2.js" async=""></script></body></html>
