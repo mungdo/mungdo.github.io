@@ -121,6 +121,12 @@
 <li>변환 후에 knn 재실시 하면 상대적인 거리를 반영한 예측 결과 도출</li>
 </ul>
 </li>
+<li>이상치 변환
+<ul>
+<li>오른쪽으로 꼬리가 긴 분포 : √x , log(x)</li>
+<li>왼쪽으로 꼬리가 긴 분포 : x^2, e^x</li>
+</ul>
+</li>
 </ul>
 <h1 id="" style="position:relative;"><a href="#" aria-label=" permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h1>
 <h1 id="-1" style="position:relative;"><a href="#-1" aria-label=" 1 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h1>
@@ -298,6 +304,7 @@ accuracy_score<span class="token punctuation">(</span>y_test<span class="token p
 </li>
 </ul>
 <h4 id="데이터-인코딩--code-classlanguage-textlabelencodercode" style="position:relative;"><a href="#%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%9D%B8%EC%BD%94%EB%94%A9--code-classlanguage-textlabelencodercode" aria-label="데이터 인코딩  code classlanguage textlabelencodercode permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>데이터 인코딩 : <code class="language-text">LabelEncoder</code></h4>
+<p><strong>라벨 인코딩</strong></p>
 <div class="gatsby-highlight" data-language="python"><pre class="language-python"><code class="language-python"><span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>preprocessing <span class="token keyword">import</span> LabelEncoder <span class="token comment"># preprocession : 전처리에 필요한 모듈</span>
 
 items <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'TV'</span><span class="token punctuation">,</span> <span class="token string">'냉장고'</span><span class="token punctuation">,</span> <span class="token string">'전자렌지'</span><span class="token punctuation">,</span> <span class="token string">'컴퓨터'</span><span class="token punctuation">,</span> <span class="token string">'선풍기'</span><span class="token punctuation">,</span> <span class="token string">'선풍기'</span><span class="token punctuation">,</span> <span class="token string">'믹서'</span><span class="token punctuation">,</span> <span class="token string">'믹서'</span><span class="token punctuation">]</span>
@@ -646,7 +653,7 @@ Image<span class="token punctuation">(</span>filename<span class="token operator
 <li>앙상블 : 여러 개의 분류기를 사용해서 예측 결합해 보다 정확한 최종 예측 도출</li>
 <li>앙상블 유형
 <ul>
-<li>보팅 : 서로 다른 알고리즘으로 학습시켜 최종적으로 투표해 예측결정을 함</li>
+<li>보팅 : 서로 다른 알고리즘으로 학습시켜 최종적으로 (평균을 내거나 가장 많은 빈도로) 투표해 예측결정을 함</li>
 <li>배깅 : 서로 같은 알고리즘으로(데이터 무작위 샘플링으로 표본을 달리하여) 학습시켜 최종적으로 투표해 예측결정을 함 (결정트리 기반)
 <ul>
 <li>랜덤 포레스트 : DT가 여러개 있는 것. 하나씩 랜덤하게 뽑아진 DT를 estimator라고 함.
@@ -658,12 +665,13 @@ Image<span class="token punctuation">(</span>filename<span class="token operator
 </li>
 <li>부스팅 : 오분류된 것에 가중치. 이전의 학습 결과를 이후의 학습에 전달하여 학습 성능 향상을 꽤하는 직렬적 학습 방식을 의미함.
 <ul>
+<li>AdaBoost</li>
 <li>그래디언트 부스팅 (GBM) : 경사하강법(Gradient Descent) 이용</li>
 <li>XGB</li>
 <li>LightGBM</li>
 </ul>
 </li>
-<li>스태킹 : 여러 가지 다른 모델의 예측 결과값을 다시 학습 데이터로 만들어 다른 모델(메타 모델)로 재학습시켜 결과를 예측함</li>
+<li>스태깅 : 여러 가지 다른 모델의 예측 결과값을 다시 학습 데이터로 만들어 다른 모델(메타 모델)로 재학습시켜 결과를 예측함</li>
 </ul>
 </li>
 </ul>
@@ -707,17 +715,22 @@ Image<span class="token punctuation">(</span>filename<span class="token operator
 </ul>
 </li>
 <li>
-<p>경사하강법 : 비용함수(손실함수)가 최소가 되는 지점의 w를 계산</p>
+<p>경사하강법 : 비용함수(손실함수)가 최소가 되는 지점의 w를 계산 … <em>따로 정리 필요</em></p>
+</li>
+<li>
+<p>실습</p>
+<ul>
+<li><a href="https://github.com/mungdo/multicam_ds/blob/main/12_MachineLearning/day7/%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D_14_%ED%9A%8C%EA%B7%80(Regression).ipynb">단순 회귀 실습</a></li>
+<li><a href="https://github.com/mungdo/multicam_ds/blob/main/12_MachineLearning/day7/%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D_15_%EB%8B%A4%ED%95%AD%ED%9A%8C%EA%B7%80.ipynb">다항 회귀 실습</a></li>
+</ul>
 </li>
 </ul>
 <h1 id="-26" style="position:relative;"><a href="#-26" aria-label=" 26 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h1>
 <hr>
 <h1 id="-27" style="position:relative;"><a href="#-27" aria-label=" 27 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h1>
 <h2 id="-20220312" style="position:relative;"><a href="#-20220312" aria-label=" 20220312 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>🌧 20220312</h2>
-<p><strong>&#x3C;통계 이론 및 데이터 시각화></strong></p>
-<blockquote>
-<p><a href="https://mungdo-log.tistory.com/381">블로그 포스팅</a></p>
-</blockquote>
+<p><em>&#x3C;proDS 강의></em></p>
+<p><a href="https://mungdo-log.tistory.com/381">통계 이론 및 데이터 시각화</a></p>
 <ul>
 <li>이항분포
 <ul>
@@ -756,6 +769,37 @@ Image<span class="token punctuation">(</span>filename<span class="token operator
 <hr>
 <h1 id="-31" style="position:relative;"><a href="#-31" aria-label=" 31 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h1>
 <h2 id="-20220314" style="position:relative;"><a href="#-20220314" aria-label=" 20220314 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>🏊‍ 20220314</h2>
+<p><strong>&#x3C;머신러닝 : 회귀분석></strong></p>
+<ul>
+<li><a href="">다항회귀의 과대적합/과소적합</a>
+<ul>
+<li>과대 적합을 방지하기 위한 모델 -> <a href="">규제 선형 모델(ridge, lasso)</a></li>
+</ul>
+</li>
+<li><a href="">로지스틱 회귀분석</a></li>
+</ul>
+<h1 id="-32" style="position:relative;"><a href="#-32" aria-label=" 32 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h1>
+<p><em>&#x3C;proDS 강의></em></p>
+<p><a href="https://mungdo-log.tistory.com/381">머신러닝 이론 및 데이터 처리</a></p>
+<ul>
+<li>머신러닝 모델 평가 지표
+<ul>
+<li>회귀 : MSE, RMSE, R-square, MAE, MAPE</li>
+<li>분류 : 정확도, 정밀도, 재현율, roc-auc curve</li>
+</ul>
+</li>
+<li>특성 공학
+<ul>
+<li>특성 선택 : fillter, wrapper, embeded 등</li>
+<li>특성 추출 : 주성분 분석(PCA), 특성값 분해(SVD) 등</li>
+</ul>
+</li>
+</ul>
+<h1 id="-33" style="position:relative;"><a href="#-33" aria-label=" 33 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h1>
+<hr>
+<h1 id="-34" style="position:relative;"><a href="#-34" aria-label=" 34 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h1>
+<h2 id="-20220315" style="position:relative;"><a href="#-20220315" aria-label=" 20220315 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>⛸ 20220315</h2>
+<p><strong>&#x3C;머신러닝 : 차원 축소></strong></p>
 <div class="table-of-contents">
 <ul>
 <li>
@@ -803,6 +847,9 @@ Image<span class="token punctuation">(</span>filename<span class="token operator
 </li>
 <li>
 <p><a href="#-20220314">🏊‍ 20220314</a></p>
+</li>
+<li>
+<p><a href="#-20220315">⛸ 20220315</a></p>
 </li>
 </ul>
 </div></div></div><div class="post-navigator"><div class="post-navigator-card-wrapper"><a class="post-card prev" href="/TIL/202202/"><div class="direction">이전 글</div><div class="title">202202</div></a></div><div class="post-navigator-card-wrapper"></div></div><div class="utterances"></div></main><footer class="page-footer-wrapper"><p class="page-footer">© <!-- -->2022<!-- --> <a href="https://github.com/mungdo">안문주</a> powered by<a href="https://github.com/zoomKoding/zoomkoding-gatsby-blog"> zoomkoding-gatsby-blog</a></p></footer><div class="dark-mode-button-wrapper"><button class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium dark-mode-button css-1yxmbwk" tabindex="0" type="button"><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeLarge dark-mode-icon css-6flbmm" focusable="false" viewBox="0 0 24 24" aria-hidden="true" data-testid="DarkModeIcon"><path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9c0-.46-.04-.92-.1-1.36-.98 1.37-2.58 2.26-4.4 2.26-2.98 0-5.4-2.42-5.4-5.4 0-1.81.89-3.42 2.26-4.4-.44-.06-.9-.1-1.36-.1z"></path></svg></button></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/TIL/202203/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-0616fad1f708e5420168.js"],"app":["/app-889f0644be3e8780fa3b.js"],"component---cache-caches-gatsby-plugin-offline-app-shell-js":["/component---cache-caches-gatsby-plugin-offline-app-shell-js-5f4d6e6517138b0667ff.js"],"component---src-pages-404-js":["/component---src-pages-404-js-0f892ebcd010b6f91108.js"],"component---src-pages-about-js":["/component---src-pages-about-js-8d3b5b5f011b48040aeb.js"],"component---src-pages-index-js":["/component---src-pages-index-js-66fa20e8773286f91373.js"],"component---src-templates-blog-template-js":["/component---src-templates-blog-template-js-7e0f67ebc752626855c1.js"],"component---src-templates-category-template-js":["/component---src-templates-category-template-js-ed70fe8a3875146c144e.js"]};/*]]>*/</script><script src="/polyfill-0616fad1f708e5420168.js" nomodule=""></script><script src="/component---src-templates-blog-template-js-7e0f67ebc752626855c1.js" async=""></script><script src="/f9d3028dbef90a6e9b8db85387d63dd9f4edf538-852cf68f9be39a5a4bc9.js" async=""></script><script src="/app-889f0644be3e8780fa3b.js" async=""></script><script src="/framework-91ebf51d003c3c6f38be.js" async=""></script><script src="/webpack-runtime-f5f3382f227c26345aa2.js" async=""></script></body></html>
