@@ -1,0 +1,636 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><style data-href="/styles.df38b158323be6c050c3.css" data-identity="gatsby-global-css">@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:100;src:local("Montserrat Thin "),local("Montserrat-Thin"),url(/static/montserrat-latin-100-8d7d79679b70dbe27172b6460e7a7910.woff2) format("woff2"),url(/static/montserrat-latin-100-ec38980a9e0119a379e2a9b3dbb1901a.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:100;src:local("Montserrat Thin italic"),local("Montserrat-Thinitalic"),url(/static/montserrat-latin-100italic-e279051046ba1286706adc886cf1c96b.woff2) format("woff2"),url(/static/montserrat-latin-100italic-3b325a3173c8207435cd1b76e19bf501.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:200;src:local("Montserrat Extra Light "),local("Montserrat-Extra Light"),url(/static/montserrat-latin-200-9d266fbbfa6cab7009bd56003b1eeb67.woff2) format("woff2"),url(/static/montserrat-latin-200-2d8ba08717110d27122e54c34b8a5798.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:200;src:local("Montserrat Extra Light italic"),local("Montserrat-Extra Lightitalic"),url(/static/montserrat-latin-200italic-6e5b3756583bb2263eb062eae992735e.woff2) format("woff2"),url(/static/montserrat-latin-200italic-a0d6f343e4b536c582926255367a57da.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:300;src:local("Montserrat Light "),local("Montserrat-Light"),url(/static/montserrat-latin-300-00b3e893aab5a8fd632d6342eb72551a.woff2) format("woff2"),url(/static/montserrat-latin-300-ea303695ceab35f17e7d062f30e0173b.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:300;src:local("Montserrat Light italic"),local("Montserrat-Lightitalic"),url(/static/montserrat-latin-300italic-56f34ea368f6aedf89583d444bbcb227.woff2) format("woff2"),url(/static/montserrat-latin-300italic-54b0bf2c8c4c12ffafd803be2466a790.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:400;src:local("Montserrat Regular "),local("Montserrat-Regular"),url(/static/montserrat-latin-400-b71748ae4f80ec8c014def4c5fa8688b.woff2) format("woff2"),url(/static/montserrat-latin-400-0659a9f4e90db5cf51b50d005bff1e41.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:400;src:local("Montserrat Regular italic"),local("Montserrat-Regularitalic"),url(/static/montserrat-latin-400italic-6eed6b4cbb809c6efc7aa7ddad6dbe3e.woff2) format("woff2"),url(/static/montserrat-latin-400italic-7583622cfde30ae49086d18447ab28e7.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:500;src:local("Montserrat Medium "),local("Montserrat-Medium"),url(/static/montserrat-latin-500-091b209546e16313fd4f4fc36090c757.woff2) format("woff2"),url(/static/montserrat-latin-500-edd311588712a96bbf435fad264fff62.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:500;src:local("Montserrat Medium italic"),local("Montserrat-Mediumitalic"),url(/static/montserrat-latin-500italic-c90ced68b46050061d1a41842d6dfb43.woff2) format("woff2"),url(/static/montserrat-latin-500italic-5146cbfe02b1deea5dffea27a5f2f998.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:600;src:local("Montserrat SemiBold "),local("Montserrat-SemiBold"),url(/static/montserrat-latin-600-0480d2f8a71f38db8633b84d8722e0c2.woff2) format("woff2"),url(/static/montserrat-latin-600-b77863a375260a05dd13f86a1cee598f.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:600;src:local("Montserrat SemiBold italic"),local("Montserrat-SemiBolditalic"),url(/static/montserrat-latin-600italic-cf46ffb11f3a60d7df0567f8851a1d00.woff2) format("woff2"),url(/static/montserrat-latin-600italic-c4fcfeeb057724724097167e57bd7801.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:700;src:local("Montserrat Bold "),local("Montserrat-Bold"),url(/static/montserrat-latin-700-7dbcc8a5ea2289d83f657c25b4be6193.woff2) format("woff2"),url(/static/montserrat-latin-700-99271a835e1cae8c76ef8bba99a8cc4e.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:700;src:local("Montserrat Bold italic"),local("Montserrat-Bolditalic"),url(/static/montserrat-latin-700italic-c41ad6bdb4bd504a843d546d0a47958d.woff2) format("woff2"),url(/static/montserrat-latin-700italic-6779372f04095051c62ed36bc1dcc142.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:800;src:local("Montserrat ExtraBold "),local("Montserrat-ExtraBold"),url(/static/montserrat-latin-800-db9a3e0ba7eaea32e5f55328ace6cf23.woff2) format("woff2"),url(/static/montserrat-latin-800-4e3c615967a2360f5db87d2f0fd2456f.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:800;src:local("Montserrat ExtraBold italic"),local("Montserrat-ExtraBolditalic"),url(/static/montserrat-latin-800italic-bf45bfa14805969eda318973947bc42b.woff2) format("woff2"),url(/static/montserrat-latin-800italic-fe82abb0bcede51bf724254878e0c374.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:900;src:local("Montserrat Black "),local("Montserrat-Black"),url(/static/montserrat-latin-900-e66c7edc609e24bacbb705175669d814.woff2) format("woff2"),url(/static/montserrat-latin-900-8211f418baeb8ec880b80ba3c682f957.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:900;src:local("Montserrat Black italic"),local("Montserrat-Blackitalic"),url(/static/montserrat-latin-900italic-4454c775e48152c1a72510ceed3603e2.woff2) format("woff2"),url(/static/montserrat-latin-900italic-efcaa0f6a82ee0640b83a0916e6e8d68.woff) format("woff")}.search-input-wrapper{align-items:center;display:none;margin-top:3px;width:180px}@media(min-width:768px){.search-input-wrapper{display:flex}}.search-icon{color:var(--primary-text-color);margin-right:2px}.search-input{height:100%;width:100%}.search-input .MuiAutocomplete-inputRoot{padding-right:0!important}.search-input .MuiInputBase-input{color:var(--primary-text-color)!important;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;font-size:16px;font-weight:500;padding-bottom:2px!important}.search-input .MuiInput-underline:before{border-bottom-width:1px}.search-input .MuiInput-underline:after,.search-input .MuiInput-underline:before{border-bottom-color:var(--primary-text-color)}.page-header-wrapper{display:flex;height:60px;justify-content:center;width:100%}.page-header-wrapper .page-header{align-items:center;display:flex;justify-content:space-between;max-width:720px;width:100%}.page-header-wrapper .page-header .link{color:var(--primary-text-color);font-size:17px;font-weight:700}@media(min-width:768px){.page-header-wrapper .page-header .link{font-size:20px;font-weight:700}}.page-header-wrapper .page-header .trailing-section{align-items:center;display:flex}.page-header-wrapper .page-header .trailing-section .link{margin-right:10px}@media(min-width:768px){.page-header-wrapper .page-header .trailing-section .link{margin-right:20px}}.page-footer-wrapper{align-items:center;display:flex;height:62px;justify-content:center;margin-top:auto;width:100%}.page-footer-wrapper .page-footer{max-width:720px;text-align:center;width:100%}.page-footer-wrapper .page-footer .link{color:var(--primary-text-color);font-size:20px;font-weight:700;margin-right:20px}.page-footer-wrapper .page-footer a{color:#3a95ff}.dark-mode-button-wrapper{align-items:center;bottom:20px;display:flex;justify-content:center;position:fixed;right:20px}.dark-mode-button{-webkit-backdrop-filter:blur(30px);backdrop-filter:blur(30px);background-color:#363f47!important;border-radius:50px;box-shadow:0 5px 25px rgba(0,0,0,.12);cursor:pointer;height:50px;width:50px;z-index:3}.dark-mode-icon{color:#fff}a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{border:0;font-size:100%;font:inherit;margin:0;padding:0;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:"";content:none}table{border-collapse:collapse;border-spacing:0}a{outline:none;text-decoration:none}html{--background-color:#fff;--primary-text-color:#000;--secondary-text-color:#9e9e9e;--content-text-color:#37352f;--button-background-color:#f3f3f4;--button-text-color:#363f47;--tab-text-color:#6e6d7a;--tab-hover-text-color:#0d0c22;--tab-selected-background-color:rgba(13,12,34,.05);--bio-link-icon-color:rgba(0,0,0,.54);--about-link-icon-color:#a8a8a8;--chip-background-color:#f3f3f4;--link-text-color:rgba(55,53,47,.7);--post-card-border-color:rgba(0,0,0,.12);--markdown-table-even-cell-background-color:#f6f8fa;--markdown-table-border-color:#dfe2e5;--markdown-blockquote-border-color:#dfe2e5;--markdown-border-color:#e1e4e8}html[data-theme=dark]{--background-color:#232326;--primary-text-color:#e6e6e6;--secondary-text-color:#768390;--content-text-color:#e6e6e6;--button-background-color:#444c56;--button-text-color:#363f47;--tab-text-color:#768390;--tab-hover-text-color:#acbac7;--tab-selected-background-color:#373e47;--chip-background-color:#323a42;--bio-link-icon-color:#e6e6e6;--about-link-icon-color:#a8a8a8;--link-text-color:#90b0ec;--post-card-border-color:#363f47;--markdown-table-even-cell-background-color:#2d333b;--markdown-table-border-color:#444c56;--markdown-blockquote-border-color:#4f5864;--markdown-border-color:#e1e4e8}*{-webkit-appearance:none;appearance:none;box-sizing:border-box}html{font-size:14px;height:100%;overflow-y:scroll;width:100%}body{background-color:var(--background-color)!important}a{color:var(--link-text-color)}.page-wrapper{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;color:var(--primary-text-color);font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;justify-content:center;min-height:100vh;padding-left:15px;padding-right:15px;word-break:keep-all}.page-wrapper,.page-wrapper .page-content{align-items:center;display:flex;flex-direction:column;width:100%}.page-wrapper .page-content{max-width:720px}.icon{color:var(--about-link-icon-color);font-size:20px}.social-links .icon{color:var(--bio-link-icon-color);font-size:30px}@keyframes blinking-cursor{0%{opacity:0}50%{opacity:1}to{opacity:0}}.bio{color:var(--primary-text-color);display:flex;flex-direction:column;justify-content:space-between;margin-bottom:120px;margin-top:120px;width:100%}@media(min-width:768px){.bio{align-items:center;flex-direction:row}}.bio .introduction{display:flex;flex-direction:column;word-break:keep-all}.bio .introduction .react-rotating-text-cursor{animation:blinking-cursor .8s cubic-bezier(.68,.01,.01,.99) 0s infinite}.bio .introduction strong{display:inline-block;font-weight:600}.bio .introduction.korean{font-size:32px;font-weight:100;line-height:1.2}.bio .introduction.korean .title .react-rotating-text-cursor{font-size:35px;line-height:35px}@media(min-width:768px){.bio .introduction.korean{font-size:40px}.bio .introduction.korean .title .react-rotating-text-cursor{font-size:45px;line-height:45px}}.bio .introduction.english{font-family:montserrat;font-size:25px;line-height:1.2}@media(min-width:768px){.bio .introduction.english{font-size:45px}}.bio .introduction.english .name{font-size:35px;font-weight:600}.bio .introduction.english .job{font-size:35px}.bio .introduction.english .description{font-size:20px;font-weight:200;margin-top:8px}.bio .introduction.english .social-links{display:flex;margin-top:20px}.bio .thumbnail-wrapper{display:none;width:250px}@media(min-width:768px){.bio .thumbnail-wrapper{display:block}}.section-header-wrapper{display:flex;justify-content:center;margin-bottom:32px;width:100%}.section-header-wrapper .section-header{border-bottom:4px solid var(--primary-text-color);color:var(--primary-text-color);font-size:30px;font-weight:700;padding-bottom:5px}.timestamp-section{align-items:center;display:flex;flex-direction:column;justify-content:center;margin-bottom:50px;width:100%;word-break:keep-all}.timestamp-section .body{padding:0 10px;width:100%}.timestamp-section .body .timestamp{border-left:2px solid #bdbdbd;display:flex;font-size:18px;font-weight:400;justify-items:center;margin-left:5px;padding:10px 0;width:100%}.timestamp-section .body .timestamp:first-child{padding-top:7px}.timestamp-section .body .timestamp:last-child{padding-bottom:7px}.timestamp-section .body .timestamp:before{align-self:center;background-color:var(--background-color);border:2px solid #828282;border-radius:10px;content:"";height:10px;left:-1px;position:relative;transform:translatex(-50%);width:10px}.timestamp-section .body .timestamp .date{align-self:center;color:#828282;margin-left:5px;margin-right:5px;min-width:115px;width:115px}@media(min-width:768px){.timestamp-section .body .timestamp .date{min-width:200px;width:200px}}.timestamp-section .body .timestamp .activity{line-height:23px;width:100%}.project-section{align-items:center;justify-content:center}.project-section,.project-section .project{display:flex;flex-direction:column;width:100%}.project-section .project{margin-bottom:30px;padding:15px}.project-section .project .head{font-size:20px;font-weight:700;line-height:30px;margin-bottom:10px}.project-section .project .body{display:flex;flex-direction:column;width:100%}.project-section .project .body .thumbnail{margin-bottom:10px;width:100%}.project-section .project .body .tech-stack{display:flex;margin-bottom:10px}.project-section .project .body .tech-stack .tech{background-color:var(--chip-background-color);border-radius:10px;font-size:15px;font-weight:500;margin-right:5px;padding:5px 7px}.project-section .project .body .description{font-size:16px;font-weight:400;line-height:1.4}@media(min-width:768px){.project-section .project .body{flex-direction:column}.project-section .project .body .content{margin-top:0}}.post-header{border-bottom:1px solid var(--post-card-border-color);display:flex;flex-direction:column;justify-content:center;margin-bottom:40px;margin-top:20px;padding-bottom:10px;width:100%;word-break:keep-all}.post-header .emoji{font-size:78px;margin-bottom:20px}.post-header .categories{margin-bottom:5px}.post-header .categories .category{color:var(--primary-text-color);font-weight:600;margin-right:4px}.post-header .categories .category:hover{text-decoration:underline}.post-header .title{color:var(--primary-text-color);font-size:32px;font-weight:600;line-height:1.3;margin-bottom:6px}.post-header .info{color:var(--secondary-text-color);display:flex;flex-wrap:wrap;font-size:16px;font-weight:500;line-height:1.5;width:100%}.post-header .info .author{margin-right:4px}.post-header .info strong{color:var(--primary-text-color);font-weight:600}.post-navigator{column-gap:1.4%;display:grid;grid-template-columns:49.3% 49.3%;width:100%}.post-navigator .post-card{border:1px solid var(--post-card-border-color);border-radius:6px;color:var(--primary-text-color);cursor:pointer;display:flex;flex-direction:column;padding:15px;transition:transform .2s;width:100%}.post-navigator .post-card:hover .title{text-decoration:underline}.post-navigator .post-card.prev{margin-right:auto}.post-navigator .post-card.next{margin-left:auto}.post-navigator .post-card .direction{color:gray;font-size:14px;font-weight:500;margin-bottom:5px}.post-navigator .post-card .title{font-size:16px;font-weight:600;line-height:1.4;margin-bottom:7px}.markdown .octicon{fill:currentColor;display:inline-block;vertical-align:text-bottom}.markdown .anchor{float:left;line-height:1;margin-left:-20px;padding-right:4px}.markdown .anchor:focus{outline:none}.markdown h1 .octicon-link,.markdown h2 .octicon-link,.markdown h3 .octicon-link,.markdown h4 .octicon-link,.markdown h5 .octicon-link,.markdown h6 .octicon-link{color:#1b1f23;vertical-align:middle;visibility:hidden}.markdown h1:hover .anchor,.markdown h2:hover .anchor,.markdown h3:hover .anchor,.markdown h4:hover .anchor,.markdown h5:hover .anchor,.markdown h6:hover .anchor{text-decoration:none}.markdown h1:hover .anchor .octicon-link,.markdown h2:hover .anchor .octicon-link,.markdown h3:hover .anchor .octicon-link,.markdown h4:hover .anchor .octicon-link,.markdown h5:hover .anchor .octicon-link,.markdown h6:hover .anchor .octicon-link{visibility:visible}.markdown h1:hover .anchor .octicon-link:before,.markdown h2:hover .anchor .octicon-link:before,.markdown h3:hover .anchor .octicon-link:before,.markdown h4:hover .anchor .octicon-link:before,.markdown h5:hover .anchor .octicon-link:before,.markdown h6:hover .anchor .octicon-link:before{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' aria-hidden='true' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'/%3E%3C/svg%3E");content:" ";display:inline-block;height:16px;width:16px}.markdown{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;word-wrap:break-word;color:var(--content-text-color);font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;font-size:16px;font-weight:500;line-height:1.5}.markdown details{display:block}.markdown summary{display:list-item}.markdown a{background-color:initial}.markdown a:active,.markdown a:hover{outline-width:0}.markdown strong{font-weight:inherit;font-weight:bolder}.markdown h1{margin:.67em 0}.markdown img{border-style:none}.markdown code,.markdown kbd,.markdown pre{font-family:monospace,monospace;font-size:1em}.markdown hr{box-sizing:initial;overflow:visible}.markdown input{font:inherit;margin:0;overflow:visible}.markdown [type=checkbox]{box-sizing:border-box;padding:0}.markdown *{box-sizing:border-box}.markdown input{font-family:inherit;font-size:inherit;line-height:inherit}.markdown a{border-bottom:.05em solid;border-bottom-color:var(--link-text-color);border-left-color:var(--link-text-color);border-right-color:var(--link-text-color);border-top-color:var(--link-text-color);color:var(--link-text-color);text-decoration:none}.markdown a.anchor{border-bottom:none}.markdown strong{font-weight:700}.markdown hr{background:transparent;border-bottom:1px solid var(--markdown-blockquote-border-color);height:0;margin:15px 0;overflow:hidden}.markdown hr:after,.markdown hr:before{content:"";display:table}.markdown hr:after{clear:both}.markdown table{border-collapse:collapse;border-spacing:0}.markdown td,.markdown th{padding:0}.markdown details summary{cursor:pointer}.markdown h1,.markdown h2,.markdown h3,.markdown h4,.markdown h5,.markdown h6{margin-bottom:0;margin-top:0}.markdown h1{font-size:32px}.markdown h1,.markdown h2{font-weight:600}.markdown h2{font-size:24px}.markdown h3{font-size:20px}.markdown h3,.markdown h4{font-weight:600}.markdown h4{font-size:16px}.markdown h5{font-size:14px}.markdown h5,.markdown h6{font-weight:600}.markdown h6{font-size:12px}.markdown p{margin-bottom:10px;margin-top:0}.markdown blockquote{margin:0}.markdown ol,.markdown ul{margin-bottom:0;margin-top:0;padding-left:0}.markdown ol ol,.markdown ul ol{list-style-type:lower-roman}.markdown ol ol ol,.markdown ol ul ol,.markdown ul ol ol,.markdown ul ul ol{list-style-type:lower-alpha}.markdown dd{margin-left:0}.markdown code,.markdown pre{font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;font-size:12px}.markdown code.language-text{border-radius:3px;font-size:85%;padding:.2em .4em}.markdown :not(pre)>code.language-text{background:hsla(44,6%,50%,.15);color:#eb5757;overflow-wrap:break-word}.markdown pre{margin-bottom:0;margin-top:0}.markdown input::-webkit-inner-spin-button,.markdown input::-webkit-outer-spin-button{-webkit-appearance:none;appearance:none;margin:0}.markdown :checked+.radio-label{border-color:#0366d6;position:relative;z-index:1}.markdown .border{border:1px solid var(--markdown-border-color)!important}.markdown .border-0{border:0!important}.markdown .border-bottom{border-bottom:1px solid var(--markdown-border-color)!important}.markdown .rounded-1{border-radius:3px!important}.markdown .bg-white{background-color:transparent!important}.markdown .bg-gray-light{background-color:#fafbfc!important}.markdown .text-gray-light{color:#6a737d!important}.markdown .pl-3,.markdown .px-3{padding-left:16px!important}.markdown .px-3{padding-right:16px!important}.markdown .f6{font-size:12px!important}.markdown .lh-condensed{line-height:1.25!important}.markdown .text-bold{font-weight:600!important}.markdown .pl-c{color:#6a737d}.markdown .pl-c1,.markdown .pl-s .pl-v{color:#005cc5}.markdown .pl-e,.markdown .pl-en{color:#6f42c1}.markdown .pl-s .pl-s1,.markdown .pl-smi{color:#24292e}.markdown .pl-ent{color:#22863a}.markdown .pl-k{color:#d73a49}.markdown .pl-pds,.markdown .pl-s,.markdown .pl-s .pl-pse .pl-s1,.markdown .pl-sr,.markdown .pl-sr .pl-cce,.markdown .pl-sr .pl-sra,.markdown .pl-sr .pl-sre{color:#032f62}.markdown .pl-smw,.markdown .pl-v{color:#e36209}.markdown .pl-bu{color:#b31d28}.markdown .pl-ii{background-color:#b31d28;color:#fafbfc}.markdown .pl-c2{background-color:#d73a49;color:#fafbfc}.markdown .pl-c2:before{content:"^M"}.markdown .pl-sr .pl-cce{color:#22863a;font-weight:700}.markdown .pl-ml{color:#735c0f}.markdown .pl-mh,.markdown .pl-mh .pl-en,.markdown .pl-ms{color:#005cc5;font-weight:700}.markdown .pl-mi{color:#24292e;font-style:italic}.markdown .pl-mb{color:#24292e;font-weight:700}.markdown .pl-md{background-color:#ffeef0;color:#b31d28}.markdown .pl-mi1{background-color:#f0fff4;color:#22863a}.markdown .pl-mc{background-color:#ffebda;color:#e36209}.markdown .pl-mi2{background-color:#005cc5;color:#f6f8fa}.markdown .pl-mdr{color:#6f42c1;font-weight:700}.markdown .pl-ba{color:#586069}.markdown .pl-sg{color:#959da5}.markdown .pl-corl{color:#032f62;text-decoration:underline}.markdown .mb-0{margin-bottom:0!important}.markdown .my-2{margin-bottom:8px!important;margin-top:8px!important}.markdown .pl-0{padding-left:0!important}.markdown .py-0{padding-bottom:0!important;padding-top:0!important}.markdown .pl-1{padding-left:4px!important}.markdown .pl-2{padding-left:8px!important}.markdown .py-2{padding-bottom:8px!important;padding-top:8px!important}.markdown .pl-3{padding-left:16px!important}.markdown .pl-4{padding-left:24px!important}.markdown .pl-5{padding-left:32px!important}.markdown .pl-6{padding-left:40px!important}.markdown .pl-7{padding-left:48px!important}.markdown .pl-8{padding-left:64px!important}.markdown .pl-9{padding-left:80px!important}.markdown .pl-10{padding-left:96px!important}.markdown .pl-11{padding-left:112px!important}.markdown .pl-12{padding-left:128px!important}.markdown hr{border-bottom-color:#eee}.markdown kbd{background-color:#fafbfc;border:1px solid #d1d5da;border-radius:3px;box-shadow:inset 0 -1px 0 #d1d5da;color:#444d56;display:inline-block;font:11px SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;line-height:10px;padding:3px 5px;vertical-align:middle}.markdown:after,.markdown:before{content:"";display:table}.markdown:after{clear:both}.markdown>:first-child{margin-top:0!important}.markdown>:last-child{margin-bottom:0!important}.markdown a:not([href]){color:inherit;text-decoration:none}.markdown blockquote,.markdown details,.markdown dl,.markdown ol,.markdown p,.markdown pre,.markdown table,.markdown ul{margin-bottom:16px;margin-top:0}.markdown hr{background-color:var(--markdown-border-color);border:0;height:.25em;margin:24px 0;padding:0}.markdown blockquote{border-left:.25em solid var(--markdown-blockquote-border-color);color:#6a737d;padding:0 1em}.markdown blockquote>:first-child{margin-top:0}.markdown blockquote>:last-child{margin-bottom:0}.markdown h1,.markdown h2,.markdown h3,.markdown h4,.markdown h5,.markdown h6{font-weight:600;line-height:1.25;margin-bottom:16px;margin-top:24px}.markdown h1{font-size:2em}.markdown h2{font-size:1.5em}.markdown h3{font-size:1.25em}.markdown h4{font-size:1em}.markdown h5{font-size:.875em}.markdown h6{color:#6a737d;font-size:.85em}.markdown ol,.markdown ul{padding-left:2em}.markdown ol ol,.markdown ol ul,.markdown ul ol,.markdown ul ul{margin-bottom:0;margin-top:0}.markdown ol{list-style-type:decimal}.markdown ul{list-style-type:disc}.markdown li{word-wrap:break-all;display:list-item;text-align:-webkit-match-parent}.markdown li>p{margin-top:16px}.markdown li+li{margin-top:.25em}.markdown dl{padding:0}.markdown dl dt{font-size:1em;font-style:italic;font-weight:600;margin-top:16px;padding:0}.markdown dl dd{margin-bottom:16px;padding:0 16px}.markdown table{display:block;overflow:auto;width:100%}.markdown table th{font-weight:600}.markdown table td,.markdown table th{border:1px solid var(--markdown-table-border-color);padding:6px 13px}.markdown table tr{border-top:1px solid var(--markdown-table-border-color)}.markdown table tr:nth-child(2n){background-color:var(--markdown-table-even-cell-background-color)}.markdown img{background-color:transparent;box-sizing:initial;display:block;margin:0 auto;max-width:100%}.markdown img[align=right]{padding-left:20px}.markdown img[align=left]{padding-right:20px}.markdown code{background-color:rgba(27,31,35,.05);border-radius:3px;font-size:85%;margin:0;padding:.2em .4em}.markdown pre{word-wrap:normal}.markdown pre>code{background:transparent;border:0;font-size:100%;margin:0;padding:0;white-space:pre;word-break:normal}.markdown .highlight{margin-bottom:16px}.markdown .highlight pre{margin-bottom:0;word-break:normal}.markdown .highlight pre,.markdown pre{background-color:#f6f8fa;border-radius:3px;font-size:85%;line-height:1.45;overflow:auto;padding:16px}.markdown pre code{word-wrap:normal;background-color:initial;border:0;display:inline;line-height:inherit;margin:0;max-width:auto;overflow:visible;padding:0}.markdown .commit-tease-sha{color:#444d56;display:inline-block;font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;font-size:90%}.markdown .full-commit .btn-outline:not(:disabled):hover{border-color:#005cc5;color:#005cc5}.markdown .blob-wrapper{overflow-x:auto;overflow-y:hidden}.markdown .blob-wrapper-embedded{max-height:240px;overflow-y:auto}.markdown .blob-num{color:rgba(27,31,35,.3);cursor:pointer;font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;font-size:12px;line-height:20px;min-width:50px;padding-left:10px;padding-right:10px;text-align:right;-webkit-user-select:none;-ms-user-select:none;user-select:none;vertical-align:top;white-space:nowrap;width:1%}.markdown .blob-num:hover{color:rgba(27,31,35,.6)}.markdown .blob-num:before{content:attr(data-line-number)}.markdown .blob-code{line-height:20px;padding-left:10px;padding-right:10px;position:relative;vertical-align:top}.markdown .blob-code-inner{word-wrap:normal;color:#24292e;font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;font-size:12px;overflow:visible;white-space:pre}.markdown .pl-token.active,.markdown .pl-token:hover{background:#ffea7f;cursor:pointer}.markdown .tab-size[data-tab-size="1"]{-moz-tab-size:1;-o-tab-size:1;tab-size:1}.markdown .tab-size[data-tab-size="2"]{-moz-tab-size:2;-o-tab-size:2;tab-size:2}.markdown .tab-size[data-tab-size="3"]{-moz-tab-size:3;-o-tab-size:3;tab-size:3}.markdown .tab-size[data-tab-size="4"]{-moz-tab-size:4;-o-tab-size:4;tab-size:4}.markdown .tab-size[data-tab-size="5"]{-moz-tab-size:5;-o-tab-size:5;tab-size:5}.markdown .tab-size[data-tab-size="6"]{-moz-tab-size:6;-o-tab-size:6;tab-size:6}.markdown .tab-size[data-tab-size="7"]{-moz-tab-size:7;-o-tab-size:7;tab-size:7}.markdown .tab-size[data-tab-size="8"]{-moz-tab-size:8;-o-tab-size:8;tab-size:8}.markdown .tab-size[data-tab-size="9"]{-moz-tab-size:9;-o-tab-size:9;tab-size:9}.markdown .tab-size[data-tab-size="10"]{-moz-tab-size:10;-o-tab-size:10;tab-size:10}.markdown .tab-size[data-tab-size="11"]{-moz-tab-size:11;-o-tab-size:11;tab-size:11}.markdown .tab-size[data-tab-size="12"]{-moz-tab-size:12;-o-tab-size:12;tab-size:12}.markdown .task-list-item{list-style-type:none}.markdown .task-list-item+.task-list-item{margin-top:3px}.markdown .task-list-item input{margin:0 .2em .25em -1.6em;vertical-align:middle}.markdown .table-of-contents{align-items:flex-start;display:flex;flex-direction:column;justify-content:center;position:fixed;right:0;top:75px;width:340px}@media(max-width:1300px){.markdown .table-of-contents{display:none}}.markdown .table-of-contents ul{cursor:pointer;list-style-type:none}.markdown .table-of-contents ul li a{border-bottom:none;color:var(--secondary-text-color);font-size:14px;height:30px;padding:6px 2px;width:100%}.markdown .table-of-contents ul p{margin:0}.markdown .gatsby-resp-image-wrapper{display:flex!important;justify-content:center!important;max-height:560px!important;width:100%!important}.markdown .gatsby-resp-image-wrapper img{height:auto!important;max-height:560px!important;max-width:100%!important;position:relative!important;width:auto!important}.markdown .gatsby-resp-image-wrapper+em{color:#6a737d;display:block;font-size:15px;font-style:italic;text-align:center}code[class*=language-],pre[class*=language-]{word-wrap:normal;background:none;color:#ccc;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;text-align:left;white-space:pre;word-break:normal;word-spacing:normal}pre[class*=language-]{margin:.5em 0;overflow:auto;padding:1em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#2d2d2d}:not(pre)>code[class*=language-]{border-radius:.3em;padding:.1em;white-space:normal}.token.block-comment,.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#999}.token.punctuation{color:#ccc}.token.attr-name,.token.deleted,.token.namespace,.token.tag{color:#e2777a}.token.function-name{color:#6196cc}.token.boolean,.token.function,.token.number{color:#f08d49}.token.class-name,.token.constant,.token.property,.token.symbol{color:#f8c555}.token.atrule,.token.builtin,.token.important,.token.keyword,.token.selector{color:#cc99cd}.token.attr-value,.token.char,.token.regex,.token.string,.token.variable{color:#7ec699}.token.entity,.token.operator,.token.url{color:#67cdcc}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}.token.inserted{color:green}.post-content{margin-bottom:20px;width:100%}.category-page-header-wrapper,.post-content{display:flex;flex-direction:column;justify-content:center}.category-page-header-wrapper{align-items:center;margin-bottom:30px;margin-top:30px}.category-page-header-wrapper .category-page-title{border-bottom:3px solid var(--primary-text-color);font-size:40px;font-weight:700;margin-bottom:15px;padding-bottom:7px;text-align:center;width:-webkit-fit-content;width:-moz-fit-content;width:fit-content}.category-page-header-wrapper .category-page-subtitle{font-size:20px;font-weight:500;padding-bottom:10px;text-align:center}.post-card-wrapper{display:flex;justify-content:center;min-height:150px;width:100%}.post-card-wrapper .post-card{border:1px solid var(--post-card-border-color);border-radius:6px;color:var(--primary-text-color);cursor:pointer;display:flex;flex-direction:column;height:100%;margin-bottom:15px;max-width:720px;padding:15px;transition:transform .2s;width:100%}.post-card-wrapper .post-card:hover .title{text-decoration:underline}@media(min-width:768px){.post-card-wrapper .post-card{margin-bottom:0}}.post-card-wrapper .post-card .title{font-size:18px;font-weight:600;line-height:1.4;margin-bottom:7px}.post-card-wrapper .post-card .description{-webkit-line-clamp:3;-webkit-box-orient:vertical;color:var(--primary-text-color);display:-webkit-box;font-size:13px;line-height:20px;margin-bottom:10px;overflow:hidden;text-overflow:ellipsis}.post-card-wrapper .post-card .info{color:var(--about-link-icon-color);display:flex;font-size:14px;justify-content:space-between;margin-top:auto}.post-card-wrapper .post-card .info .categories{display:flex}.post-card-wrapper .post-card .info .categories .category{margin-left:4px}.post-card-wrapper .post-card .info .categories .category:hover{text-decoration:underline}.post-card-column-wrapper{display:flex;justify-content:center;width:100%}.post-card-column-wrapper .post-card-column{align-items:center;display:flex;flex-direction:column;width:100%}.post-card-column-wrapper .post-card-column .post-card-wrapper{margin-bottom:10px}.post-card-column-wrapper .post-card-column .more-post-card-button{background-color:var(--button-background-color);color:var(--tab-hover-text-color);font-size:15px;font-weight:500;height:40px}.post-tabs-wrapper{align-self:flex-start;display:flex;flex-direction:column;justify-content:center;top:0;width:100%}.post-tabs-wrapper .post-tabs{display:flex;height:40px;justify-content:center;margin-bottom:12px;max-width:760px;width:100%}.post-tabs-wrapper .post-tabs .mui-tabs .MuiTab-root{color:var(--tab-text-color);font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;font-size:17px;font-weight:500;height:40px;min-height:auto;min-width:auto;padding:10px 12px;transition:all .2s ease}.post-tabs-wrapper .post-tabs .mui-tabs .Mui-selected,.post-tabs-wrapper .post-tabs .mui-tabs .MuiTab-root :hover{color:var(--tab-hover-text-color);transition:all .2s ease}.post-tabs-wrapper .post-tabs .mui-tabs .Mui-selected{background-color:var(--tab-selected-background-color);border-radius:8px;font-weight:600}.post-tabs-wrapper .post-tabs .mui-tabs .MuiTabScrollButton-root{height:40px;width:20px}.post-tabs-wrapper .post-tabs .mui-tabs .MuiTabs-scrollable{height:40px}.post-tabs-wrapper .post-tabs .mui-tabs .MuiTabs-indicator{display:none}</style><meta name="generator" content="Gatsby 3.14.6"/><style data-emotion="css-global o6gwfi">html{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;box-sizing:border-box;-webkit-text-size-adjust:100%;}*,*::before,*::after{box-sizing:inherit;}strong,b{font-weight:700;}body{margin:0;color:rgba(0, 0, 0, 0.87);font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:400;font-size:1rem;line-height:1.5;letter-spacing:0.00938em;background-color:#fff;}@media print{body{background-color:#fff;}}body::backdrop{background-color:#fff;}</style><style data-emotion="css-global 1prfaxn">@-webkit-keyframes mui-auto-fill{from{display:block;}}@keyframes mui-auto-fill{from{display:block;}}@-webkit-keyframes mui-auto-fill-cancel{from{display:block;}}@keyframes mui-auto-fill-cancel{from{display:block;}}</style><style data-emotion="css 1l6di18 feqhe6 11tfndm mnn31 vubbuv 1yxmbwk 6flbmm">.css-1l6di18.Mui-focused .MuiAutocomplete-clearIndicator{visibility:visible;}@media (pointer: fine){.css-1l6di18:hover .MuiAutocomplete-clearIndicator{visibility:visible;}}.css-1l6di18 .MuiAutocomplete-tag{margin:3px;max-width:calc(100% - 6px);}.css-1l6di18 .MuiAutocomplete-inputRoot{-webkit-box-flex-wrap:wrap;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;}.MuiAutocomplete-hasPopupIcon.css-1l6di18 .MuiAutocomplete-inputRoot,.MuiAutocomplete-hasClearIcon.css-1l6di18 .MuiAutocomplete-inputRoot{padding-right:30px;}.MuiAutocomplete-hasPopupIcon.MuiAutocomplete-hasClearIcon.css-1l6di18 .MuiAutocomplete-inputRoot{padding-right:56px;}.css-1l6di18 .MuiAutocomplete-inputRoot .MuiAutocomplete-input{width:0;min-width:30px;}.css-1l6di18 .MuiInput-root{padding-bottom:1px;}.css-1l6di18 .MuiInput-root .MuiInput-input{padding:4px 4px 4px 0px;}.css-1l6di18 .MuiInput-root.MuiInputBase-sizeSmall .MuiInput-input{padding:2px 4px 3px 0;}.css-1l6di18 .MuiOutlinedInput-root{padding:9px;}.MuiAutocomplete-hasPopupIcon.css-1l6di18 .MuiOutlinedInput-root,.MuiAutocomplete-hasClearIcon.css-1l6di18 .MuiOutlinedInput-root{padding-right:39px;}.MuiAutocomplete-hasPopupIcon.MuiAutocomplete-hasClearIcon.css-1l6di18 .MuiOutlinedInput-root{padding-right:65px;}.css-1l6di18 .MuiOutlinedInput-root .MuiAutocomplete-input{padding:7.5px 4px 7.5px 6px;}.css-1l6di18 .MuiOutlinedInput-root .MuiAutocomplete-endAdornment{right:9px;}.css-1l6di18 .MuiOutlinedInput-root.MuiInputBase-sizeSmall{padding:6px;}.css-1l6di18 .MuiOutlinedInput-root.MuiInputBase-sizeSmall .MuiAutocomplete-input{padding:2.5px 4px 2.5px 6px;}.css-1l6di18 .MuiFilledInput-root{padding-top:19px;padding-left:8px;}.MuiAutocomplete-hasPopupIcon.css-1l6di18 .MuiFilledInput-root,.MuiAutocomplete-hasClearIcon.css-1l6di18 .MuiFilledInput-root{padding-right:39px;}.MuiAutocomplete-hasPopupIcon.MuiAutocomplete-hasClearIcon.css-1l6di18 .MuiFilledInput-root{padding-right:65px;}.css-1l6di18 .MuiFilledInput-root .MuiFilledInput-input{padding:7px 4px;}.css-1l6di18 .MuiFilledInput-root .MuiAutocomplete-endAdornment{right:9px;}.css-1l6di18 .MuiFilledInput-root.MuiInputBase-sizeSmall{padding-bottom:1px;}.css-1l6di18 .MuiFilledInput-root.MuiInputBase-sizeSmall .MuiFilledInput-input{padding:2.5px 4px;}.css-1l6di18 .MuiInputBase-hiddenLabel{padding-top:8px;}.css-1l6di18 .MuiAutocomplete-input{-webkit-box-flex:1;-webkit-flex-grow:1;-ms-flex-positive:1;flex-grow:1;text-overflow:ellipsis;opacity:1;}.css-feqhe6{display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;position:relative;min-width:0;padding:0;margin:0;border:0;vertical-align:top;width:100%;}.css-11tfndm{font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:400;font-size:1rem;line-height:1.4375em;letter-spacing:0.00938em;color:rgba(0, 0, 0, 0.87);box-sizing:border-box;position:relative;cursor:text;display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:100%;position:relative;}.css-11tfndm.Mui-disabled{color:rgba(0, 0, 0, 0.38);cursor:default;}label+.css-11tfndm{margin-top:16px;}.css-11tfndm:after{border-bottom:2px solid #1976d2;left:0;bottom:0;content:"";position:absolute;right:0;-webkit-transform:scaleX(0);-moz-transform:scaleX(0);-ms-transform:scaleX(0);transform:scaleX(0);-webkit-transition:-webkit-transform 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms;transition:transform 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms;pointer-events:none;}.css-11tfndm.Mui-focused:after{-webkit-transform:scaleX(1);-moz-transform:scaleX(1);-ms-transform:scaleX(1);transform:scaleX(1);}.css-11tfndm.Mui-error:after{border-bottom-color:#d32f2f;-webkit-transform:scaleX(1);-moz-transform:scaleX(1);-ms-transform:scaleX(1);transform:scaleX(1);}.css-11tfndm:before{border-bottom:1px solid rgba(0, 0, 0, 0.42);left:0;bottom:0;content:"\00a0";position:absolute;right:0;-webkit-transition:border-bottom-color 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:border-bottom-color 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;pointer-events:none;}.css-11tfndm:hover:not(.Mui-disabled):before{border-bottom:2px solid rgba(0, 0, 0, 0.87);}@media (hover: none){.css-11tfndm:hover:not(.Mui-disabled):before{border-bottom:1px solid rgba(0, 0, 0, 0.42);}}.css-11tfndm.Mui-disabled:before{border-bottom-style:dotted;}.css-mnn31{font:inherit;letter-spacing:inherit;color:currentColor;padding:4px 0 5px;border:0;box-sizing:content-box;background:none;height:1.4375em;margin:0;-webkit-tap-highlight-color:transparent;display:block;min-width:0;width:100%;-webkit-animation-name:mui-auto-fill-cancel;animation-name:mui-auto-fill-cancel;-webkit-animation-duration:10ms;animation-duration:10ms;}.css-mnn31::-webkit-input-placeholder{color:currentColor;opacity:0.42;-webkit-transition:opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;}.css-mnn31::-moz-placeholder{color:currentColor;opacity:0.42;-webkit-transition:opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;}.css-mnn31:-ms-input-placeholder{color:currentColor;opacity:0.42;-webkit-transition:opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;}.css-mnn31::-ms-input-placeholder{color:currentColor;opacity:0.42;-webkit-transition:opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;}.css-mnn31:focus{outline:0;}.css-mnn31:invalid{box-shadow:none;}.css-mnn31::-webkit-search-decoration{-webkit-appearance:none;}label[data-shrink=false]+.MuiInputBase-formControl .css-mnn31::-webkit-input-placeholder{opacity:0!important;}label[data-shrink=false]+.MuiInputBase-formControl .css-mnn31::-moz-placeholder{opacity:0!important;}label[data-shrink=false]+.MuiInputBase-formControl .css-mnn31:-ms-input-placeholder{opacity:0!important;}label[data-shrink=false]+.MuiInputBase-formControl .css-mnn31::-ms-input-placeholder{opacity:0!important;}label[data-shrink=false]+.MuiInputBase-formControl .css-mnn31:focus::-webkit-input-placeholder{opacity:0.42;}label[data-shrink=false]+.MuiInputBase-formControl .css-mnn31:focus::-moz-placeholder{opacity:0.42;}label[data-shrink=false]+.MuiInputBase-formControl .css-mnn31:focus:-ms-input-placeholder{opacity:0.42;}label[data-shrink=false]+.MuiInputBase-formControl .css-mnn31:focus::-ms-input-placeholder{opacity:0.42;}.css-mnn31.Mui-disabled{opacity:1;-webkit-text-fill-color:rgba(0, 0, 0, 0.38);}.css-mnn31:-webkit-autofill{-webkit-animation-duration:5000s;animation-duration:5000s;-webkit-animation-name:mui-auto-fill;animation-name:mui-auto-fill;}.css-vubbuv{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:1em;height:1em;display:inline-block;fill:currentColor;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;-webkit-transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;font-size:1.5rem;}.css-1yxmbwk{display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;position:relative;box-sizing:border-box;-webkit-tap-highlight-color:transparent;background-color:transparent;outline:0;border:0;margin:0;border-radius:0;padding:0;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;vertical-align:middle;-moz-appearance:none;-webkit-appearance:none;-webkit-text-decoration:none;text-decoration:none;color:inherit;text-align:center;-webkit-flex:0 0 auto;-ms-flex:0 0 auto;flex:0 0 auto;font-size:1.5rem;padding:8px;border-radius:50%;overflow:visible;color:rgba(0, 0, 0, 0.54);-webkit-transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;}.css-1yxmbwk::-moz-focus-inner{border-style:none;}.css-1yxmbwk.Mui-disabled{pointer-events:none;cursor:default;}@media print{.css-1yxmbwk{-webkit-print-color-adjust:exact;color-adjust:exact;}}.css-1yxmbwk:hover{background-color:rgba(0, 0, 0, 0.04);}@media (hover: none){.css-1yxmbwk:hover{background-color:transparent;}}.css-1yxmbwk.Mui-disabled{background-color:transparent;color:rgba(0, 0, 0, 0.26);}.css-6flbmm{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:1em;height:1em;display:inline-block;fill:currentColor;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;-webkit-transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;font-size:2.1875rem;}</style><link rel="preconnect" href="https://www.google-analytics.com"/><link rel="dns-prefetch" href="https://www.google-analytics.com"/><script>
+  
+  function gaOptout(){document.cookie=disableStr+'=true; expires=Thu, 31 Dec 2099 23:59:59 UTC;path=/',window[disableStr]=!0}var gaProperty='0',disableStr='ga-disable-'+gaProperty;document.cookie.indexOf(disableStr+'=true')>-1&&(window[disableStr]=!0);
+  if(true) {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  }
+  if (typeof ga === "function") {
+    ga('create', '0', 'auto', {});
+      ga('set', 'anonymizeIp', true);
+      
+      
+      
+      
+      }</script><link rel="icon" href="/favicon-32x32.png?v=ad9e124e5060ab5ddbaf24744e1cfc72" type="image/png"/><link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=ad9e124e5060ab5ddbaf24744e1cfc72"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=ad9e124e5060ab5ddbaf24744e1cfc72"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=ad9e124e5060ab5ddbaf24744e1cfc72"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=ad9e124e5060ab5ddbaf24744e1cfc72"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=ad9e124e5060ab5ddbaf24744e1cfc72"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=ad9e124e5060ab5ddbaf24744e1cfc72"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=ad9e124e5060ab5ddbaf24744e1cfc72"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=ad9e124e5060ab5ddbaf24744e1cfc72"/><style type="text/css">
+    .anchor.before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateX(-100%);
+      padding-right: 4px;
+    }
+    .anchor.after {
+      display: inline-block;
+      padding-left: 4px;
+    }
+    h1 .anchor svg,
+    h2 .anchor svg,
+    h3 .anchor svg,
+    h4 .anchor svg,
+    h5 .anchor svg,
+    h6 .anchor svg {
+      visibility: hidden;
+    }
+    h1:hover .anchor svg,
+    h2:hover .anchor svg,
+    h3:hover .anchor svg,
+    h4:hover .anchor svg,
+    h5:hover .anchor svg,
+    h6:hover .anchor svg,
+    h1 .anchor:focus svg,
+    h2 .anchor:focus svg,
+    h3 .anchor:focus svg,
+    h4 .anchor:focus svg,
+    h5 .anchor:focus svg,
+    h6 .anchor:focus svg {
+      visibility: visible;
+    }
+  </style><script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+      var hash = window.decodeURI(location.hash.replace('#', ''))
+      if (hash !== '') {
+        var element = document.getElementById(hash)
+        if (element) {
+          var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+          var clientTop = document.documentElement.clientTop || document.body.clientTop || 0
+          var offset = element.getBoundingClientRect().top + scrollTop - clientTop
+          // Wait for the browser to finish rendering before scrolling.
+          setTimeout((function() {
+            window.scrollTo(0, offset - 0)
+          }), 0)
+        }
+      }
+    })
+  </script><title data-react-helmet="true">공공데이터 시각화 프로젝트 : 코로나19 확산으로 재택근무가 늘었는가</title><meta data-react-helmet="true" name="viewport" content="initial-scale=1, width=device-width"/><meta data-react-helmet="true" property="og:title" content="공공데이터 시각화 프로젝트 : 코로나19 확산으로 재택근무가 늘었는가"/><meta data-react-helmet="true" property="og:site_title" content="공공데이터 시각화 프로젝트 : 코로나19 확산으로 재택근무가 늘었는가"/><meta data-react-helmet="true" name="description" content="본 프로젝트는 팀 활동으로 진행 되었고, 프로젝트 상에서 제가 기여한 부분을 중심으로 작성했습니다.  ⛳️  프로젝트 배경 및 목표  재택근무의 증가1
+재택근무의 증가2  코로나 전후 출퇴근 교통 이용자 수, 사무실 공실률 등 다양한 지표를 통해
+실제 재택근무 변화를 관찰하고자 한다. 📄   데이터 수집 1. 출퇴근 시간대 교통 이용량 변화 분석을 통한 관찰 대상 지역 설정 서울시 지하철 선별 역별 승하차 인원 정보 (2018.01~2021.11) 서울시 버스노선별 정류장별 시간대별 승하차 인원 정보 서울시 역별 일별 시간대별 지하철 승하차 인원 정보 2. 관찰 대상 지역 공실률 분석 서울시 오피스빌딩 임대료·공실률 및 수익률 (2013년 이후) 통계 📊   데이터 전처리 및 시각화 1. 지하철 요일별, 시간별 변화 살펴보기  데이터 : 서울시 역별 일별 시간대별 지하철 승하차 인원 정보  데이터 전처리 과정 날짜 데이터 Datatime 형태로 변환 datetime.day_name(…"/><meta data-react-helmet="true" property="og:description" content="본 프로젝트는 팀 활동으로 진행 되었고, 프로젝트 상에서 제가 기여한 부분을 중심으로 작성했습니다.  ⛳️  프로젝트 배경 및 목표  재택근무의 증가1
+재택근무의 증가2  코로나 전후 출퇴근 교통 이용자 수, 사무실 공실률 등 다양한 지표를 통해
+실제 재택근무 변화를 관찰하고자 한다. 📄   데이터 수집 1. 출퇴근 시간대 교통 이용량 변화 분석을 통한 관찰 대상 지역 설정 서울시 지하철 선별 역별 승하차 인원 정보 (2018.01~2021.11) 서울시 버스노선별 정류장별 시간대별 승하차 인원 정보 서울시 역별 일별 시간대별 지하철 승하차 인원 정보 2. 관찰 대상 지역 공실률 분석 서울시 오피스빌딩 임대료·공실률 및 수익률 (2013년 이후) 통계 📊   데이터 전처리 및 시각화 1. 지하철 요일별, 시간별 변화 살펴보기  데이터 : 서울시 역별 일별 시간대별 지하철 승하차 인원 정보  데이터 전처리 과정 날짜 데이터 Datatime 형태로 변환 datetime.day_name(…"/><meta data-react-helmet="true" property="og:author" content="안문주"/><meta data-react-helmet="true" property="og:image" content="/og-image.png"/><meta data-react-helmet="true" property="og:type" content="website"/><link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="/static/webfonts/s/roboto/v29/KFOlCnqEu92Fr1MmSU5fBBc4.woff2"/><link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="/static/webfonts/s/roboto/v29/KFOmCnqEu92Fr1Mu4mxK.woff2"/><link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="/static/webfonts/s/roboto/v29/KFOlCnqEu92Fr1MmEU9fBBc4.woff2"/><style>@font-face{font-display:swap;font-family:Roboto;font-style:normal;font-weight:300;src:url(/static/webfonts/s/roboto/v29/KFOlCnqEu92Fr1MmSU5fBBc4.woff2) format("woff2")}@font-face{font-display:swap;font-family:Roboto;font-style:normal;font-weight:400;src:url(/static/webfonts/s/roboto/v29/KFOmCnqEu92Fr1Mu4mxK.woff2) format("woff2")}@font-face{font-display:swap;font-family:Roboto;font-style:normal;font-weight:500;src:url(/static/webfonts/s/roboto/v29/KFOlCnqEu92Fr1MmEU9fBBc4.woff2) format("woff2")}@font-face{font-display:swap;font-family:Roboto;font-style:normal;font-weight:300;src:url(/static/webfonts/s/roboto/v29/KFOlCnqEu92Fr1MmSU5fBBc-.woff) format("woff")}@font-face{font-display:swap;font-family:Roboto;font-style:normal;font-weight:400;src:url(/static/webfonts/s/roboto/v29/KFOmCnqEu92Fr1Mu4mxM.woff) format("woff")}@font-face{font-display:swap;font-family:Roboto;font-style:normal;font-weight:500;src:url(/static/webfonts/s/roboto/v29/KFOlCnqEu92Fr1MmEU9fBBc-.woff) format("woff")}</style><link rel="sitemap" type="application/xml" href="/sitemap.xml"/><link rel="alternate" type="application/rss+xml" href="/rss.xml"/><style>.gatsby-image-wrapper{position:relative;overflow:hidden}.gatsby-image-wrapper picture.object-fit-polyfill{position:static!important}.gatsby-image-wrapper img{bottom:0;height:100%;left:0;margin:0;max-width:none;padding:0;position:absolute;right:0;top:0;width:100%;object-fit:cover}.gatsby-image-wrapper [data-main-image]{opacity:0;transform:translateZ(0);transition:opacity .25s linear;will-change:opacity}.gatsby-image-wrapper-constrained{display:inline-block;vertical-align:top}</style><noscript><style>.gatsby-image-wrapper noscript [data-main-image]{opacity:1!important}.gatsby-image-wrapper [data-placeholder-image]{opacity:0!important}</style></noscript><script type="module">const e="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;e&&document.body.addEventListener("load",(function(e){if(void 0===e.target.dataset.mainImage)return;if(void 0===e.target.dataset.gatsbyImageSsr)return;const t=e.target;let a=null,n=t;for(;null===a&&n;)void 0!==n.parentNode.dataset.gatsbyImageWrapper&&(a=n.parentNode),n=n.parentNode;const o=a.querySelector("[data-placeholder-image]"),r=new Image;r.src=t.currentSrc,r.decode().catch((()=>{})).then((()=>{t.style.opacity=1,o&&(o.style.opacity=0,o.style.transition="opacity 500ms linear")}))}),!0);</script><link as="script" rel="preload" href="/webpack-runtime-f5f3382f227c26345aa2.js"/><link as="script" rel="preload" href="/framework-91ebf51d003c3c6f38be.js"/><link as="script" rel="preload" href="/app-889f0644be3e8780fa3b.js"/><link as="script" rel="preload" href="/f9d3028dbef90a6e9b8db85387d63dd9f4edf538-852cf68f9be39a5a4bc9.js"/><link as="script" rel="preload" href="/component---src-templates-blog-template-js-7e0f67ebc752626855c1.js"/><link as="fetch" rel="preload" href="/page-data/project/heap_pop/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/1073350324.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/1956554647.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/2938748437.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="page-wrapper"><header class="page-header-wrapper"><div class="page-header"><div class="front-section"><a class="link" href="/">mungdologs</a></div><div class="trailing-section"><a class="link" href="/about">about</a><a class="link" href="/posts">posts</a><div class="MuiAutocomplete-root MuiAutocomplete-hasPopupIcon css-1l6di18" role="combobox" aria-expanded="false"><div class="search-input-wrapper"><div class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root search-input css-feqhe6"><div class="MuiInput-root MuiInput-underline MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-11tfndm"><input type="text" aria-invalid="false" autoComplete="off" value="" class="MuiInput-input MuiInputBase-input MuiInputBase-inputAdornedEnd MuiAutocomplete-input MuiAutocomplete-inputFocused css-mnn31" aria-autocomplete="list" autoCapitalize="none" spellcheck="false"/><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium search-icon css-vubbuv" focusable="false" viewBox="0 0 24 24" aria-hidden="true" data-testid="SearchOutlinedIcon"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg></div></div></div></div></div></div></header><main class="page-content"><header class="post-header"><div class="emoji">🏠</div><div class="info"><div class="categories"><a class="category" href="/posts/project">project</a></div></div><h1 class="title">공공데이터 시각화 프로젝트 : 코로나19 확산으로 재택근무가 늘었는가</h1><div class="info"><div class="author">posted by <strong>mungdo</strong>,</div> <!-- -->February 25, 2022</div></header><div class="post-content"><div class="markdown"><p><strong>본 프로젝트는 팀 활동으로 진행 되었고, 프로젝트 상에서 제가 기여한 부분을 중심으로 작성했습니다.</strong></p>
+<h1 id="" style="position:relative;"><a href="#" aria-label=" permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h1>
+<h2 id="️-프로젝트-배경-및-목표" style="position:relative;"><a href="#%EF%B8%8F-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EB%B0%B0%EA%B2%BD-%EB%B0%8F-%EB%AA%A9%ED%91%9C" aria-label="️ 프로젝트 배경 및 목표 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>⛳️  프로젝트 배경 및 목표</h2>
+<h1 id="-1" style="position:relative;"><a href="#-1" aria-label=" 1 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h1>
+<p><img src="https://user-images.githubusercontent.com/82261307/155633280-2c446f5d-708b-418c-8884-1086b6476c2e.png" alt="재택근무의 증가1">
+<img src="https://user-images.githubusercontent.com/82261307/155633291-6eee9e28-64de-4853-b50b-b0d52911606e.png" alt="재택근무의 증가2"></p>
+<h1 id="-2" style="position:relative;"><a href="#-2" aria-label=" 2 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h1>
+<blockquote>
+<p>코로나 전후 출퇴근 교통 이용자 수, 사무실 공실률 등 다양한 지표를 통해
+실제 재택근무 변화를 관찰하고자 한다.</p>
+</blockquote>
+<hr>
+<h2 id="--데이터-수집" style="position:relative;"><a href="#--%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%88%98%EC%A7%91" aria-label="  데이터 수집 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>📄   데이터 수집</h2>
+<h3 id="1-출퇴근-시간대-교통-이용량-변화-분석을-통한-관찰-대상-지역-설정" style="position:relative;"><a href="#1-%EC%B6%9C%ED%87%B4%EA%B7%BC-%EC%8B%9C%EA%B0%84%EB%8C%80-%EA%B5%90%ED%86%B5-%EC%9D%B4%EC%9A%A9%EB%9F%89-%EB%B3%80%ED%99%94-%EB%B6%84%EC%84%9D%EC%9D%84-%ED%86%B5%ED%95%9C-%EA%B4%80%EC%B0%B0-%EB%8C%80%EC%83%81-%EC%A7%80%EC%97%AD-%EC%84%A4%EC%A0%95" aria-label="1 출퇴근 시간대 교통 이용량 변화 분석을 통한 관찰 대상 지역 설정 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1. 출퇴근 시간대 교통 이용량 변화 분석을 통한 관찰 대상 지역 설정</h3>
+<ul>
+<li>
+<p><a href="https://data.seoul.go.kr/dataList/OA-12914/S/1/datasetView.do#">서울시 지하철 선별 역별 승하차 인원 정보 (2018.01~2021.11)</a></p>
+</li>
+<li>
+<p><a href="http://data.seoul.go.kr/dataList/OA-12913/S/1/datasetView.do#">서울시 버스노선별 정류장별 시간대별 승하차 인원 정보</a></p>
+</li>
+<li>
+<p><a href="http://www.seoulmetro.co.kr/kr/board.do?menuIdx=551&#x26;bbsIdx=2213351">서울시 역별 일별 시간대별 지하철 승하차 인원 정보</a></p>
+</li>
+</ul>
+<h3 id="2-관찰-대상-지역-공실률-분석" style="position:relative;"><a href="#2-%EA%B4%80%EC%B0%B0-%EB%8C%80%EC%83%81-%EC%A7%80%EC%97%AD-%EA%B3%B5%EC%8B%A4%EB%A5%A0-%EB%B6%84%EC%84%9D" aria-label="2 관찰 대상 지역 공실률 분석 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2. 관찰 대상 지역 공실률 분석</h3>
+<ul>
+<li><a href="https://data.seoul.go.kr/dataList/10613/S/2/datasetView.do">서울시 오피스빌딩 임대료·공실률 및 수익률 (2013년 이후) 통계</a></li>
+</ul>
+<hr>
+<h2 id="--데이터-전처리-및-시각화" style="position:relative;"><a href="#--%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%A0%84%EC%B2%98%EB%A6%AC-%EB%B0%8F-%EC%8B%9C%EA%B0%81%ED%99%94" aria-label="  데이터 전처리 및 시각화 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>📊   데이터 전처리 및 시각화</h2>
+<h3 id="1-지하철-요일별-시간별-변화-살펴보기" style="position:relative;"><a href="#1-%EC%A7%80%ED%95%98%EC%B2%A0-%EC%9A%94%EC%9D%BC%EB%B3%84-%EC%8B%9C%EA%B0%84%EB%B3%84-%EB%B3%80%ED%99%94-%EC%82%B4%ED%8E%B4%EB%B3%B4%EA%B8%B0" aria-label="1 지하철 요일별 시간별 변화 살펴보기 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1. 지하철 요일별, 시간별 변화 살펴보기</h3>
+<h1 id="-3" style="position:relative;"><a href="#-3" aria-label=" 3 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h1>
+<ol>
+<li>데이터 : 서울시 역별 일별 시간대별 지하철 승하차 인원 정보</li>
+</ol>
+<h1 id="-4" style="position:relative;"><a href="#-4" aria-label=" 4 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h1>
+<ol start="2">
+<li>
+<p>데이터 전처리 과정</p>
+<ol>
+<li>
+<p>날짜 데이터 Datatime 형태로 변환</p>
+</li>
+<li>
+<p>datetime.day_name() 함수로 요일 칼럼 추가</p>
+</li>
+<li>
+<p>2018~2021년 상이한 인덱스 조정 및 pd.concat() 함수로 합침.</p>
+</li>
+<li>
+<p>[날짜, 호선, 역번호, 역명, 시간대(6시부터 23시까지), 요일] columns를 가진 csv 파일 완성</p>
+</li>
+</ol>
+</li>
+</ol>
+<h1 id="-5" style="position:relative;"><a href="#-5" aria-label=" 5 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h1>
+<ol start="3">
+<li>시각화
+<ol>
+<li>
+<p>18년 요일별 시간별 히트맵 승객수 (평균) <span class="gatsby-resp-image-wrapper" style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 720px; ">
+      <span class="gatsby-resp-image-background-image" style="padding-bottom: 20.555555555555554%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAYAAACOXx+WAAAACXBIWXMAAAsTAAALEwEAmpwYAAABT0lEQVQY0wFEAbv+AMHJpQ/x9bqls+O6syZ4oq8ZUYewWrzBsJDQtbCO0bevfcSxtni+rbtsu7C4Ur7BsDCGs7AfSpqwQKa/sHvJuLCMzrWwu+Oysr3UqjQAAGIYAJ+miRzw87r4suK5/yF1ov8TSYT/VLfB/43Os/+MzrX/f8m2/33Jt/9ww7f/TrrA/yyAr/8bQpL/PaO//3PGt/99x7b/r9ux/7fasU4ARJwmAKWqjRrw9Lvwv+a3/0ySpf8ya4//Xru//4bMtf97yLf/a8K6/2nBuv9dvLv/Q7TF/yeCrv8jV47/TaO6/3XHuP9+yLb/n9Wz/6/etExiuasjALO2lRXs8b/O5/Cy39jqrtu23K7cpNaw3JzSsdyEyrTcbcK53GvCu9xqwbrcX7u83Fy4utx2xLbcndGw3KvZsNy03K7cz+et3uPxsEHW3KketsjVjNIxLLoAAAAASUVORK5CYII='); background-size: cover; display: block;"></span>
+  <img class="gatsby-resp-image-image" alt="1" title="1" src="/static/311a924c142378454f3bae4cd60a65f8/37523/1.png" srcset="/static/311a924c142378454f3bae4cd60a65f8/e9ff0/1.png 180w,
+/static/311a924c142378454f3bae4cd60a65f8/f21e7/1.png 360w,
+/static/311a924c142378454f3bae4cd60a65f8/37523/1.png 720w,
+/static/311a924c142378454f3bae4cd60a65f8/302a4/1.png 1080w,
+/static/311a924c142378454f3bae4cd60a65f8/07a9c/1.png 1440w,
+/static/311a924c142378454f3bae4cd60a65f8/44d59/1.png 1553w" sizes="(max-width: 720px) 100vw, 720px" style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;" loading="lazy" decoding="async">
+    </span></p>
+</li>
+<li>
+<p>19년 요일별 시간별 히트맵 승객수 (평균) <span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 720px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 20.555555555555554%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAYAAACOXx+WAAAACXBIWXMAAAsTAAALEwEAmpwYAAABT0lEQVQY0wFEAbv+AMHIpA/x9bmls+K6syN1n68TS4GwUrbCsIzPtbCL0LevecOytnW9rbtpurC4TLvCsCd+rLAYRYuwQafAsHzJt7CNz7WwvuSyssDVqzQAAGIYAJ6liBzw87n4suK5/yF1oP8PRoD/T7TC/4rNtP+JzLX/e8i3/3nHt/9qwbj/SrrF/yV4qv8WQYj/PqfB/3XGtv+AybX/st2x/7ncsU4ARJwmAKWrjRrw9Lrwwei3/1GXpv80a5D/Xbu//4LKtf92xbf/Zr+6/2O/u/9Wurz/QrTI/yd8rP8jW5D/T6m9/3fHt/+Aybb/pNiy/7XhtExguKwjALS3lRXt8sDO5/Cz39nqrtu43a7cotWx3JjRstyAyLXcasC63GnBu9xnwLvcXbm73Fy4u9x2xLbcnNGw3KrYsNy13K/cz+et3uTxsUHW3KkeBGvU2vKlcwMAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="19년"
+        title="19년"
+        src="/static/a4a14fb490ffcabb8a0185730e3830dc/37523/2.png"
+        srcset="/static/a4a14fb490ffcabb8a0185730e3830dc/e9ff0/2.png 180w,
+/static/a4a14fb490ffcabb8a0185730e3830dc/f21e7/2.png 360w,
+/static/a4a14fb490ffcabb8a0185730e3830dc/37523/2.png 720w,
+/static/a4a14fb490ffcabb8a0185730e3830dc/302a4/2.png 1080w,
+/static/a4a14fb490ffcabb8a0185730e3830dc/07a9c/2.png 1440w,
+/static/a4a14fb490ffcabb8a0185730e3830dc/44d59/2.png 1553w"
+        sizes="(max-width: 720px) 100vw, 720px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+</li>
+<li>
+<p>20년 요일별 시간별 히트맵 승객수 (평균) <span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 720px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 20.555555555555554%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAYAAACOXx+WAAAACXBIWXMAAAsTAAALEwEAmpwYAAABT0lEQVQY0wFEAbv+AMPLqg/z9b2lweu2s0KTt68xbauwg9K9sMflr7DG57Gvt9qrtq/Up7un0qq4jdS4sEectrArca+wbsq/sLrgsLDI5rCw5PKxstXerjQAAGEYAJ+mixzy9Lz4v+m0/zyOtP8saq3/f9C9/8Tirv/F5K//vOGx/7jgsv+r2rL/iNK4/0Kbuv8nba//a8nA/7LbsP/A4q//3++t/9TmsE4AQJwmAKarjhry9b/wzeyz/2ursf9XkrD/k9W4/8Tjr/+/4rD/st2x/63asf+i1bL/hM+4/1Spu/9Mi7H/hdG8/7vfsP/F5K//3e2u/93wskxSsqwjALW3lxXv88XO7PK73+bwtNvY6q3c0eer3NLorNzG467cu9+v3Lvfrty53q7cstuv3LHbsNzB4a7c0ues3NXprNzb66vc5/C03vD2vkHS26Qeljnor5D7MMcAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="20년"
+        title="20년"
+        src="/static/60c06b6daa6b605a299da50f6b2173bc/37523/3.png"
+        srcset="/static/60c06b6daa6b605a299da50f6b2173bc/e9ff0/3.png 180w,
+/static/60c06b6daa6b605a299da50f6b2173bc/f21e7/3.png 360w,
+/static/60c06b6daa6b605a299da50f6b2173bc/37523/3.png 720w,
+/static/60c06b6daa6b605a299da50f6b2173bc/302a4/3.png 1080w,
+/static/60c06b6daa6b605a299da50f6b2173bc/07a9c/3.png 1440w,
+/static/60c06b6daa6b605a299da50f6b2173bc/44d59/3.png 1553w"
+        sizes="(max-width: 720px) 100vw, 720px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+</li>
+<li>
+<p>21년 요일별 시간별 히트맵 승객수 (평균) <span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 720px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 20.555555555555554%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAYAAACOXx+WAAAACXBIWXMAAAsTAAALEwEAmpwYAAABT0lEQVQY0wFEAbv+AMTMqg/09r6lwuq0s0KWtK80dq2wh9K5sMflsLDG57KvudyrtrHVp7um0qq4i9O4sEaguLAue7Cwfc26sMHjsbDK57Cw6fS7stzgvTQAAFsYAKCnixzy9Lz4vei0/zqPtf8sbKz/fs66/8Pir//D46//u+Gx/7jgsf+p2bL/gtC5/z2bvP8ob63/c8m5/7fesP++4a//5PG3/9zqwE4AP5YmAKasjxry9L/wy+u0/2mrtP9WkK//kdS3/8Dir/+437D/rtux/6vasv+e1LL/fc25/1Gmu/9Oiq7/jdK3/77hsP/A4q//4vC2/+j1v0xNsKcjALW3lxXx9MbO7vO93+bwtNvX6q3cz+as3MvlrNy94K7ctNyw3LTcr9yz3K/crNmw3K/ar9zE4q3c1eis3NXprNzZ6qrc6fG53vP3xkHQ2qEe+lTo+DKcj58AAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="21년"
+        title="21년"
+        src="/static/b296dc46610d0a4678c8f7c52b51b12a/37523/4.png"
+        srcset="/static/b296dc46610d0a4678c8f7c52b51b12a/e9ff0/4.png 180w,
+/static/b296dc46610d0a4678c8f7c52b51b12a/f21e7/4.png 360w,
+/static/b296dc46610d0a4678c8f7c52b51b12a/37523/4.png 720w,
+/static/b296dc46610d0a4678c8f7c52b51b12a/302a4/4.png 1080w,
+/static/b296dc46610d0a4678c8f7c52b51b12a/07a9c/4.png 1440w,
+/static/b296dc46610d0a4678c8f7c52b51b12a/44d59/4.png 1553w"
+        sizes="(max-width: 720px) 100vw, 720px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+</li>
+<li>
+<p>코로나 이전 (18, 19년) 요일별 시간별 히트맵 승객수 (평균) <span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 720px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 20.555555555555554%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAYAAACOXx+WAAAACXBIWXMAAAsTAAALEwEAmpwYAAABT0lEQVQY0wFEAbv+AIGmSw+u23Oh5OqKr912UazEPzus/NOGrfr2s6z2766v7eGftu7hnrXp2JK39daCsemIVKzQOzOt+bhxrPnvpKz69LKs6PSlrtnTgzOoAAAXAGqJPhyr2HH54umJ/9x0Uf/BNTX/+c2A//fysP/48a//+e2m//nspP/45pr/+taB/+N8T//LMjD/97Vt//fqn//57an/6/Km/+bkk07VTCgmAG+PQhus2HHw2+iG/92UZP/PZFT/+dSJ//jwrP/46aP/9+GV//ffk//32Yr/+sd2/+eAU//PTkP/+bt4//fsof/47Kf/8PGp/+/1qEzp14wjAHSbTBaj0mrRtdpz48figt/i65vf7e6m3/Dup9/06aLf9t+X3/Xeld/13JPf9dSL3/XRit/04Jvf8O+q3+3xqt/n76Lf0OaK4cPjfkKpzHUfCOfqAejl/Z0AAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="18_19년"
+        title="18_19년"
+        src="/static/997f020ede94628fbefc2ad4f2abec88/37523/5.png"
+        srcset="/static/997f020ede94628fbefc2ad4f2abec88/e9ff0/5.png 180w,
+/static/997f020ede94628fbefc2ad4f2abec88/f21e7/5.png 360w,
+/static/997f020ede94628fbefc2ad4f2abec88/37523/5.png 720w,
+/static/997f020ede94628fbefc2ad4f2abec88/302a4/5.png 1080w,
+/static/997f020ede94628fbefc2ad4f2abec88/07a9c/5.png 1440w,
+/static/997f020ede94628fbefc2ad4f2abec88/44d59/5.png 1553w"
+        sizes="(max-width: 720px) 100vw, 720px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+</li>
+<li>
+<p>코로나 이전 (20, 21년) 요일별 시간별 히트맵 승객수 (평균) <span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 720px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 20.555555555555554%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAYAAACOXx+WAAAACXBIWXMAAAsTAAALEwEAmpwYAAABT0lEQVQY0wFEAbv+AIKqUA+q122h2eyIr/GjZ6zpeU+s8+qZrefzo6zh7Zqv3eectuDooLXk6Ke39PKtsfW0cqzvfk+t9+eXrO32razh75asv+N8rrDCZTO4AAoXAGyNQhyp1mz52OuI//GfZv/ocEr/8uaX/+Xxo//j753/6vOm/+vzqf/z9rP/+fSs//KoaP/tdEn/9uSW/+/2sf/k753/wuJ//7rQbE7lUzcmAG6RRBuo1Wvwz+iE/+m3cv/ql2H/7+qa/+fypP/o8aT/7vSt//D1r//19rb/+fGq//S3eP/tk2H/7+aV/+r0qf/j75z/xeKA/77geUz8358jAG+YSxabz2fRqtZt47bbdd/L5IXf0+eM39Xojt/f7Zrf5/Cj3+bwo9/m76Pf6e+j3+juot/f65jf0eaI39Dmh9/J44Lfstly4avYbkKy0HsfXVvsp1z1KlwAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="20_21년"
+        title="20_21년"
+        src="/static/710df7eb38c11558040ba22c2d9507b4/37523/6.png"
+        srcset="/static/710df7eb38c11558040ba22c2d9507b4/e9ff0/6.png 180w,
+/static/710df7eb38c11558040ba22c2d9507b4/f21e7/6.png 360w,
+/static/710df7eb38c11558040ba22c2d9507b4/37523/6.png 720w,
+/static/710df7eb38c11558040ba22c2d9507b4/302a4/6.png 1080w,
+/static/710df7eb38c11558040ba22c2d9507b4/07a9c/6.png 1440w,
+/static/710df7eb38c11558040ba22c2d9507b4/44d59/6.png 1553w"
+        sizes="(max-width: 720px) 100vw, 720px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+</li>
+<li>
+<p>전체 기간 출근 시간대 (7~10시) 이용객 평균 변화 line chart <span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 601px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 53.333333333333336%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB+0lEQVQoz22R3WvTUBjG888oeOFN6N1Wcd6Il14MiuyvUgaddHTIhjdKh1O61o/WqgO9kI0wxW262lSm7ZL25OTkJDnJ80rSNLZuLzw8J4eT3/ul7e8fXP3VO136+fVz8fd3Y/H9y53bG+X7pa311eXy6oOVp9s7dzc3t5Y3qtVSpVK5l6hcLq9Uq9VSq9W6MxgMFr8c94rfjo5uGoZxXTu3rHVSkmLpUOy7BN8lCgQhSM5O6oSYQJMAkDvimOI4IsYs6vdNMk3ztWbb9sPsbZi8uyDlgyQDBQJAnN7hvzd+6EVCCBoOh40cCEDhssgAUBKQDEjAys8kARWAQFHC4Jw3tNFotDYF5q1MNbnI20xDSaLQI4Re5oIgWZScHcdpJsDZCud+nv2e1prPcsYBpBXOAZPcl4FoOrTZymeUdTAHXJNRQDwQygs9iFCABy6cgKfuR342xn9LmDDmYgqczNBTimwhlC08jD0J7iu4foSx58MSLgbuGCPJIZNFEC4kIMqX0tQsy6pkw0CWPy0hjuPMQUEYkSMlDbhDZ8ymP3xEQ85o6DKyhUNMcnIDjxhjr7RarXalvrt767Tb1Y9PTgqJeqapdzrvFhrNZrHfN/Ve90fhrGcWnHNLf/6ieWO7/mbhg3GoP9t7W6h/7BT2Dj/pj548Xmq329f+Alb6IiiaELccAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="출근"
+        title="출근"
+        src="/static/f9f685e819a729b949be784e7068caf1/d8f62/7.png"
+        srcset="/static/f9f685e819a729b949be784e7068caf1/e9ff0/7.png 180w,
+/static/f9f685e819a729b949be784e7068caf1/f21e7/7.png 360w,
+/static/f9f685e819a729b949be784e7068caf1/d8f62/7.png 601w"
+        sizes="(max-width: 601px) 100vw, 601px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+</li>
+<li>
+<p>전체 기간 퇴근 시간대 (17~20시) 이용객 평균 변화 line chart <span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 601px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 53.333333333333336%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB+klEQVQoz3WRS2/TQBSF/WNgwYKNlV0bBN0gliyKIsSfYoEUKotUartAqhSpuzRAggJC7LJCUeNESd2Sl+PHjGOP53EvGjvECRFXOnMlz/i7Z84Ytm0/cO4nR7d3v8tT1z/89rX1/LT6tnJhvTs+O/3w6rJ+9fL8/OL4tFarWJb1Wqtarb6p1WqVdrv1YjqbH/66GZd7vd7Tbrf72PB93wIeo4oDVEmIwAhiukJII0RGENIVIgAC5gUAm64lhMAgcHE4HOJoNPpseJ53kp9QHEHp07sSCWASAvIYIKfpZbMPoIDxWFJK0XXdhnb4Pp+IAjaDt2oNAA1MwrzLdLO3BkvNoJRuA0FgQdwRFnYQeZxHwmgeiVYSSv2dEHJtBEFQADdJ7dYe+C+8GJo5zIDaIZMMSUoESSm6qzDTIgrRiwlyyffAuXbgBVA7ZEIhSbiImADGJTChIBUKKEthRkOYRwHEPNl/sH8yJIRkGZ6sDYj//ZAIAYuIwpT6ELIYFCiQqhCXSkqVPcq1sVwuLX0FpRQopXBbUsqs4zo/LiR6EcVFFOCM+DghPk6Jj3MaIGUxhmH4yajX6w8bjcbReDw2B4NBSctxHLPT6Rw0m82y49yZfdsu3fT7pdlkYna+tJ78/P7jwJstzMmtU5o696WRY5uXVx+ftdvtR38AOMQj8t5JR+oAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="퇴근"
+        title="퇴근"
+        src="/static/1b9caa561dfc8ab270b50d6473de0400/d8f62/8.png"
+        srcset="/static/1b9caa561dfc8ab270b50d6473de0400/e9ff0/8.png 180w,
+/static/1b9caa561dfc8ab270b50d6473de0400/f21e7/8.png 360w,
+/static/1b9caa561dfc8ab270b50d6473de0400/d8f62/8.png 601w"
+        sizes="(max-width: 601px) 100vw, 601px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+</li>
+</ol>
+</li>
+</ol>
+<h1 id="-6" style="position:relative;"><a href="#-6" aria-label=" 6 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h1>
+<h1 id="-7" style="position:relative;"><a href="#-7" aria-label=" 7 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h1>
+<h3 id="2-대중교통-총-승객-변화-지도-시각화" style="position:relative;"><a href="#2-%EB%8C%80%EC%A4%91%EA%B5%90%ED%86%B5-%EC%B4%9D-%EC%8A%B9%EA%B0%9D-%EB%B3%80%ED%99%94-%EC%A7%80%EB%8F%84-%EC%8B%9C%EA%B0%81%ED%99%94" aria-label="2 대중교통 총 승객 변화 지도 시각화 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2. 대중교통 총 승객 변화 지도 시각화</h3>
+<ol>
+<li>
+<p>데이터 : 서울시 버스노선별 정류장별 시간대별 승하차 인원 정보, 서울시 역별 일별 시간대별 지하철 승하차 인원 정보</p>
+</li>
+<li>
+<p>데이터 전처리 과정</p>
+<ol>
+<li>
+<p>지하철</p>
+<ol>
+<li>코로나 발생 전인 2018년도 이용객수 상위 25%인(quantile() 함수) 지하철 역만 추출. (이용객 다발 구역만 제한해서 시각화 하기 위해)</li>
+<li>해당 지하철 역의 출근시간대 승객수(합계), 퇴근시간대 승객수(합계), 출+퇴근시간 승객수(합계) 계산해 [해당년도, 지하철역, 위도, 경도, 출근, 퇴근, 총계] 컬럼의 csv 완성.</li>
+</ol>
+</li>
+<li>
+<p>버스</p>
+<ol>
+<li>각각의 버스 정류장과 가장 가까이 위치한 지하철역 엮어주기 (haversine 모듈로 거리 계산해서 가장 짧은 위치 엮어주기) -> <strong>전체 버스 정류장 데이터</strong></li>
+<li><strong>전체 버스 정류장 데이터</strong> 에서 지하철 역과의 거리가 1km 이상인 정류장 제거 (서울 외 지역까지 포함된 버스 정류장이 많아서 서울 지하철 평균 간격 1km로 제한. 90%의 데이터가 1km 이내에 위치한 것을 확인.)</li>
+<li>버스노선별 정류장별 시간대별 승하차 인원 정보 + <strong>전체 버스 정류장 데이터</strong> : inner join 해서 합산. 정류장 데이터 없는 경우는 제거.</li>
+<li>지하철 역 기준으로 묶어 출근시간대 승객수(합계), 퇴근시간대 승객수(합계), 출+퇴근시간 승객수(합계) 계산해 [해당년도, 지하철역, 위도, 경도, 출근, 퇴근, 총계] 컬럼의 csv 완성.</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>
+<p>시각화</p>
+<ol>
+<li>
+<p>서울시 이동량 지도 전체 (파란 원 : 코로나 이전, 붉은 원 : 코로나 이후) <span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 720px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 60%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAAsTAAALEwEAmpwYAAADL0lEQVQozxXMbU8bBQDA8Xvp1/CtwSxG36DxhTFxLOHN3EDMks04JxiNzCyYTLahKBWGQwQqHaW025Xrw/X5er0+3fVKC304+nCsFBY6s5Esfoy/8fcBfsK/r15h9+uU+yqlXpoT2+DQLmC04rS6GkVbItsXMbsWwWubpEYWeDoXIxHL0M4nedZWsbs6lU6c9rM8Qq9dwu6VsJpZ1HKIs36V2nGKzmEcrRNBqaVJVPNE70Twjzrx3grg/1rEP7rGnijzemBwNKggW9uU20mEotXAfpHHHpjEH+xSSRtU9vZI1DV2PWHk4TmSQ98hfzBLYFJEHl8l/f4Mu5MitXKJf44NUl2JhO3l5amOIDs1wnaXg4FJXdOILGWQrntxfxXEcytA+c1xWm8MI1+4i3L7MXt5A9VfJP5bHNMRoH1QQuq4UQ8lTKuBUJPiNK0K2f09Svo+sQkX+ugsiQ/vszISJvXW92xdXCQaSdOxKpyc6VhlBf3PCMqP/4dlDk4yZBsajTML4aBf5MWgRquVJhw3cd3PsX1PxXtDJLSQRvxCpBgz6b1OcWTnqXYrNOtFGrsKypQTdUVmcFwhb+joG1GEk6MDqnKOupJGvi2yNS2z8zCF5DNILEXJzvg4f97k/NjEqJTx/hQj+sNTEnKVQqxIZCGDZ80kJDYpLMcQTo+q5FZlwtMi4fE15I/miQ7NIM94cc8paFKBXjtHrl7Dv14gMrpCaPQRgQknHneNv50t1Hk/+ZUAKcNC6J3XMVMF3Je2CI4ss3k1xPa7i8SnfCT/yqE0m0QrdSLraUKfbqC+M836RR+Jj38h8ZmTzasS1cVtzOUnaNE6wkk/h+LS8L7nwHPpMeGxDXamFHyXd3Bd8fGkmMRq59FdCvLYKsrI7wTenkW6sonpy6CrTZJreTK+KvZpG8HuNIjeCaIOTSN/8pDKjZ8JX9siNf6I5OUl3LMamZldclIW+aaX1Mg8oeEHJB1R+i9Nuv0swV9FMn/EKa/5EVr9fZL3fOQufIv0+Q6lLx34xnZQJxyEbzoJfuMnMelCi8SIxkJ47vqJOdJ02k3q/Sz6c4OsZVDVy+y70vwHC6/F31vB9DEAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="서울"
+        title="서울"
+        src="/static/2a05a69e5c9c3afa13373bb371fe6870/37523/map1.png"
+        srcset="/static/2a05a69e5c9c3afa13373bb371fe6870/e9ff0/map1.png 180w,
+/static/2a05a69e5c9c3afa13373bb371fe6870/f21e7/map1.png 360w,
+/static/2a05a69e5c9c3afa13373bb371fe6870/37523/map1.png 720w,
+/static/2a05a69e5c9c3afa13373bb371fe6870/d4c13/map1.png 825w"
+        sizes="(max-width: 720px) 100vw, 720px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+</li>
+<li>
+<p>종로 이동량 지도 <span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 720px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 60%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAAsTAAALEwEAmpwYAAAC2UlEQVQozxXP227bdADAYT8xN9yBhgQCLidEQaJlq1DUsaash7XJcmxTJ3HixHZ8jA9/n+04TdfxDD/E9wafZFYGH/Q3tK23yOGIPDXISo2wVlDDAWI7Y1faqPGQlnPCJl9hdg3kP/skccChidnXCVlmkWYekpus+Gt9RNs6Jdx57FKHIrNRizGL7RWuOeL5IIhzi5F7i5oO8ToKg5+v0GOTtLHJY5842lKWAmnh3PDJOqdrX/AY3FE1HpY8YXTfxRQ9Ik/FHqukwsQRQzb+LU3tEMcGceFQVymfn3YIYVMVKVLxHOCGc+o8wYpV4mSC8rbD4PsWgXhEODLy8TW5r7GuhszFDbvKJ8o27CvBv18OPD9ViESjiF2kdTrFjAbkwYJ9apE3Bn4Y0/ulx/S4x/RcxXxQKUyXwZtblmEH43KO8keHra7hzTX26ZZdprHLNkjv1CN0f8guM3GmCtPxI1t/id4a03t1xvXXbRa/fsBfrdGvhkTuA/JvN4xftfCmc1z5jlRMybIZRbxFegw7yKJPIXLGr6+Z/3DG7PYBO1owuhhx81WLm5/axJFM7M7x9AHBXMG1TAJ9hba8pGmW5NGGXSqQXg4H9oecKsuZ/X7H/Mf3KD0Vcz1ldHTB5KTP4nJGJhSKwMY2xyTxjKcvEcrlEK17z+cXwb6MODQZkuMZ1FVJU8Ws+hPku3tEuCB3Viy7C2xvg/pJJ1Tn5IGFMAyKwiJNdKoqYL+vacqYZpey39VITWbSFFsqb812tiSvPTxPYXIho3x7xqq7ovJ9VLPHbH1OFFmkoUESL7G0Bw77lOZpS5rYiMJEesojXpIVRbAh3QcYG4OP353Rf92l0x5iaDqq98Cd9w7FucLwZ9w671mGH/GSBYfGp64FuQiwMgWp9EwqT6PJA9JYx7Vt2t/8jXI6wivnbMs+F4sTWsYxV+4pE+8ftEjGzgzK/5uHElEXOLFDVuX8B0dkLGmCdS1eAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="종로"
+        title="종로"
+        src="/static/738426ef494ad081898341b34da649aa/37523/map2.png"
+        srcset="/static/738426ef494ad081898341b34da649aa/e9ff0/map2.png 180w,
+/static/738426ef494ad081898341b34da649aa/f21e7/map2.png 360w,
+/static/738426ef494ad081898341b34da649aa/37523/map2.png 720w,
+/static/738426ef494ad081898341b34da649aa/c1c45/map2.png 824w"
+        sizes="(max-width: 720px) 100vw, 720px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+</li>
+<li>
+<p>동작,관악,구로 이동량 지도 <span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 720px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 60%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAAsTAAALEwEAmpwYAAAC+klEQVQozxXQ53LbBADAcb0ZT8M3PsIVuOsdBykpJSEttC4kQEbjDO/Yjkc8JFnTkuUlS5YlOV5JRxjH8QJ/jt8j/IQ/H/7g7XrKLOoQxCLDoMVkIFLfSlG7KlMNdK59g+TM5UIzkdsS8aRLHPWQchUmZouHeMDKV1gvBwjx1GQV2aipDJJYInSqBEqNgdohGmTp7h3SOMqi3uRIdiwOvDmKUkIr5Tj/+DeCqs4/m4D1xGYzkxEWC5vFyuDm2SniaZ7VvY9+VsRqG/QkAzGRQnn0M85+BX1k8lPN543koitlpmaRidUijoYEvsFq2EFYrQJmsU4wtdHMa1y3Sz1xQ20nR/PxK7LPixQfHXC5laL5wxmVR69J7JbJWwaZ/gjJ7uBbNWylRF2+QZguTDzPYuzVCec6UjJHcbfAVaKB/CyDJXuoyRb5p1Ua32URvz6ndVynb96Q+r/AvefIdNi3plwMA4T5sk9/pmMPSqgnMpnPT2knkrhBD8/3uFvHRLMe3nqI63gY131my5C//r0lHolo3RrNlohld7l1dYRFaBDGEo5c4GrrjLGm4m0cprMx4dxkE0t8eDfBDXzef4h5++Didwd0LZVqUOLSvqDSOcDrVRmGOkLoSvTMEo5aw4s0ZsuI7JdZGk/LGFmThjiknLOwLoZUskM6E4XqQQUxWyPjH3HWv6C/7rBZDdmsQoRw6rCKR0RWGbPZpvi4Su2TA4znKfSdU/a/1WnvHdN/mUZ6kSR1bFE6EpGuHNxbnWjjMq4M8ZUB9+EAIQp6LO7HTDpNyp8ekv7oCfpOGuvXHJ3t3yl8kcd+laF3WEZ/cU7pszzdnTTaj3lKksa7v5d0Mwr9mkLcdxDe381ZrHt0mxVa3xxT2m6i7aaxtg/pJKpc/jJCe5nGeZ1B3Ctw8pVI4/sjtN08zUKTzd2E3omKK+kMfBXBXqhEK4tgrmHLGbpagCHH6Nc211YPKxwhNWYUD1tYckxVVym8yVBvj1lGIfFmhlJzsGSZ+cbiP4yhDSGVXD0tAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="동작,관악,구로"
+        title="동작,관악,구로"
+        src="/static/171ff91a1c8bd1a7b005b288369f3568/37523/map3.png"
+        srcset="/static/171ff91a1c8bd1a7b005b288369f3568/e9ff0/map3.png 180w,
+/static/171ff91a1c8bd1a7b005b288369f3568/f21e7/map3.png 360w,
+/static/171ff91a1c8bd1a7b005b288369f3568/37523/map3.png 720w,
+/static/171ff91a1c8bd1a7b005b288369f3568/c1c45/map3.png 824w"
+        sizes="(max-width: 720px) 100vw, 720px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+</li>
+<li>
+<p>강남 이동량 지도 <span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 720px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 60%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAAsTAAALEwEAmpwYAAAC6klEQVQozxXOWXLbBACAYd2SS/DIE8tDh2EgYaaTGUJbAmHiLHZWK7HlLbYsy5KsXbIcrd6dNE6hlB7hZ/hO8AlPq5jtdsnLZkIeKYiKzFWUcefZnBseTTtgmsW8xBpRvcciTfGaOvZJnWnY4kQz6XshC8tFP2whPGUm2+eUz89TNKNFxUkZHdWQf72mvlOleq5xafvUBhqO12E2d/n0GLP2FSqmz4UfUBi3rBc262WC8D6z2OY6XcPgaGjhu13ssoJy0MJ8WyNqyYw7PXrtHiUr5fdwzo2XUzE93ikP1EWTfBwyXsj4TwZCOGoiKQMO/QLHVfEPRAI1YFM4mNIQvWbR+OaU8LaL76n0AxcxSTi3I253amivr2hUAlpLhbu/2wjHfs6N7eBHBqvERv6ugl7qoR9IJIpJUYwZ9U2kr86p799h9rsUgw4XOx1GexXM3Teo75q4YUqyVhHUKCLqdNBf/z+TCaQe0o7Kw6Tg878Z8qVI+0gm/PGY+2/LyG2H1XzCsOnSOh3S2L1BERPyRcyHTYgwK4ZY5oj7V8d46hD9Wqf2xS+IX14j73fR9i4YlFRs2UGrd0lSlaLQ2LwPyRY5bpSTZwHPzzZPaw9hOrN5fFwSFiO8ZIDxh4r7cwnt60P0sz5FbHO/d89yHjGLeyxTizQaMLZ7LAud2YvNh7jPx9zk8SVG+Gs1ZbIwiSYiW0/FHsT096o0f2qhj8a4WoOJ1mM2tUhzjTTRWG0emK01vP459lGVbWTwUlgspw7CYmwx1oaEjwppR8U+uMWojlBenSHvVql+f8vEVkj+GZFvTELvgulUxZv3kPoi0g9lxqZCNnFwKxLCbDmmeVrnae2zjvu0lTKDbpWrnQO00zbZpiArVBK/gZHc0Ugv0OYd+oVII62ihCJK/Yyx1UZ5W0FYbXSCosl9VOLO/o1y/CdaKmFHCvHC4dPHGfPNCN06phZfUnL2OXHfUMsktFwhmA0J5iGTxYSwrfMfNrUUHTKSxqAAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="강남"
+        title="강남"
+        src="/static/7482bdf8685d2e66b103d06f7b70616c/37523/map4.png"
+        srcset="/static/7482bdf8685d2e66b103d06f7b70616c/e9ff0/map4.png 180w,
+/static/7482bdf8685d2e66b103d06f7b70616c/f21e7/map4.png 360w,
+/static/7482bdf8685d2e66b103d06f7b70616c/37523/map4.png 720w,
+/static/7482bdf8685d2e66b103d06f7b70616c/c1c45/map4.png 824w"
+        sizes="(max-width: 720px) 100vw, 720px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+</li>
+</ol>
+</li>
+</ol>
+<h1 id="-8" style="position:relative;"><a href="#-8" aria-label=" 8 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h1>
+<h3 id="-팀원이-수행한-시각화-목록" style="position:relative;"><a href="#-%ED%8C%80%EC%9B%90%EC%9D%B4-%EC%88%98%ED%96%89%ED%95%9C-%EC%8B%9C%EA%B0%81%ED%99%94-%EB%AA%A9%EB%A1%9D" aria-label=" 팀원이 수행한 시각화 목록 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>+. 팀원이 수행한 시각화 목록</h3>
+<ol>
+<li>버스·지하철 월별 출퇴근 시간 이용자 수</li>
+<li>코로나 전(2019년), 후(2020년) 동월대비 대중교통 출퇴근 이용량 비교</li>
+<li>출퇴근 시간대 유동인구 지도시각화</li>
+<li>사무실 지역 공실률 현황</li>
+</ol>
+<hr>
+<h2 id="--데이터를-보여줄-웹-구현" style="position:relative;"><a href="#--%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%A5%BC-%EB%B3%B4%EC%97%AC%EC%A4%84-%EC%9B%B9-%EA%B5%AC%ED%98%84" aria-label="  데이터를 보여줄 웹 구현 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>👩‍💻   데이터를 보여줄 웹 구현</h2>
+<h3 id="1-django를-이용한-웹-구현" style="position:relative;"><a href="#1-django%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EC%9B%B9-%EA%B5%AC%ED%98%84" aria-label="1 django를 이용한 웹 구현 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1. Django를 이용한 웹 구현</h3>
+<ul>
+<li>
+<p>프로젝트 생성 및 settings.py에 app 추가</p>
+</li>
+<li>
+<p>index 페이지 생성</p>
+</li>
+</ul>
+<p><img src="/5cc9b50a7280c9fbbfffbfb22a0293b6/indexPage.gif" alt="index"></p>
+<h3 id="2-웹-협업을-위한-깃-환경-구성--깃허브-주소" style="position:relative;"><a href="#2-%EC%9B%B9-%ED%98%91%EC%97%85%EC%9D%84-%EC%9C%84%ED%95%9C-%EA%B9%83-%ED%99%98%EA%B2%BD-%EA%B5%AC%EC%84%B1--%EA%B9%83%ED%97%88%EB%B8%8C-%EC%A3%BC%EC%86%8C" aria-label="2 웹 협업을 위한 깃 환경 구성  깃허브 주소 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2. 웹 협업을 위한 깃 환경 구성 : <a href="https://github.com/mungdo/heap_pop">깃허브 주소</a></h3>
+<ul>
+<li>
+<p>Readme.md 작성 (협업에 필요한 가이드 내용 작성)</p>
+</li>
+<li>
+<p>master 브랜치만 merge 가능하도록 설정하고 merge 진행</p>
+</li>
+</ul>
+<h3 id="3-페이지-생성-후-작업" style="position:relative;"><a href="#3-%ED%8E%98%EC%9D%B4%EC%A7%80-%EC%83%9D%EC%84%B1-%ED%9B%84-%EC%9E%91%EC%97%85" aria-label="3 페이지 생성 후 작업 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>3. 페이지 생성 후 작업</h3>
+<ul>
+<li><a href="#1-%EC%A7%80%ED%95%98%EC%B2%A0-%EC%9A%94%EC%9D%BC%EB%B3%84-%EC%8B%9C%EA%B0%84%EB%B3%84-%EB%B3%80%ED%99%94-%EC%82%B4%ED%8E%B4%EB%B3%B4%EA%B8%B0">지하철 요일별, 시간별 변화 살펴보기</a></li>
+</ul>
+<p><img src="/4b2d7278dc6a3202b750e4b2b292af45/time_week_sub.gif" alt="히트맵"></p>
+<ul>
+<li><a href="#2-%EB%8C%80%EC%A4%91%EA%B5%90%ED%86%B5-%EC%B4%9D-%EC%8A%B9%EA%B0%9D-%EB%B3%80%ED%99%94-%EC%A7%80%EB%8F%84-%EC%8B%9C%EA%B0%81%ED%99%94">대중교통 코로나 전 후 총 이동량 지도 시각화</a></li>
+</ul>
+<p><img src="/a3ece1c11703b7085e84ce5c12488d12/covid_map.gif" alt="지도"></p>
+<h3 id="4-발표용-ppt-작성" style="position:relative;"><a href="#4-%EB%B0%9C%ED%91%9C%EC%9A%A9-ppt-%EC%9E%91%EC%84%B1" aria-label="4 발표용 ppt 작성 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>4. 발표용 PPT 작성</h3>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 720px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 48.888888888888886%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAABYlAAAWJQFJUiTwAAACfUlEQVQozz2Q6VNSARTF35/bVCpoZOaMtrkhuGQ1lWZmueQCaqaIiCiFPt7TB8hm8moMUAS1RAVZ9Nf0ZvTMnA9n7p1zzz1C8keEs6NDSmdZlufmGJ+0EE8kyGQy2O0OJq0z7MYTJPf2mZ9fYNwyTTJ9xEHmCK+yxeiMjZ3dOOrvBIHtGMJuco+T0hVXgMvlYnHRQT6f4z/CkShrokSxWKRcLhEMhlgXvVzkz4Er/pxkWVqTKBQKlAt5bU9wL9lRNiR8ikLfm16amlv5+nWOSDTKxKSVwY8jKIpPM7NYZxgaGSMUieEPbuNwi7z7PMW6soVb3MAtKQg9TQ28MjXTbW5Hp6uhUm/gSVMLrUYzlToD+po6nraYNVZVG6jQ3eexqY/Gjvfcf9ZDRX0bj5738+TFAA3m1wg7WzZ+q07+qMt4PIvI/hDXUHwBFMVPAbi4REspSTJF4PSiQCKZwr7qpVQuc1Uuc3p6hhALWzg6XuUs7WD1+yyyL0yhVNQMA4Egm4rv5kA4EkEUpRu9n0rjdEuc5875+/eYXC6H8LDuDh1t9Rhb6rh19zb3ausxmsyYzF3oqg3oqw20mzo16mtqqdIbMHa+5Zl5gMbml1Q+MNLUNUhr9wcem3oRnM5VLbZH3mLw4zDjFisOj1creHR0jOGRzzjXJFbEDcYmLPR/+IR3M8C67Gd2YYX+oVns7u/0W2243ApCNpu9eUHe2ET9+etGh0Jhrbdr7MRUvq1LlC4vKeTPiScPEOVtLooZ5EiU4ikIfn+AZCLOQWqf6ZlZll0rpFJ7pNMpbDY787YFDjNpbe5YWsY6/QVVjRENh/CKMlNTC8TUIC7PGmpY5R+TC5avqWBRIQAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="ppt 페이지(1)"
+        title="ppt 페이지(1)"
+        src="/static/9492c1a9fe3d0d10d25fab48d4d7ccd5/37523/ppt_1page.png"
+        srcset="/static/9492c1a9fe3d0d10d25fab48d4d7ccd5/e9ff0/ppt_1page.png 180w,
+/static/9492c1a9fe3d0d10d25fab48d4d7ccd5/f21e7/ppt_1page.png 360w,
+/static/9492c1a9fe3d0d10d25fab48d4d7ccd5/37523/ppt_1page.png 720w,
+/static/9492c1a9fe3d0d10d25fab48d4d7ccd5/302a4/ppt_1page.png 1080w,
+/static/9492c1a9fe3d0d10d25fab48d4d7ccd5/07a9c/ppt_1page.png 1440w,
+/static/9492c1a9fe3d0d10d25fab48d4d7ccd5/b1945/ppt_1page.png 2754w"
+        sizes="(max-width: 720px) 100vw, 720px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span>
+<span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 720px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 46.111111111111114%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAABYlAAAWJQFJUiTwAAACSUlEQVQozz3S+09SAQDF8fvnuvVTrdaUtFwqqSjlA0HABPLChctTHlfBKwFOk6f4wkmZ2WoJhS80H/ht0+r8+vnh7GxHyKQyLJeL5Lc+EQlF8Hj9fP9xSK1eJxJREJ1OtqolKrtlPJKfd/bAvdd+Mq+kcEy72d3fobhZJLeaR9jbrVI//Ubj9Jb8cpa4mqTFfXL5NXwBF6XEAgUlxmzUTzSS+qvXlAqbzIZiwFfOLiocfN5AsJpNiJINSQoyoh9lUKcnGJwlEo4yMmqit7cPu9WC2Wihq0tHd6eBoC+OV4ow3G+mt/sNoUAAWXJjmxIRDIYJ7JIXyR9ENziM9pWOQChMNDqHXj9Kj1aPHFpA9Cfoej5Jx9MRfPI84aCKfsDKy85xZJ+Kyx3DPCkhFApZzn/XuWo1WFRjJNPL/Eu5tI497GXjpgHXCqoqIofS/72U3yEmhzimTrV5wPaXKoIsyxQLK6yVs0xZzdjsM1QqO2xvVXCJbvoNYwQyCrmkFceEFsOIifJahUJ+A48YwThsI7nygWhCJRBQEHp6tEwYzVisb+lof4ZG08mYwYzBaEWj6aKj/TnTVgdT4xb6Hj6ive0Bwzobr4dm6Hg8wJO2fmxjXkxDTvpfmBBW80Wubm7uJmQyS6iJBKeXlzQBdTFFODpHi9s7z6bThD0erlr3P8gtrWN3xGgAe0dHZHNlhJXVLL8aDS4uzkml0oiOadLzftR4GNFmQZlLUKsdcnxywqIyT9ApcdZsctY85X18FZdduatrXl6x93GfP9inQnzWw1pEAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="ppt 페이지(2)"
+        title="ppt 페이지(2)"
+        src="/static/3b54fa705fe0de29e2acea3d12044cfe/37523/ppt_2page.png"
+        srcset="/static/3b54fa705fe0de29e2acea3d12044cfe/e9ff0/ppt_2page.png 180w,
+/static/3b54fa705fe0de29e2acea3d12044cfe/f21e7/ppt_2page.png 360w,
+/static/3b54fa705fe0de29e2acea3d12044cfe/37523/ppt_2page.png 720w,
+/static/3b54fa705fe0de29e2acea3d12044cfe/302a4/ppt_2page.png 1080w,
+/static/3b54fa705fe0de29e2acea3d12044cfe/07a9c/ppt_2page.png 1440w,
+/static/3b54fa705fe0de29e2acea3d12044cfe/b325c/ppt_2page.png 2770w"
+        sizes="(max-width: 720px) 100vw, 720px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<hr>
+<h2 id="--분석을-통해-나온-결론" style="position:relative;"><a href="#--%EB%B6%84%EC%84%9D%EC%9D%84-%ED%86%B5%ED%95%B4-%EB%82%98%EC%98%A8-%EA%B2%B0%EB%A1%A0" aria-label="  분석을 통해 나온 결론 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>🏁   분석을 통해 나온 결론</h2>
+<ol>
+<li>코로나 발생 후 출퇴근 시간대 하루 평균 지하철 이용자 수는 코로나 발생 이전보다 약 18% 감소</li>
+<li>2020년 1월 국내에서 코로나 확진자 발생 이후 지하철·버스 이용자 모두 급감 코로나 이전과 비교해 지하철 · 버스 이용자 수는 각각 20%, 22% 감소</li>
+<li>코로나 전후로 같은 달을 비교했을 때 출퇴근 이용자 변화율이 버스·지하철 모두 감소하는 추세</li>
+<li>대중교통 이동객 수를 지도로 확인했을 때, 종로, 관악, 동작, 관악 등이 이동객 수가 많은 지역으로 드러남</li>
+<li>코로나 후 모든 지역 지하철역 부근에서 버스를 이용하는 이용자 수는 코로나 전보다 감소</li>
+<li>출 · 퇴근 시간대 교통량으로 유입 인구가 많은 지역은 시청, 테헤란로, 디지털단지, 여의도로 나타남 해당 지역의 유입 인구의 수는 코로나 이후로 감소함</li>
+<li>오피스 공실률은 재택근무 증가와 대중교통 이용 감소와는 큰 관계가 없음
+<ul>
+<li>기사에 따르면 코로나 확산으로 재택근무자는 늘었으나 오피스 투자 등 요인으로 오피스 빌딩 공실률 감소</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="️-개선사항-및-느낀점" style="position:relative;"><a href="#%EF%B8%8F-%EA%B0%9C%EC%84%A0%EC%82%AC%ED%95%AD-%EB%B0%8F-%EB%8A%90%EB%82%80%EC%A0%90" aria-label="️ 개선사항 및 느낀점 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>❗️  개선사항 및 느낀점</h2>
+<p><strong>개인적으로 느낀 미진한 부분/느낀 부분을 작성했습니다.</strong></p>
+<ol>
+<li>
+<p>재택근무와 직접적으로 관련된 데이터(원격근무량 등)에 대한 조사가 없음.</p>
+<ul>
+<li>애초에 첫 기획이 ‘코로나와 관련된 근무 환경의 변화’ 였지만 예상대로 진행 되지 않음</li>
+<li>짧은 프로젝트 기간(17일) 동안 빠르게 진행 해야 했는데 첫 프로젝트라 감을 못잡고 한 분석에만 지나치게 몰두한 경향이 있음.</li>
+</ul>
+</li>
+<li>
+<p>상관관계 분석이나 고도화된 분석이 아닌 EDM(탐색적 데이터 분석) 수준에 그침</p>
+<ul>
+<li>아직 진도가 안나갔어요…</li>
+</ul>
+</li>
+<li>
+<p>그럼에도 첫 프로젝트로 기획부터 웹 구현, 발표용 PPT 제작까지 짧은 기간에 몰두해서 준비해 볼 수 있는 좋은 기회였음.</p>
+<ul>
+<li>내가 할 수 있는 한 최대한 적극적으로 진행했고, 팀원분들의 적극적인 참여로 얼추 완성까지 이끌었던 것 같다.</li>
+<li>그간에 팀프로젝트의 경험상 불편한 일이 있지는 않을 까 했지만 생각보다 서로 적극적으로 의견을 내고 수용하고 거절하면서 다양한 합의가 이뤄진 것 같았음.</li>
+</ul>
+</li>
+<li>
+<p>생각보다 팀원분들의 분석 시간이 오래걸림. 다음 프로젝트에서 진행 방향을 기획하게 된다면 비슷한 분석은 소수에게 몰아주고 새로운 분석 아이템을 찾아보고 나눠야 겠음. 비슷한 분석 주제를 쪼개서 빨리 끝내고자 잘게 나눠 분배했으나 각자 종료 시간이 다르기 때문에 딜레이 되는 경향이 있음.</p>
+</li>
+<li>
+<p>역시 나는 앉아서 공부하는 것 보다 함께 의견 나누면서 실수하면서 배워가는 프로젝트 체질인 듯!</p>
+</li>
+</ol>
+<hr>
+<p>첫 프로젝트를 마쳤습니다. 잘 하고 싶은 욕심이 너무 컸는지 과업 배분을 잘 못하고 제가 과하게 참여했던 것 같습니다. 그래서 그런지 저에게는 많은 공부가 되었고 특히 git 같은 경우 혼자서만 사용해왔는데 협업을 하면서 branch 사용도 해보고 conflict도 겪게되는.. 좋은 경험이었습니다.</p>
+<p>조금 더 열심히 공부하고 특히 가설 검증을 위한 분석 부분을 좀 더 강화해서 다음 프로젝트에는 아쉬움이 적은 프로젝트가 되도록 노력해보도록 하겠습니다. 글 읽어주셔서 감사해요. 피드백은 언제나 환영입니다. 😁</p>
+<div class="table-of-contents">
+<ul>
+<li>
+<p><a href="#%EF%B8%8F-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EB%B0%B0%EA%B2%BD-%EB%B0%8F-%EB%AA%A9%ED%91%9C">⛳️  프로젝트 배경 및 목표</a></p>
+</li>
+<li>
+<p><a href="#--%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%88%98%EC%A7%91">📄   데이터 수집</a></p>
+<ul>
+<li><a href="#1-%EC%B6%9C%ED%87%B4%EA%B7%BC-%EC%8B%9C%EA%B0%84%EB%8C%80-%EA%B5%90%ED%86%B5-%EC%9D%B4%EC%9A%A9%EB%9F%89-%EB%B3%80%ED%99%94-%EB%B6%84%EC%84%9D%EC%9D%84-%ED%86%B5%ED%95%9C-%EA%B4%80%EC%B0%B0-%EB%8C%80%EC%83%81-%EC%A7%80%EC%97%AD-%EC%84%A4%EC%A0%95">1. 출퇴근 시간대 교통 이용량 변화 분석을 통한 관찰 대상 지역 설정</a></li>
+<li><a href="#2-%EA%B4%80%EC%B0%B0-%EB%8C%80%EC%83%81-%EC%A7%80%EC%97%AD-%EA%B3%B5%EC%8B%A4%EB%A5%A0-%EB%B6%84%EC%84%9D">2. 관찰 대상 지역 공실률 분석</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#--%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%A0%84%EC%B2%98%EB%A6%AC-%EB%B0%8F-%EC%8B%9C%EA%B0%81%ED%99%94">📊   데이터 전처리 및 시각화</a></p>
+<ul>
+<li><a href="#1-%EC%A7%80%ED%95%98%EC%B2%A0-%EC%9A%94%EC%9D%BC%EB%B3%84-%EC%8B%9C%EA%B0%84%EB%B3%84-%EB%B3%80%ED%99%94-%EC%82%B4%ED%8E%B4%EB%B3%B4%EA%B8%B0">1. 지하철 요일별, 시간별 변화 살펴보기</a></li>
+<li><a href="#2-%EB%8C%80%EC%A4%91%EA%B5%90%ED%86%B5-%EC%B4%9D-%EC%8A%B9%EA%B0%9D-%EB%B3%80%ED%99%94-%EC%A7%80%EB%8F%84-%EC%8B%9C%EA%B0%81%ED%99%94">2. 대중교통 총 승객 변화 지도 시각화</a></li>
+<li><a href="#-%ED%8C%80%EC%9B%90%EC%9D%B4-%EC%88%98%ED%96%89%ED%95%9C-%EC%8B%9C%EA%B0%81%ED%99%94-%EB%AA%A9%EB%A1%9D">+. 팀원이 수행한 시각화 목록</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#--%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%A5%BC-%EB%B3%B4%EC%97%AC%EC%A4%84-%EC%9B%B9-%EA%B5%AC%ED%98%84">👩‍💻   데이터를 보여줄 웹 구현</a></p>
+<ul>
+<li><a href="#1-django%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EC%9B%B9-%EA%B5%AC%ED%98%84">1. Django를 이용한 웹 구현</a></li>
+<li><a href="#2-%EC%9B%B9-%ED%98%91%EC%97%85%EC%9D%84-%EC%9C%84%ED%95%9C-%EA%B9%83-%ED%99%98%EA%B2%BD-%EA%B5%AC%EC%84%B1--%EA%B9%83%ED%97%88%EB%B8%8C-%EC%A3%BC%EC%86%8C">2. 웹 협업을 위한 깃 환경 구성 : 깃허브 주소</a></li>
+<li><a href="#3-%ED%8E%98%EC%9D%B4%EC%A7%80-%EC%83%9D%EC%84%B1-%ED%9B%84-%EC%9E%91%EC%97%85">3. 페이지 생성 후 작업</a></li>
+<li><a href="#4-%EB%B0%9C%ED%91%9C%EC%9A%A9-ppt-%EC%9E%91%EC%84%B1">4. 발표용 PPT 작성</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#--%EB%B6%84%EC%84%9D%EC%9D%84-%ED%86%B5%ED%95%B4-%EB%82%98%EC%98%A8-%EA%B2%B0%EB%A1%A0">🏁   분석을 통해 나온 결론</a></p>
+</li>
+<li>
+<p><a href="#%EF%B8%8F-%EA%B0%9C%EC%84%A0%EC%82%AC%ED%95%AD-%EB%B0%8F-%EB%8A%90%EB%82%80%EC%A0%90">❗️  개선사항 및 느낀점</a></p>
+</li>
+</ul>
+</div></div></div><div class="post-navigator"><div class="post-navigator-card-wrapper"></div><div class="post-navigator-card-wrapper"><a class="post-card next" href="/TIL/202202/"><div class="direction">다음 글</div><div class="title">202202</div></a></div></div><div class="utterances"></div></main><footer class="page-footer-wrapper"><p class="page-footer">© <!-- -->2022<!-- --> <a href="https://github.com/mungdo">안문주</a> powered by<a href="https://github.com/zoomKoding/zoomkoding-gatsby-blog"> zoomkoding-gatsby-blog</a></p></footer><div class="dark-mode-button-wrapper"><button class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium dark-mode-button css-1yxmbwk" tabindex="0" type="button"><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeLarge dark-mode-icon css-6flbmm" focusable="false" viewBox="0 0 24 24" aria-hidden="true" data-testid="DarkModeIcon"><path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9c0-.46-.04-.92-.1-1.36-.98 1.37-2.58 2.26-4.4 2.26-2.98 0-5.4-2.42-5.4-5.4 0-1.81.89-3.42 2.26-4.4-.44-.06-.9-.1-1.36-.1z"></path></svg></button></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/project/heap_pop/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-0616fad1f708e5420168.js"],"app":["/app-889f0644be3e8780fa3b.js"],"component---cache-caches-gatsby-plugin-offline-app-shell-js":["/component---cache-caches-gatsby-plugin-offline-app-shell-js-5f4d6e6517138b0667ff.js"],"component---src-pages-404-js":["/component---src-pages-404-js-0f892ebcd010b6f91108.js"],"component---src-pages-about-js":["/component---src-pages-about-js-8d3b5b5f011b48040aeb.js"],"component---src-pages-index-js":["/component---src-pages-index-js-66fa20e8773286f91373.js"],"component---src-templates-blog-template-js":["/component---src-templates-blog-template-js-7e0f67ebc752626855c1.js"],"component---src-templates-category-template-js":["/component---src-templates-category-template-js-ed70fe8a3875146c144e.js"]};/*]]>*/</script><script src="/polyfill-0616fad1f708e5420168.js" nomodule=""></script><script src="/component---src-templates-blog-template-js-7e0f67ebc752626855c1.js" async=""></script><script src="/f9d3028dbef90a6e9b8db85387d63dd9f4edf538-852cf68f9be39a5a4bc9.js" async=""></script><script src="/app-889f0644be3e8780fa3b.js" async=""></script><script src="/framework-91ebf51d003c3c6f38be.js" async=""></script><script src="/webpack-runtime-f5f3382f227c26345aa2.js" async=""></script></body></html>

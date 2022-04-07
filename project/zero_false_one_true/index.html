@@ -64,408 +64,136 @@
         }
       }
     })
-  </script><title data-react-helmet="true">공공데이터 시각화 프로젝트 : 코로나19 확산으로 재택근무가 늘었는가</title><meta data-react-helmet="true" name="viewport" content="initial-scale=1, width=device-width"/><meta data-react-helmet="true" property="og:title" content="공공데이터 시각화 프로젝트 : 코로나19 확산으로 재택근무가 늘었는가"/><meta data-react-helmet="true" property="og:site_title" content="공공데이터 시각화 프로젝트 : 코로나19 확산으로 재택근무가 늘었는가"/><meta data-react-helmet="true" name="description" content="본 프로젝트는 팀 활동으로 진행 되었고, 프로젝트 상에서 제가 기여한 부분을 중심으로 작성했습니다.  ⛳️  프로젝트 배경 및 목표  재택근무의 증가1
-재택근무의 증가2  코로나 전후 출퇴근 교통 이용자 수, 사무실 공실률 등 다양한 지표를 통해
-실제 재택근무 변화를 관찰하고자 한다. 📄   데이터 수집 1. 출퇴근 시간대 교통 이용량 변화 분석을 통한 관찰 대상 지역 설정 서울시 지하철 선별 역별 승하차 인원 정보 (2018.01~2021.11) 서울시 버스노선별 정류장별 시간대별 승하차 인원 정보 서울시 역별 일별 시간대별 지하철 승하차 인원 정보 2. 관찰 대상 지역 공실률 분석 서울시 오피스빌딩 임대료·공실률 및 수익률 (2013년 이후) 통계 📊   데이터 전처리 및 시각화 1. 지하철 요일별, 시간별 변화 살펴보기  데이터 : 서울시 역별 일별 시간대별 지하철 승하차 인원 정보  데이터 전처리 과정 날짜 데이터 Datatime 형태로 변환 datetime.day_name(…"/><meta data-react-helmet="true" property="og:description" content="본 프로젝트는 팀 활동으로 진행 되었고, 프로젝트 상에서 제가 기여한 부분을 중심으로 작성했습니다.  ⛳️  프로젝트 배경 및 목표  재택근무의 증가1
-재택근무의 증가2  코로나 전후 출퇴근 교통 이용자 수, 사무실 공실률 등 다양한 지표를 통해
-실제 재택근무 변화를 관찰하고자 한다. 📄   데이터 수집 1. 출퇴근 시간대 교통 이용량 변화 분석을 통한 관찰 대상 지역 설정 서울시 지하철 선별 역별 승하차 인원 정보 (2018.01~2021.11) 서울시 버스노선별 정류장별 시간대별 승하차 인원 정보 서울시 역별 일별 시간대별 지하철 승하차 인원 정보 2. 관찰 대상 지역 공실률 분석 서울시 오피스빌딩 임대료·공실률 및 수익률 (2013년 이후) 통계 📊   데이터 전처리 및 시각화 1. 지하철 요일별, 시간별 변화 살펴보기  데이터 : 서울시 역별 일별 시간대별 지하철 승하차 인원 정보  데이터 전처리 과정 날짜 데이터 Datatime 형태로 변환 datetime.day_name(…"/><meta data-react-helmet="true" property="og:author" content="안문주"/><meta data-react-helmet="true" property="og:image" content="/og-image.png"/><meta data-react-helmet="true" property="og:type" content="website"/><link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="/static/webfonts/s/roboto/v29/KFOlCnqEu92Fr1MmSU5fBBc4.woff2"/><link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="/static/webfonts/s/roboto/v29/KFOmCnqEu92Fr1Mu4mxK.woff2"/><link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="/static/webfonts/s/roboto/v29/KFOlCnqEu92Fr1MmEU9fBBc4.woff2"/><style>@font-face{font-display:swap;font-family:Roboto;font-style:normal;font-weight:300;src:url(/static/webfonts/s/roboto/v29/KFOlCnqEu92Fr1MmSU5fBBc4.woff2) format("woff2")}@font-face{font-display:swap;font-family:Roboto;font-style:normal;font-weight:400;src:url(/static/webfonts/s/roboto/v29/KFOmCnqEu92Fr1Mu4mxK.woff2) format("woff2")}@font-face{font-display:swap;font-family:Roboto;font-style:normal;font-weight:500;src:url(/static/webfonts/s/roboto/v29/KFOlCnqEu92Fr1MmEU9fBBc4.woff2) format("woff2")}@font-face{font-display:swap;font-family:Roboto;font-style:normal;font-weight:300;src:url(/static/webfonts/s/roboto/v29/KFOlCnqEu92Fr1MmSU5fBBc-.woff) format("woff")}@font-face{font-display:swap;font-family:Roboto;font-style:normal;font-weight:400;src:url(/static/webfonts/s/roboto/v29/KFOmCnqEu92Fr1Mu4mxM.woff) format("woff")}@font-face{font-display:swap;font-family:Roboto;font-style:normal;font-weight:500;src:url(/static/webfonts/s/roboto/v29/KFOlCnqEu92Fr1MmEU9fBBc-.woff) format("woff")}</style><link rel="sitemap" type="application/xml" href="/sitemap.xml"/><link rel="alternate" type="application/rss+xml" href="/rss.xml"/><style>.gatsby-image-wrapper{position:relative;overflow:hidden}.gatsby-image-wrapper picture.object-fit-polyfill{position:static!important}.gatsby-image-wrapper img{bottom:0;height:100%;left:0;margin:0;max-width:none;padding:0;position:absolute;right:0;top:0;width:100%;object-fit:cover}.gatsby-image-wrapper [data-main-image]{opacity:0;transform:translateZ(0);transition:opacity .25s linear;will-change:opacity}.gatsby-image-wrapper-constrained{display:inline-block;vertical-align:top}</style><noscript><style>.gatsby-image-wrapper noscript [data-main-image]{opacity:1!important}.gatsby-image-wrapper [data-placeholder-image]{opacity:0!important}</style></noscript><script type="module">const e="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;e&&document.body.addEventListener("load",(function(e){if(void 0===e.target.dataset.mainImage)return;if(void 0===e.target.dataset.gatsbyImageSsr)return;const t=e.target;let a=null,n=t;for(;null===a&&n;)void 0!==n.parentNode.dataset.gatsbyImageWrapper&&(a=n.parentNode),n=n.parentNode;const o=a.querySelector("[data-placeholder-image]"),r=new Image;r.src=t.currentSrc,r.decode().catch((()=>{})).then((()=>{t.style.opacity=1,o&&(o.style.opacity=0,o.style.transition="opacity 500ms linear")}))}),!0);</script><link as="script" rel="preload" href="/webpack-runtime-f5f3382f227c26345aa2.js"/><link as="script" rel="preload" href="/framework-91ebf51d003c3c6f38be.js"/><link as="script" rel="preload" href="/app-889f0644be3e8780fa3b.js"/><link as="script" rel="preload" href="/f9d3028dbef90a6e9b8db85387d63dd9f4edf538-852cf68f9be39a5a4bc9.js"/><link as="script" rel="preload" href="/component---src-templates-blog-template-js-7e0f67ebc752626855c1.js"/><link as="fetch" rel="preload" href="/page-data/project/heap_pop/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/1073350324.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/1956554647.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/2938748437.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="page-wrapper"><header class="page-header-wrapper"><div class="page-header"><div class="front-section"><a class="link" href="/">mungdologs</a></div><div class="trailing-section"><a class="link" href="/about">about</a><a class="link" href="/posts">posts</a><div class="MuiAutocomplete-root MuiAutocomplete-hasPopupIcon css-1l6di18" role="combobox" aria-expanded="false"><div class="search-input-wrapper"><div class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root search-input css-feqhe6"><div class="MuiInput-root MuiInput-underline MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-11tfndm"><input type="text" aria-invalid="false" autoComplete="off" value="" class="MuiInput-input MuiInputBase-input MuiInputBase-inputAdornedEnd MuiAutocomplete-input MuiAutocomplete-inputFocused css-mnn31" aria-autocomplete="list" autoCapitalize="none" spellcheck="false"/><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium search-icon css-vubbuv" focusable="false" viewBox="0 0 24 24" aria-hidden="true" data-testid="SearchOutlinedIcon"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg></div></div></div></div></div></div></header><main class="page-content"><header class="post-header"><div class="emoji">🏠</div><div class="info"><div class="categories"><a class="category" href="/posts/project">project</a></div></div><h1 class="title">공공데이터 시각화 프로젝트 : 코로나19 확산으로 재택근무가 늘었는가</h1><div class="info"><div class="author">posted by <strong>mungdo</strong>,</div> <!-- -->February 25, 2022</div></header><div class="post-content"><div class="markdown"><p><strong>본 프로젝트는 팀 활동으로 진행 되었고, 프로젝트 상에서 제가 기여한 부분을 중심으로 작성했습니다.</strong></p>
+  </script><title data-react-helmet="true">문제해결 빅데이터 활용 프로젝트 : 대졸 구직자 취업에 영향을 미치는 변수분석 및 취업예측 모델</title><meta data-react-helmet="true" name="viewport" content="initial-scale=1, width=device-width"/><meta data-react-helmet="true" property="og:title" content="문제해결 빅데이터 활용 프로젝트 : 대졸 구직자 취업에 영향을 미치는 변수분석 및 취업예측 모델"/><meta data-react-helmet="true" property="og:site_title" content="문제해결 빅데이터 활용 프로젝트 : 대졸 구직자 취업에 영향을 미치는 변수분석 및 취업예측 모델"/><meta data-react-helmet="true" name="description" content="본 프로젝트는 팀 활동으로 진행 되었고, 프로젝트 상에서 제가 기여한 부분을 중심으로 작성했습니다.  ⛳️  프로젝트 배경 및 목표  기획의도1
+대졸자 집단의 실업률이 높은 상황. 해당 그래프를 보면 2019년 대졸자의 취업비율은 73.8%에서 2020년 조사 당시 66.4%로 하락한 모습을 볼 수 있습니다. 기획의도2
+이런 청년층 취업난의 심화에 한국고용정보원은 위와 같은 8개의 원인을 제시했습니다. 이번 프로젝트에서 저희가 주목한 것은 7번 대졸자 노동시장에 대한 잘못된 정보와 8번 구직의욕 상실자인 청년 NEET의 증가입니다.
+그래서 이번 프로젝트를 통해 대졸자 구직에 영향을 미치는 요소들은 어떤 것이 있는지 알아보고 구직자 상황을 반영한 정보를 제공하고자 합니다. 기획 목표 취업 여부를 결정하는 변수 알아보기 종사상 지위 구분(정규직, 비정규직, 프리랜서 등)을 결정하는 변수 알아보기 기업체 구분(국내 사기업, 공기업, 외국계 기업 등)을 결정하는 변수 알아보기   📄   데…"/><meta data-react-helmet="true" property="og:description" content="본 프로젝트는 팀 활동으로 진행 되었고, 프로젝트 상에서 제가 기여한 부분을 중심으로 작성했습니다.  ⛳️  프로젝트 배경 및 목표  기획의도1
+대졸자 집단의 실업률이 높은 상황. 해당 그래프를 보면 2019년 대졸자의 취업비율은 73.8%에서 2020년 조사 당시 66.4%로 하락한 모습을 볼 수 있습니다. 기획의도2
+이런 청년층 취업난의 심화에 한국고용정보원은 위와 같은 8개의 원인을 제시했습니다. 이번 프로젝트에서 저희가 주목한 것은 7번 대졸자 노동시장에 대한 잘못된 정보와 8번 구직의욕 상실자인 청년 NEET의 증가입니다.
+그래서 이번 프로젝트를 통해 대졸자 구직에 영향을 미치는 요소들은 어떤 것이 있는지 알아보고 구직자 상황을 반영한 정보를 제공하고자 합니다. 기획 목표 취업 여부를 결정하는 변수 알아보기 종사상 지위 구분(정규직, 비정규직, 프리랜서 등)을 결정하는 변수 알아보기 기업체 구분(국내 사기업, 공기업, 외국계 기업 등)을 결정하는 변수 알아보기   📄   데…"/><meta data-react-helmet="true" property="og:author" content="안문주"/><meta data-react-helmet="true" property="og:image" content="/og-image.png"/><meta data-react-helmet="true" property="og:type" content="website"/><link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="/static/webfonts/s/roboto/v29/KFOlCnqEu92Fr1MmSU5fBBc4.woff2"/><link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="/static/webfonts/s/roboto/v29/KFOmCnqEu92Fr1Mu4mxK.woff2"/><link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="/static/webfonts/s/roboto/v29/KFOlCnqEu92Fr1MmEU9fBBc4.woff2"/><style>@font-face{font-display:swap;font-family:Roboto;font-style:normal;font-weight:300;src:url(/static/webfonts/s/roboto/v29/KFOlCnqEu92Fr1MmSU5fBBc4.woff2) format("woff2")}@font-face{font-display:swap;font-family:Roboto;font-style:normal;font-weight:400;src:url(/static/webfonts/s/roboto/v29/KFOmCnqEu92Fr1Mu4mxK.woff2) format("woff2")}@font-face{font-display:swap;font-family:Roboto;font-style:normal;font-weight:500;src:url(/static/webfonts/s/roboto/v29/KFOlCnqEu92Fr1MmEU9fBBc4.woff2) format("woff2")}@font-face{font-display:swap;font-family:Roboto;font-style:normal;font-weight:300;src:url(/static/webfonts/s/roboto/v29/KFOlCnqEu92Fr1MmSU5fBBc-.woff) format("woff")}@font-face{font-display:swap;font-family:Roboto;font-style:normal;font-weight:400;src:url(/static/webfonts/s/roboto/v29/KFOmCnqEu92Fr1Mu4mxM.woff) format("woff")}@font-face{font-display:swap;font-family:Roboto;font-style:normal;font-weight:500;src:url(/static/webfonts/s/roboto/v29/KFOlCnqEu92Fr1MmEU9fBBc-.woff) format("woff")}</style><link rel="sitemap" type="application/xml" href="/sitemap.xml"/><link rel="alternate" type="application/rss+xml" href="/rss.xml"/><style>.gatsby-image-wrapper{position:relative;overflow:hidden}.gatsby-image-wrapper picture.object-fit-polyfill{position:static!important}.gatsby-image-wrapper img{bottom:0;height:100%;left:0;margin:0;max-width:none;padding:0;position:absolute;right:0;top:0;width:100%;object-fit:cover}.gatsby-image-wrapper [data-main-image]{opacity:0;transform:translateZ(0);transition:opacity .25s linear;will-change:opacity}.gatsby-image-wrapper-constrained{display:inline-block;vertical-align:top}</style><noscript><style>.gatsby-image-wrapper noscript [data-main-image]{opacity:1!important}.gatsby-image-wrapper [data-placeholder-image]{opacity:0!important}</style></noscript><script type="module">const e="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;e&&document.body.addEventListener("load",(function(e){if(void 0===e.target.dataset.mainImage)return;if(void 0===e.target.dataset.gatsbyImageSsr)return;const t=e.target;let a=null,n=t;for(;null===a&&n;)void 0!==n.parentNode.dataset.gatsbyImageWrapper&&(a=n.parentNode),n=n.parentNode;const o=a.querySelector("[data-placeholder-image]"),r=new Image;r.src=t.currentSrc,r.decode().catch((()=>{})).then((()=>{t.style.opacity=1,o&&(o.style.opacity=0,o.style.transition="opacity 500ms linear")}))}),!0);</script><link as="script" rel="preload" href="/webpack-runtime-f5f3382f227c26345aa2.js"/><link as="script" rel="preload" href="/framework-91ebf51d003c3c6f38be.js"/><link as="script" rel="preload" href="/app-889f0644be3e8780fa3b.js"/><link as="script" rel="preload" href="/f9d3028dbef90a6e9b8db85387d63dd9f4edf538-852cf68f9be39a5a4bc9.js"/><link as="script" rel="preload" href="/component---src-templates-blog-template-js-7e0f67ebc752626855c1.js"/><link as="fetch" rel="preload" href="/page-data/project/zero_false_one_true/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/1073350324.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/1956554647.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/2938748437.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="page-wrapper"><header class="page-header-wrapper"><div class="page-header"><div class="front-section"><a class="link" href="/">mungdologs</a></div><div class="trailing-section"><a class="link" href="/about">about</a><a class="link" href="/posts">posts</a><div class="MuiAutocomplete-root MuiAutocomplete-hasPopupIcon css-1l6di18" role="combobox" aria-expanded="false"><div class="search-input-wrapper"><div class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root search-input css-feqhe6"><div class="MuiInput-root MuiInput-underline MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-11tfndm"><input type="text" aria-invalid="false" autoComplete="off" value="" class="MuiInput-input MuiInputBase-input MuiInputBase-inputAdornedEnd MuiAutocomplete-input MuiAutocomplete-inputFocused css-mnn31" aria-autocomplete="list" autoCapitalize="none" spellcheck="false"/><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium search-icon css-vubbuv" focusable="false" viewBox="0 0 24 24" aria-hidden="true" data-testid="SearchOutlinedIcon"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg></div></div></div></div></div></div></header><main class="page-content"><header class="post-header"><div class="emoji">🏠</div><div class="info"><div class="categories"><a class="category" href="/posts/project">project</a></div></div><h1 class="title">문제해결 빅데이터 활용 프로젝트 : 대졸 구직자 취업에 영향을 미치는 변수분석 및 취업예측 모델</h1><div class="info"><div class="author">posted by <strong>mungdo</strong>,</div> <!-- -->April 01, 2022</div></header><div class="post-content"><div class="markdown"><p><strong>본 프로젝트는 팀 활동으로 진행 되었고, 프로젝트 상에서 제가 기여한 부분을 중심으로 작성했습니다.</strong></p>
 <h1 id="" style="position:relative;"><a href="#" aria-label=" permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h1>
 <h2 id="️-프로젝트-배경-및-목표" style="position:relative;"><a href="#%EF%B8%8F-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EB%B0%B0%EA%B2%BD-%EB%B0%8F-%EB%AA%A9%ED%91%9C" aria-label="️ 프로젝트 배경 및 목표 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>⛳️  프로젝트 배경 및 목표</h2>
 <h1 id="-1" style="position:relative;"><a href="#-1" aria-label=" 1 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h1>
-<p><img src="https://user-images.githubusercontent.com/82261307/155633280-2c446f5d-708b-418c-8884-1086b6476c2e.png" alt="재택근무의 증가1">
-<img src="https://user-images.githubusercontent.com/82261307/155633291-6eee9e28-64de-4853-b50b-b0d52911606e.png" alt="재택근무의 증가2"></p>
+<p><img src="./zero_false_one_true_imgs/%EA%B8%B0%ED%9A%8D%EC%9D%98%EB%8F%841.png" alt="기획의도1">
+대졸자 집단의 실업률이 높은 상황. 해당 그래프를 보면 2019년 대졸자의 취업비율은 73.8%에서 2020년 조사 당시 66.4%로 하락한 모습을 볼 수 있습니다.</p>
+<p><img src="./zero_false_one_true_imgs/%EA%B8%B0%ED%9A%8D%EC%9D%98%EB%8F%842.png" alt="기획의도2">
+이런 청년층 취업난의 심화에 한국고용정보원은 위와 같은 8개의 원인을 제시했습니다. 이번 프로젝트에서 저희가 주목한 것은 7번 대졸자 노동시장에 대한 잘못된 정보와 8번 구직의욕 상실자인 청년 NEET의 증가입니다.
+그래서 이번 프로젝트를 통해 대졸자 구직에 영향을 미치는 요소들은 어떤 것이 있는지 알아보고 구직자 상황을 반영한 정보를 제공하고자 합니다.</p>
+<h3 id="기획-목표" style="position:relative;"><a href="#%EA%B8%B0%ED%9A%8D-%EB%AA%A9%ED%91%9C" aria-label="기획 목표 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>기획 목표</h3>
+<ol>
+<li>
+<p>취업 여부를 결정하는 변수 알아보기</p>
+</li>
+<li>
+<p>종사상 지위 구분(정규직, 비정규직, 프리랜서 등)을 결정하는 변수 알아보기</p>
+</li>
+<li>
+<p>기업체 구분(국내 사기업, 공기업, 외국계 기업 등)을 결정하는 변수 알아보기</p>
+</li>
+</ol>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 720px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 49.44444444444444%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAABYlAAAWJQFJUiTwAAACI0lEQVQoz1WSW08TURSF+xf9Hz744IOJFwwRAxjBS7xFEUFoFPqgMSYaE3nyCUMw0pah5dZSep3OnM7lnJkz08+cAxjdyXrZJ/n2WmumsPS1wcRilcmlXW4uVLizvMvkUpUbr8rcXqwyU3R4WKozW3R4sF5jfq3G9Kpjde/dHnNrNWaKe9x/X2Ph8xGFxyWHy3ObXHv+i6tPtrm1sGPhBjjxusLU2ypz6zWmVhymi3vcXXWYX6/z8tMhLz4e8uzDPo9K9b+7giciugOP9sDHH4WMwhidZ8AYnedEKkXIFJ2PMRMmOVvHgnJTUG0FNL2Uf6cQxAl+IGl2PE46Q1pdj9OeT6cvCGWKHyb4UYJMM7J8jOF++9lgdmWT6083uHTlDR03sLBIaQpDIe1i/2RAsz2kNwwQkbKAUGnckcINFCrNyMdjC70YpRLKzjGH3RClc5I0p6CSDJloGm2X7sDHVOCNIkQQI0JJEKeM4pRE5xZooutsTJrlGHQOfHcEvszQOqcQy5QglLRNzJ6H6wVEsbK7IFI2RiC1dZCfw6zyManOrNPlL2V26p2zDlN9ds3Edf2QMFbWiblu9qM4QcQpKv0faKIb12a2Kg1+H/TPgKc9wcHJgOO2R9N8lJ5vIxpnBtQXMX0hrcPxeYcXMocNdLsVs1FxcYU0v42k3R/R6glipYmV6TTDdBtJjRckuEFiY5u9ebdKzhRKTaQyjtqCxdIP/gAYNN3ofozjmwAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="WBS"
+        title="WBS"
+        src="/static/47ebafe8a3a31a5bf90dfef93be9e4bd/37523/WBS.png"
+        srcset="/static/47ebafe8a3a31a5bf90dfef93be9e4bd/e9ff0/WBS.png 180w,
+/static/47ebafe8a3a31a5bf90dfef93be9e4bd/f21e7/WBS.png 360w,
+/static/47ebafe8a3a31a5bf90dfef93be9e4bd/37523/WBS.png 720w,
+/static/47ebafe8a3a31a5bf90dfef93be9e4bd/302a4/WBS.png 1080w,
+/static/47ebafe8a3a31a5bf90dfef93be9e4bd/07a9c/WBS.png 1440w,
+/static/47ebafe8a3a31a5bf90dfef93be9e4bd/573d3/WBS.png 1650w"
+        sizes="(max-width: 720px) 100vw, 720px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
 <h1 id="-2" style="position:relative;"><a href="#-2" aria-label=" 2 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h1>
-<blockquote>
-<p>코로나 전후 출퇴근 교통 이용자 수, 사무실 공실률 등 다양한 지표를 통해
-실제 재택근무 변화를 관찰하고자 한다.</p>
-</blockquote>
 <hr>
-<h2 id="--데이터-수집" style="position:relative;"><a href="#--%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%88%98%EC%A7%91" aria-label="  데이터 수집 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>📄   데이터 수집</h2>
-<h3 id="1-출퇴근-시간대-교통-이용량-변화-분석을-통한-관찰-대상-지역-설정" style="position:relative;"><a href="#1-%EC%B6%9C%ED%87%B4%EA%B7%BC-%EC%8B%9C%EA%B0%84%EB%8C%80-%EA%B5%90%ED%86%B5-%EC%9D%B4%EC%9A%A9%EB%9F%89-%EB%B3%80%ED%99%94-%EB%B6%84%EC%84%9D%EC%9D%84-%ED%86%B5%ED%95%9C-%EA%B4%80%EC%B0%B0-%EB%8C%80%EC%83%81-%EC%A7%80%EC%97%AD-%EC%84%A4%EC%A0%95" aria-label="1 출퇴근 시간대 교통 이용량 변화 분석을 통한 관찰 대상 지역 설정 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1. 출퇴근 시간대 교통 이용량 변화 분석을 통한 관찰 대상 지역 설정</h3>
+<h2 id="--데이터" style="position:relative;"><a href="#--%EB%8D%B0%EC%9D%B4%ED%84%B0" aria-label="  데이터 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>📄   데이터</h2>
+<h3 id="대졸자-직업이동경로조사" style="position:relative;"><a href="#%EB%8C%80%EC%A1%B8%EC%9E%90-%EC%A7%81%EC%97%85%EC%9D%B4%EB%8F%99%EA%B2%BD%EB%A1%9C%EC%A1%B0%EC%82%AC" aria-label="대졸자 직업이동경로조사 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>대졸자 직업이동경로조사</h3>
+<blockquote>
+<p>GOMS : Graduates Occupational Mobility Survey</p>
+</blockquote>
+<p><a href="https://survey.keis.or.kr/goms/goms01.jsp">GOMS 조사개요</a></p>
+<p>전국의 전문대학 및 대학교 졸업자의 3~4%를 선정하여 대학 졸업자의 경력개발 및 직업(직장) 이동경로를 조사한 내용입니다.</p>
 <ul>
 <li>
-<p><a href="https://data.seoul.go.kr/dataList/OA-12914/S/1/datasetView.do#">서울시 지하철 선별 역별 승하차 인원 정보 (2018.01~2021.11)</a></p>
+<p><a href="https://survey.keis.or.kr/goms/gomsdownload/List.jsp">데이터(2016~2018)</a></p>
 </li>
-<li>
-<p><a href="http://data.seoul.go.kr/dataList/OA-12913/S/1/datasetView.do#">서울시 버스노선별 정류장별 시간대별 승하차 인원 정보</a></p>
-</li>
-<li>
-<p><a href="http://www.seoulmetro.co.kr/kr/board.do?menuIdx=551&#x26;bbsIdx=2213351">서울시 역별 일별 시간대별 지하철 승하차 인원 정보</a></p>
-</li>
-</ul>
-<h3 id="2-관찰-대상-지역-공실률-분석" style="position:relative;"><a href="#2-%EA%B4%80%EC%B0%B0-%EB%8C%80%EC%83%81-%EC%A7%80%EC%97%AD-%EA%B3%B5%EC%8B%A4%EB%A5%A0-%EB%B6%84%EC%84%9D" aria-label="2 관찰 대상 지역 공실률 분석 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2. 관찰 대상 지역 공실률 분석</h3>
-<ul>
-<li><a href="https://data.seoul.go.kr/dataList/10613/S/2/datasetView.do">서울시 오피스빌딩 임대료·공실률 및 수익률 (2013년 이후) 통계</a></li>
 </ul>
 <hr>
 <h2 id="--데이터-전처리-및-시각화" style="position:relative;"><a href="#--%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%A0%84%EC%B2%98%EB%A6%AC-%EB%B0%8F-%EC%8B%9C%EA%B0%81%ED%99%94" aria-label="  데이터 전처리 및 시각화 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>📊   데이터 전처리 및 시각화</h2>
-<h3 id="1-지하철-요일별-시간별-변화-살펴보기" style="position:relative;"><a href="#1-%EC%A7%80%ED%95%98%EC%B2%A0-%EC%9A%94%EC%9D%BC%EB%B3%84-%EC%8B%9C%EA%B0%84%EB%B3%84-%EB%B3%80%ED%99%94-%EC%82%B4%ED%8E%B4%EB%B3%B4%EA%B8%B0" aria-label="1 지하철 요일별 시간별 변화 살펴보기 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1. 지하철 요일별, 시간별 변화 살펴보기</h3>
+<p><a href="https://github.com/mungdo/zero_false_one_true/blob/main/%EC%A0%84%EC%B2%98%EB%A6%AC/1%EC%B0%A8%20%EC%A0%84%EC%B2%98%EB%A6%AC/%EC%A0%84%EC%B2%98%EB%A6%AC.ipynb">전처리.ipynb</a></p>
+<h3 id="1-데이터-확인" style="position:relative;"><a href="#1-%EB%8D%B0%EC%9D%B4%ED%84%B0-%ED%99%95%EC%9D%B8" aria-label="1 데이터 확인 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1. 데이터 확인</h3>
 <h1 id="-3" style="position:relative;"><a href="#-3" aria-label=" 3 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h1>
 <ol>
-<li>데이터 : 서울시 역별 일별 시간대별 지하철 승하차 인원 정보</li>
+<li>전체 문답 중 주관적인 문답 요소나 응답이 거의 없는 항목 전체 제거</li>
+<li>2016, 2017, 2018년 모두 동일한 카테고리를 사용했는지 확인하기</li>
+<li>null값 확인</li>
 </ol>
+<h3 id="2-칼럼별로-전처리" style="position:relative;"><a href="#2-%EC%B9%BC%EB%9F%BC%EB%B3%84%EB%A1%9C-%EC%A0%84%EC%B2%98%EB%A6%AC" aria-label="2 칼럼별로 전처리 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2. 칼럼별로 전처리</h3>
 <h1 id="-4" style="position:relative;"><a href="#-4" aria-label=" 4 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h1>
-<ol start="2">
-<li>
-<p>데이터 전처리 과정</p>
 <ol>
-<li>
-<p>날짜 데이터 Datatime 형태로 변환</p>
-</li>
-<li>
-<p>datetime.day_name() 함수로 요일 칼럼 추가</p>
-</li>
-<li>
-<p>2018~2021년 상이한 인덱스 조정 및 pd.concat() 함수로 합침.</p>
-</li>
-<li>
-<p>[날짜, 호선, 역번호, 역명, 시간대(6시부터 23시까지), 요일] columns를 가진 csv 파일 완성</p>
-</li>
+<li>연령 소수점 제거(내림)</li>
+<li>target값인 취업여부 : 취업(1), 미취업(0)</li>
+<li>설문 내용에 응답하지 않은 경우와 모르는 경우 전체 0으로 수정.</li>
 </ol>
-</li>
+<ul>
+<li>같은 이유로 NaN값 0으로 수정</li>
+</ul>
+<ol start="4">
+<li>비슷한 내용의 설문 문답 하나로 맞추기, 동일한 내용을 묻는 세부 문답에 대해서는 필요에 따라 제거</li>
 </ol>
+<h3 id="3-시각화" style="position:relative;"><a href="#3-%EC%8B%9C%EA%B0%81%ED%99%94" aria-label="3 시각화 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>3. 시각화</h3>
 <h1 id="-5" style="position:relative;"><a href="#-5" aria-label=" 5 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h1>
-<ol start="3">
-<li>시각화
 <ol>
-<li>
-<p>18년 요일별 시간별 히트맵 승객수 (평균) <span class="gatsby-resp-image-wrapper" style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 720px; ">
-      <span class="gatsby-resp-image-background-image" style="padding-bottom: 20.555555555555554%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAYAAACOXx+WAAAACXBIWXMAAAsTAAALEwEAmpwYAAABT0lEQVQY0wFEAbv+AMHJpQ/x9bqls+O6syZ4oq8ZUYewWrzBsJDQtbCO0bevfcSxtni+rbtsu7C4Ur7BsDCGs7AfSpqwQKa/sHvJuLCMzrWwu+Oysr3UqjQAAGIYAJ+miRzw87r4suK5/yF1ov8TSYT/VLfB/43Os/+MzrX/f8m2/33Jt/9ww7f/TrrA/yyAr/8bQpL/PaO//3PGt/99x7b/r9ux/7fasU4ARJwmAKWqjRrw9Lvwv+a3/0ySpf8ya4//Xru//4bMtf97yLf/a8K6/2nBuv9dvLv/Q7TF/yeCrv8jV47/TaO6/3XHuP9+yLb/n9Wz/6/etExiuasjALO2lRXs8b/O5/Cy39jqrtu23K7cpNaw3JzSsdyEyrTcbcK53GvCu9xqwbrcX7u83Fy4utx2xLbcndGw3KvZsNy03K7cz+et3uPxsEHW3KketsjVjNIxLLoAAAAASUVORK5CYII='); background-size: cover; display: block;"></span>
-  <img class="gatsby-resp-image-image" alt="1" title="1" src="/static/311a924c142378454f3bae4cd60a65f8/37523/1.png" srcset="/static/311a924c142378454f3bae4cd60a65f8/e9ff0/1.png 180w,
-/static/311a924c142378454f3bae4cd60a65f8/f21e7/1.png 360w,
-/static/311a924c142378454f3bae4cd60a65f8/37523/1.png 720w,
-/static/311a924c142378454f3bae4cd60a65f8/302a4/1.png 1080w,
-/static/311a924c142378454f3bae4cd60a65f8/07a9c/1.png 1440w,
-/static/311a924c142378454f3bae4cd60a65f8/44d59/1.png 1553w" sizes="(max-width: 720px) 100vw, 720px" style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;" loading="lazy" decoding="async">
-    </span></p>
-</li>
-<li>
-<p>19년 요일별 시간별 히트맵 승객수 (평균) <span
-      class="gatsby-resp-image-wrapper"
-      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 720px; "
-    >
-      <span
-    class="gatsby-resp-image-background-image"
-    style="padding-bottom: 20.555555555555554%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAYAAACOXx+WAAAACXBIWXMAAAsTAAALEwEAmpwYAAABT0lEQVQY0wFEAbv+AMHIpA/x9bmls+K6syN1n68TS4GwUrbCsIzPtbCL0LevecOytnW9rbtpurC4TLvCsCd+rLAYRYuwQafAsHzJt7CNz7WwvuSyssDVqzQAAGIYAJ6liBzw87n4suK5/yF1oP8PRoD/T7TC/4rNtP+JzLX/e8i3/3nHt/9qwbj/SrrF/yV4qv8WQYj/PqfB/3XGtv+AybX/st2x/7ncsU4ARJwmAKWrjRrw9Lrwwei3/1GXpv80a5D/Xbu//4LKtf92xbf/Zr+6/2O/u/9Wurz/QrTI/yd8rP8jW5D/T6m9/3fHt/+Aybb/pNiy/7XhtExguKwjALS3lRXt8sDO5/Cz39nqrtu43a7cotWx3JjRstyAyLXcasC63GnBu9xnwLvcXbm73Fy4u9x2xLbcnNGw3KrYsNy13K/cz+et3uTxsUHW3KkeBGvU2vKlcwMAAAAASUVORK5CYII='); background-size: cover; display: block;"
-  ></span>
-  <img
-        class="gatsby-resp-image-image"
-        alt="19년"
-        title="19년"
-        src="/static/a4a14fb490ffcabb8a0185730e3830dc/37523/2.png"
-        srcset="/static/a4a14fb490ffcabb8a0185730e3830dc/e9ff0/2.png 180w,
-/static/a4a14fb490ffcabb8a0185730e3830dc/f21e7/2.png 360w,
-/static/a4a14fb490ffcabb8a0185730e3830dc/37523/2.png 720w,
-/static/a4a14fb490ffcabb8a0185730e3830dc/302a4/2.png 1080w,
-/static/a4a14fb490ffcabb8a0185730e3830dc/07a9c/2.png 1440w,
-/static/a4a14fb490ffcabb8a0185730e3830dc/44d59/2.png 1553w"
-        sizes="(max-width: 720px) 100vw, 720px"
-        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
-        loading="lazy"
-        decoding="async"
-      />
-    </span></p>
-</li>
-<li>
-<p>20년 요일별 시간별 히트맵 승객수 (평균) <span
-      class="gatsby-resp-image-wrapper"
-      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 720px; "
-    >
-      <span
-    class="gatsby-resp-image-background-image"
-    style="padding-bottom: 20.555555555555554%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAYAAACOXx+WAAAACXBIWXMAAAsTAAALEwEAmpwYAAABT0lEQVQY0wFEAbv+AMPLqg/z9b2lweu2s0KTt68xbauwg9K9sMflr7DG57Gvt9qrtq/Up7un0qq4jdS4sEectrArca+wbsq/sLrgsLDI5rCw5PKxstXerjQAAGEYAJ+mixzy9Lz4v+m0/zyOtP8saq3/f9C9/8Tirv/F5K//vOGx/7jgsv+r2rL/iNK4/0Kbuv8nba//a8nA/7LbsP/A4q//3++t/9TmsE4AQJwmAKarjhry9b/wzeyz/2ursf9XkrD/k9W4/8Tjr/+/4rD/st2x/63asf+i1bL/hM+4/1Spu/9Mi7H/hdG8/7vfsP/F5K//3e2u/93wskxSsqwjALW3lxXv88XO7PK73+bwtNvY6q3c0eer3NLorNzG467cu9+v3Lvfrty53q7cstuv3LHbsNzB4a7c0ues3NXprNzb66vc5/C03vD2vkHS26Qeljnor5D7MMcAAAAASUVORK5CYII='); background-size: cover; display: block;"
-  ></span>
-  <img
-        class="gatsby-resp-image-image"
-        alt="20년"
-        title="20년"
-        src="/static/60c06b6daa6b605a299da50f6b2173bc/37523/3.png"
-        srcset="/static/60c06b6daa6b605a299da50f6b2173bc/e9ff0/3.png 180w,
-/static/60c06b6daa6b605a299da50f6b2173bc/f21e7/3.png 360w,
-/static/60c06b6daa6b605a299da50f6b2173bc/37523/3.png 720w,
-/static/60c06b6daa6b605a299da50f6b2173bc/302a4/3.png 1080w,
-/static/60c06b6daa6b605a299da50f6b2173bc/07a9c/3.png 1440w,
-/static/60c06b6daa6b605a299da50f6b2173bc/44d59/3.png 1553w"
-        sizes="(max-width: 720px) 100vw, 720px"
-        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
-        loading="lazy"
-        decoding="async"
-      />
-    </span></p>
-</li>
-<li>
-<p>21년 요일별 시간별 히트맵 승객수 (평균) <span
-      class="gatsby-resp-image-wrapper"
-      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 720px; "
-    >
-      <span
-    class="gatsby-resp-image-background-image"
-    style="padding-bottom: 20.555555555555554%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAYAAACOXx+WAAAACXBIWXMAAAsTAAALEwEAmpwYAAABT0lEQVQY0wFEAbv+AMTMqg/09r6lwuq0s0KWtK80dq2wh9K5sMflsLDG57KvudyrtrHVp7um0qq4i9O4sEaguLAue7Cwfc26sMHjsbDK57Cw6fS7stzgvTQAAFsYAKCnixzy9Lz4vei0/zqPtf8sbKz/fs66/8Pir//D46//u+Gx/7jgsf+p2bL/gtC5/z2bvP8ob63/c8m5/7fesP++4a//5PG3/9zqwE4AP5YmAKasjxry9L/wy+u0/2mrtP9WkK//kdS3/8Dir/+437D/rtux/6vasv+e1LL/fc25/1Gmu/9Oiq7/jdK3/77hsP/A4q//4vC2/+j1v0xNsKcjALW3lxXx9MbO7vO93+bwtNvX6q3cz+as3MvlrNy94K7ctNyw3LTcr9yz3K/crNmw3K/ar9zE4q3c1eis3NXprNzZ6qrc6fG53vP3xkHQ2qEe+lTo+DKcj58AAAAASUVORK5CYII='); background-size: cover; display: block;"
-  ></span>
-  <img
-        class="gatsby-resp-image-image"
-        alt="21년"
-        title="21년"
-        src="/static/b296dc46610d0a4678c8f7c52b51b12a/37523/4.png"
-        srcset="/static/b296dc46610d0a4678c8f7c52b51b12a/e9ff0/4.png 180w,
-/static/b296dc46610d0a4678c8f7c52b51b12a/f21e7/4.png 360w,
-/static/b296dc46610d0a4678c8f7c52b51b12a/37523/4.png 720w,
-/static/b296dc46610d0a4678c8f7c52b51b12a/302a4/4.png 1080w,
-/static/b296dc46610d0a4678c8f7c52b51b12a/07a9c/4.png 1440w,
-/static/b296dc46610d0a4678c8f7c52b51b12a/44d59/4.png 1553w"
-        sizes="(max-width: 720px) 100vw, 720px"
-        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
-        loading="lazy"
-        decoding="async"
-      />
-    </span></p>
-</li>
-<li>
-<p>코로나 이전 (18, 19년) 요일별 시간별 히트맵 승객수 (평균) <span
-      class="gatsby-resp-image-wrapper"
-      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 720px; "
-    >
-      <span
-    class="gatsby-resp-image-background-image"
-    style="padding-bottom: 20.555555555555554%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAYAAACOXx+WAAAACXBIWXMAAAsTAAALEwEAmpwYAAABT0lEQVQY0wFEAbv+AIGmSw+u23Oh5OqKr912UazEPzus/NOGrfr2s6z2766v7eGftu7hnrXp2JK39daCsemIVKzQOzOt+bhxrPnvpKz69LKs6PSlrtnTgzOoAAAXAGqJPhyr2HH54umJ/9x0Uf/BNTX/+c2A//fysP/48a//+e2m//nspP/45pr/+taB/+N8T//LMjD/97Vt//fqn//57an/6/Km/+bkk07VTCgmAG+PQhus2HHw2+iG/92UZP/PZFT/+dSJ//jwrP/46aP/9+GV//ffk//32Yr/+sd2/+eAU//PTkP/+bt4//fsof/47Kf/8PGp/+/1qEzp14wjAHSbTBaj0mrRtdpz48figt/i65vf7e6m3/Dup9/06aLf9t+X3/Xeld/13JPf9dSL3/XRit/04Jvf8O+q3+3xqt/n76Lf0OaK4cPjfkKpzHUfCOfqAejl/Z0AAAAASUVORK5CYII='); background-size: cover; display: block;"
-  ></span>
-  <img
-        class="gatsby-resp-image-image"
-        alt="18_19년"
-        title="18_19년"
-        src="/static/997f020ede94628fbefc2ad4f2abec88/37523/5.png"
-        srcset="/static/997f020ede94628fbefc2ad4f2abec88/e9ff0/5.png 180w,
-/static/997f020ede94628fbefc2ad4f2abec88/f21e7/5.png 360w,
-/static/997f020ede94628fbefc2ad4f2abec88/37523/5.png 720w,
-/static/997f020ede94628fbefc2ad4f2abec88/302a4/5.png 1080w,
-/static/997f020ede94628fbefc2ad4f2abec88/07a9c/5.png 1440w,
-/static/997f020ede94628fbefc2ad4f2abec88/44d59/5.png 1553w"
-        sizes="(max-width: 720px) 100vw, 720px"
-        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
-        loading="lazy"
-        decoding="async"
-      />
-    </span></p>
-</li>
-<li>
-<p>코로나 이전 (20, 21년) 요일별 시간별 히트맵 승객수 (평균) <span
-      class="gatsby-resp-image-wrapper"
-      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 720px; "
-    >
-      <span
-    class="gatsby-resp-image-background-image"
-    style="padding-bottom: 20.555555555555554%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAYAAACOXx+WAAAACXBIWXMAAAsTAAALEwEAmpwYAAABT0lEQVQY0wFEAbv+AIKqUA+q122h2eyIr/GjZ6zpeU+s8+qZrefzo6zh7Zqv3eectuDooLXk6Ke39PKtsfW0cqzvfk+t9+eXrO32razh75asv+N8rrDCZTO4AAoXAGyNQhyp1mz52OuI//GfZv/ocEr/8uaX/+Xxo//j753/6vOm/+vzqf/z9rP/+fSs//KoaP/tdEn/9uSW/+/2sf/k753/wuJ//7rQbE7lUzcmAG6RRBuo1Wvwz+iE/+m3cv/ql2H/7+qa/+fypP/o8aT/7vSt//D1r//19rb/+fGq//S3eP/tk2H/7+aV/+r0qf/j75z/xeKA/77geUz8358jAG+YSxabz2fRqtZt47bbdd/L5IXf0+eM39Xojt/f7Zrf5/Cj3+bwo9/m76Pf6e+j3+juot/f65jf0eaI39Dmh9/J44Lfstly4avYbkKy0HsfXVvsp1z1KlwAAAAASUVORK5CYII='); background-size: cover; display: block;"
-  ></span>
-  <img
-        class="gatsby-resp-image-image"
-        alt="20_21년"
-        title="20_21년"
-        src="/static/710df7eb38c11558040ba22c2d9507b4/37523/6.png"
-        srcset="/static/710df7eb38c11558040ba22c2d9507b4/e9ff0/6.png 180w,
-/static/710df7eb38c11558040ba22c2d9507b4/f21e7/6.png 360w,
-/static/710df7eb38c11558040ba22c2d9507b4/37523/6.png 720w,
-/static/710df7eb38c11558040ba22c2d9507b4/302a4/6.png 1080w,
-/static/710df7eb38c11558040ba22c2d9507b4/07a9c/6.png 1440w,
-/static/710df7eb38c11558040ba22c2d9507b4/44d59/6.png 1553w"
-        sizes="(max-width: 720px) 100vw, 720px"
-        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
-        loading="lazy"
-        decoding="async"
-      />
-    </span></p>
-</li>
-<li>
-<p>전체 기간 출근 시간대 (7~10시) 이용객 평균 변화 line chart <span
-      class="gatsby-resp-image-wrapper"
-      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 601px; "
-    >
-      <span
-    class="gatsby-resp-image-background-image"
-    style="padding-bottom: 53.333333333333336%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB+0lEQVQoz22R3WvTUBjG888oeOFN6N1Wcd6Il14MiuyvUgaddHTIhjdKh1O61o/WqgO9kI0wxW262lSm7ZL25OTkJDnJ80rSNLZuLzw8J4eT3/ul7e8fXP3VO136+fVz8fd3Y/H9y53bG+X7pa311eXy6oOVp9s7dzc3t5Y3qtVSpVK5l6hcLq9Uq9VSq9W6MxgMFr8c94rfjo5uGoZxXTu3rHVSkmLpUOy7BN8lCgQhSM5O6oSYQJMAkDvimOI4IsYs6vdNMk3ztWbb9sPsbZi8uyDlgyQDBQJAnN7hvzd+6EVCCBoOh40cCEDhssgAUBKQDEjAys8kARWAQFHC4Jw3tNFotDYF5q1MNbnI20xDSaLQI4Re5oIgWZScHcdpJsDZCud+nv2e1prPcsYBpBXOAZPcl4FoOrTZymeUdTAHXJNRQDwQygs9iFCABy6cgKfuR342xn9LmDDmYgqczNBTimwhlC08jD0J7iu4foSx58MSLgbuGCPJIZNFEC4kIMqX0tQsy6pkw0CWPy0hjuPMQUEYkSMlDbhDZ8ymP3xEQ85o6DKyhUNMcnIDjxhjr7RarXalvrt767Tb1Y9PTgqJeqapdzrvFhrNZrHfN/Ve90fhrGcWnHNLf/6ieWO7/mbhg3GoP9t7W6h/7BT2Dj/pj548Xmq329f+Alb6IiiaELccAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
-  ></span>
-  <img
-        class="gatsby-resp-image-image"
-        alt="출근"
-        title="출근"
-        src="/static/f9f685e819a729b949be784e7068caf1/d8f62/7.png"
-        srcset="/static/f9f685e819a729b949be784e7068caf1/e9ff0/7.png 180w,
-/static/f9f685e819a729b949be784e7068caf1/f21e7/7.png 360w,
-/static/f9f685e819a729b949be784e7068caf1/d8f62/7.png 601w"
-        sizes="(max-width: 601px) 100vw, 601px"
-        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
-        loading="lazy"
-        decoding="async"
-      />
-    </span></p>
-</li>
-<li>
-<p>전체 기간 퇴근 시간대 (17~20시) 이용객 평균 변화 line chart <span
-      class="gatsby-resp-image-wrapper"
-      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 601px; "
-    >
-      <span
-    class="gatsby-resp-image-background-image"
-    style="padding-bottom: 53.333333333333336%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB+klEQVQoz3WRS2/TQBSF/WNgwYKNlV0bBN0gliyKIsSfYoEUKotUartAqhSpuzRAggJC7LJCUeNESd2Sl+PHjGOP53EvGjvECRFXOnMlz/i7Z84Ytm0/cO4nR7d3v8tT1z/89rX1/LT6tnJhvTs+O/3w6rJ+9fL8/OL4tFarWJb1Wqtarb6p1WqVdrv1YjqbH/66GZd7vd7Tbrf72PB93wIeo4oDVEmIwAhiukJII0RGENIVIgAC5gUAm64lhMAgcHE4HOJoNPpseJ53kp9QHEHp07sSCWASAvIYIKfpZbMPoIDxWFJK0XXdhnb4Pp+IAjaDt2oNAA1MwrzLdLO3BkvNoJRuA0FgQdwRFnYQeZxHwmgeiVYSSv2dEHJtBEFQADdJ7dYe+C+8GJo5zIDaIZMMSUoESSm6qzDTIgrRiwlyyffAuXbgBVA7ZEIhSbiImADGJTChIBUKKEthRkOYRwHEPNl/sH8yJIRkGZ6sDYj//ZAIAYuIwpT6ELIYFCiQqhCXSkqVPcq1sVwuLX0FpRQopXBbUsqs4zo/LiR6EcVFFOCM+DghPk6Jj3MaIGUxhmH4yajX6w8bjcbReDw2B4NBSctxHLPT6Rw0m82y49yZfdsu3fT7pdlkYna+tJ78/P7jwJstzMmtU5o696WRY5uXVx+ftdvtR38AOMQj8t5JR+oAAAAASUVORK5CYII='); background-size: cover; display: block;"
-  ></span>
-  <img
-        class="gatsby-resp-image-image"
-        alt="퇴근"
-        title="퇴근"
-        src="/static/1b9caa561dfc8ab270b50d6473de0400/d8f62/8.png"
-        srcset="/static/1b9caa561dfc8ab270b50d6473de0400/e9ff0/8.png 180w,
-/static/1b9caa561dfc8ab270b50d6473de0400/f21e7/8.png 360w,
-/static/1b9caa561dfc8ab270b50d6473de0400/d8f62/8.png 601w"
-        sizes="(max-width: 601px) 100vw, 601px"
-        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
-        loading="lazy"
-        decoding="async"
-      />
-    </span></p>
-</li>
+<li>목표 직업의 여부</li>
 </ol>
-</li>
-</ol>
-<h1 id="-6" style="position:relative;"><a href="#-6" aria-label=" 6 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h1>
-<h1 id="-7" style="position:relative;"><a href="#-7" aria-label=" 7 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h1>
-<h3 id="2-대중교통-총-승객-변화-지도-시각화" style="position:relative;"><a href="#2-%EB%8C%80%EC%A4%91%EA%B5%90%ED%86%B5-%EC%B4%9D-%EC%8A%B9%EA%B0%9D-%EB%B3%80%ED%99%94-%EC%A7%80%EB%8F%84-%EC%8B%9C%EA%B0%81%ED%99%94" aria-label="2 대중교통 총 승객 변화 지도 시각화 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2. 대중교통 총 승객 변화 지도 시각화</h3>
-<ol>
-<li>
-<p>데이터 : 서울시 버스노선별 정류장별 시간대별 승하차 인원 정보, 서울시 역별 일별 시간대별 지하철 승하차 인원 정보</p>
-</li>
-<li>
-<p>데이터 전처리 과정</p>
-<ol>
-<li>
-<p>지하철</p>
-<ol>
-<li>코로나 발생 전인 2018년도 이용객수 상위 25%인(quantile() 함수) 지하철 역만 추출. (이용객 다발 구역만 제한해서 시각화 하기 위해)</li>
-<li>해당 지하철 역의 출근시간대 승객수(합계), 퇴근시간대 승객수(합계), 출+퇴근시간 승객수(합계) 계산해 [해당년도, 지하철역, 위도, 경도, 출근, 퇴근, 총계] 컬럼의 csv 완성.</li>
-</ol>
-</li>
-<li>
-<p>버스</p>
-<ol>
-<li>각각의 버스 정류장과 가장 가까이 위치한 지하철역 엮어주기 (haversine 모듈로 거리 계산해서 가장 짧은 위치 엮어주기) -> <strong>전체 버스 정류장 데이터</strong></li>
-<li><strong>전체 버스 정류장 데이터</strong> 에서 지하철 역과의 거리가 1km 이상인 정류장 제거 (서울 외 지역까지 포함된 버스 정류장이 많아서 서울 지하철 평균 간격 1km로 제한. 90%의 데이터가 1km 이내에 위치한 것을 확인.)</li>
-<li>버스노선별 정류장별 시간대별 승하차 인원 정보 + <strong>전체 버스 정류장 데이터</strong> : inner join 해서 합산. 정류장 데이터 없는 경우는 제거.</li>
-<li>지하철 역 기준으로 묶어 출근시간대 승객수(합계), 퇴근시간대 승객수(합계), 출+퇴근시간 승객수(합계) 계산해 [해당년도, 지하철역, 위도, 경도, 출근, 퇴근, 총계] 컬럼의 csv 완성.</li>
-</ol>
-</li>
-</ol>
-</li>
-<li>
-<p>시각화</p>
-<ol>
-<li>
-<p>서울시 이동량 지도 전체 (파란 원 : 코로나 이전, 붉은 원 : 코로나 이후) <span
-      class="gatsby-resp-image-wrapper"
-      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 720px; "
-    >
-      <span
-    class="gatsby-resp-image-background-image"
-    style="padding-bottom: 60%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAAsTAAALEwEAmpwYAAADL0lEQVQozxXMbU8bBQDA8Xvp1/CtwSxG36DxhTFxLOHN3EDMks04JxiNzCyYTLahKBWGQwQqHaW025Xrw/X5er0+3fVKC304+nCsFBY6s5Esfoy/8fcBfsK/r15h9+uU+yqlXpoT2+DQLmC04rS6GkVbItsXMbsWwWubpEYWeDoXIxHL0M4nedZWsbs6lU6c9rM8Qq9dwu6VsJpZ1HKIs36V2nGKzmEcrRNBqaVJVPNE70Twjzrx3grg/1rEP7rGnijzemBwNKggW9uU20mEotXAfpHHHpjEH+xSSRtU9vZI1DV2PWHk4TmSQ98hfzBLYFJEHl8l/f4Mu5MitXKJf44NUl2JhO3l5amOIDs1wnaXg4FJXdOILGWQrntxfxXEcytA+c1xWm8MI1+4i3L7MXt5A9VfJP5bHNMRoH1QQuq4UQ8lTKuBUJPiNK0K2f09Svo+sQkX+ugsiQ/vszISJvXW92xdXCQaSdOxKpyc6VhlBf3PCMqP/4dlDk4yZBsajTML4aBf5MWgRquVJhw3cd3PsX1PxXtDJLSQRvxCpBgz6b1OcWTnqXYrNOtFGrsKypQTdUVmcFwhb+joG1GEk6MDqnKOupJGvi2yNS2z8zCF5DNILEXJzvg4f97k/NjEqJTx/hQj+sNTEnKVQqxIZCGDZ80kJDYpLMcQTo+q5FZlwtMi4fE15I/miQ7NIM94cc8paFKBXjtHrl7Dv14gMrpCaPQRgQknHneNv50t1Hk/+ZUAKcNC6J3XMVMF3Je2CI4ss3k1xPa7i8SnfCT/yqE0m0QrdSLraUKfbqC+M836RR+Jj38h8ZmTzasS1cVtzOUnaNE6wkk/h+LS8L7nwHPpMeGxDXamFHyXd3Bd8fGkmMRq59FdCvLYKsrI7wTenkW6sonpy6CrTZJreTK+KvZpG8HuNIjeCaIOTSN/8pDKjZ8JX9siNf6I5OUl3LMamZldclIW+aaX1Mg8oeEHJB1R+i9Nuv0swV9FMn/EKa/5EVr9fZL3fOQufIv0+Q6lLx34xnZQJxyEbzoJfuMnMelCi8SIxkJ47vqJOdJ02k3q/Sz6c4OsZVDVy+y70vwHC6/F31vB9DEAAAAASUVORK5CYII='); background-size: cover; display: block;"
-  ></span>
-  <img
-        class="gatsby-resp-image-image"
-        alt="서울"
-        title="서울"
-        src="/static/2a05a69e5c9c3afa13373bb371fe6870/37523/map1.png"
-        srcset="/static/2a05a69e5c9c3afa13373bb371fe6870/e9ff0/map1.png 180w,
-/static/2a05a69e5c9c3afa13373bb371fe6870/f21e7/map1.png 360w,
-/static/2a05a69e5c9c3afa13373bb371fe6870/37523/map1.png 720w,
-/static/2a05a69e5c9c3afa13373bb371fe6870/d4c13/map1.png 825w"
-        sizes="(max-width: 720px) 100vw, 720px"
-        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
-        loading="lazy"
-        decoding="async"
-      />
-    </span></p>
-</li>
-<li>
-<p>종로 이동량 지도 <span
-      class="gatsby-resp-image-wrapper"
-      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 720px; "
-    >
-      <span
-    class="gatsby-resp-image-background-image"
-    style="padding-bottom: 60%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAAsTAAALEwEAmpwYAAAC2UlEQVQozxXP227bdADAYT8xN9yBhgQCLidEQaJlq1DUsaash7XJcmxTJ3HixHZ8jA9/n+04TdfxDD/E9wafZFYGH/Q3tK23yOGIPDXISo2wVlDDAWI7Y1faqPGQlnPCJl9hdg3kP/skccChidnXCVlmkWYekpus+Gt9RNs6Jdx57FKHIrNRizGL7RWuOeL5IIhzi5F7i5oO8ToKg5+v0GOTtLHJY5842lKWAmnh3PDJOqdrX/AY3FE1HpY8YXTfxRQ9Ik/FHqukwsQRQzb+LU3tEMcGceFQVymfn3YIYVMVKVLxHOCGc+o8wYpV4mSC8rbD4PsWgXhEODLy8TW5r7GuhszFDbvKJ8o27CvBv18OPD9ViESjiF2kdTrFjAbkwYJ9apE3Bn4Y0/ulx/S4x/RcxXxQKUyXwZtblmEH43KO8keHra7hzTX26ZZdprHLNkjv1CN0f8guM3GmCtPxI1t/id4a03t1xvXXbRa/fsBfrdGvhkTuA/JvN4xftfCmc1z5jlRMybIZRbxFegw7yKJPIXLGr6+Z/3DG7PYBO1owuhhx81WLm5/axJFM7M7x9AHBXMG1TAJ9hba8pGmW5NGGXSqQXg4H9oecKsuZ/X7H/Mf3KD0Vcz1ldHTB5KTP4nJGJhSKwMY2xyTxjKcvEcrlEK17z+cXwb6MODQZkuMZ1FVJU8Ws+hPku3tEuCB3Viy7C2xvg/pJJ1Tn5IGFMAyKwiJNdKoqYL+vacqYZpey39VITWbSFFsqb812tiSvPTxPYXIho3x7xqq7ovJ9VLPHbH1OFFmkoUESL7G0Bw77lOZpS5rYiMJEesojXpIVRbAh3QcYG4OP353Rf92l0x5iaDqq98Cd9w7FucLwZ9w671mGH/GSBYfGp64FuQiwMgWp9EwqT6PJA9JYx7Vt2t/8jXI6wivnbMs+F4sTWsYxV+4pE+8ftEjGzgzK/5uHElEXOLFDVuX8B0dkLGmCdS1eAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
-  ></span>
-  <img
-        class="gatsby-resp-image-image"
-        alt="종로"
-        title="종로"
-        src="/static/738426ef494ad081898341b34da649aa/37523/map2.png"
-        srcset="/static/738426ef494ad081898341b34da649aa/e9ff0/map2.png 180w,
-/static/738426ef494ad081898341b34da649aa/f21e7/map2.png 360w,
-/static/738426ef494ad081898341b34da649aa/37523/map2.png 720w,
-/static/738426ef494ad081898341b34da649aa/c1c45/map2.png 824w"
-        sizes="(max-width: 720px) 100vw, 720px"
-        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
-        loading="lazy"
-        decoding="async"
-      />
-    </span></p>
-</li>
-<li>
-<p>동작,관악,구로 이동량 지도 <span
-      class="gatsby-resp-image-wrapper"
-      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 720px; "
-    >
-      <span
-    class="gatsby-resp-image-background-image"
-    style="padding-bottom: 60%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAAsTAAALEwEAmpwYAAAC+klEQVQozxXQ53LbBADAcb0ZT8M3PsIVuOsdBykpJSEttC4kQEbjDO/Yjkc8JFnTkuUlS5YlOV5JRxjH8QJ/jt8j/IQ/H/7g7XrKLOoQxCLDoMVkIFLfSlG7KlMNdK59g+TM5UIzkdsS8aRLHPWQchUmZouHeMDKV1gvBwjx1GQV2aipDJJYInSqBEqNgdohGmTp7h3SOMqi3uRIdiwOvDmKUkIr5Tj/+DeCqs4/m4D1xGYzkxEWC5vFyuDm2SniaZ7VvY9+VsRqG/QkAzGRQnn0M85+BX1k8lPN543koitlpmaRidUijoYEvsFq2EFYrQJmsU4wtdHMa1y3Sz1xQ20nR/PxK7LPixQfHXC5laL5wxmVR69J7JbJWwaZ/gjJ7uBbNWylRF2+QZguTDzPYuzVCec6UjJHcbfAVaKB/CyDJXuoyRb5p1Ua32URvz6ndVynb96Q+r/AvefIdNi3plwMA4T5sk9/pmMPSqgnMpnPT2knkrhBD8/3uFvHRLMe3nqI63gY131my5C//r0lHolo3RrNlohld7l1dYRFaBDGEo5c4GrrjLGm4m0cprMx4dxkE0t8eDfBDXzef4h5++Didwd0LZVqUOLSvqDSOcDrVRmGOkLoSvTMEo5aw4s0ZsuI7JdZGk/LGFmThjiknLOwLoZUskM6E4XqQQUxWyPjH3HWv6C/7rBZDdmsQoRw6rCKR0RWGbPZpvi4Su2TA4znKfSdU/a/1WnvHdN/mUZ6kSR1bFE6EpGuHNxbnWjjMq4M8ZUB9+EAIQp6LO7HTDpNyp8ekv7oCfpOGuvXHJ3t3yl8kcd+laF3WEZ/cU7pszzdnTTaj3lKksa7v5d0Mwr9mkLcdxDe381ZrHt0mxVa3xxT2m6i7aaxtg/pJKpc/jJCe5nGeZ1B3Ctw8pVI4/sjtN08zUKTzd2E3omKK+kMfBXBXqhEK4tgrmHLGbpagCHH6Nc211YPKxwhNWYUD1tYckxVVym8yVBvj1lGIfFmhlJzsGSZ+cbiP4yhDSGVXD0tAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
-  ></span>
-  <img
-        class="gatsby-resp-image-image"
-        alt="동작,관악,구로"
-        title="동작,관악,구로"
-        src="/static/171ff91a1c8bd1a7b005b288369f3568/37523/map3.png"
-        srcset="/static/171ff91a1c8bd1a7b005b288369f3568/e9ff0/map3.png 180w,
-/static/171ff91a1c8bd1a7b005b288369f3568/f21e7/map3.png 360w,
-/static/171ff91a1c8bd1a7b005b288369f3568/37523/map3.png 720w,
-/static/171ff91a1c8bd1a7b005b288369f3568/c1c45/map3.png 824w"
-        sizes="(max-width: 720px) 100vw, 720px"
-        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
-        loading="lazy"
-        decoding="async"
-      />
-    </span></p>
-</li>
-<li>
-<p>강남 이동량 지도 <span
-      class="gatsby-resp-image-wrapper"
-      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 720px; "
-    >
-      <span
-    class="gatsby-resp-image-background-image"
-    style="padding-bottom: 60%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAAsTAAALEwEAmpwYAAAC6klEQVQozxXOWXLbBACAYd2SS/DIE8tDh2EgYaaTGUJbAmHiLHZWK7HlLbYsy5KsXbIcrd6dNE6hlB7hZ/hO8AlPq5jtdsnLZkIeKYiKzFWUcefZnBseTTtgmsW8xBpRvcciTfGaOvZJnWnY4kQz6XshC8tFP2whPGUm2+eUz89TNKNFxUkZHdWQf72mvlOleq5xafvUBhqO12E2d/n0GLP2FSqmz4UfUBi3rBc262WC8D6z2OY6XcPgaGjhu13ssoJy0MJ8WyNqyYw7PXrtHiUr5fdwzo2XUzE93ikP1EWTfBwyXsj4TwZCOGoiKQMO/QLHVfEPRAI1YFM4mNIQvWbR+OaU8LaL76n0AxcxSTi3I253amivr2hUAlpLhbu/2wjHfs6N7eBHBqvERv6ugl7qoR9IJIpJUYwZ9U2kr86p799h9rsUgw4XOx1GexXM3Teo75q4YUqyVhHUKCLqdNBf/z+TCaQe0o7Kw6Tg878Z8qVI+0gm/PGY+2/LyG2H1XzCsOnSOh3S2L1BERPyRcyHTYgwK4ZY5oj7V8d46hD9Wqf2xS+IX14j73fR9i4YlFRs2UGrd0lSlaLQ2LwPyRY5bpSTZwHPzzZPaw9hOrN5fFwSFiO8ZIDxh4r7cwnt60P0sz5FbHO/d89yHjGLeyxTizQaMLZ7LAud2YvNh7jPx9zk8SVG+Gs1ZbIwiSYiW0/FHsT096o0f2qhj8a4WoOJ1mM2tUhzjTTRWG0emK01vP459lGVbWTwUlgspw7CYmwx1oaEjwppR8U+uMWojlBenSHvVql+f8vEVkj+GZFvTELvgulUxZv3kPoi0g9lxqZCNnFwKxLCbDmmeVrnae2zjvu0lTKDbpWrnQO00zbZpiArVBK/gZHc0Ugv0OYd+oVII62ihCJK/Yyx1UZ5W0FYbXSCosl9VOLO/o1y/CdaKmFHCvHC4dPHGfPNCN06phZfUnL2OXHfUMsktFwhmA0J5iGTxYSwrfMfNrUUHTKSxqAAAAAASUVORK5CYII='); background-size: cover; display: block;"
-  ></span>
-  <img
-        class="gatsby-resp-image-image"
-        alt="강남"
-        title="강남"
-        src="/static/7482bdf8685d2e66b103d06f7b70616c/37523/map4.png"
-        srcset="/static/7482bdf8685d2e66b103d06f7b70616c/e9ff0/map4.png 180w,
-/static/7482bdf8685d2e66b103d06f7b70616c/f21e7/map4.png 360w,
-/static/7482bdf8685d2e66b103d06f7b70616c/37523/map4.png 720w,
-/static/7482bdf8685d2e66b103d06f7b70616c/c1c45/map4.png 824w"
-        sizes="(max-width: 720px) 100vw, 720px"
-        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
-        loading="lazy"
-        decoding="async"
-      />
-    </span></p>
-</li>
-</ol>
-</li>
-</ol>
-<h1 id="-8" style="position:relative;"><a href="#-8" aria-label=" 8 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h1>
+<ul>
+<li>구직자</li>
+</ul>
+<p><img src="./zero_false_one_true_imgs/%EA%B5%AC%EC%A7%81%EC%9E%90_%EB%AA%A9%ED%91%9C%EC%A7%81%EC%97%85_%EC%97%AC%EB%B6%80.png" alt="구직자 목표 직업 여부"></p>
+<ul>
+<li>취업자</li>
+</ul>
+<p><img src="./zero_false_one_true_imgs/%EC%B7%A8%EC%97%85%EC%9E%90_%EB%AA%A9%ED%91%9C%EC%A7%81%EC%97%85_%EC%97%AC%EB%B6%80.png" alt="취업자 목표 직업 여부">
+2. 구직자와 취업자의 희망연봉 응답 (이상치 제거)
+<img src="./zero_false_one_true_imgs/%ED%9D%AC%EB%A7%9D%EC%97%B0%EB%B4%89_%EC%9D%91%EB%8B%B5_%EC%9D%B4%EB%AF%B8%EC%A7%80.png" alt="희망연봉 응답 이미지">
+<img src="./zero_false_one_true_imgs/%ED%9D%AC%EB%A7%9D%EC%97%B0%EB%B4%89_%EC%9D%91%EB%8B%B5_%ED%91%9C.png" alt="희망연봉 응답 표 - 전체">
+<img src="./zero_false_one_true_imgs/%ED%9D%AC%EB%A7%9D%EC%97%B0%EB%B4%89_%EC%9D%91%EB%8B%B5_%ED%91%9C2.png" alt="희망연봉 응답 표 - 비교">
+3. 구직시에 중요하게 생각하는 요소</p>
+<ul>
+<li>구직자</li>
+</ul>
+<p><img src="./zero_false_one_true_imgs/%EA%B5%AC%EC%A7%81%EC%8B%9C_%EC%A4%91%EC%9A%94%EC%9A%94%EC%86%8C_%EA%B5%AC%EC%A7%81%EC%9E%90.png" alt="구직자 구직시 중요 요소"></p>
+<ul>
+<li>취업자</li>
+</ul>
+<p><img src="./zero_false_one_true_imgs/%EA%B5%AC%EC%A7%81%EC%8B%9C_%EC%A4%91%EC%9A%94%EC%9A%94%EC%86%8C_%EC%B7%A8%EC%97%85%EC%9E%90.png" alt="취업자 구직시 중요 요소">
+4. 전체 취업자 직장 분류 count
+<img src="" alt="전체 취업자 직장">
+5. 직장 분류에 따른 근로소득
+<img src="" alt="직장 분류별 근로소득">
+6. 구직기간 box plot (이상치 제거)
+<img src="" alt="구직기간"></p>
 <h3 id="-팀원이-수행한-시각화-목록" style="position:relative;"><a href="#-%ED%8C%80%EC%9B%90%EC%9D%B4-%EC%88%98%ED%96%89%ED%95%9C-%EC%8B%9C%EA%B0%81%ED%99%94-%EB%AA%A9%EB%A1%9D" aria-label=" 팀원이 수행한 시각화 목록 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>+. 팀원이 수행한 시각화 목록</h3>
 <ol>
-<li>버스·지하철 월별 출퇴근 시간 이용자 수</li>
-<li>코로나 전(2019년), 후(2020년) 동월대비 대중교통 출퇴근 이용량 비교</li>
-<li>출퇴근 시간대 유동인구 지도시각화</li>
-<li>사무실 지역 공실률 현황</li>
+<li>구직자/취업자 선호직업 명확성 응답</li>
+</ol>
+<blockquote>
+<p>선호직업에 대해서 확실하게 가지고 있었는지 정도. 매우 그렇다 &#x3C;-> 전혀 그렇지 않다 (5점 척도)</p>
+</blockquote>
+<ol start="2">
+<li></li>
 </ol>
 <hr>
 <h2 id="--데이터를-보여줄-웹-구현" style="position:relative;"><a href="#--%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%A5%BC-%EB%B3%B4%EC%97%AC%EC%A4%84-%EC%9B%B9-%EA%B5%AC%ED%98%84" aria-label="  데이터를 보여줄 웹 구현 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>👩‍💻   데이터를 보여줄 웹 구현</h2>
@@ -601,19 +329,22 @@
 <ul>
 <li>
 <p><a href="#%EF%B8%8F-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EB%B0%B0%EA%B2%BD-%EB%B0%8F-%EB%AA%A9%ED%91%9C">⛳️  프로젝트 배경 및 목표</a></p>
+<ul>
+<li><a href="#%EA%B8%B0%ED%9A%8D-%EB%AA%A9%ED%91%9C">기획 목표</a></li>
+</ul>
 </li>
 <li>
-<p><a href="#--%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%88%98%EC%A7%91">📄   데이터 수집</a></p>
+<p><a href="#--%EB%8D%B0%EC%9D%B4%ED%84%B0">📄   데이터</a></p>
 <ul>
-<li><a href="#1-%EC%B6%9C%ED%87%B4%EA%B7%BC-%EC%8B%9C%EA%B0%84%EB%8C%80-%EA%B5%90%ED%86%B5-%EC%9D%B4%EC%9A%A9%EB%9F%89-%EB%B3%80%ED%99%94-%EB%B6%84%EC%84%9D%EC%9D%84-%ED%86%B5%ED%95%9C-%EA%B4%80%EC%B0%B0-%EB%8C%80%EC%83%81-%EC%A7%80%EC%97%AD-%EC%84%A4%EC%A0%95">1. 출퇴근 시간대 교통 이용량 변화 분석을 통한 관찰 대상 지역 설정</a></li>
-<li><a href="#2-%EA%B4%80%EC%B0%B0-%EB%8C%80%EC%83%81-%EC%A7%80%EC%97%AD-%EA%B3%B5%EC%8B%A4%EB%A5%A0-%EB%B6%84%EC%84%9D">2. 관찰 대상 지역 공실률 분석</a></li>
+<li><a href="#%EB%8C%80%EC%A1%B8%EC%9E%90-%EC%A7%81%EC%97%85%EC%9D%B4%EB%8F%99%EA%B2%BD%EB%A1%9C%EC%A1%B0%EC%82%AC">대졸자 직업이동경로조사</a></li>
 </ul>
 </li>
 <li>
 <p><a href="#--%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%A0%84%EC%B2%98%EB%A6%AC-%EB%B0%8F-%EC%8B%9C%EA%B0%81%ED%99%94">📊   데이터 전처리 및 시각화</a></p>
 <ul>
-<li><a href="#1-%EC%A7%80%ED%95%98%EC%B2%A0-%EC%9A%94%EC%9D%BC%EB%B3%84-%EC%8B%9C%EA%B0%84%EB%B3%84-%EB%B3%80%ED%99%94-%EC%82%B4%ED%8E%B4%EB%B3%B4%EA%B8%B0">1. 지하철 요일별, 시간별 변화 살펴보기</a></li>
-<li><a href="#2-%EB%8C%80%EC%A4%91%EA%B5%90%ED%86%B5-%EC%B4%9D-%EC%8A%B9%EA%B0%9D-%EB%B3%80%ED%99%94-%EC%A7%80%EB%8F%84-%EC%8B%9C%EA%B0%81%ED%99%94">2. 대중교통 총 승객 변화 지도 시각화</a></li>
+<li><a href="#1-%EB%8D%B0%EC%9D%B4%ED%84%B0-%ED%99%95%EC%9D%B8">1. 데이터 확인</a></li>
+<li><a href="#2-%EC%B9%BC%EB%9F%BC%EB%B3%84%EB%A1%9C-%EC%A0%84%EC%B2%98%EB%A6%AC">2. 칼럼별로 전처리</a></li>
+<li><a href="#3-%EC%8B%9C%EA%B0%81%ED%99%94">3. 시각화</a></li>
 <li><a href="#-%ED%8C%80%EC%9B%90%EC%9D%B4-%EC%88%98%ED%96%89%ED%95%9C-%EC%8B%9C%EA%B0%81%ED%99%94-%EB%AA%A9%EB%A1%9D">+. 팀원이 수행한 시각화 목록</a></li>
 </ul>
 </li>
@@ -633,4 +364,4 @@
 <p><a href="#%EF%B8%8F-%EA%B0%9C%EC%84%A0%EC%82%AC%ED%95%AD-%EB%B0%8F-%EB%8A%90%EB%82%80%EC%A0%90">❗️  개선사항 및 느낀점</a></p>
 </li>
 </ul>
-</div></div></div><div class="post-navigator"><div class="post-navigator-card-wrapper"></div><div class="post-navigator-card-wrapper"><a class="post-card next" href="/TIL/202202/"><div class="direction">다음 글</div><div class="title">202202</div></a></div></div><div class="utterances"></div></main><footer class="page-footer-wrapper"><p class="page-footer">© <!-- -->2022<!-- --> <a href="https://github.com/mungdo">안문주</a> powered by<a href="https://github.com/zoomKoding/zoomkoding-gatsby-blog"> zoomkoding-gatsby-blog</a></p></footer><div class="dark-mode-button-wrapper"><button class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium dark-mode-button css-1yxmbwk" tabindex="0" type="button"><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeLarge dark-mode-icon css-6flbmm" focusable="false" viewBox="0 0 24 24" aria-hidden="true" data-testid="DarkModeIcon"><path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9c0-.46-.04-.92-.1-1.36-.98 1.37-2.58 2.26-4.4 2.26-2.98 0-5.4-2.42-5.4-5.4 0-1.81.89-3.42 2.26-4.4-.44-.06-.9-.1-1.36-.1z"></path></svg></button></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/project/heap_pop/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-0616fad1f708e5420168.js"],"app":["/app-889f0644be3e8780fa3b.js"],"component---cache-caches-gatsby-plugin-offline-app-shell-js":["/component---cache-caches-gatsby-plugin-offline-app-shell-js-5f4d6e6517138b0667ff.js"],"component---src-pages-404-js":["/component---src-pages-404-js-0f892ebcd010b6f91108.js"],"component---src-pages-about-js":["/component---src-pages-about-js-8d3b5b5f011b48040aeb.js"],"component---src-pages-index-js":["/component---src-pages-index-js-66fa20e8773286f91373.js"],"component---src-templates-blog-template-js":["/component---src-templates-blog-template-js-7e0f67ebc752626855c1.js"],"component---src-templates-category-template-js":["/component---src-templates-category-template-js-ed70fe8a3875146c144e.js"]};/*]]>*/</script><script src="/polyfill-0616fad1f708e5420168.js" nomodule=""></script><script src="/component---src-templates-blog-template-js-7e0f67ebc752626855c1.js" async=""></script><script src="/f9d3028dbef90a6e9b8db85387d63dd9f4edf538-852cf68f9be39a5a4bc9.js" async=""></script><script src="/app-889f0644be3e8780fa3b.js" async=""></script><script src="/framework-91ebf51d003c3c6f38be.js" async=""></script><script src="/webpack-runtime-f5f3382f227c26345aa2.js" async=""></script></body></html>
+</div></div></div><div class="post-navigator"><div class="post-navigator-card-wrapper"><a class="post-card prev" href="/TIL/202204/"><div class="direction">이전 글</div><div class="title">202204</div></a></div><div class="post-navigator-card-wrapper"></div></div><div class="utterances"></div></main><footer class="page-footer-wrapper"><p class="page-footer">© <!-- -->2022<!-- --> <a href="https://github.com/mungdo">안문주</a> powered by<a href="https://github.com/zoomKoding/zoomkoding-gatsby-blog"> zoomkoding-gatsby-blog</a></p></footer><div class="dark-mode-button-wrapper"><button class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium dark-mode-button css-1yxmbwk" tabindex="0" type="button"><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeLarge dark-mode-icon css-6flbmm" focusable="false" viewBox="0 0 24 24" aria-hidden="true" data-testid="DarkModeIcon"><path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9c0-.46-.04-.92-.1-1.36-.98 1.37-2.58 2.26-4.4 2.26-2.98 0-5.4-2.42-5.4-5.4 0-1.81.89-3.42 2.26-4.4-.44-.06-.9-.1-1.36-.1z"></path></svg></button></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/project/zero_false_one_true/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-0616fad1f708e5420168.js"],"app":["/app-889f0644be3e8780fa3b.js"],"component---cache-caches-gatsby-plugin-offline-app-shell-js":["/component---cache-caches-gatsby-plugin-offline-app-shell-js-5f4d6e6517138b0667ff.js"],"component---src-pages-404-js":["/component---src-pages-404-js-0f892ebcd010b6f91108.js"],"component---src-pages-about-js":["/component---src-pages-about-js-8d3b5b5f011b48040aeb.js"],"component---src-pages-index-js":["/component---src-pages-index-js-66fa20e8773286f91373.js"],"component---src-templates-blog-template-js":["/component---src-templates-blog-template-js-7e0f67ebc752626855c1.js"],"component---src-templates-category-template-js":["/component---src-templates-category-template-js-ed70fe8a3875146c144e.js"]};/*]]>*/</script><script src="/polyfill-0616fad1f708e5420168.js" nomodule=""></script><script src="/component---src-templates-blog-template-js-7e0f67ebc752626855c1.js" async=""></script><script src="/f9d3028dbef90a6e9b8db85387d63dd9f4edf538-852cf68f9be39a5a4bc9.js" async=""></script><script src="/app-889f0644be3e8780fa3b.js" async=""></script><script src="/framework-91ebf51d003c3c6f38be.js" async=""></script><script src="/webpack-runtime-f5f3382f227c26345aa2.js" async=""></script></body></html>
