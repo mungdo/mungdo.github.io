@@ -1,7 +1,7 @@
 ---
 emoji: 🏠
-title: "공공데이터 시각화 프로젝트 : 코로나19 확산으로 재택근무가 늘었는가"
-date: '2022-02-25 19:30:00'
+title: "문제해결 빅데이터 활용 프로젝트 : 대졸 구직자 취업에 영향을 미치는 변수분석 및 취업예측 모델"
+date: '2022-04-01 19:30:00'
 author: mungdo
 tags: project
 categories: project
@@ -12,11 +12,10 @@ __본 프로젝트는 팀 활동으로 진행 되었고, 프로젝트 상에서 
 #
 ## ⛳️ &nbsp;프로젝트 배경 및 목표
 #  
-![재택근무의 증가1](https://user-images.githubusercontent.com/82261307/155633280-2c446f5d-708b-418c-8884-1086b6476c2e.png)
-![재택근무의 증가2](https://user-images.githubusercontent.com/82261307/155633291-6eee9e28-64de-4853-b50b-b0d52911606e.png)
+![]()
+![]()
 #   
-> 코로나 전후 출퇴근 교통 이용자 수, 사무실 공실률 등 다양한 지표를 통해
-> 실제 재택근무 변화를 관찰하고자 한다.
+> 
 
 ---
 
@@ -24,15 +23,15 @@ __본 프로젝트는 팀 활동으로 진행 되었고, 프로젝트 상에서 
 
 ### 1. 출퇴근 시간대 교통 이용량 변화 분석을 통한 관찰 대상 지역 설정
 
-- [서울시 지하철 선별 역별 승하차 인원 정보 (2018.01~2021.11)](https://data.seoul.go.kr/dataList/OA-12914/S/1/datasetView.do#)
+- []()
 
-- [서울시 버스노선별 정류장별 시간대별 승하차 인원 정보](http://data.seoul.go.kr/dataList/OA-12913/S/1/datasetView.do#)
+- []()
 
-- [서울시 역별 일별 시간대별 지하철 승하차 인원 정보](http://www.seoulmetro.co.kr/kr/board.do?menuIdx=551&bbsIdx=2213351)
+- []()
 
 ### 2. 관찰 대상 지역 공실률 분석
 
-- [서울시 오피스빌딩 임대료·공실률 및 수익률 (2013년 이후) 통계](https://data.seoul.go.kr/dataList/10613/S/2/datasetView.do)
+- []()
 
 
 ---
