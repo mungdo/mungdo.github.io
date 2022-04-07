@@ -12,11 +12,11 @@ __본 프로젝트는 팀 활동으로 진행 되었고, 프로젝트 상에서 
 #
 ## ⛳️ &nbsp;프로젝트 배경 및 목표
 #  
-![기획의도1](./zero_false_one_true_imgs/%EA%B8%B0%ED%9A%8D%EC%9D%98%EB%8F%841.png)
+![기획의도1](./zero_false_one_true_imgs/project_intention1.png)
 대졸자 집단의 실업률이 높은 상황. 해당 그래프를 보면 2019년 대졸자의 취업비율은 73.8%에서 2020년 조사 당시 66.4%로 하락한 모습을 볼 수 있습니다.
    
 
-![기획의도2](./zero_false_one_true_imgs/%EA%B8%B0%ED%9A%8D%EC%9D%98%EB%8F%842.png)
+![기획의도2](./zero_false_one_true_imgs/project_intention2.png)
 이런 청년층 취업난의 심화에 한국고용정보원은 위와 같은 8개의 원인을 제시했습니다. 이번 프로젝트에서 저희가 주목한 것은 7번 대졸자 노동시장에 대한 잘못된 정보와 8번 구직의욕 상실자인 청년 NEET의 증가입니다.
 그래서 이번 프로젝트를 통해 대졸자 구직에 영향을 미치는 요소들은 어떤 것이 있는지 알아보고 구직자 상황을 반영한 정보를 제공하고자 합니다.
    
@@ -27,10 +27,10 @@ __본 프로젝트는 팀 활동으로 진행 되었고, 프로젝트 상에서 
 3. 기업체 구분(국내 사기업, 공기업, 외국계 기업 등)을 결정하는 변수 알아보기
 
    
-![WBS](./zero_false_one_true_imgs/%08WBS.png)
+![WBS](./zero_false_one_true_imgs/WBS.png)
 
 #   
-> 
+
 
 ---
 
@@ -73,27 +73,39 @@ __본 프로젝트는 팀 활동으로 진행 되었고, 프로젝트 상에서 
 # 
 1. 목표 직업의 여부 
 - 구직자
-![구직자 목표 직업 여부](./zero_false_one_true_imgs/%EA%B5%AC%EC%A7%81%EC%9E%90_%EB%AA%A9%ED%91%9C%EC%A7%81%EC%97%85_%EC%97%AC%EB%B6%80.png)
+
+![구직자 목표 직업 여부](./zero_false_one_true_imgs/target_job_seeker.png)
 - 취업자
-![취업자 목표 직업 여부](./zero_false_one_true_imgs/%EC%B7%A8%EC%97%85%EC%9E%90_%EB%AA%A9%ED%91%9C%EC%A7%81%EC%97%85_%EC%97%AC%EB%B6%80.png)
+
+![취업자 목표 직업 여부](./zero_false_one_true_imgs/target_job_employee.png)
 2. 구직자와 취업자의 희망연봉 응답 (이상치 제거)
-![]()
-![]()
+![희망연봉 응답 이미지](./zero_false_one_true_imgs/expected_salary_img.png)
+![희망연봉 응답 표 - 전체](./zero_false_one_true_imgs/expected_salary_table1.png)
+![희망연봉 응답 표 - 비교](./zero_false_one_true_imgs/expected_salary_table2.png)
 3. 구직시에 중요하게 생각하는 요소
 - 구직자
-![구직자 구직시 중요 요소]()
+  
+![구직자 구직시 중요 요소](./zero_false_one_true_imgs/important_factor_seeker.png)
 - 취업자
-![취업자 구직시 중요 요소]()
+  
+![취업자 구직시 중요 요소](./zero_false_one_true_imgs/important_factor_employee.png)
 4. 전체 취업자 직장 분류 count
 ![전체 취업자 직장]()
 5. 직장 분류에 따른 근로소득
-![직장 분류별 근로소득]()
+![직장 분류별 근로소득](./zero_false_one_true_imgs/salary_to_job.png)
 6. 구직기간 box plot (이상치 제거)
 ![구직기간]()
 
 ### +. 팀원이 수행한 시각화 목록
-1. 구직자/취업자 선호직업 명확성 응답
-2. 
+1. 구직자/취업자 선호직업 명확성 응답 
+> 선호직업에 대해서 확실하게 가지고 있었는지 정도. 매우 그렇다 <-> 전혀 그렇지 않다 (5점 척도)
+2. 청년 구직활동 지원금 수령여부
+3. 구직자/취업자 취업계획 및 목표의 명확성 응답
+> 취업 계획시에 고려했던 요소들의 정도. 매우 준비되어 있음 <-> 전혀 준비되어 있지 않음.
+4. 구직자/취업자 심리적 안정성 응답
+> 심리적 안정성애 대한 요소들의 정도. 자신감 정도, 의지할 사람이 있었는가, 사회적 관심 및 지원이 있었는가.
+5. 2016~2018 기간 동안 구직기간과 희망 최저 연봉의 추세
+6. 취업자의 희망 연봉의 평균과 실제 연봉의 평균 비교
 
 ---
 
