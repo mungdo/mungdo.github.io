@@ -80,10 +80,14 @@ __본 프로젝트는 팀 활동으로 진행 되었고, 프로젝트 상에서 
 - 취업자
 
 ![취업자 목표 직업 여부](./zero_false_one_true_imgs/target_job_employee.png)
+> 구직자(약 58%), 취업자(약 60%) 모두 목표 직업이 있는 경우가 15% 이상 많았다.
 2. 구직자와 취업자의 희망연봉 응답 (이상치 제거)
-![희망연봉 응답 이미지](./zero_false_one_true_imgs/expected_salary_img.png)
-![희망연봉 응답 표 - 전체](./zero_false_one_true_imgs/expected_salary_table1.png)
-![희망연봉 응답 표 - 비교](./zero_false_one_true_imgs/expected_salary_table2.png)
+   <img alt="희망연봉 응답 이미지" height="300" src="./zero_false_one_true_imgs/expected_salary_img.png" width="420"/>
+   <img alt="희망연봉 응답 표 - 전체" height="80" src="./zero_false_one_true_imgs/expected_salary_table1.png" width="100"/>
+   <img alt="희망연봉 응답 표 - 비교" height="80" src="./zero_false_one_true_imgs/expected_salary_table2.png" width="300"/>
+> 이상치를 제거한 이후의 희망연봉의 기술 통계량은 유사하게 나타남
+> 구직자의 평균은 2,783만원이고 취업자의 평균은 2,816만원. 
+
 3. 구직시에 중요하게 생각하는 요소
 - 구직자
   
