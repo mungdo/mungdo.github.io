@@ -134,11 +134,32 @@ __본 프로젝트는 팀 활동으로 진행 되었고, 프로젝트 상에서 
    ![랜덤포레스트](./zero_false_one_true_imgs/job_gridsearchcv.png)
    - 성능 평가 및 Feature Importances Top 20
    ![모델링 결과](./zero_false_one_true_imgs/job_result.png)
-
-3. **종사상 지위 구분(정규직, 비정규직, 프리랜서 등)을 결정하는 변수 알아보기**
-
-
-
+   ####
+2. **종사상 지위 구분(정규직, 비정규직, 프리랜서 등)을 결정하는 변수 알아보기**
+   ####
+   1. 과정 요약
+   - 전체 항목에서 필요한 독립변수만 선별
+   - 응답 데이터와 모름/무응답 데이터 분리
+   - X = 종사상 지위, y = 종사상 지위를 제외한 응답 데이터로 설정
+   - 종사상 지위 분류 오버샘플링
+   - 하이퍼 파라미터 조정 전 후 모델 비교 : 랜덤포레스트, XGBoost 적용
+   - 성능 높은 모델 결과 확인 및 채택
+   ####
+   2. RandomForest 이용해서 결과 확인 
+   - 랜덤포레스트 파라미터 조정 전 정확도 및 Feature Importances Top 20
+   ![랜덤포레스트 파라미터 조정 전](./zero_false_one_true_imgs/position_before_rf.png)
+   - 랜덤포레스트 GridSearchCV로 파라미터 조정
+   ![랜덤포레스트 gridsearchcv](./zero_false_one_true_imgs/position_gridsearchcv_rf.png)
+   - 랜덤포레스트 파라미터 조정 후 정확도 및 Feature Importances Top 20
+   ![랜덤포레스트 파라미터 조정 후](./zero_false_one_true_imgs/position_after_rf.png)
+   ####
+   3. XGBoost 이용해서 결과 확인
+   - XGBoost 파라미터 조정 전 정확도 및 Feature Importances Top 20
+   ![XGBoost 파라미터 조정 전](./zero_false_one_true_imgs/position_before_xgb.png)
+   - XGBoost GridSearchCV로 파라미터 조정
+   ![XGBoost gridsearchcv](./zero_false_one_true_imgs/position_gridsearchcv_xgb.png)
+   - XGBoost 파라미터 조정 후 정확도 및 Feature Importances Top 20
+   ![XGBoost 파라미터 조정 후](./zero_false_one_true_imgs/position_after_xgb.png)
 
 3. 기업체 구분(국내 사기업, 공기업, 외국계 기업 등)을 결정하는 변수 알아보기 (다른 팀원 담당 파트)
 
