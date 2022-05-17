@@ -135,6 +135,7 @@ __본 프로젝트는 팀 활동으로 진행 되었고, 프로젝트 상에서 
    - 성능 평가 및 Feature Importances Top 20
    ![모델링 결과](./zero_false_one_true_imgs/job_result.png)
    ####
+
 2. **종사상 지위 구분(정규직, 비정규직, 프리랜서 등)을 결정하는 변수 알아보기**
    ####
    1. 과정 요약
@@ -160,6 +161,16 @@ __본 프로젝트는 팀 활동으로 진행 되었고, 프로젝트 상에서 
    ![XGBoost gridsearchcv](./zero_false_one_true_imgs/position_gridsearchcv_xgb.png)
    - XGBoost 파라미터 조정 후 정확도 및 Feature Importances Top 20
    ![XGBoost 파라미터 조정 후](./zero_false_one_true_imgs/position_after_xgb.png)
+   ####
+   4. RandomForest VS XGBoost 비교
+   ![모델 비교](./zero_false_one_true_imgs/choice_model.png)
+   ####
+   5. 선택한 모델 (XGBoost 파라미터 조정 X)에서 중요도 높은 Features
+   ![중요도 높은 Features](./zero_false_one_true_imgs/import_features.png)
+   ####
+   6. 선택 모델로 종사상 지위 예측 수행
+   ![선택 모델로 예측](./zero_false_one_true_imgs/model_predicts.png)
+   ####
 
 3. 기업체 구분(국내 사기업, 공기업, 외국계 기업 등)을 결정하는 변수 알아보기 (다른 팀원 담당 파트)
 
