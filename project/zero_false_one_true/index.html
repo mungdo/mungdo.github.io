@@ -536,9 +536,274 @@
         decoding="async"
       />
     </span></p>
+<h4 id="-8" style="position:relative;"><a href="#-8" aria-label=" 8 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h4>
 </li>
 <li>
 <p><strong>종사상 지위 구분(정규직, 비정규직, 프리랜서 등)을 결정하는 변수 알아보기</strong></p>
+<h4 id="-9" style="position:relative;"><a href="#-9" aria-label=" 9 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h4>
+<ol>
+<li>과정 요약</li>
+</ol>
+<ul>
+<li>전체 항목에서 필요한 독립변수만 선별</li>
+<li>응답 데이터와 모름/무응답 데이터 분리</li>
+<li>X = 종사상 지위, y = 종사상 지위를 제외한 응답 데이터로 설정</li>
+<li>종사상 지위 분류 오버샘플링</li>
+<li>하이퍼 파라미터 조정 전 후 모델 비교 : 랜덤포레스트, XGBoost 적용</li>
+<li>성능 높은 모델 결과 확인 및 채택</li>
+</ul>
+<h4 id="-10" style="position:relative;"><a href="#-10" aria-label=" 10 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h4>
+<ol start="2">
+<li>RandomForest 이용해서 결과 확인</li>
+</ol>
+<ul>
+<li>랜덤포레스트 파라미터 조정 전 정확도 및 Feature Importances Top 20</li>
+</ul>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 720px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 46.111111111111114%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAABYlAAAWJQFJUiTwAAAB2klEQVQoz12Sy27TUBBA8y/wMbBHYleEhEBiwxqJFVtWfANVUwIFNQilDSlUrUgaBRTUprR50dI83Nhx4jh2Yl/7+qDrEBMx0mjmamaO5nFTURTRvriidlqn3vhFu32BpmkoUbGlKE8Cjg/X4wBtFKJPZKyzeYAMAqSUpFSRMbTo6haXmknjsothGAnIdV2GY4tx6YB57j3ubpZpbhv741usD2ms7AZetYroXCPmc1KqyLYdwkoZSocE38pMJ3YCFL6Hbk44yT3nZOMOtcwax+m7NHNPMSvrzFpfwZ/FuYEQC2D/+BTvdRoyafzsG0y9nwA9BewbvCy+4GF+jSd7j3icv09z9DNZxWI9kiAISIWAXy7C5jq8yzDb3sLQB8kOAymxdYMHpV1ufN7k5l6ae9Uvi7iUsRJFi1wFjFttNZH7n5AHBcTRIa5t4QufqT3FdhwmxoBnR3Vu79e5VThjpzuKgaFcgKJVoHLmQtAfeXSGMwaWYDj2CMPob5dgDAd8LwwobzlUdhw879/1VyUGCiHodDqctwxqzQk/zke0rqYrwIiBaWDmG/iv6vjFPiES3/djgKpXVr3F8ii9Xg/LGmFOAn5rLrYjEthyFM91Ea6LN58lgP+t+od/AIjtm5Do9oSiAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="랜덤포레스트 파라미터 조정 전"
+        title="랜덤포레스트 파라미터 조정 전"
+        src="/static/1d7e7b550d1e2c0738b86d99c483014c/37523/position_before_rf.png"
+        srcset="/static/1d7e7b550d1e2c0738b86d99c483014c/e9ff0/position_before_rf.png 180w,
+/static/1d7e7b550d1e2c0738b86d99c483014c/f21e7/position_before_rf.png 360w,
+/static/1d7e7b550d1e2c0738b86d99c483014c/37523/position_before_rf.png 720w,
+/static/1d7e7b550d1e2c0738b86d99c483014c/302a4/position_before_rf.png 1080w,
+/static/1d7e7b550d1e2c0738b86d99c483014c/78612/position_before_rf.png 1260w"
+        sizes="(max-width: 720px) 100vw, 720px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<ul>
+<li>랜덤포레스트 GridSearchCV로 파라미터 조정</li>
+</ul>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 720px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 53.888888888888886%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABYlAAAWJQFJUiTwAAABeklEQVQoz31TXU+rQBDt//9LxsQnr9EXY3qrJloipdAttMCy3U+WY2baSq3WSU5mhmHOnmGHyTAMiDECGEAx4TQ+Bdm5P9oxn/gQUbcWZe1QSw9tA87e/dZ0Sh76iKyosN60X/VJ30e0UqPcdKhbDRcivPdcDCGA6mpnEOPPU+iZqBrUrRoJqTnPl8gWKdZCYBgiqqqCtRbb7RayU3h6TrDThj9N3/eMEHo+8MA0juycQ1mWEEIwCVnXSVbZdR03d1Kyb5qGSaheblq8zpfQxkBKOSo0xiBNUyRJgsVigVVRIM0KaG25mUDk5J3z8H7vrfPQxsF5z/mXQiLM85xJCQXFSwFjPY9PynjUwybscfnSJtSglGLZBK01pNIHgm9XgI9cYfquMH1rMJu3mL237F8SCev6vUL8YeOacIbH6Rw3tzO8JA2u7gQe/m/w76nC9b2AtgfC3xb4fJGPsVjleH2estok3yFba6wqg3mmoHS4rPDSXzDml6f5BI9uWF/uG78pAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="랜덤포레스트 gridsearchcv"
+        title="랜덤포레스트 gridsearchcv"
+        src="/static/6389a04521426bad16012e72dfcea0b2/37523/position_gridsearchcv_rf.png"
+        srcset="/static/6389a04521426bad16012e72dfcea0b2/e9ff0/position_gridsearchcv_rf.png 180w,
+/static/6389a04521426bad16012e72dfcea0b2/f21e7/position_gridsearchcv_rf.png 360w,
+/static/6389a04521426bad16012e72dfcea0b2/37523/position_gridsearchcv_rf.png 720w,
+/static/6389a04521426bad16012e72dfcea0b2/dc333/position_gridsearchcv_rf.png 938w"
+        sizes="(max-width: 720px) 100vw, 720px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<ul>
+<li>랜덤포레스트 파라미터 조정 후 정확도 및 Feature Importances Top 20</li>
+</ul>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 720px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 46.666666666666664%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAABYlAAAWJQFJUiTwAAAB4UlEQVQoz1WS3WoTQRiGc0sVvBBBpBehUPDAGxA80zO1Z6I0klYKBX9axbQVrbalxpSY2pjETJNNskn3L/u/mdlHdltj+sEwzMw7D/O+8xWS6ZRmq0O93uC00aLZbGNZFlmlacp8ZSsrShl7knNfYfgpTnxFQkFKxUA36Y0dWr0Rp22BZZkzYBAEeJ5H/KdL/KvNpNbCPm5iVxtYlROcSo2oLYiHY6bTKYXsoutM4OgADr+S1I7xg/DyPeTAvqahrd9n+PwOevEu+soSg9V7nG88wP9UQo10VBCRxDEFCfSOqsjSCpSKhO82MM3RzEIYhnQ6HYrbSzx+e4PlzUWevLmJNjxEqRA1F0eSJBSSNCXZLcPaS3hVwt98jWFbM2BmQ5ydsbj3jOs7j7hWfsjtH2v/c81yTtN8zoEZeVqrkpa3YOcD0f4XPM/ND6MoyvPrCMGtvQoL2wcsfPzG1tDIYVKpHPYPnAOVlARRTHfo0tMn6EaIYUUXwDjOM9T6fVY/Gyy/d3ixazEJZW5yvgtmwCgKEaJHvWnws+Xw/cSk1XVnQqkkQgjsNYH/VBDv21db6dKuUuoCmG1qmoZtmRhOguh7OF4yE2dC13UJhE74e0BoOoRxhGPbeRxZLNnIPk9KyV+Y+Zum6IlkzwAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="랜덤포레스트 파라미터 조정 후"
+        title="랜덤포레스트 파라미터 조정 후"
+        src="/static/e993c110e7d252c6f8a5c4d0c4ab6504/37523/position_after_rf.png"
+        srcset="/static/e993c110e7d252c6f8a5c4d0c4ab6504/e9ff0/position_after_rf.png 180w,
+/static/e993c110e7d252c6f8a5c4d0c4ab6504/f21e7/position_after_rf.png 360w,
+/static/e993c110e7d252c6f8a5c4d0c4ab6504/37523/position_after_rf.png 720w,
+/static/e993c110e7d252c6f8a5c4d0c4ab6504/302a4/position_after_rf.png 1080w,
+/static/e993c110e7d252c6f8a5c4d0c4ab6504/78612/position_after_rf.png 1260w"
+        sizes="(max-width: 720px) 100vw, 720px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<h4 id="-11" style="position:relative;"><a href="#-11" aria-label=" 11 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h4>
+<ol start="3">
+<li>XGBoost 이용해서 결과 확인</li>
+</ol>
+<ul>
+<li>XGBoost 파라미터 조정 전 정확도 및 Feature Importances Top 20</li>
+</ul>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 720px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 45.55555555555556%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAABYlAAAWJQFJUiTwAAAB4ElEQVQoz1WS22oTURSG8yhe+CY+hHihV76BoNCC3vXWGy9F8cIEGhAplMZDlJpgA6UFSWtjbcxpcpjJZDKnPXtm9sx8MhOStgs2bNhrff9e/1qlJEkwDIM/l13Ozi+5uvqH6zjkkWUZNyMFTJGguwrdTZh7CU50K4XSqihDt1zO/g646g3wfW8DVEoRRiGRbhFrc8TQIBgayKFO0J8g+yNCbYywbGIVUypUJzq0mnD0A9X+hQjkRlEGARN9jv7xJfa7J9jlLaz3T5mUn2NWd7D23+BedAhtlzCKKEVKMWsdk1YrsFtB1g+wlsY1MJQYM5NXh9tsH9xnq/aQnU+P6XWbyEBHKsHamLybUqwUybfPsFuGagXvSw1zaRWPURRhOw7jXp8HrRp36hXuNT7QmHZvG5dlpGm6AuZ0dd4madRJm9+J26cI4a28C8OiDUPTePTzhLtfj3h23IZIFb/K0nQzuLXfpXzKfqToGxJtETJbxizs69GlacZ0POL1ocaL/Rl7J0NSFa6AN7ZgAwylpN8f0eku+N11OL1YMJqJdSfkgoPxEG9vQPJ2gNmZkOQLlK0g67NpOS+cjDVcx0bIlOk8wA/UBpgn516GSxehm8VKBUGA53kIIYq7lBLf9wvx//ZRnqsaD64mAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="XGBoost 파라미터 조정 전"
+        title="XGBoost 파라미터 조정 전"
+        src="/static/ef5e02edd1136dd2647b5dc116da365e/37523/position_before_xgb.png"
+        srcset="/static/ef5e02edd1136dd2647b5dc116da365e/e9ff0/position_before_xgb.png 180w,
+/static/ef5e02edd1136dd2647b5dc116da365e/f21e7/position_before_xgb.png 360w,
+/static/ef5e02edd1136dd2647b5dc116da365e/37523/position_before_xgb.png 720w,
+/static/ef5e02edd1136dd2647b5dc116da365e/302a4/position_before_xgb.png 1080w,
+/static/ef5e02edd1136dd2647b5dc116da365e/8b70b/position_before_xgb.png 1266w"
+        sizes="(max-width: 720px) 100vw, 720px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<ul>
+<li>XGBoost GridSearchCV로 파라미터 조정</li>
+</ul>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 720px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 60%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAABYlAAAWJQFJUiTwAAABZ0lEQVQoz52TDW+CMBCG+f9/bHFZtjnc5lCnyIcgUEGBFtryLj2HGqeb2SUvx7XkuetdsQBANC24aCGVJmndoet+yth5rLsOopFopaLYMgtlrbBmDZYRBysacLHfPLdLCQxsPPPgrdI90Gw0TYOiKJDnOdq2hdYKvK4hpSTPihILf42/zLAs8xJFERzHIXHOSX4YkWeMYVPs4PorSlZVFRVQ1/Xh215UoXmY6pIkQZKklGW7K+HMA8hvgJQthOAEKssSQghaNxAD7nUApmmKMAzhui48z4PnBwji7NArrfXVwZyLgHEcE2g6nZIPwgh+tAcqpQjYy8SXpY/APmvvzbUx0/uPWadHAbqr18SYUhLPY4bBKMfdMMHDa4b7UYaBneHxnVEh1m89Od0zZoZiv83gzAL4McfTeIPJckf+xcnpklu3HOMUbttDzD8n0AAcdwt3VSFc1/hYbOmHsG7tzbEtuNievodf9A+ngJWGciEAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="XGBoost gridsearchcv"
+        title="XGBoost gridsearchcv"
+        src="/static/9c586a82561811790b5fa4903a128a37/37523/position_gridsearchcv_xgb.png"
+        srcset="/static/9c586a82561811790b5fa4903a128a37/e9ff0/position_gridsearchcv_xgb.png 180w,
+/static/9c586a82561811790b5fa4903a128a37/f21e7/position_gridsearchcv_xgb.png 360w,
+/static/9c586a82561811790b5fa4903a128a37/37523/position_gridsearchcv_xgb.png 720w,
+/static/9c586a82561811790b5fa4903a128a37/58213/position_gridsearchcv_xgb.png 902w"
+        sizes="(max-width: 720px) 100vw, 720px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<ul>
+<li>XGBoost 파라미터 조정 후 정확도 및 Feature Importances Top 20</li>
+</ul>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 720px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 47.22222222222222%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAABYlAAAWJQFJUiTwAAAB4klEQVQoz2WSS08UQRSF5+for2Gl/gddsXHpwpXuXLhxpZGIAcUQH5GXuFAxSnCiCMzATDfDwDwamm66q6a6qrvrMzXRBuJNKlWVnDp1zrm3VhQFp2FIr9dnMBgSDAOUUriy1nKx3C1SlmFaEKQlgSiJs0sQamVZkucG7yjg+689fjf2iOOoIjR5zkhKdKeHaXcRuwekjQPEjk+y3UJsNVFtD3Ecoo2m5n4VpxF2axNT30A0dhBy9FeSRQhJ129z9PIug6lJgunb9J9N0pu9w8n8PcLlKdK2h04lmdbUdFFyuF6nnJ2GF89Rq4skSVRZkGKE32nx9MMtHi1c5+H7a0wt36R3tIU2ZxibV9g8z6k51nx1CeZmYG4W+XGJIAww2qC15iyK2NxrMvHlCVdXH3Bj7TF+2L0cnLXYcXQ5NZe7+baGXXgDi2+RXz8TJ2cYY8iyDK0U257PxKc6V1bWuV9vQmEpxzxl1Ti3jwldU5RUDPsh4XFEEktGo3Mbxmha7X3erUTMvE7Y2OxTWvPfFFSEWaboHAb83I2pN2N+NCK8Q1EBXST7LR/1qkM27RPuD85tXlhOmHM1Vuh7HnEU0TvO6A4kUhX/3lBaO7aexQny5BQpnYMRIk2rs5tbIQRupv8An06eSl69XscAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="XGBoost 파라미터 조정 후"
+        title="XGBoost 파라미터 조정 후"
+        src="/static/f8d625f83d43d5909574536974735709/37523/position_after_xgb.png"
+        srcset="/static/f8d625f83d43d5909574536974735709/e9ff0/position_after_xgb.png 180w,
+/static/f8d625f83d43d5909574536974735709/f21e7/position_after_xgb.png 360w,
+/static/f8d625f83d43d5909574536974735709/37523/position_after_xgb.png 720w,
+/static/f8d625f83d43d5909574536974735709/302a4/position_after_xgb.png 1080w,
+/static/f8d625f83d43d5909574536974735709/62da8/position_after_xgb.png 1262w"
+        sizes="(max-width: 720px) 100vw, 720px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<h4 id="-12" style="position:relative;"><a href="#-12" aria-label=" 12 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h4>
+<ol start="4">
+<li>RandomForest VS XGBoost 비교</li>
+</ol>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 720px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 55.55555555555556%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABYlAAAWJQFJUiTwAAAB1ElEQVQoz21Ri46iUAzl/z/JRI2J7mqy4+yMgoq8XPEB9wICIm/PpnVwZid7k8LtaXtO26vEcYzD4QDDMLBarXA8HtknI3+xWHDsdDphu91CVVXGdV2Hbdvsk2maBt/3oQghsNlsMJ1OMRwOuWi9XmO5XGIwGKDX62E2mzHpZDJhbDQaYTweYz6fo9/vM0Z/ElDwn1PXNUgoTVP227bF/X7/J/49vzsKJX5ay2BZljifzzwmjXG9XtE0DefQPQxDvhNGZOSTKBPSRwQxdOsI0znBlxdUVYUgCJiMkomERAj/2hVhHRGRN037OXLXJR0qJDIyGvtR2HAsyzJEUfRcBRGR+LPDDqy5/YYDeVFASAnfF5BSIstuTEp5RVHidrtxNyRMNTQBdUy1ShiXMN0Urpdj7+XYnTIYfy749e7gt7qH7oTY7i4w3QSWm2JjB1B1D/bhCnP/wLStB2OfwgtyKPJSYu2k+Pnq4seri7WTQHcueNNcvK8OTEgC1geh7kRYmeKDMH6IWBJmRyiiEpqV4EXz8aJ60KwYu2MCKQWEkLxDWkFV1zxmkqbPV62qmo1WQ3F6A+V6q+GFBcKkZiOBKClQVeVzL92jda9ZleUX7I48z5/xv8U3P519z0/UAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="모델 비교"
+        title="모델 비교"
+        src="/static/5894e18888fcc99140d588d14cca25dd/37523/choice_model.png"
+        srcset="/static/5894e18888fcc99140d588d14cca25dd/e9ff0/choice_model.png 180w,
+/static/5894e18888fcc99140d588d14cca25dd/f21e7/choice_model.png 360w,
+/static/5894e18888fcc99140d588d14cca25dd/37523/choice_model.png 720w,
+/static/5894e18888fcc99140d588d14cca25dd/ecf19/choice_model.png 948w"
+        sizes="(max-width: 720px) 100vw, 720px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<h4 id="-13" style="position:relative;"><a href="#-13" aria-label=" 13 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h4>
+<ol start="5">
+<li>선택한 모델 (XGBoost 파라미터 조정 X)에서 중요도 높은 Features</li>
+</ol>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 720px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 54.44444444444444%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABYlAAAWJQFJUiTwAAABhElEQVQoz3VSa0/jMBDs//9NgJBOnPgCJwEHFNRW16vaqHnaefgRO3Oa5dxWFFYa2U52xrOTzKZpAsEKIWAcR1S6RaFalN9g32gUSsNaK7zEZ81OxYwZUFU1bl6WuPq9wPUXuHpa4Od8hT9ZjqHvvxc0xqDrOlR1jR/PC1w8vuPyEy4e3nE7X0F3nXC89+eCOKlpilBa42G1wd3iL+6XG9z/X39xv9wgK0rEMMKP49nIXGfGBpSNQ15ZWBflRQwB3rkPWAvvLFqtMXoPMwxwzqHve4npaOZDdGZcQK0dau3RGy9jnI4gF8R4GC8VxawxEhU/5MHh8YYApRrs93tpGoYBbdtKrlmWYb1eQyklzii+2+3w/PKK1/mbcA6CyQ2JdV2LG4Lk7XYrRBKqqkJRFNLH7OiwHRw64zDFeBw5beiGBDbTAc9lWQooki6iEDOUHq2hlZJnZ4Jaa3GT57mIpTOdMaMEkinGlX8E++JXDpkbyenrcW2aRggJFCI5CbOHWZ8K/gP8g09gZY3/yAAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="중요도 높은 Features"
+        title="중요도 높은 Features"
+        src="/static/8f2e2022d2059752e6c43c90c75cc34c/37523/import_features.png"
+        srcset="/static/8f2e2022d2059752e6c43c90c75cc34c/e9ff0/import_features.png 180w,
+/static/8f2e2022d2059752e6c43c90c75cc34c/f21e7/import_features.png 360w,
+/static/8f2e2022d2059752e6c43c90c75cc34c/37523/import_features.png 720w,
+/static/8f2e2022d2059752e6c43c90c75cc34c/302a4/import_features.png 1080w,
+/static/8f2e2022d2059752e6c43c90c75cc34c/26a94/import_features.png 1102w"
+        sizes="(max-width: 720px) 100vw, 720px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<h4 id="-14" style="position:relative;"><a href="#-14" aria-label=" 14 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h4>
+<ol start="6">
+<li>선택 모델로 종사상 지위 예측 수행</li>
+</ol>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 720px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 43.333333333333336%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAABYlAAAWJQFJUiTwAAABzUlEQVQoz4WSW0/bQBCF8///SJ/aipaKcCkl3CtICCSNSyCJbWJIbCfBib2+7K6/ymuK1KeOdHa0mss5o5mGVCVDO6T726b/4NIdjLjuDekNHQM/XFJZWZbGF1ITbSSxUIi0htZ1rHobwSLi4OwXzZMbOncWfWto0Bvc0+0NmHrPKKVRSqFU1SjHm6/xZhEvQYy/FGR5YWIVacObvTIYukwmYxx7zGRcw56MGY0emc9nSKmI4wQppVEycaccnlwYsloXaK0MaSMRBfNgheO62I6D67rvsG2bIPCRSpGm6ftoFx2LD19bNFttztsWt9aYOBGUWtPgzSqGopC8BGue/TWbJCMrpGHN84IoWpu8cBnx5eAnn3bP2P5xRfO4y9bBFc50buJG4WXP48gKOLJCrh99ek7IYLrC8iJeY2FGTYQwBZ3+iM97l3xsnrJ9eMXe6S3fjtoMHhwzfqMoCjrWEyN/jbdKSIuckgKlc7TOkTInLyRV3vMsYP+0y07rmq39c3Zabb6f37F7fEOn/1idAo3Jk8/d/RO6zAFVHcY/0KpuaFQmAiFSs6AwXLBYLM2/Up9mWb1lP9wQLDYIEZMktRfir4/JMoHW+m2X/7c/vQiiGj9QtHoAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="선택 모델로 예측"
+        title="선택 모델로 예측"
+        src="/static/5d526b86053ea61afaae2ed1c0bd7c72/37523/model_predicts.png"
+        srcset="/static/5d526b86053ea61afaae2ed1c0bd7c72/e9ff0/model_predicts.png 180w,
+/static/5d526b86053ea61afaae2ed1c0bd7c72/f21e7/model_predicts.png 360w,
+/static/5d526b86053ea61afaae2ed1c0bd7c72/37523/model_predicts.png 720w,
+/static/5d526b86053ea61afaae2ed1c0bd7c72/302a4/model_predicts.png 1080w,
+/static/5d526b86053ea61afaae2ed1c0bd7c72/081d5/model_predicts.png 1264w"
+        sizes="(max-width: 720px) 100vw, 720px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<h4 id="-15" style="position:relative;"><a href="#-15" aria-label=" 15 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h4>
 </li>
 <li>
 <p>기업체 구분(국내 사기업, 공기업, 외국계 기업 등)을 결정하는 변수 알아보기 (다른 팀원 담당 파트)</p>
