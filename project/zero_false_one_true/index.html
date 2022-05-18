@@ -547,7 +547,7 @@
 <ul>
 <li>전체 항목에서 필요한 독립변수만 선별</li>
 <li>응답 데이터와 모름/무응답 데이터 분리</li>
-<li>X = 종사상 지위, y = 종사상 지위를 제외한 응답 데이터로 설정</li>
+<li>X = 종사상 지위, y = 종사상 지위를 제외한 응답 데이터로 설정 (Dataset에서 target값 분리)</li>
 <li>종사상 지위 분류 오버샘플링</li>
 <li>하이퍼 파라미터 조정 전 후 모델 비교 : 랜덤포레스트, XGBoost 적용</li>
 <li>성능 높은 모델 결과 확인 및 채택</li>
@@ -807,23 +807,231 @@
 </li>
 <li>
 <p>기업체 구분(국내 사기업, 공기업, 외국계 기업 등)을 결정하는 변수 알아보기 (다른 팀원 담당 파트)</p>
+<ol>
+<li>과정 요약</li>
+</ol>
+<ul>
+<li>전체 항목에서 필요한 독립변수만 선별</li>
+<li>outlier 제거</li>
+<li>Dataset에서 target값 분리</li>
+<li>모델 선정을 위해 테스트 : 의사결정나무, 랜덤포레스트, XGBoost 사용</li>
+<li>하이퍼 파라미터 조정 전 후 모델 비교</li>
+<li>성능 높은 모델 결과 확인</li>
+</ul>
+<h4 id="-16" style="position:relative;"><a href="#-16" aria-label=" 16 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h4>
+<ol start="2">
+<li>모델별 결과</li>
+</ol>
+<ul>
+<li>하이퍼 파라미터 조정 전 Randomforest</li>
+</ul>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 671px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 56.111111111111114%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAABsElEQVQoz42TTW/TQBCG8085lX8Al3AqJw5wgWsPSO2FA6pE1aithEjbhIQDoMpK2nw0bmvij8YhduKP7K79IDsxSpRSMdKr2dmZeTQ70pYA0jRFKomcS2QgcqlQ4DoBt7rH7Y3P3Y3Hnf4bxxghPR/hTRGejwzCvJ80zX2pCCbTGVZHw6q8xzrewzraxT5eaFjZwTrZ4/7LR7zvTXztgtgZEdsj5hMPlSiKwUosTSoYdKrUD57QqDylcbiVq3a4hdH6QDjuIaMxD5lSK8AkSYjnMSJW/Lhu8Ob0Ge/OX/D2vMzr6nNaZnOtOV0+bVUbQCEFIoxo9K8onx2wXa9QPvvEbqtJsqgkTZO/gKK58GvAIkGi+NY32D7t8KrW5WX1iutxsEjle96c7lGgUnP6nXtqRwH1kxlfP88Iw2RZyKO2CUxBpgrn0sTd1xnv6wh9uixPyNaSKWtc9cVZSvnQhArXttG7Jhc/h7R7Lu3BhIHhIaVCKYkQIodkPqsvYNndGrCAmuYQ7bJH15jRHvhovQn6MOB/rGCUVgPf92m3NKJY8MsJsd0Iy43WfsK/VEz4B6o2Q6PuzzuNAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="조정 전 랜덤포레스트"
+        title="조정 전 랜덤포레스트"
+        src="/static/db0c5f85d50adc6447168513e5de7fac/d0e73/bclass_before_rf.png"
+        srcset="/static/db0c5f85d50adc6447168513e5de7fac/e9ff0/bclass_before_rf.png 180w,
+/static/db0c5f85d50adc6447168513e5de7fac/f21e7/bclass_before_rf.png 360w,
+/static/db0c5f85d50adc6447168513e5de7fac/d0e73/bclass_before_rf.png 671w"
+        sizes="(max-width: 671px) 100vw, 671px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<ul>
+<li>하이퍼 파라미터 조정 전 XGBoost</li>
+</ul>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 666px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 55.00000000000001%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAABYUlEQVQoz42S0U7CMBSGeWkTb30CX8AX8FKvuCBEjJogcgFGQU00Yw7Y2NYWWMe2tr9pR6eLi/Inf9pkOV//c3ZaSiloSSmNlYQxFJDnwHzJMfPWcFwG16VwZgQbmkDuMoh0ZyyFMAzNallgnucgcYzwvofV1QWC3iXCmzbCuy7i4QPIeIRk7oPPA6SLujOeQu45FVArDEMM20d46hyDvF+D+1NkxMV37GbZ7ipgURTIsgxBsMLZ7QkGn91agbJW6pe1hBB1oIbplhljOO138Er8/csCSslG0J9Aq4gynI9m4IWshvyfG4HlBwV/ucJ0wCDFvlVV+j/VZmiTaG3oGtHQg5LKtAqU+yNFYVJo63nrYn3aZHpkDQnL1eFJgjTlIHQDL0iMt0lmHrBQXWxPe7eMWkLOOZ4nEywWHl4+YvQfI4zfKLa8wCEyi/0TqOU4DgiJEbECEd1hvc2rGR/yg74ADytXMeyirDwAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="조정 전 XGB"
+        title="조정 전 XGB"
+        src="/static/dce1e5bf4c202df5eab874331eaf4b43/ace37/bclass_before_xgb.png"
+        srcset="/static/dce1e5bf4c202df5eab874331eaf4b43/e9ff0/bclass_before_xgb.png 180w,
+/static/dce1e5bf4c202df5eab874331eaf4b43/f21e7/bclass_before_xgb.png 360w,
+/static/dce1e5bf4c202df5eab874331eaf4b43/ace37/bclass_before_xgb.png 666w"
+        sizes="(max-width: 666px) 100vw, 666px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<ul>
+<li>하이퍼 파라미터 조정 후 Randomforest</li>
+</ul>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 702px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 53.888888888888886%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAABv0lEQVQoz32T72vaQBjH/W832Jh9PSjs15v9ERt0MNheKHODDdqyrWnrurSuIJpstVVbsbpEU2OiicldPiMhBquuD3y5h0uez91977lcFEUsx3wmiODaClKF9G4E/RuBmP8nJXF9xogicvEopWTsTrDbLeyKin16kmj06wRTVTHVY4yjMv2ywt8fCtbxIZPLDl7PwOv2mTluBs2lS2G7Hs1KgVrxPvXSBvUPeeqlPPrHDeqlh5xtP2VQLeFeHOG2T5HBjEhIIiEQYZhsKgHGiZCCwJeUtSKvvt/jzX6eLeVRMr7ee8DWXh5z1OB/EddnwCAImHoenuPyWVd5rLzlyeH7RJv773j5s4g2bKYWydS3294JsQDMLiKY8UVrsqnUeHGg8fxA45lS47dpJ9/lAmRRK8D5pO9PqFZNdnddvn5z2NlxUCuTdGcRd8Va4Hjq0FM7mIUrrE8dBoU2wYWTtYdMW0SuyVeAsYSU2AOLYadHQ++jV7ucnQ9pXNqMxh5ShElh7HkYrua32iY79mzGeavFn7aB1nbRWmP0po3ni3nf3hkxJ7dssK7p9LpXjCeSa2OKYflIGSXvZ92lLNf/A5AdPaFigyl8AAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="조정 후 랜덤포레스트"
+        title="조정 후 랜덤포레스트"
+        src="/static/eb217bd02427f876f26133b2674334b2/d6331/bclass_after_rf.png"
+        srcset="/static/eb217bd02427f876f26133b2674334b2/e9ff0/bclass_after_rf.png 180w,
+/static/eb217bd02427f876f26133b2674334b2/f21e7/bclass_after_rf.png 360w,
+/static/eb217bd02427f876f26133b2674334b2/d6331/bclass_after_rf.png 702w"
+        sizes="(max-width: 702px) 100vw, 702px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<ul>
+<li>하이퍼 파라미터 조정 후 XGBoost</li>
+</ul>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 702px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 52.222222222222214%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsTAAALEwEAmpwYAAABKUlEQVQoz52SXU/CMBSG+f/Ga/+FPwCvTLyDCAGHCTiFiGMbbGUM2Lp2fbSDaQCj6EnenqYfT0/7tmGMAWOwebvZkD65pE6f9NFBPDgEnT5Bp0fYGxCPPdJpQOaHe83JvACZrCgrDjQqIKCUxp95DJuXjJsXBO1rVByho3AnEYGUGCkp8yMVCq11xfkCFpog9LjtXiHVCsNu/JywjANgDQ3iOTdu62Dhb6qeqyyPgHuAH8XcvXhnw+pCTirM8xwpc7zZnOfJ+gj4jyuXtmSjCd9CUndZL/vMdv4nWZhS6tAU2yZLge8tGE4ShmPBaLLEfU2qH1AURbXxu2xhFnxiihCC+26P0TiiPRC0nAh3uv6T2426Y8OeEi0WaFWwyTTpVpHl+nzHPyp8B2BTCxKTgb7wAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="조정 후 XGB"
+        title="조정 후 XGB"
+        src="/static/bdee85e33a287575e842a809c64c93d0/d6331/bclass_after_xgb.png"
+        srcset="/static/bdee85e33a287575e842a809c64c93d0/e9ff0/bclass_after_xgb.png 180w,
+/static/bdee85e33a287575e842a809c64c93d0/f21e7/bclass_after_xgb.png 360w,
+/static/bdee85e33a287575e842a809c64c93d0/d6331/bclass_after_xgb.png 702w"
+        sizes="(max-width: 702px) 100vw, 702px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<h4 id="-17" style="position:relative;"><a href="#-17" aria-label=" 17 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h4>
+<ol start="3">
+<li>모델 선택</li>
+</ol>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 574px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 56.111111111111114%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAABz0lEQVQoz31RXY/aMBDM//9JlVAfgApa+nC0R48ThK80xLGTOMSx88lUu4HcQ6WLNPF4Pbte73haa+z3e1wuF6xWKyyXS5xOJxwOB/i+j/P5jPV6jclkgsViMZ4R5vM5ptMpZrMZttst8jyHV5YloiiClJKTKSGOY0YYhgiCgJMp4Xg8so70QoixMOF6vcIYAw+ffFVVQSnFNzvncL/f/9NkWYau65j3fQ/vKdK5gZAZpNIojOUYdU9dUlc0Gtq3bYumaRjEqRiBOGEseCsshNSIlWbOBa3l52WZhrUWdV1znApQN5RbFAUXJ07xT5/sbIk4FkiUQqIknBsuwr2nH1NjCnRd+3hyB8/YBldZQqgSV2kYkSohEosg0tifBI5Bgr9RjjAuIJLyoTGskZlDnFqOmbKGp7IKr36Oja/xZfaOrwsfr7sM21OBlzeB2Y8dvr+c8etd4fcuwdvxho2f4c9BM7799LHextj4ORLt4FnXQmYVlK6Q5DWvivc1dxGKG3cvUzec6QoyHTr70FaIU4fSNh8zTNIcQSgZOi841rYNbGnQP2Y0fuMMe6SJQtMMZvVkCrkzONSjaTteu4eDtHL+HXjqiJPDfT/sn24/+T9al0auTTJ3FAAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="모델 선택"
+        title="모델 선택"
+        src="/static/cd07ead5de914a23f1b952794c9ac937/86389/bclass_choice_model.png"
+        srcset="/static/cd07ead5de914a23f1b952794c9ac937/e9ff0/bclass_choice_model.png 180w,
+/static/cd07ead5de914a23f1b952794c9ac937/f21e7/bclass_choice_model.png 360w,
+/static/cd07ead5de914a23f1b952794c9ac937/86389/bclass_choice_model.png 574w"
+        sizes="(max-width: 574px) 100vw, 574px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
 </li>
 </ol>
 <hr>
 <h2 id="--발표용-ppt-및-분석-보고서-작성" style="position:relative;"><a href="#--%EB%B0%9C%ED%91%9C%EC%9A%A9-ppt-%EB%B0%8F-%EB%B6%84%EC%84%9D-%EB%B3%B4%EA%B3%A0%EC%84%9C-%EC%9E%91%EC%84%B1" aria-label="  발표용 ppt 및 분석 보고서 작성 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>📢   발표용 PPT 및 분석 보고서 작성</h2>
 <p><a href="https://drive.google.com/file/d/1tkLEW5AsZsFa_uHeYKGNnTBvC3m4wZjZ/view?usp=sharing">분석 보고서.pdf</a></p>
 <hr>
+<h2 id="️--코드-공유" style="position:relative;"><a href="#%EF%B8%8F--%EC%BD%94%EB%93%9C-%EA%B3%B5%EC%9C%A0" aria-label="️  코드 공유 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>⌨️   코드 공유</h2>
+<p><a href="https://github.com/mungdo/zero_false_one_true">프로젝트 깃허브(개인)</a></p>
+<hr>
 <h2 id="--분석을-통해-나온-결론" style="position:relative;"><a href="#--%EB%B6%84%EC%84%9D%EC%9D%84-%ED%86%B5%ED%95%B4-%EB%82%98%EC%98%A8-%EA%B2%B0%EB%A1%A0" aria-label="  분석을 통해 나온 결론 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>🏁   분석을 통해 나온 결론</h2>
 <ol>
-<li></li>
+<li>취업 여부</li>
 </ol>
+<ul>
+<li>취업 여부는 취업 / 미취업으로 구분됨.</li>
+<li>XGB 기본 파라미터의 경우 특정 변수 Importance 값이 높은 경향이 있음. (과적합 가능성 높음)</li>
+<li>랜덤포레스트 하이퍼 파라미터 튜닝 후가 F1_Score 83.7로 가장 높은 결과를 보임.</li>
+<li>이 결과에 따르면 <strong>연령, 재학 중 일자리 경험 횟수, 구직기간, 학점, 전공</strong> 변수가 취업여부에 가장 영향을 많이 주는 것으로 분석됨.</li>
+<li>연령과 일자리 횟수가 높을 수록 취업인 경우가 다수</li>
+</ul>
+<ol start="2">
+<li>종사상 지위 구분</li>
+</ol>
+<ul>
+<li>종사상 지위는 상용근로자 / 임시근로자 / 일용근로자 / 고용원이 있는 자영업자 / 고용원이 없는 자영업자 / 무급가족종사자로 구분됨.</li>
+<li>랜덤포레스트, XGBoost 각각 파라미터 조정 전후 총 4가지의 모델 중 XGBoost 파라미터 조정하지 않은 경우를 채택함. 정확도는 77.8%</li>
+<li>이 결과에 따르면 <strong>전공분류, 학점, 학자금대출 금액, 연령</strong>이 종사상 지위에 높은 영향을 미침.
+<ul>
+<li>특히 특정 전공(반도체 세라믹공학, 자원, 교육학, 유아교육학)의 경우 상용근로자가 100%인 경우도 있음.</li>
+</ul>
+</li>
+<li>해당 모델을 사용해 실제 예측을 진행했을 때 predict proba(예측 확률)은 47.5<del>60%, 62.5</del>67.5%로 높다고 보기에는 어려움이 있음.</li>
+</ul>
+<ol start="3">
+<li>기업체 구분</li>
+</ol>
+<ul>
+<li>기업체는 내국 민간회사 / 외국 민간회사 / 공기업 / 정부기관 / 교육기관 / 연구기관 / 소속없음 / 기타로 구분됨.</li>
+<li>XGB의 경우 가중치를 늘려가는 방식으로 오버샘플링 진행하지 않음.</li>
+<li><strong>전공, 학위과정</strong> 등의 변수가 취업하는 기업 유형에 가장 영향을 많이 주는 것으로 분석됨.</li>
+</ul>
 <hr>
 <h2 id="️-개선사항-및-느낀점" style="position:relative;"><a href="#%EF%B8%8F-%EA%B0%9C%EC%84%A0%EC%82%AC%ED%95%AD-%EB%B0%8F-%EB%8A%90%EB%82%80%EC%A0%90" aria-label="️ 개선사항 및 느낀점 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>❗️  개선사항 및 느낀점</h2>
 <p><strong>개인적으로 느낀 미진한 부분/느낀 부분을 작성했습니다.</strong></p>
 <ol>
-<li></li>
+<li>모델링 요소</li>
 </ol>
+<ul>
+<li>대졸자의 취업에 영향을 미치는 요소로 객관적 지표로만 모델링을 실행함.</li>
+<li>다른 정성적인 평가 기준인 면접, 자기소개서 등의 내용은 배제하고 진행됨.</li>
+<li>따라서 참고 지표 수준밖에 되지 못했다는 한계점이 있음</li>
+<li>주관적/정성적 요소의 데이터화를 추가해 개선해 나갈 여지가 있음</li>
+</ul>
+<ol start="2">
+<li>데이터의 수집 범위와 종속 변수 세분화</li>
+</ol>
+<ul>
+<li>취업 여부 분석의 경우 상용 근로자 외의 임시/일용 근로자 까지 취업자에 포함시킴.</li>
+<li>종속변수로 정규직/비정규직/창업을 구분하는 등 보다 세분화할 필요가 있다고 판단됨.</li>
+<li>추가로 2016~2018년 이전, 이후의 자료 분석을 통해 시간 흐름에 따른 대졸자 취업 예측 변수를 탐색할 필요가 있음.</li>
+</ul>
+<ol start="3">
+<li>모델링 방법론과 자료의 범위</li>
+</ol>
+<ul>
+<li>보다 다양화된 모델링 방법론 사용할 필요가 있음. 주로 XGBoost, 랜덤포레스트만 사용.
+<ul>
+<li>이외의 앙상블 모형 중 배깅, 부스팅 등 다양한 방식을 추가로 활용했다면 더욱 좋은 성능의 모델을 찾을 수 있었을 것.</li>
+</ul>
+</li>
+<li>자료는 주로 인구통계학적인 특성과 졸업대학의 특성 같은 개인 노력으로 한계가 있는 부분을 많이 다루고 있음.
+<ul>
+<li>따라서 대학생활, 취업준비, 대외활동 등의 노력으로 개선할 수 있는 부분의 정량적 데이터가 있다면 추가할 필요가 있음.</li>
+</ul>
+</li>
+</ul>
 <hr>
+<p>두번째 프로젝트는 데이터 사이언스 공부를 수강한 뒤 머신러닝을 활용해서 데이터를 분석하는 과정이었습니다.
+주제 선정에 일부 어려움이 있었지만, 가치 있는 조사 데이터를 찾아냈고 덕분에 실제로 취업을 준비하는 저희들에게 도움이 될만한 내용인 “취업에 영향을 미치는 요소”를 찾아내는데 중점을 두었습니다.
+어떤 방식으로 접근해야할지 어려움이 있었고 데이터 자체의 문항수가 상당했기 때문에 사용할 수 있는 데이터만 선별하다 보니 일부 주관적인 생각이 반영되었을 것 같습니다.
+이 점에서 분석 과제를 발굴하고 그에 대한 객관적인 분석이 얼마나 어려운지 느낀 경험이었습니다.</p>
+<p>다행히도 마음 맞는 팀원분들을 만나서 조언도 많이 구하고 개인적인 친분도 쌓아가면서 좋은 경험이 되었던 것 같습니다.
+직접 데이터 전처리와 EDA, 앙상블 분석까지 진행하면서 개인적으로도 많이 성장했습니다.
+앞으로도 더 많은 주제로 프로젝트 경험을 쌓고 싶습니다. 읽어주셔서 감사합니다 :)</p>
 <div class="table-of-contents">
 <ul>
 <li>
@@ -852,6 +1060,9 @@
 </li>
 <li>
 <p><a href="#--%EB%B0%9C%ED%91%9C%EC%9A%A9-ppt-%EB%B0%8F-%EB%B6%84%EC%84%9D-%EB%B3%B4%EA%B3%A0%EC%84%9C-%EC%9E%91%EC%84%B1">📢   발표용 PPT 및 분석 보고서 작성</a></p>
+</li>
+<li>
+<p><a href="#%EF%B8%8F--%EC%BD%94%EB%93%9C-%EA%B3%B5%EC%9C%A0">⌨️   코드 공유</a></p>
 </li>
 <li>
 <p><a href="#--%EB%B6%84%EC%84%9D%EC%9D%84-%ED%86%B5%ED%95%B4-%EB%82%98%EC%98%A8-%EA%B2%B0%EB%A1%A0">🏁   분석을 통해 나온 결론</a></p>
