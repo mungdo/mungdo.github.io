@@ -40,16 +40,16 @@ self.__precacheManifest = [
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "4bb3174a41fdd466f084c6cc2ca4a958"
+    "revision": "679bb6e10c542d607851557927a449d3"
   },
   {
-    "url": "static/webfonts/s/roboto/v29/KFOlCnqEu92Fr1MmSU5fBBc4.woff2"
+    "url": "static/webfonts/s/roboto/v30/KFOlCnqEu92Fr1MmSU5fBBc4.woff2"
   },
   {
-    "url": "static/webfonts/s/roboto/v29/KFOmCnqEu92Fr1Mu4mxK.woff2"
+    "url": "static/webfonts/s/roboto/v30/KFOmCnqEu92Fr1Mu4mxK.woff2"
   },
   {
-    "url": "static/webfonts/s/roboto/v29/KFOlCnqEu92Fr1MmEU9fBBc4.woff2"
+    "url": "static/webfonts/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fBBc4.woff2"
   },
   {
     "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-5f4d6e6517138b0667ff.js"
