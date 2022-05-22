@@ -142,23 +142,64 @@ __본 프로젝트는 팀 활동으로 진행 되었고, 프로젝트 상에서 
 
 ### 1. 소설 카테고리 분류를 위한 LDA 토픽 모델링
 
-1) 분석 흐름
-- 분석 목적 및 환경 정의
-- 분석용 데이터 전처리 및 EDA
-- LDA 기반 Topic Modeling
-- 모델 성능 평가 및 개선
+1) 분석 흐름도
+![분석 흐름도](./boram_imgs/LDA_analyze_flow.png)
 
-2) 분석 데이터 설명
-- 소설 줄거리
+2) LDA 분석 개요
+- 분석 데이터 : 소설 데이터
   - 줄거리 : 텍스트 분석에서 활용할 데이터 (문자열)
   - 서평 : 텍스트 분석에서 활용할 데이터 (문자열)
   - 책 내용 일부 : 텍스트 분석에서 활용할 데이터 (문자열)
   - 데이터 양 : (레코드 수) 1,118개, (용량) 1.77MB
-  
-3) 전처리
-4) LDA 모델링
-5) 결과
+- LDA 
+  - 추출한 문서에 담긴 단어들의 주제(토픽)을 추출하는 ‘토픽모델링’ 기법 중 하나인 「잠재디리클레할당」 방법론 
+  - LDA는 각 문서의 토픽 분포와 각 토픽 내의 단어 분포를 추정 
+  - 추출한 원문에는 다양한 내용이 담겨 있을 수 있는데 이러한 주제들을 일일이 수작업으로 분류하기 어렵기 때문에 LDA 같은 분류 방법을 적용해 전반적인 데이터의 구조를 먼저 파악할 수 있음 
+  - LDA 기법은 단순히 주제만 분류해주는 것이 아니라 주제에 포함되는 키워드를 보여주기 때문에 그 키워드들로 해당 주제를 해석하고 정의할 수 있음
 
+##
+
+3) 전처리 : 형태소 분리 및 불용어 처리 
+- Konlpy (한국어 정보처리를 위한 파이썬 패키지) 형태소 분리 모듈 사용 
+  - OKT : 오픈소스 한국어 분석기. 과거 트위터 형태소 분석기.
+  - 한나눔 (Hannanum) : KAIST Semantic Web Research Center 개발.
+  - 꼬꼬마 (kkma) : 서울대학교 IDS(Intelligent Data Systems) 연구실 개발.
+  - Komoran : Shineware 개발.
+  - MeCab : 일본어용 형태소 분석기를 한국어를 사용할 수 있도록 수정.
+- 전처리 수행 : OKT 채택
+![형태소 분리 모듈 선택](./boram_imgs/LDA_pretreatment.png)
+
+4) 성능 개선 : 성능 평가 및 최적의 토픽 개수 채택
+- LDA 성능 평가 지표 : Coherence Score (응집성 지수, c_v).
+  - genism.models.coherencemodel 사용
+  - 주제 모델에 대한 주제 일관성 계산.
+  - 파라미터
+    - model : 사전 훈련된 주제 모델. LdaMallet 사용. 
+    - texts : 형태소 분리된 줄거리 / 서평 / 내용 일부 사용 
+    - coherence : c_v 사용
+- 성능 평가 과정 요약
+  1. 단어를 정수 인코딩 값으로 변환 : gensim.corpora.dictionary
+  2. 5회 이하로 발생한 값 제거 : dictionary class에서 filter_extremes(no_below = 5) 
+  3. LDA 토픽 분석 진행 : gensim.models.wrappers.LdaMallet
+  4. 응집성 지수 값 계산 : CoherenceModel
+  - 줄거리, 서평, 책 내용 여러 조합으로 데이터 바꿔가며, 토픽 개수 4~18개로 바꿔가며 유사성 점수 계산  
+- 데이터 조합 별 유사성 점수 시각화 : 책 소개 + 서평 조합과 10개 군집 채택
+![LDA Coherence Score](./boram_imgs/LDA_cvscore.png)
+
+5) 결과
+- 시각화에 사용한 모듈 : pyLDAvis.gensim_models 이용
+![LDA visualize](./boram_imgs/LDA_visualize.png)
+  - 일부 군집에서 겹치는 모습으로 보임
+  - 각각 분류의 단어를 확인하며 군집의 내용이 모두 상이한 것을 확인
+- 최종 분류된 토픽별 키워드 
+![LDA keywords](./boram_imgs/LDA_topic_keyword.png)
+- 최종 소설 테이블 일부
+![novel table](./boram_imgs/LDA_novel_table.png)
+
+
+---
+
+### 2. 소설-노래-감성배색을 연결하기 위한 감성 분류 모델 구축
 
 
 ---
