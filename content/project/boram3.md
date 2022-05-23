@@ -155,9 +155,7 @@ __본 프로젝트는 팀 활동으로 진행 되었고, 프로젝트 상에서 
   - 추출한 문서에 담긴 단어들의 주제(토픽)을 추출하는 ‘토픽모델링’ 기법 중 하나인 「잠재디리클레할당」 방법론 
   - LDA는 각 문서의 토픽 분포와 각 토픽 내의 단어 분포를 추정 
   - 추출한 원문에는 다양한 내용이 담겨 있을 수 있는데 이러한 주제들을 일일이 수작업으로 분류하기 어렵기 때문에 LDA 같은 분류 방법을 적용해 전반적인 데이터의 구조를 먼저 파악할 수 있음 
-  - LDA 기법은 단순히 주제만 분류해주는 것이 아니라 주제에 포함되는 키워드를 보여주기 때문에 그 키워드들로 해당 주제를 해석하고 정의할 수 있음
-
-##
+  - LDA 기법은 단순히 주제만 분류하는 것이 아니라 주제에 포함되는 키워드를 보여주기 때문에 그 키워드들로 해당 주제를 해석하고 정의할 수 있음
 
 3) 전처리 : 형태소 분리 및 불용어 처리 
 - Konlpy (한국어 정보처리를 위한 파이썬 패키지) 형태소 분리 모듈 사용 
@@ -196,11 +194,56 @@ __본 프로젝트는 팀 활동으로 진행 되었고, 프로젝트 상에서 
 - 최종 소설 테이블 일부
 ![novel table](./boram_imgs/LDA_novel_table.png)
 
-
 ---
 
 ### 2. 소설-노래-감성배색을 연결하기 위한 감성 분류 모델 구축
 
+1) 감성 분류 모델 개요
+- AI Hub 감성 대화 말뭉치
+  - 대화 응답 시나리오를 동반한 감성 텍스트 언어
+  - 감정대분류 : 0:기쁨, 1:불안, 2:슬픔, 3:당황, 4:상처, 5:분노
+  - 사람 응답 문장만 활용
+- 분석 방법 : 사전 훈련된 NLP 모델 4가지를 활용한 전이학습
+  - 4가지의 언어모델은 스스로 라벨링을 하는 준지도 학습
+  - 전이학습을 통해서 라벨이 주어지는 지도학습으로 전환
+    - 각각 언어모델에 NLP Task를 위한 추가적인 모델을 쌓아 이를 통해 분석하고자 하는 감정 분류 모델을 생성
+
+2) 활용한 사전 훈련 모델
+
+| 모델명 | 설명 요약                                             | 
+|------|---------------------------------------------------|
+| [Bert](https://github.com/SKTBrain/KoBERT) | 구글에서 2018년 개발한 NLP(자연어처리) 사전 훈련 기술                |
+| [Albert](https://github.com/google-research/albert) | Bert 모델에서 파라미터의 개수를 감소시켜 학습시간을 단축한 기술             |
+| [Roberta](https://github.com/facebookresearch/fairseq/blob/main/examples/roberta/README.md) | Bert 모델에서 학습단계의 hyper parameter들을 조정하여 성능을 높이는 방법 |
+| [KoElectra](https://github.com/Beomi/KoELECTRA) | 구글에서 2020년 개발한 NLP 사전 훈련 기술 (bert 보다 빠른 성능)       |
+
+  1. Bert : generator에서 나온 token을 보고 discriminator에서 "real" token인지 "fake" token인지 판별하는 방법으로 학습성능을 테스트
+     - BERT는 Bidirectional(양방향) Encoder(문자를 숫자로 바꿔주는) Representations from Transformers의 약자이며 오픈소스로 공개된 구글의 Language Representation Model임
+     - 단어를 하나씩 읽어가면서 다음 단어를 예측하는 일방향 모델인 GPT-1 모델의 문장처리의 한계를 극복하기 위해 탄생됨 - 한 두 문장의 학습데이터를 통해서 토큰 간의 상관관계와 문장 간의 상관관계를 학습하게 됨
+
+  2. Albert
+     - ALBERT는 사전 훈련된 모델을 확장하는 데 있어 주요 장애물을 제거하는 두가지 매개변수 감소 기술을 통합함
+     - 두 기술 모두 성능을 심각하게 저하시키지 않으면서 BERT에 대한 매개변수 수를 크게 줄여 매개변수 효율성을 개선함
+
+  3. Roberta
+     - self-Supervised 기반의 학습 방식은 Pre-training에서 많은 시간/리소스가 소요되기 때문에 BERT 및 이후 접근법들을 엄밀하게 비교하기 힘들고, 어떤 Hyper Parameter가 결과에 많은 영향을 미쳤는지 검증하기 힘듦.
+     - BERT는 아직 Undertrain되어 있고, Pre-training 과정에서 Hyper-parameter의 튜닝으로 더 좋은 결과를 얻을 수 있음
+     - BERT에 비해 더 많은 데이터로 더 오래, 더 큰 배치로 학습을 진행함.
+
+  4. Koelectra
+     - ICLR 2020에서 구글 리서치 팀은 새로운 pre-training 기법을 적용한 language model, ELECTRA (Efficiently Learning an Encoder that Classifies Token Replacements Accurately)를 발표
+     - 기존 BERT를 비롯한 많은 language model들은 입력을 마스크 토큰으로 치환하고 이를 치환 전의 원본 토큰으로 복원하는 masked language modeling 태스크를 통해 pre-training 진행
+     - ELECTRA는 Replaced Token Detection, 즉 generator에서 나온 token을 보고 discriminator에서 "real" token인지 "fake" token인지 판별하는 방법으로 학습
+
+3) 감성 분류 모델 과정
+- 분석 흐름도
+![분석 흐름도](./boram_imgs/classification_analyze_flow.png)
+
+4) 각 사전 훈련 모델 예측 결과
+
+5) 모델 앙상블로 가중치 결정
+
+6) 최종 벡터 생성 결과
 
 ---
 
