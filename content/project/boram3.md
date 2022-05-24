@@ -229,6 +229,7 @@ __본 프로젝트는 팀 활동으로 진행 되었고, 프로젝트 상에서 
      - self-Supervised 기반의 학습 방식은 Pre-training에서 많은 시간/리소스가 소요되기 때문에 BERT 및 이후 접근법들을 엄밀하게 비교하기 힘들고, 어떤 Hyper Parameter가 결과에 많은 영향을 미쳤는지 검증하기 힘듦.
      - BERT는 아직 Undertrain되어 있고, Pre-training 과정에서 Hyper-parameter의 튜닝으로 더 좋은 결과를 얻을 수 있음
      - BERT에 비해 더 많은 데이터로 더 오래, 더 큰 배치로 학습을 진행함.
+     * 전이학습 과정에서 프리즈를 328, 329개로 각각 설정해 2가지 모델로 만들었음.
 
   4. Koelectra
      - ICLR 2020에서 구글 리서치 팀은 새로운 pre-training 기법을 적용한 language model, ELECTRA (Efficiently Learning an Encoder that Classifies Token Replacements Accurately)를 발표
@@ -240,10 +241,24 @@ __본 프로젝트는 팀 활동으로 진행 되었고, 프로젝트 상에서 
 ![분석 흐름도](./boram_imgs/classification_analyze_flow.png)
 
 4) 각 사전 훈련 모델 예측 결과
+- 모델별 정확도
+
+| 모델명                                                                                        | 정확도  | 
+|--------------------------------------------------------------------------------------------|------|
+| [Bert](https://github.com/SKTBrain/KoBERT)                                                 | 0.47 |
+| [Albert](https://github.com/google-research/albert)                                        | 0.52 |
+| [Roberta](https://github.com/facebookresearch/fairseq/blob/main/examples/roberta/README.md) | 0.53 |
+| [Roberta](https://github.com/facebookresearch/fairseq/blob/main/examples/roberta/README.md) | 0.53 |
+| [KoElectra](https://github.com/Beomi/KoELECTRA)                                            | 0.51 |
 
 5) 모델 앙상블로 가중치 결정
+- 0~1 사이 값을 조정하며 모든 모델의 정확도를 계산해서 정확도가 가장 높은 가중치 채택.
+- 0.075*bert + 0.3*albert + 0.05*koelectra + 0.15*roberta328 + 0.425*roberta329
+  - 최종 정확도 0.55 (2% 상향)
 
 6) 최종 벡터 생성 결과
+![노래, 소설 테이블](./boram_imgs/classification_sing_novel_table.png)
+![배색 테이블](./boram_imgs/classification_color_table.png)
 
 ---
 
