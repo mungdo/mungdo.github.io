@@ -1,0 +1,1173 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><style data-href="/styles.df38b158323be6c050c3.css" data-identity="gatsby-global-css">@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:100;src:local("Montserrat Thin "),local("Montserrat-Thin"),url(/static/montserrat-latin-100-8d7d79679b70dbe27172b6460e7a7910.woff2) format("woff2"),url(/static/montserrat-latin-100-ec38980a9e0119a379e2a9b3dbb1901a.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:100;src:local("Montserrat Thin italic"),local("Montserrat-Thinitalic"),url(/static/montserrat-latin-100italic-e279051046ba1286706adc886cf1c96b.woff2) format("woff2"),url(/static/montserrat-latin-100italic-3b325a3173c8207435cd1b76e19bf501.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:200;src:local("Montserrat Extra Light "),local("Montserrat-Extra Light"),url(/static/montserrat-latin-200-9d266fbbfa6cab7009bd56003b1eeb67.woff2) format("woff2"),url(/static/montserrat-latin-200-2d8ba08717110d27122e54c34b8a5798.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:200;src:local("Montserrat Extra Light italic"),local("Montserrat-Extra Lightitalic"),url(/static/montserrat-latin-200italic-6e5b3756583bb2263eb062eae992735e.woff2) format("woff2"),url(/static/montserrat-latin-200italic-a0d6f343e4b536c582926255367a57da.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:300;src:local("Montserrat Light "),local("Montserrat-Light"),url(/static/montserrat-latin-300-00b3e893aab5a8fd632d6342eb72551a.woff2) format("woff2"),url(/static/montserrat-latin-300-ea303695ceab35f17e7d062f30e0173b.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:300;src:local("Montserrat Light italic"),local("Montserrat-Lightitalic"),url(/static/montserrat-latin-300italic-56f34ea368f6aedf89583d444bbcb227.woff2) format("woff2"),url(/static/montserrat-latin-300italic-54b0bf2c8c4c12ffafd803be2466a790.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:400;src:local("Montserrat Regular "),local("Montserrat-Regular"),url(/static/montserrat-latin-400-b71748ae4f80ec8c014def4c5fa8688b.woff2) format("woff2"),url(/static/montserrat-latin-400-0659a9f4e90db5cf51b50d005bff1e41.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:400;src:local("Montserrat Regular italic"),local("Montserrat-Regularitalic"),url(/static/montserrat-latin-400italic-6eed6b4cbb809c6efc7aa7ddad6dbe3e.woff2) format("woff2"),url(/static/montserrat-latin-400italic-7583622cfde30ae49086d18447ab28e7.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:500;src:local("Montserrat Medium "),local("Montserrat-Medium"),url(/static/montserrat-latin-500-091b209546e16313fd4f4fc36090c757.woff2) format("woff2"),url(/static/montserrat-latin-500-edd311588712a96bbf435fad264fff62.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:500;src:local("Montserrat Medium italic"),local("Montserrat-Mediumitalic"),url(/static/montserrat-latin-500italic-c90ced68b46050061d1a41842d6dfb43.woff2) format("woff2"),url(/static/montserrat-latin-500italic-5146cbfe02b1deea5dffea27a5f2f998.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:600;src:local("Montserrat SemiBold "),local("Montserrat-SemiBold"),url(/static/montserrat-latin-600-0480d2f8a71f38db8633b84d8722e0c2.woff2) format("woff2"),url(/static/montserrat-latin-600-b77863a375260a05dd13f86a1cee598f.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:600;src:local("Montserrat SemiBold italic"),local("Montserrat-SemiBolditalic"),url(/static/montserrat-latin-600italic-cf46ffb11f3a60d7df0567f8851a1d00.woff2) format("woff2"),url(/static/montserrat-latin-600italic-c4fcfeeb057724724097167e57bd7801.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:700;src:local("Montserrat Bold "),local("Montserrat-Bold"),url(/static/montserrat-latin-700-7dbcc8a5ea2289d83f657c25b4be6193.woff2) format("woff2"),url(/static/montserrat-latin-700-99271a835e1cae8c76ef8bba99a8cc4e.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:700;src:local("Montserrat Bold italic"),local("Montserrat-Bolditalic"),url(/static/montserrat-latin-700italic-c41ad6bdb4bd504a843d546d0a47958d.woff2) format("woff2"),url(/static/montserrat-latin-700italic-6779372f04095051c62ed36bc1dcc142.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:800;src:local("Montserrat ExtraBold "),local("Montserrat-ExtraBold"),url(/static/montserrat-latin-800-db9a3e0ba7eaea32e5f55328ace6cf23.woff2) format("woff2"),url(/static/montserrat-latin-800-4e3c615967a2360f5db87d2f0fd2456f.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:800;src:local("Montserrat ExtraBold italic"),local("Montserrat-ExtraBolditalic"),url(/static/montserrat-latin-800italic-bf45bfa14805969eda318973947bc42b.woff2) format("woff2"),url(/static/montserrat-latin-800italic-fe82abb0bcede51bf724254878e0c374.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:900;src:local("Montserrat Black "),local("Montserrat-Black"),url(/static/montserrat-latin-900-e66c7edc609e24bacbb705175669d814.woff2) format("woff2"),url(/static/montserrat-latin-900-8211f418baeb8ec880b80ba3c682f957.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:900;src:local("Montserrat Black italic"),local("Montserrat-Blackitalic"),url(/static/montserrat-latin-900italic-4454c775e48152c1a72510ceed3603e2.woff2) format("woff2"),url(/static/montserrat-latin-900italic-efcaa0f6a82ee0640b83a0916e6e8d68.woff) format("woff")}.search-input-wrapper{align-items:center;display:none;margin-top:3px;width:180px}@media(min-width:768px){.search-input-wrapper{display:flex}}.search-icon{color:var(--primary-text-color);margin-right:2px}.search-input{height:100%;width:100%}.search-input .MuiAutocomplete-inputRoot{padding-right:0!important}.search-input .MuiInputBase-input{color:var(--primary-text-color)!important;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;font-size:16px;font-weight:500;padding-bottom:2px!important}.search-input .MuiInput-underline:before{border-bottom-width:1px}.search-input .MuiInput-underline:after,.search-input .MuiInput-underline:before{border-bottom-color:var(--primary-text-color)}.page-header-wrapper{display:flex;height:60px;justify-content:center;width:100%}.page-header-wrapper .page-header{align-items:center;display:flex;justify-content:space-between;max-width:720px;width:100%}.page-header-wrapper .page-header .link{color:var(--primary-text-color);font-size:17px;font-weight:700}@media(min-width:768px){.page-header-wrapper .page-header .link{font-size:20px;font-weight:700}}.page-header-wrapper .page-header .trailing-section{align-items:center;display:flex}.page-header-wrapper .page-header .trailing-section .link{margin-right:10px}@media(min-width:768px){.page-header-wrapper .page-header .trailing-section .link{margin-right:20px}}.page-footer-wrapper{align-items:center;display:flex;height:62px;justify-content:center;margin-top:auto;width:100%}.page-footer-wrapper .page-footer{max-width:720px;text-align:center;width:100%}.page-footer-wrapper .page-footer .link{color:var(--primary-text-color);font-size:20px;font-weight:700;margin-right:20px}.page-footer-wrapper .page-footer a{color:#3a95ff}.dark-mode-button-wrapper{align-items:center;bottom:20px;display:flex;justify-content:center;position:fixed;right:20px}.dark-mode-button{-webkit-backdrop-filter:blur(30px);backdrop-filter:blur(30px);background-color:#363f47!important;border-radius:50px;box-shadow:0 5px 25px rgba(0,0,0,.12);cursor:pointer;height:50px;width:50px;z-index:3}.dark-mode-icon{color:#fff}a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{border:0;font-size:100%;font:inherit;margin:0;padding:0;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:"";content:none}table{border-collapse:collapse;border-spacing:0}a{outline:none;text-decoration:none}html{--background-color:#fff;--primary-text-color:#000;--secondary-text-color:#9e9e9e;--content-text-color:#37352f;--button-background-color:#f3f3f4;--button-text-color:#363f47;--tab-text-color:#6e6d7a;--tab-hover-text-color:#0d0c22;--tab-selected-background-color:rgba(13,12,34,.05);--bio-link-icon-color:rgba(0,0,0,.54);--about-link-icon-color:#a8a8a8;--chip-background-color:#f3f3f4;--link-text-color:rgba(55,53,47,.7);--post-card-border-color:rgba(0,0,0,.12);--markdown-table-even-cell-background-color:#f6f8fa;--markdown-table-border-color:#dfe2e5;--markdown-blockquote-border-color:#dfe2e5;--markdown-border-color:#e1e4e8}html[data-theme=dark]{--background-color:#232326;--primary-text-color:#e6e6e6;--secondary-text-color:#768390;--content-text-color:#e6e6e6;--button-background-color:#444c56;--button-text-color:#363f47;--tab-text-color:#768390;--tab-hover-text-color:#acbac7;--tab-selected-background-color:#373e47;--chip-background-color:#323a42;--bio-link-icon-color:#e6e6e6;--about-link-icon-color:#a8a8a8;--link-text-color:#90b0ec;--post-card-border-color:#363f47;--markdown-table-even-cell-background-color:#2d333b;--markdown-table-border-color:#444c56;--markdown-blockquote-border-color:#4f5864;--markdown-border-color:#e1e4e8}*{-webkit-appearance:none;appearance:none;box-sizing:border-box}html{font-size:14px;height:100%;overflow-y:scroll;width:100%}body{background-color:var(--background-color)!important}a{color:var(--link-text-color)}.page-wrapper{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;color:var(--primary-text-color);font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;justify-content:center;min-height:100vh;padding-left:15px;padding-right:15px;word-break:keep-all}.page-wrapper,.page-wrapper .page-content{align-items:center;display:flex;flex-direction:column;width:100%}.page-wrapper .page-content{max-width:720px}.icon{color:var(--about-link-icon-color);font-size:20px}.social-links .icon{color:var(--bio-link-icon-color);font-size:30px}@keyframes blinking-cursor{0%{opacity:0}50%{opacity:1}to{opacity:0}}.bio{color:var(--primary-text-color);display:flex;flex-direction:column;justify-content:space-between;margin-bottom:120px;margin-top:120px;width:100%}@media(min-width:768px){.bio{align-items:center;flex-direction:row}}.bio .introduction{display:flex;flex-direction:column;word-break:keep-all}.bio .introduction .react-rotating-text-cursor{animation:blinking-cursor .8s cubic-bezier(.68,.01,.01,.99) 0s infinite}.bio .introduction strong{display:inline-block;font-weight:600}.bio .introduction.korean{font-size:32px;font-weight:100;line-height:1.2}.bio .introduction.korean .title .react-rotating-text-cursor{font-size:35px;line-height:35px}@media(min-width:768px){.bio .introduction.korean{font-size:40px}.bio .introduction.korean .title .react-rotating-text-cursor{font-size:45px;line-height:45px}}.bio .introduction.english{font-family:montserrat;font-size:25px;line-height:1.2}@media(min-width:768px){.bio .introduction.english{font-size:45px}}.bio .introduction.english .name{font-size:35px;font-weight:600}.bio .introduction.english .job{font-size:35px}.bio .introduction.english .description{font-size:20px;font-weight:200;margin-top:8px}.bio .introduction.english .social-links{display:flex;margin-top:20px}.bio .thumbnail-wrapper{display:none;width:250px}@media(min-width:768px){.bio .thumbnail-wrapper{display:block}}.section-header-wrapper{display:flex;justify-content:center;margin-bottom:32px;width:100%}.section-header-wrapper .section-header{border-bottom:4px solid var(--primary-text-color);color:var(--primary-text-color);font-size:30px;font-weight:700;padding-bottom:5px}.timestamp-section{align-items:center;display:flex;flex-direction:column;justify-content:center;margin-bottom:50px;width:100%;word-break:keep-all}.timestamp-section .body{padding:0 10px;width:100%}.timestamp-section .body .timestamp{border-left:2px solid #bdbdbd;display:flex;font-size:18px;font-weight:400;justify-items:center;margin-left:5px;padding:10px 0;width:100%}.timestamp-section .body .timestamp:first-child{padding-top:7px}.timestamp-section .body .timestamp:last-child{padding-bottom:7px}.timestamp-section .body .timestamp:before{align-self:center;background-color:var(--background-color);border:2px solid #828282;border-radius:10px;content:"";height:10px;left:-1px;position:relative;transform:translatex(-50%);width:10px}.timestamp-section .body .timestamp .date{align-self:center;color:#828282;margin-left:5px;margin-right:5px;min-width:115px;width:115px}@media(min-width:768px){.timestamp-section .body .timestamp .date{min-width:200px;width:200px}}.timestamp-section .body .timestamp .activity{line-height:23px;width:100%}.project-section{align-items:center;justify-content:center}.project-section,.project-section .project{display:flex;flex-direction:column;width:100%}.project-section .project{margin-bottom:30px;padding:15px}.project-section .project .head{font-size:20px;font-weight:700;line-height:30px;margin-bottom:10px}.project-section .project .body{display:flex;flex-direction:column;width:100%}.project-section .project .body .thumbnail{margin-bottom:10px;width:100%}.project-section .project .body .tech-stack{display:flex;margin-bottom:10px}.project-section .project .body .tech-stack .tech{background-color:var(--chip-background-color);border-radius:10px;font-size:15px;font-weight:500;margin-right:5px;padding:5px 7px}.project-section .project .body .description{font-size:16px;font-weight:400;line-height:1.4}@media(min-width:768px){.project-section .project .body{flex-direction:column}.project-section .project .body .content{margin-top:0}}.post-header{border-bottom:1px solid var(--post-card-border-color);display:flex;flex-direction:column;justify-content:center;margin-bottom:40px;margin-top:20px;padding-bottom:10px;width:100%;word-break:keep-all}.post-header .emoji{font-size:78px;margin-bottom:20px}.post-header .categories{margin-bottom:5px}.post-header .categories .category{color:var(--primary-text-color);font-weight:600;margin-right:4px}.post-header .categories .category:hover{text-decoration:underline}.post-header .title{color:var(--primary-text-color);font-size:32px;font-weight:600;line-height:1.3;margin-bottom:6px}.post-header .info{color:var(--secondary-text-color);display:flex;flex-wrap:wrap;font-size:16px;font-weight:500;line-height:1.5;width:100%}.post-header .info .author{margin-right:4px}.post-header .info strong{color:var(--primary-text-color);font-weight:600}.post-navigator{column-gap:1.4%;display:grid;grid-template-columns:49.3% 49.3%;width:100%}.post-navigator .post-card{border:1px solid var(--post-card-border-color);border-radius:6px;color:var(--primary-text-color);cursor:pointer;display:flex;flex-direction:column;padding:15px;transition:transform .2s;width:100%}.post-navigator .post-card:hover .title{text-decoration:underline}.post-navigator .post-card.prev{margin-right:auto}.post-navigator .post-card.next{margin-left:auto}.post-navigator .post-card .direction{color:gray;font-size:14px;font-weight:500;margin-bottom:5px}.post-navigator .post-card .title{font-size:16px;font-weight:600;line-height:1.4;margin-bottom:7px}.markdown .octicon{fill:currentColor;display:inline-block;vertical-align:text-bottom}.markdown .anchor{float:left;line-height:1;margin-left:-20px;padding-right:4px}.markdown .anchor:focus{outline:none}.markdown h1 .octicon-link,.markdown h2 .octicon-link,.markdown h3 .octicon-link,.markdown h4 .octicon-link,.markdown h5 .octicon-link,.markdown h6 .octicon-link{color:#1b1f23;vertical-align:middle;visibility:hidden}.markdown h1:hover .anchor,.markdown h2:hover .anchor,.markdown h3:hover .anchor,.markdown h4:hover .anchor,.markdown h5:hover .anchor,.markdown h6:hover .anchor{text-decoration:none}.markdown h1:hover .anchor .octicon-link,.markdown h2:hover .anchor .octicon-link,.markdown h3:hover .anchor .octicon-link,.markdown h4:hover .anchor .octicon-link,.markdown h5:hover .anchor .octicon-link,.markdown h6:hover .anchor .octicon-link{visibility:visible}.markdown h1:hover .anchor .octicon-link:before,.markdown h2:hover .anchor .octicon-link:before,.markdown h3:hover .anchor .octicon-link:before,.markdown h4:hover .anchor .octicon-link:before,.markdown h5:hover .anchor .octicon-link:before,.markdown h6:hover .anchor .octicon-link:before{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' aria-hidden='true' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'/%3E%3C/svg%3E");content:" ";display:inline-block;height:16px;width:16px}.markdown{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;word-wrap:break-word;color:var(--content-text-color);font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;font-size:16px;font-weight:500;line-height:1.5}.markdown details{display:block}.markdown summary{display:list-item}.markdown a{background-color:initial}.markdown a:active,.markdown a:hover{outline-width:0}.markdown strong{font-weight:inherit;font-weight:bolder}.markdown h1{margin:.67em 0}.markdown img{border-style:none}.markdown code,.markdown kbd,.markdown pre{font-family:monospace,monospace;font-size:1em}.markdown hr{box-sizing:initial;overflow:visible}.markdown input{font:inherit;margin:0;overflow:visible}.markdown [type=checkbox]{box-sizing:border-box;padding:0}.markdown *{box-sizing:border-box}.markdown input{font-family:inherit;font-size:inherit;line-height:inherit}.markdown a{border-bottom:.05em solid;border-bottom-color:var(--link-text-color);border-left-color:var(--link-text-color);border-right-color:var(--link-text-color);border-top-color:var(--link-text-color);color:var(--link-text-color);text-decoration:none}.markdown a.anchor{border-bottom:none}.markdown strong{font-weight:700}.markdown hr{background:transparent;border-bottom:1px solid var(--markdown-blockquote-border-color);height:0;margin:15px 0;overflow:hidden}.markdown hr:after,.markdown hr:before{content:"";display:table}.markdown hr:after{clear:both}.markdown table{border-collapse:collapse;border-spacing:0}.markdown td,.markdown th{padding:0}.markdown details summary{cursor:pointer}.markdown h1,.markdown h2,.markdown h3,.markdown h4,.markdown h5,.markdown h6{margin-bottom:0;margin-top:0}.markdown h1{font-size:32px}.markdown h1,.markdown h2{font-weight:600}.markdown h2{font-size:24px}.markdown h3{font-size:20px}.markdown h3,.markdown h4{font-weight:600}.markdown h4{font-size:16px}.markdown h5{font-size:14px}.markdown h5,.markdown h6{font-weight:600}.markdown h6{font-size:12px}.markdown p{margin-bottom:10px;margin-top:0}.markdown blockquote{margin:0}.markdown ol,.markdown ul{margin-bottom:0;margin-top:0;padding-left:0}.markdown ol ol,.markdown ul ol{list-style-type:lower-roman}.markdown ol ol ol,.markdown ol ul ol,.markdown ul ol ol,.markdown ul ul ol{list-style-type:lower-alpha}.markdown dd{margin-left:0}.markdown code,.markdown pre{font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;font-size:12px}.markdown code.language-text{border-radius:3px;font-size:85%;padding:.2em .4em}.markdown :not(pre)>code.language-text{background:hsla(44,6%,50%,.15);color:#eb5757;overflow-wrap:break-word}.markdown pre{margin-bottom:0;margin-top:0}.markdown input::-webkit-inner-spin-button,.markdown input::-webkit-outer-spin-button{-webkit-appearance:none;appearance:none;margin:0}.markdown :checked+.radio-label{border-color:#0366d6;position:relative;z-index:1}.markdown .border{border:1px solid var(--markdown-border-color)!important}.markdown .border-0{border:0!important}.markdown .border-bottom{border-bottom:1px solid var(--markdown-border-color)!important}.markdown .rounded-1{border-radius:3px!important}.markdown .bg-white{background-color:transparent!important}.markdown .bg-gray-light{background-color:#fafbfc!important}.markdown .text-gray-light{color:#6a737d!important}.markdown .pl-3,.markdown .px-3{padding-left:16px!important}.markdown .px-3{padding-right:16px!important}.markdown .f6{font-size:12px!important}.markdown .lh-condensed{line-height:1.25!important}.markdown .text-bold{font-weight:600!important}.markdown .pl-c{color:#6a737d}.markdown .pl-c1,.markdown .pl-s .pl-v{color:#005cc5}.markdown .pl-e,.markdown .pl-en{color:#6f42c1}.markdown .pl-s .pl-s1,.markdown .pl-smi{color:#24292e}.markdown .pl-ent{color:#22863a}.markdown .pl-k{color:#d73a49}.markdown .pl-pds,.markdown .pl-s,.markdown .pl-s .pl-pse .pl-s1,.markdown .pl-sr,.markdown .pl-sr .pl-cce,.markdown .pl-sr .pl-sra,.markdown .pl-sr .pl-sre{color:#032f62}.markdown .pl-smw,.markdown .pl-v{color:#e36209}.markdown .pl-bu{color:#b31d28}.markdown .pl-ii{background-color:#b31d28;color:#fafbfc}.markdown .pl-c2{background-color:#d73a49;color:#fafbfc}.markdown .pl-c2:before{content:"^M"}.markdown .pl-sr .pl-cce{color:#22863a;font-weight:700}.markdown .pl-ml{color:#735c0f}.markdown .pl-mh,.markdown .pl-mh .pl-en,.markdown .pl-ms{color:#005cc5;font-weight:700}.markdown .pl-mi{color:#24292e;font-style:italic}.markdown .pl-mb{color:#24292e;font-weight:700}.markdown .pl-md{background-color:#ffeef0;color:#b31d28}.markdown .pl-mi1{background-color:#f0fff4;color:#22863a}.markdown .pl-mc{background-color:#ffebda;color:#e36209}.markdown .pl-mi2{background-color:#005cc5;color:#f6f8fa}.markdown .pl-mdr{color:#6f42c1;font-weight:700}.markdown .pl-ba{color:#586069}.markdown .pl-sg{color:#959da5}.markdown .pl-corl{color:#032f62;text-decoration:underline}.markdown .mb-0{margin-bottom:0!important}.markdown .my-2{margin-bottom:8px!important;margin-top:8px!important}.markdown .pl-0{padding-left:0!important}.markdown .py-0{padding-bottom:0!important;padding-top:0!important}.markdown .pl-1{padding-left:4px!important}.markdown .pl-2{padding-left:8px!important}.markdown .py-2{padding-bottom:8px!important;padding-top:8px!important}.markdown .pl-3{padding-left:16px!important}.markdown .pl-4{padding-left:24px!important}.markdown .pl-5{padding-left:32px!important}.markdown .pl-6{padding-left:40px!important}.markdown .pl-7{padding-left:48px!important}.markdown .pl-8{padding-left:64px!important}.markdown .pl-9{padding-left:80px!important}.markdown .pl-10{padding-left:96px!important}.markdown .pl-11{padding-left:112px!important}.markdown .pl-12{padding-left:128px!important}.markdown hr{border-bottom-color:#eee}.markdown kbd{background-color:#fafbfc;border:1px solid #d1d5da;border-radius:3px;box-shadow:inset 0 -1px 0 #d1d5da;color:#444d56;display:inline-block;font:11px SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;line-height:10px;padding:3px 5px;vertical-align:middle}.markdown:after,.markdown:before{content:"";display:table}.markdown:after{clear:both}.markdown>:first-child{margin-top:0!important}.markdown>:last-child{margin-bottom:0!important}.markdown a:not([href]){color:inherit;text-decoration:none}.markdown blockquote,.markdown details,.markdown dl,.markdown ol,.markdown p,.markdown pre,.markdown table,.markdown ul{margin-bottom:16px;margin-top:0}.markdown hr{background-color:var(--markdown-border-color);border:0;height:.25em;margin:24px 0;padding:0}.markdown blockquote{border-left:.25em solid var(--markdown-blockquote-border-color);color:#6a737d;padding:0 1em}.markdown blockquote>:first-child{margin-top:0}.markdown blockquote>:last-child{margin-bottom:0}.markdown h1,.markdown h2,.markdown h3,.markdown h4,.markdown h5,.markdown h6{font-weight:600;line-height:1.25;margin-bottom:16px;margin-top:24px}.markdown h1{font-size:2em}.markdown h2{font-size:1.5em}.markdown h3{font-size:1.25em}.markdown h4{font-size:1em}.markdown h5{font-size:.875em}.markdown h6{color:#6a737d;font-size:.85em}.markdown ol,.markdown ul{padding-left:2em}.markdown ol ol,.markdown ol ul,.markdown ul ol,.markdown ul ul{margin-bottom:0;margin-top:0}.markdown ol{list-style-type:decimal}.markdown ul{list-style-type:disc}.markdown li{word-wrap:break-all;display:list-item;text-align:-webkit-match-parent}.markdown li>p{margin-top:16px}.markdown li+li{margin-top:.25em}.markdown dl{padding:0}.markdown dl dt{font-size:1em;font-style:italic;font-weight:600;margin-top:16px;padding:0}.markdown dl dd{margin-bottom:16px;padding:0 16px}.markdown table{display:block;overflow:auto;width:100%}.markdown table th{font-weight:600}.markdown table td,.markdown table th{border:1px solid var(--markdown-table-border-color);padding:6px 13px}.markdown table tr{border-top:1px solid var(--markdown-table-border-color)}.markdown table tr:nth-child(2n){background-color:var(--markdown-table-even-cell-background-color)}.markdown img{background-color:transparent;box-sizing:initial;display:block;margin:0 auto;max-width:100%}.markdown img[align=right]{padding-left:20px}.markdown img[align=left]{padding-right:20px}.markdown code{background-color:rgba(27,31,35,.05);border-radius:3px;font-size:85%;margin:0;padding:.2em .4em}.markdown pre{word-wrap:normal}.markdown pre>code{background:transparent;border:0;font-size:100%;margin:0;padding:0;white-space:pre;word-break:normal}.markdown .highlight{margin-bottom:16px}.markdown .highlight pre{margin-bottom:0;word-break:normal}.markdown .highlight pre,.markdown pre{background-color:#f6f8fa;border-radius:3px;font-size:85%;line-height:1.45;overflow:auto;padding:16px}.markdown pre code{word-wrap:normal;background-color:initial;border:0;display:inline;line-height:inherit;margin:0;max-width:auto;overflow:visible;padding:0}.markdown .commit-tease-sha{color:#444d56;display:inline-block;font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;font-size:90%}.markdown .full-commit .btn-outline:not(:disabled):hover{border-color:#005cc5;color:#005cc5}.markdown .blob-wrapper{overflow-x:auto;overflow-y:hidden}.markdown .blob-wrapper-embedded{max-height:240px;overflow-y:auto}.markdown .blob-num{color:rgba(27,31,35,.3);cursor:pointer;font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;font-size:12px;line-height:20px;min-width:50px;padding-left:10px;padding-right:10px;text-align:right;-webkit-user-select:none;-ms-user-select:none;user-select:none;vertical-align:top;white-space:nowrap;width:1%}.markdown .blob-num:hover{color:rgba(27,31,35,.6)}.markdown .blob-num:before{content:attr(data-line-number)}.markdown .blob-code{line-height:20px;padding-left:10px;padding-right:10px;position:relative;vertical-align:top}.markdown .blob-code-inner{word-wrap:normal;color:#24292e;font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;font-size:12px;overflow:visible;white-space:pre}.markdown .pl-token.active,.markdown .pl-token:hover{background:#ffea7f;cursor:pointer}.markdown .tab-size[data-tab-size="1"]{-moz-tab-size:1;-o-tab-size:1;tab-size:1}.markdown .tab-size[data-tab-size="2"]{-moz-tab-size:2;-o-tab-size:2;tab-size:2}.markdown .tab-size[data-tab-size="3"]{-moz-tab-size:3;-o-tab-size:3;tab-size:3}.markdown .tab-size[data-tab-size="4"]{-moz-tab-size:4;-o-tab-size:4;tab-size:4}.markdown .tab-size[data-tab-size="5"]{-moz-tab-size:5;-o-tab-size:5;tab-size:5}.markdown .tab-size[data-tab-size="6"]{-moz-tab-size:6;-o-tab-size:6;tab-size:6}.markdown .tab-size[data-tab-size="7"]{-moz-tab-size:7;-o-tab-size:7;tab-size:7}.markdown .tab-size[data-tab-size="8"]{-moz-tab-size:8;-o-tab-size:8;tab-size:8}.markdown .tab-size[data-tab-size="9"]{-moz-tab-size:9;-o-tab-size:9;tab-size:9}.markdown .tab-size[data-tab-size="10"]{-moz-tab-size:10;-o-tab-size:10;tab-size:10}.markdown .tab-size[data-tab-size="11"]{-moz-tab-size:11;-o-tab-size:11;tab-size:11}.markdown .tab-size[data-tab-size="12"]{-moz-tab-size:12;-o-tab-size:12;tab-size:12}.markdown .task-list-item{list-style-type:none}.markdown .task-list-item+.task-list-item{margin-top:3px}.markdown .task-list-item input{margin:0 .2em .25em -1.6em;vertical-align:middle}.markdown .table-of-contents{align-items:flex-start;display:flex;flex-direction:column;justify-content:center;position:fixed;right:0;top:75px;width:340px}@media(max-width:1300px){.markdown .table-of-contents{display:none}}.markdown .table-of-contents ul{cursor:pointer;list-style-type:none}.markdown .table-of-contents ul li a{border-bottom:none;color:var(--secondary-text-color);font-size:14px;height:30px;padding:6px 2px;width:100%}.markdown .table-of-contents ul p{margin:0}.markdown .gatsby-resp-image-wrapper{display:flex!important;justify-content:center!important;max-height:560px!important;width:100%!important}.markdown .gatsby-resp-image-wrapper img{height:auto!important;max-height:560px!important;max-width:100%!important;position:relative!important;width:auto!important}.markdown .gatsby-resp-image-wrapper+em{color:#6a737d;display:block;font-size:15px;font-style:italic;text-align:center}code[class*=language-],pre[class*=language-]{word-wrap:normal;background:none;color:#ccc;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;text-align:left;white-space:pre;word-break:normal;word-spacing:normal}pre[class*=language-]{margin:.5em 0;overflow:auto;padding:1em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#2d2d2d}:not(pre)>code[class*=language-]{border-radius:.3em;padding:.1em;white-space:normal}.token.block-comment,.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#999}.token.punctuation{color:#ccc}.token.attr-name,.token.deleted,.token.namespace,.token.tag{color:#e2777a}.token.function-name{color:#6196cc}.token.boolean,.token.function,.token.number{color:#f08d49}.token.class-name,.token.constant,.token.property,.token.symbol{color:#f8c555}.token.atrule,.token.builtin,.token.important,.token.keyword,.token.selector{color:#cc99cd}.token.attr-value,.token.char,.token.regex,.token.string,.token.variable{color:#7ec699}.token.entity,.token.operator,.token.url{color:#67cdcc}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}.token.inserted{color:green}.post-content{margin-bottom:20px;width:100%}.category-page-header-wrapper,.post-content{display:flex;flex-direction:column;justify-content:center}.category-page-header-wrapper{align-items:center;margin-bottom:30px;margin-top:30px}.category-page-header-wrapper .category-page-title{border-bottom:3px solid var(--primary-text-color);font-size:40px;font-weight:700;margin-bottom:15px;padding-bottom:7px;text-align:center;width:-webkit-fit-content;width:-moz-fit-content;width:fit-content}.category-page-header-wrapper .category-page-subtitle{font-size:20px;font-weight:500;padding-bottom:10px;text-align:center}.post-card-wrapper{display:flex;justify-content:center;min-height:150px;width:100%}.post-card-wrapper .post-card{border:1px solid var(--post-card-border-color);border-radius:6px;color:var(--primary-text-color);cursor:pointer;display:flex;flex-direction:column;height:100%;margin-bottom:15px;max-width:720px;padding:15px;transition:transform .2s;width:100%}.post-card-wrapper .post-card:hover .title{text-decoration:underline}@media(min-width:768px){.post-card-wrapper .post-card{margin-bottom:0}}.post-card-wrapper .post-card .title{font-size:18px;font-weight:600;line-height:1.4;margin-bottom:7px}.post-card-wrapper .post-card .description{-webkit-line-clamp:3;-webkit-box-orient:vertical;color:var(--primary-text-color);display:-webkit-box;font-size:13px;line-height:20px;margin-bottom:10px;overflow:hidden;text-overflow:ellipsis}.post-card-wrapper .post-card .info{color:var(--about-link-icon-color);display:flex;font-size:14px;justify-content:space-between;margin-top:auto}.post-card-wrapper .post-card .info .categories{display:flex}.post-card-wrapper .post-card .info .categories .category{margin-left:4px}.post-card-wrapper .post-card .info .categories .category:hover{text-decoration:underline}.post-card-column-wrapper{display:flex;justify-content:center;width:100%}.post-card-column-wrapper .post-card-column{align-items:center;display:flex;flex-direction:column;width:100%}.post-card-column-wrapper .post-card-column .post-card-wrapper{margin-bottom:10px}.post-card-column-wrapper .post-card-column .more-post-card-button{background-color:var(--button-background-color);color:var(--tab-hover-text-color);font-size:15px;font-weight:500;height:40px}.post-tabs-wrapper{align-self:flex-start;display:flex;flex-direction:column;justify-content:center;top:0;width:100%}.post-tabs-wrapper .post-tabs{display:flex;height:40px;justify-content:center;margin-bottom:12px;max-width:760px;width:100%}.post-tabs-wrapper .post-tabs .mui-tabs .MuiTab-root{color:var(--tab-text-color);font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;font-size:17px;font-weight:500;height:40px;min-height:auto;min-width:auto;padding:10px 12px;transition:all .2s ease}.post-tabs-wrapper .post-tabs .mui-tabs .Mui-selected,.post-tabs-wrapper .post-tabs .mui-tabs .MuiTab-root :hover{color:var(--tab-hover-text-color);transition:all .2s ease}.post-tabs-wrapper .post-tabs .mui-tabs .Mui-selected{background-color:var(--tab-selected-background-color);border-radius:8px;font-weight:600}.post-tabs-wrapper .post-tabs .mui-tabs .MuiTabScrollButton-root{height:40px;width:20px}.post-tabs-wrapper .post-tabs .mui-tabs .MuiTabs-scrollable{height:40px}.post-tabs-wrapper .post-tabs .mui-tabs .MuiTabs-indicator{display:none}</style><meta name="generator" content="Gatsby 3.14.6"/><style data-emotion="css-global o6gwfi">html{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;box-sizing:border-box;-webkit-text-size-adjust:100%;}*,*::before,*::after{box-sizing:inherit;}strong,b{font-weight:700;}body{margin:0;color:rgba(0, 0, 0, 0.87);font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:400;font-size:1rem;line-height:1.5;letter-spacing:0.00938em;background-color:#fff;}@media print{body{background-color:#fff;}}body::backdrop{background-color:#fff;}</style><style data-emotion="css-global 1prfaxn">@-webkit-keyframes mui-auto-fill{from{display:block;}}@keyframes mui-auto-fill{from{display:block;}}@-webkit-keyframes mui-auto-fill-cancel{from{display:block;}}@keyframes mui-auto-fill-cancel{from{display:block;}}</style><style data-emotion="css 1l6di18 feqhe6 11tfndm mnn31 vubbuv 1yxmbwk 6flbmm">.css-1l6di18.Mui-focused .MuiAutocomplete-clearIndicator{visibility:visible;}@media (pointer: fine){.css-1l6di18:hover .MuiAutocomplete-clearIndicator{visibility:visible;}}.css-1l6di18 .MuiAutocomplete-tag{margin:3px;max-width:calc(100% - 6px);}.css-1l6di18 .MuiAutocomplete-inputRoot{-webkit-box-flex-wrap:wrap;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;}.MuiAutocomplete-hasPopupIcon.css-1l6di18 .MuiAutocomplete-inputRoot,.MuiAutocomplete-hasClearIcon.css-1l6di18 .MuiAutocomplete-inputRoot{padding-right:30px;}.MuiAutocomplete-hasPopupIcon.MuiAutocomplete-hasClearIcon.css-1l6di18 .MuiAutocomplete-inputRoot{padding-right:56px;}.css-1l6di18 .MuiAutocomplete-inputRoot .MuiAutocomplete-input{width:0;min-width:30px;}.css-1l6di18 .MuiInput-root{padding-bottom:1px;}.css-1l6di18 .MuiInput-root .MuiInput-input{padding:4px 4px 4px 0px;}.css-1l6di18 .MuiInput-root.MuiInputBase-sizeSmall .MuiInput-input{padding:2px 4px 3px 0;}.css-1l6di18 .MuiOutlinedInput-root{padding:9px;}.MuiAutocomplete-hasPopupIcon.css-1l6di18 .MuiOutlinedInput-root,.MuiAutocomplete-hasClearIcon.css-1l6di18 .MuiOutlinedInput-root{padding-right:39px;}.MuiAutocomplete-hasPopupIcon.MuiAutocomplete-hasClearIcon.css-1l6di18 .MuiOutlinedInput-root{padding-right:65px;}.css-1l6di18 .MuiOutlinedInput-root .MuiAutocomplete-input{padding:7.5px 4px 7.5px 6px;}.css-1l6di18 .MuiOutlinedInput-root .MuiAutocomplete-endAdornment{right:9px;}.css-1l6di18 .MuiOutlinedInput-root.MuiInputBase-sizeSmall{padding:6px;}.css-1l6di18 .MuiOutlinedInput-root.MuiInputBase-sizeSmall .MuiAutocomplete-input{padding:2.5px 4px 2.5px 6px;}.css-1l6di18 .MuiFilledInput-root{padding-top:19px;padding-left:8px;}.MuiAutocomplete-hasPopupIcon.css-1l6di18 .MuiFilledInput-root,.MuiAutocomplete-hasClearIcon.css-1l6di18 .MuiFilledInput-root{padding-right:39px;}.MuiAutocomplete-hasPopupIcon.MuiAutocomplete-hasClearIcon.css-1l6di18 .MuiFilledInput-root{padding-right:65px;}.css-1l6di18 .MuiFilledInput-root .MuiFilledInput-input{padding:7px 4px;}.css-1l6di18 .MuiFilledInput-root .MuiAutocomplete-endAdornment{right:9px;}.css-1l6di18 .MuiFilledInput-root.MuiInputBase-sizeSmall{padding-bottom:1px;}.css-1l6di18 .MuiFilledInput-root.MuiInputBase-sizeSmall .MuiFilledInput-input{padding:2.5px 4px;}.css-1l6di18 .MuiInputBase-hiddenLabel{padding-top:8px;}.css-1l6di18 .MuiAutocomplete-input{-webkit-box-flex:1;-webkit-flex-grow:1;-ms-flex-positive:1;flex-grow:1;text-overflow:ellipsis;opacity:1;}.css-feqhe6{display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;position:relative;min-width:0;padding:0;margin:0;border:0;vertical-align:top;width:100%;}.css-11tfndm{font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:400;font-size:1rem;line-height:1.4375em;letter-spacing:0.00938em;color:rgba(0, 0, 0, 0.87);box-sizing:border-box;position:relative;cursor:text;display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:100%;position:relative;}.css-11tfndm.Mui-disabled{color:rgba(0, 0, 0, 0.38);cursor:default;}label+.css-11tfndm{margin-top:16px;}.css-11tfndm:after{border-bottom:2px solid #1976d2;left:0;bottom:0;content:"";position:absolute;right:0;-webkit-transform:scaleX(0);-moz-transform:scaleX(0);-ms-transform:scaleX(0);transform:scaleX(0);-webkit-transition:-webkit-transform 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms;transition:transform 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms;pointer-events:none;}.css-11tfndm.Mui-focused:after{-webkit-transform:scaleX(1);-moz-transform:scaleX(1);-ms-transform:scaleX(1);transform:scaleX(1);}.css-11tfndm.Mui-error:after{border-bottom-color:#d32f2f;-webkit-transform:scaleX(1);-moz-transform:scaleX(1);-ms-transform:scaleX(1);transform:scaleX(1);}.css-11tfndm:before{border-bottom:1px solid rgba(0, 0, 0, 0.42);left:0;bottom:0;content:"\00a0";position:absolute;right:0;-webkit-transition:border-bottom-color 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:border-bottom-color 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;pointer-events:none;}.css-11tfndm:hover:not(.Mui-disabled):before{border-bottom:2px solid rgba(0, 0, 0, 0.87);}@media (hover: none){.css-11tfndm:hover:not(.Mui-disabled):before{border-bottom:1px solid rgba(0, 0, 0, 0.42);}}.css-11tfndm.Mui-disabled:before{border-bottom-style:dotted;}.css-mnn31{font:inherit;letter-spacing:inherit;color:currentColor;padding:4px 0 5px;border:0;box-sizing:content-box;background:none;height:1.4375em;margin:0;-webkit-tap-highlight-color:transparent;display:block;min-width:0;width:100%;-webkit-animation-name:mui-auto-fill-cancel;animation-name:mui-auto-fill-cancel;-webkit-animation-duration:10ms;animation-duration:10ms;}.css-mnn31::-webkit-input-placeholder{color:currentColor;opacity:0.42;-webkit-transition:opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;}.css-mnn31::-moz-placeholder{color:currentColor;opacity:0.42;-webkit-transition:opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;}.css-mnn31:-ms-input-placeholder{color:currentColor;opacity:0.42;-webkit-transition:opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;}.css-mnn31::-ms-input-placeholder{color:currentColor;opacity:0.42;-webkit-transition:opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;}.css-mnn31:focus{outline:0;}.css-mnn31:invalid{box-shadow:none;}.css-mnn31::-webkit-search-decoration{-webkit-appearance:none;}label[data-shrink=false]+.MuiInputBase-formControl .css-mnn31::-webkit-input-placeholder{opacity:0!important;}label[data-shrink=false]+.MuiInputBase-formControl .css-mnn31::-moz-placeholder{opacity:0!important;}label[data-shrink=false]+.MuiInputBase-formControl .css-mnn31:-ms-input-placeholder{opacity:0!important;}label[data-shrink=false]+.MuiInputBase-formControl .css-mnn31::-ms-input-placeholder{opacity:0!important;}label[data-shrink=false]+.MuiInputBase-formControl .css-mnn31:focus::-webkit-input-placeholder{opacity:0.42;}label[data-shrink=false]+.MuiInputBase-formControl .css-mnn31:focus::-moz-placeholder{opacity:0.42;}label[data-shrink=false]+.MuiInputBase-formControl .css-mnn31:focus:-ms-input-placeholder{opacity:0.42;}label[data-shrink=false]+.MuiInputBase-formControl .css-mnn31:focus::-ms-input-placeholder{opacity:0.42;}.css-mnn31.Mui-disabled{opacity:1;-webkit-text-fill-color:rgba(0, 0, 0, 0.38);}.css-mnn31:-webkit-autofill{-webkit-animation-duration:5000s;animation-duration:5000s;-webkit-animation-name:mui-auto-fill;animation-name:mui-auto-fill;}.css-vubbuv{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:1em;height:1em;display:inline-block;fill:currentColor;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;-webkit-transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;font-size:1.5rem;}.css-1yxmbwk{display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;position:relative;box-sizing:border-box;-webkit-tap-highlight-color:transparent;background-color:transparent;outline:0;border:0;margin:0;border-radius:0;padding:0;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;vertical-align:middle;-moz-appearance:none;-webkit-appearance:none;-webkit-text-decoration:none;text-decoration:none;color:inherit;text-align:center;-webkit-flex:0 0 auto;-ms-flex:0 0 auto;flex:0 0 auto;font-size:1.5rem;padding:8px;border-radius:50%;overflow:visible;color:rgba(0, 0, 0, 0.54);-webkit-transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;}.css-1yxmbwk::-moz-focus-inner{border-style:none;}.css-1yxmbwk.Mui-disabled{pointer-events:none;cursor:default;}@media print{.css-1yxmbwk{-webkit-print-color-adjust:exact;color-adjust:exact;}}.css-1yxmbwk:hover{background-color:rgba(0, 0, 0, 0.04);}@media (hover: none){.css-1yxmbwk:hover{background-color:transparent;}}.css-1yxmbwk.Mui-disabled{background-color:transparent;color:rgba(0, 0, 0, 0.26);}.css-6flbmm{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:1em;height:1em;display:inline-block;fill:currentColor;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;-webkit-transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;font-size:2.1875rem;}</style><link rel="preconnect" href="https://www.google-analytics.com"/><link rel="dns-prefetch" href="https://www.google-analytics.com"/><script>
+  
+  function gaOptout(){document.cookie=disableStr+'=true; expires=Thu, 31 Dec 2099 23:59:59 UTC;path=/',window[disableStr]=!0}var gaProperty='0',disableStr='ga-disable-'+gaProperty;document.cookie.indexOf(disableStr+'=true')>-1&&(window[disableStr]=!0);
+  if(true) {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  }
+  if (typeof ga === "function") {
+    ga('create', '0', 'auto', {});
+      ga('set', 'anonymizeIp', true);
+      
+      
+      
+      
+      }</script><link rel="icon" href="/favicon-32x32.png?v=ad9e124e5060ab5ddbaf24744e1cfc72" type="image/png"/><link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=ad9e124e5060ab5ddbaf24744e1cfc72"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=ad9e124e5060ab5ddbaf24744e1cfc72"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=ad9e124e5060ab5ddbaf24744e1cfc72"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=ad9e124e5060ab5ddbaf24744e1cfc72"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=ad9e124e5060ab5ddbaf24744e1cfc72"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=ad9e124e5060ab5ddbaf24744e1cfc72"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=ad9e124e5060ab5ddbaf24744e1cfc72"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=ad9e124e5060ab5ddbaf24744e1cfc72"/><style type="text/css">
+    .anchor.before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateX(-100%);
+      padding-right: 4px;
+    }
+    .anchor.after {
+      display: inline-block;
+      padding-left: 4px;
+    }
+    h1 .anchor svg,
+    h2 .anchor svg,
+    h3 .anchor svg,
+    h4 .anchor svg,
+    h5 .anchor svg,
+    h6 .anchor svg {
+      visibility: hidden;
+    }
+    h1:hover .anchor svg,
+    h2:hover .anchor svg,
+    h3:hover .anchor svg,
+    h4:hover .anchor svg,
+    h5:hover .anchor svg,
+    h6:hover .anchor svg,
+    h1 .anchor:focus svg,
+    h2 .anchor:focus svg,
+    h3 .anchor:focus svg,
+    h4 .anchor:focus svg,
+    h5 .anchor:focus svg,
+    h6 .anchor:focus svg {
+      visibility: visible;
+    }
+  </style><script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+      var hash = window.decodeURI(location.hash.replace('#', ''))
+      if (hash !== '') {
+        var element = document.getElementById(hash)
+        if (element) {
+          var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+          var clientTop = document.documentElement.clientTop || document.body.clientTop || 0
+          var offset = element.getBoundingClientRect().top + scrollTop - clientTop
+          // Wait for the browser to finish rendering before scrolling.
+          setTimeout((function() {
+            window.scrollTo(0, offset - 0)
+          }), 0)
+        }
+      }
+    })
+  </script><title data-react-helmet="true">감성을 담은 온라인 서점, 보람서점 : 음악과 함께하는 소설</title><meta data-react-helmet="true" name="viewport" content="initial-scale=1, width=device-width"/><meta data-react-helmet="true" property="og:title" content="감성을 담은 온라인 서점, 보람서점 : 음악과 함께하는 소설"/><meta data-react-helmet="true" property="og:site_title" content="감성을 담은 온라인 서점, 보람서점 : 음악과 함께하는 소설"/><meta data-react-helmet="true" name="description" content="본 프로젝트는 팀 활동으로 진행 되었고, 프로젝트 상에서 제가 기여한 부분을 중심으로 작성했습니다.  ⛳️  프로젝트 배경 및 목표  1. 배경 이전에는 이성적으로 소비를 결정하는 문화가 많았으나 요즘은 감성적인 소비 패턴으로 변화하는 문화를 보여주고 있다.
+더하여 세일즈포스 2020 마케팅 보고서에서는 마케팅 종사자의 80%는 기업이 제공하는 경험이 중요하다고 응답했다.
+그래서 많은 회사들이 경험 마케팅을 전개하고 있다.
+우리 프로젝트는 이러한 마케팅 분위기에 맞는 기존에 없던 새로운 서점을 만들고자 하였다. 기존 인터넷 서점의 경우 단순하게 정보 제공에만 그치고 있다.
+그렇다면 책을 구매할 때 정보 외에 다양한 경험을 제공할 수는 없을까? 그래서 우리는 핵심 소비자층의 감각과 감성을 자극하기 위해 접근성이 높은 노래(청각)과 다양한 연구를 통해 검증된 감정배색(시각)을 활용해서
+이전에는 존재하지 않았던 경험할 수 있는 새로운 서점을 기획하게 되었다. 2. 목표 소비자의 감성을 자…"/><meta data-react-helmet="true" property="og:description" content="본 프로젝트는 팀 활동으로 진행 되었고, 프로젝트 상에서 제가 기여한 부분을 중심으로 작성했습니다.  ⛳️  프로젝트 배경 및 목표  1. 배경 이전에는 이성적으로 소비를 결정하는 문화가 많았으나 요즘은 감성적인 소비 패턴으로 변화하는 문화를 보여주고 있다.
+더하여 세일즈포스 2020 마케팅 보고서에서는 마케팅 종사자의 80%는 기업이 제공하는 경험이 중요하다고 응답했다.
+그래서 많은 회사들이 경험 마케팅을 전개하고 있다.
+우리 프로젝트는 이러한 마케팅 분위기에 맞는 기존에 없던 새로운 서점을 만들고자 하였다. 기존 인터넷 서점의 경우 단순하게 정보 제공에만 그치고 있다.
+그렇다면 책을 구매할 때 정보 외에 다양한 경험을 제공할 수는 없을까? 그래서 우리는 핵심 소비자층의 감각과 감성을 자극하기 위해 접근성이 높은 노래(청각)과 다양한 연구를 통해 검증된 감정배색(시각)을 활용해서
+이전에는 존재하지 않았던 경험할 수 있는 새로운 서점을 기획하게 되었다. 2. 목표 소비자의 감성을 자…"/><meta data-react-helmet="true" property="og:author" content="안문주"/><meta data-react-helmet="true" property="og:image" content="/og-image.png"/><meta data-react-helmet="true" property="og:type" content="website"/><link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="/static/webfonts/s/roboto/v30/KFOlCnqEu92Fr1MmSU5fBBc4.woff2"/><link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="/static/webfonts/s/roboto/v30/KFOmCnqEu92Fr1Mu4mxK.woff2"/><link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="/static/webfonts/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fBBc4.woff2"/><style>@font-face{font-display:swap;font-family:Roboto;font-style:normal;font-weight:300;src:url(/static/webfonts/s/roboto/v30/KFOlCnqEu92Fr1MmSU5fBBc4.woff2) format("woff2")}@font-face{font-display:swap;font-family:Roboto;font-style:normal;font-weight:400;src:url(/static/webfonts/s/roboto/v30/KFOmCnqEu92Fr1Mu4mxK.woff2) format("woff2")}@font-face{font-display:swap;font-family:Roboto;font-style:normal;font-weight:500;src:url(/static/webfonts/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fBBc4.woff2) format("woff2")}@font-face{font-display:swap;font-family:Roboto;font-style:normal;font-weight:300;src:url(/static/webfonts/s/roboto/v30/KFOlCnqEu92Fr1MmSU5fBBc-.woff) format("woff")}@font-face{font-display:swap;font-family:Roboto;font-style:normal;font-weight:400;src:url(/static/webfonts/s/roboto/v30/KFOmCnqEu92Fr1Mu4mxM.woff) format("woff")}@font-face{font-display:swap;font-family:Roboto;font-style:normal;font-weight:500;src:url(/static/webfonts/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fBBc-.woff) format("woff")}</style><link rel="sitemap" type="application/xml" href="/sitemap.xml"/><link rel="alternate" type="application/rss+xml" href="/rss.xml"/><style>.gatsby-image-wrapper{position:relative;overflow:hidden}.gatsby-image-wrapper picture.object-fit-polyfill{position:static!important}.gatsby-image-wrapper img{bottom:0;height:100%;left:0;margin:0;max-width:none;padding:0;position:absolute;right:0;top:0;width:100%;object-fit:cover}.gatsby-image-wrapper [data-main-image]{opacity:0;transform:translateZ(0);transition:opacity .25s linear;will-change:opacity}.gatsby-image-wrapper-constrained{display:inline-block;vertical-align:top}</style><noscript><style>.gatsby-image-wrapper noscript [data-main-image]{opacity:1!important}.gatsby-image-wrapper [data-placeholder-image]{opacity:0!important}</style></noscript><script type="module">const e="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;e&&document.body.addEventListener("load",(function(e){if(void 0===e.target.dataset.mainImage)return;if(void 0===e.target.dataset.gatsbyImageSsr)return;const t=e.target;let a=null,n=t;for(;null===a&&n;)void 0!==n.parentNode.dataset.gatsbyImageWrapper&&(a=n.parentNode),n=n.parentNode;const o=a.querySelector("[data-placeholder-image]"),r=new Image;r.src=t.currentSrc,r.decode().catch((()=>{})).then((()=>{t.style.opacity=1,o&&(o.style.opacity=0,o.style.transition="opacity 500ms linear")}))}),!0);</script><link as="script" rel="preload" href="/webpack-runtime-f5f3382f227c26345aa2.js"/><link as="script" rel="preload" href="/framework-91ebf51d003c3c6f38be.js"/><link as="script" rel="preload" href="/app-889f0644be3e8780fa3b.js"/><link as="script" rel="preload" href="/f9d3028dbef90a6e9b8db85387d63dd9f4edf538-852cf68f9be39a5a4bc9.js"/><link as="script" rel="preload" href="/component---src-templates-blog-template-js-7e0f67ebc752626855c1.js"/><link as="fetch" rel="preload" href="/page-data/project/boram3/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/1073350324.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/1956554647.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/2938748437.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="page-wrapper"><header class="page-header-wrapper"><div class="page-header"><div class="front-section"><a class="link" href="/">mungdologs</a></div><div class="trailing-section"><a class="link" href="/about">about</a><a class="link" href="/posts">posts</a><div class="MuiAutocomplete-root MuiAutocomplete-hasPopupIcon css-1l6di18" role="combobox" aria-expanded="false"><div class="search-input-wrapper"><div class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root search-input css-feqhe6"><div class="MuiInput-root MuiInput-underline MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-11tfndm"><input type="text" aria-invalid="false" autoComplete="off" value="" class="MuiInput-input MuiInputBase-input MuiInputBase-inputAdornedEnd MuiAutocomplete-input MuiAutocomplete-inputFocused css-mnn31" aria-autocomplete="list" autoCapitalize="none" spellcheck="false"/><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium search-icon css-vubbuv" focusable="false" viewBox="0 0 24 24" aria-hidden="true" data-testid="SearchOutlinedIcon"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg></div></div></div></div></div></div></header><main class="page-content"><header class="post-header"><div class="emoji">🏠</div><div class="info"><div class="categories"><a class="category" href="/posts/project">project</a></div></div><h1 class="title">감성을 담은 온라인 서점, 보람서점 : 음악과 함께하는 소설</h1><div class="info"><div class="author">posted by <strong>mungdo</strong>,</div> <!-- -->May 13, 2022</div></header><div class="post-content"><div class="markdown"><p><strong>본 프로젝트는 팀 활동으로 진행 되었고, 프로젝트 상에서 제가 기여한 부분을 중심으로 작성했습니다.</strong></p>
+<h1 id="" style="position:relative;"><a href="#" aria-label=" permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h1>
+<h2 id="️-프로젝트-배경-및-목표" style="position:relative;"><a href="#%EF%B8%8F-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EB%B0%B0%EA%B2%BD-%EB%B0%8F-%EB%AA%A9%ED%91%9C" aria-label="️ 프로젝트 배경 및 목표 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>⛳️  프로젝트 배경 및 목표</h2>
+<h1 id="-1" style="position:relative;"><a href="#-1" aria-label=" 1 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h1>
+<h3 id="1-배경" style="position:relative;"><a href="#1-%EB%B0%B0%EA%B2%BD" aria-label="1 배경 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1. 배경</h3>
+<blockquote>
+<p>이전에는 이성적으로 소비를 결정하는 문화가 많았으나 요즘은 감성적인 소비 패턴으로 변화하는 문화를 보여주고 있다.
+더하여 세일즈포스 2020 마케팅 보고서에서는 마케팅 종사자의 80%는 기업이 제공하는 경험이 중요하다고 응답했다.
+그래서 많은 회사들이 경험 마케팅을 전개하고 있다.
+우리 프로젝트는 이러한 마케팅 분위기에 맞는 기존에 없던 새로운 서점을 만들고자 하였다.</p>
+</blockquote>
+<blockquote>
+<p>기존 인터넷 서점의 경우 단순하게 정보 제공에만 그치고 있다.
+그렇다면 책을 구매할 때 정보 외에 다양한 경험을 제공할 수는 없을까?</p>
+</blockquote>
+<blockquote>
+<p>그래서 우리는 핵심 소비자층의 감각과 감성을 자극하기 위해 접근성이 높은 노래(청각)과 다양한 연구를 통해 검증된 감정배색(시각)을 활용해서
+이전에는 존재하지 않았던 경험할 수 있는 새로운 서점을 기획하게 되었다.</p>
+</blockquote>
+<h3 id="2-목표" style="position:relative;"><a href="#2-%EB%AA%A9%ED%91%9C" aria-label="2 목표 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2. 목표</h3>
+<p><strong>소비자의 감성을 자극하는 감성서점 제안</strong>
+-> 이후에는 책의 챕터마다 어울리는 배경음악을 제공하는 도서-음악이 연결된 독서 플랫폼을 제공하고자 하는 목표가 있다.</p>
+<h3 id="3-프로젝트-주요-기능" style="position:relative;"><a href="#3-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%A3%BC%EC%9A%94-%EA%B8%B0%EB%8A%A5" aria-label="3 프로젝트 주요 기능 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>3. 프로젝트 주요 기능</h3>
+<ul>
+<li>회원가입과 로그인/로그아웃</li>
+<li>마이페이지 좋아요 기능</li>
+<li>도서 페이지에서 배색 팔레트 제공</li>
+<li>도서 페이지에서 노래 재생</li>
+<li>새로운 도서 카테고리 추천</li>
+<li>고객 반응 수집 (리뷰, 노래와 소설 간 어울리는 정도에 대한 반응)</li>
+</ul>
+<hr>
+<h2 id="--서비스-개발-과정--엔지니어-요약" style="position:relative;"><a href="#--%EC%84%9C%EB%B9%84%EC%8A%A4-%EA%B0%9C%EB%B0%9C-%EA%B3%BC%EC%A0%95--%EC%97%94%EC%A7%80%EB%8B%88%EC%96%B4-%EC%9A%94%EC%95%BD" aria-label="  서비스 개발 과정  엔지니어 요약 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>📄   서비스 개발 과정 : 엔지니어 (요약)</h2>
+<h3 id="1-시스템-아키텍쳐" style="position:relative;"><a href="#1-%EC%8B%9C%EC%8A%A4%ED%85%9C-%EC%95%84%ED%82%A4%ED%85%8D%EC%B3%90" aria-label="1 시스템 아키텍쳐 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1. 시스템 아키텍쳐</h3>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 720px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 48.33333333333333%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAABYlAAAWJQFJUiTwAAAB3UlEQVQoz22SW2vcMBCF/f9/QB/y0pCnPja9pJQ+ppvSDRQKSZOmcbK7ZNdry7IdW/baun1F2kBD6IEBaWZ0hqMzydHihMPbD7zfzhjthHee41+aw28Nr+c9l1tDwLT6Sf75FdmXA/ofb2POWYUfPqHkMU69AytIlnLNbbZg2wqc97FxLRU3q5x0U1HWHSHbVYJ8ecNDeoV4uMNah7Watnmg2KaURYrWAwnW440DB4HvsZY4vSMmsDijcdawLQRZXlDKirJqcC4QWmTdkhcSISqMsSQ8g/eOYdex3mxI7+5ZLpfsdsNeXl+BGXjZvx/8D8kwDAghoixtNOPYU2w3lNmKvBAxJucZNhfoeh0fNZWkbhoC3/H3c86X97RSYp0jUUqRZVkktM6g8gV3v6/ZqUeyPCdNU0ajabuOMDxgNvvK2dlZPF82FUVfYyeN844kyJrP57FozLSX4jpkXVDVzVPeYKylbCoO3hzRqZZpDL2el4iEp6enT2uwX5FOleRVgVJ9dL6UJScnH2mV4s8iRU9THOC9j3X/LKIpwbFYdDZcWDcFmciRpWQymnojKbKccdoruLi64ia9fzLmBaH3/plrHpxhMgatJ4weg37WUiBKQa9aXPhnpVB9/1/Cv+eb+3gv2n1fAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="아키텍쳐"
+        title="아키텍쳐"
+        src="/static/814d66a49ad2b4feb8fbb3bbcf4af8b0/37523/system_architecture.png"
+        srcset="/static/814d66a49ad2b4feb8fbb3bbcf4af8b0/e9ff0/system_architecture.png 180w,
+/static/814d66a49ad2b4feb8fbb3bbcf4af8b0/f21e7/system_architecture.png 360w,
+/static/814d66a49ad2b4feb8fbb3bbcf4af8b0/37523/system_architecture.png 720w,
+/static/814d66a49ad2b4feb8fbb3bbcf4af8b0/302a4/system_architecture.png 1080w,
+/static/814d66a49ad2b4feb8fbb3bbcf4af8b0/c83ae/system_architecture.png 1180w"
+        sizes="(max-width: 720px) 100vw, 720px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<h3 id="2-데이터-수집" style="position:relative;"><a href="#2-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%88%98%EC%A7%91" aria-label="2 데이터 수집 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2. 데이터 수집</h3>
+<table>
+<thead>
+<tr>
+<th>데이터 분류</th>
+<th>출처</th>
+<th>자료명</th>
+<th>데이터 건수</th>
+<th>최초 데이터 수집일</th>
+<th>자료유형</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>소설</td>
+<td>인터파크</td>
+<td>인터파크 판매량순 도서 데이터</td>
+<td>1,118건</td>
+<td>2022. 04. 16~17</td>
+<td>csv</td>
+</tr>
+<tr>
+<td>노래</td>
+<td>멜론</td>
+<td>멜론 시대별 차트 데이터</td>
+<td>981건</td>
+<td>2022. 04. 16~17</td>
+<td>csv</td>
+</tr>
+<tr>
+<td>노래</td>
+<td>스포티파이</td>
+<td>음악의 가수, 앨범 정보 데이터</td>
+<td>981건</td>
+<td>2022. 04. 20~22</td>
+<td>csv</td>
+</tr>
+<tr>
+<td>배색</td>
+<td>기술표준정보은행</td>
+<td>감성배색 데이터</td>
+<td>1,285건</td>
+<td>2022. 04. 16~17</td>
+<td>json, csv</td>
+</tr>
+</tbody>
+</table>
+<p><strong>수집 이유</strong></p>
+<ul>
+<li>도서 분류 중에서도 소설, 음악에 멜로디가 아닌 가사 데이터를 활용한 이유
+<ul>
+<li>소설이 가장 감성 분석에 적합하다고 판단.</li>
+<li>멜로디는 현실적으로 데이터 존재하지 않아서 텍스트 분석을 통해서 초기 버전 만들고 이후 고객 반응 수집으로 멜로디까지 접목할 계획.</li>
+</ul>
+</li>
+<li>인터파크, 멜론에서 데이터를 수집한 이유
+<ul>
+<li>다양하고 상세한 정보 수집에 용이한 인터파크 활용</li>
+<li>대중성 높은 스트리밍 및 다운로드 서비스 1위 멜론 활용</li>
+</ul>
+</li>
+<li>배색 데이터 수집 이유
+<ul>
+<li>배색에 대해서 느낄 수 있는 감성 언어가 제시되어 있는 데이터로 감정 분류 모델에 적용하기 위함.</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-데이터-적재-및-처리--hadoop---pyspark---mysql" style="position:relative;"><a href="#3-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%A0%81%EC%9E%AC-%EB%B0%8F-%EC%B2%98%EB%A6%AC--hadoop---pyspark---mysql" aria-label="3 데이터 적재 및 처리  hadoop   pyspark   mysql permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>3. 데이터 적재 및 처리 : hadoop -> pyspark -> mysql</h3>
+<ul>
+<li>차후에 데이터 대량으로 수집하는 경우를 위해 하둡으로 데이터를 받고 스파크로 전처리 후 mysql에 저장</li>
+</ul>
+<h3 id="4-erd" style="position:relative;"><a href="#4-erd" aria-label="4 erd permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>4. ERD</h3>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 720px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 46.666666666666664%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAADLAAAAywAEoZFrbAAACeklEQVQoz02Sz0sqURTHz4zZ/LBJ51Xja/xxp5lxRtHxBxUNhRmWIIKWSoRCQmu3YqtyLbi2iDb9WATthja1CyKMVv0DgbiXINq08XF99HhfuNwv557zuef+gEAgANVqFQRBAEVRoFgsQj6fd0SjUd/h4aHr9vbWls1mYTQagSzLsLS0BM/Pz4AQAl3XoV6vgyRJ4zjOgWAwCM1mE0RRJAzDYK+vr4lcLscoijL39PRkL5VKTCAQYN/e3ghFUSaXl5exB4/Hw8iy7MBAr9cLpmn+BYbDYfrr64uoVCqUqqp6vV537u7u2qLRKPP9/U3mcjm3rut6v9+nTNNU4vG4dHd3x66urmrr6+vS6+vrBEEQeI0eAxcXF+VsNsu3220eALRQKMTUajU+HA5LDw8PTDqdngEAcTgckqZpin6/f9ayLEoURS4Wi1FutxsSicTvYrE40+12GYhEIiJCyHlxcUHzPC+FQqG5RqPh4Hl+vtfr2VZWVlwA4Nvb26Ovrq7s9/f3RKvVmkwmk/MHBwfTo9GIVFXVCwCes7MzFrBwqzRNw8fHB4m9YRiOjY0N9Pj4iAudHMcl0un0L8uybP1+f1yDEFJ9Pt/s5+cnhRBawKGbmxv7PyC+WKx8Pg+ZTGaK47hgKpXiXl5eiHg8Prm9vW3vdDo2nIsHQsgnCIIwGAzwKZxbW1tCt9uloNVqwfHx8XhOpVLjL2AYhoskSfXk5GSiUCi4NE2Ty+Wyy7IsstfrAcuyGEqcn5+PN9jZ2ZlLJpPC6ekpDf8rk8nA2toabG5uMpqmzR8dHVH7+/tTsVjMX6vVpn+6e39/hx8fiUTwo8xwHCdeXl4yfwAai9aMFo7AewAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="ERD"
+        title="ERD"
+        src="/static/b0f4d9bb0b38bc3b04cfaefaff2d4e9b/37523/ERD.png"
+        srcset="/static/b0f4d9bb0b38bc3b04cfaefaff2d4e9b/e9ff0/ERD.png 180w,
+/static/b0f4d9bb0b38bc3b04cfaefaff2d4e9b/f21e7/ERD.png 360w,
+/static/b0f4d9bb0b38bc3b04cfaefaff2d4e9b/37523/ERD.png 720w,
+/static/b0f4d9bb0b38bc3b04cfaefaff2d4e9b/302a4/ERD.png 1080w,
+/static/b0f4d9bb0b38bc3b04cfaefaff2d4e9b/07a9c/ERD.png 1440w,
+/static/b0f4d9bb0b38bc3b04cfaefaff2d4e9b/e65fc/ERD.png 3918w"
+        sizes="(max-width: 720px) 100vw, 720px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<h3 id="5-검색엔진--mysql---logstash---elasticsearch---django---web" style="position:relative;"><a href="#5-%EA%B2%80%EC%83%89%EC%97%94%EC%A7%84--mysql---logstash---elasticsearch---django---web" aria-label="5 검색엔진  mysql   logstash   elasticsearch   django   web permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>5. 검색엔진 : mysql -> logstash -> elasticsearch -> django -> web</h3>
+<ul>
+<li>자동 완성 기능을 활용하기 위해 elasticsearch 사용.
+<ul>
+<li>합성어 어근만 저장하는 nori_discar를 사용.</li>
+</ul>
+</li>
+</ul>
+<h3 id="6-로그데이터-대시보드--web---log---logstash---elasticsearch---kibana---dashboard" style="position:relative;"><a href="#6-%EB%A1%9C%EA%B7%B8%EB%8D%B0%EC%9D%B4%ED%84%B0-%EB%8C%80%EC%8B%9C%EB%B3%B4%EB%93%9C--web---log---logstash---elasticsearch---kibana---dashboard" aria-label="6 로그데이터 대시보드  web   log   logstash   elasticsearch   kibana   dashboard permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>6. 로그데이터 대시보드 : web -> log -> logstash -> elasticsearch -> kibana -> dashboard</h3>
+<ul>
+<li>Django logging module로 수집한 로그를 logstash를 통해 elasticsearch에 ‘log data’ 인덱스로 저장</li>
+<li>웹서버 로그 데이터 시각화 : 서버 발생 이상 징후나 패턴을 찾아 웹 개선에 활용</li>
+<li>Django에서 의도된 로그를 저장하고 DB에 저장된 회원 데이터를 시각화
+<ul>
+<li>사용자 수, 성별, 연령대, 도서 검색 로그 데이터 시각화 등을 통해 마케팅 활용 및 개인화 추천 서비스로 발전 가능</li>
+</ul>
+</li>
+</ul>
+<h3 id="7-프로세스-설계서" style="position:relative;"><a href="#7-%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4-%EC%84%A4%EA%B3%84%EC%84%9C" aria-label="7 프로세스 설계서 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>7. 프로세스 설계서</h3>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 720px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 55.55555555555556%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABYlAAAWJQFJUiTwAAABxUlEQVQoz3VSWW+jYAzk//+u7jubKoGSZDm/++DI0VYhmZVNwkNXi2SMJTP2zDjph4iyKmGswTiOoLqqq6WeRgxDj37oMYwDRopphPUW6e+U//PeIct2nK+fFySX6wVlWWKz2cAYgxA9YgwIIcB7j6ZpkKYpuk7AOQ/rLIaxR54XKPZ71HWDt7dfEJ3A6XxCQq+yanD8U0Jrg9hHGKMZ3FqHTkhUdYtOKK598MyCwan2AdYu39M0EuDEm8QYORM9opxlGYMaBlWwzsM5B+cdYh8Y9Hw5cXx+XdfMgNRIYDQtxMB6vChrY/8BNFZDa81srDV4f9+gbdtFw2VDAvBMh6avGjoPqTTaTkIbx4CkIfV4pmwhpcRHcUDTdphOE5L5PuN2u3HM84zv7y8I2TE4OUvUyIRxGp5uL67T9jSUNj8cSwipFlPw4yFQqSQ3E/08z1Dsi1UCugIaQppT0NZZ/oG6aVjH5PF44BX03O/39VzIlKpu0LYdQohPrclph8PhwOdGbhf7I4SQOJ//A6i1QlEUDNgJwTf4uoLw1Jm0U0rx5kRZKb1Q/glImhJVcpDyLttiu9uuptF2RJl74iJD1bRsHhn8F1TuOqIR4nDcAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="process design"
+        title="process design"
+        src="/static/1bce25912ac15fa2e3b23d37e6abd683/37523/process_design.png"
+        srcset="/static/1bce25912ac15fa2e3b23d37e6abd683/e9ff0/process_design.png 180w,
+/static/1bce25912ac15fa2e3b23d37e6abd683/f21e7/process_design.png 360w,
+/static/1bce25912ac15fa2e3b23d37e6abd683/37523/process_design.png 720w,
+/static/1bce25912ac15fa2e3b23d37e6abd683/d5bfb/process_design.png 1072w"
+        sizes="(max-width: 720px) 100vw, 720px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<hr>
+<h2 id="--서비스-개발-과정--사이언스" style="position:relative;"><a href="#--%EC%84%9C%EB%B9%84%EC%8A%A4-%EA%B0%9C%EB%B0%9C-%EA%B3%BC%EC%A0%95--%EC%82%AC%EC%9D%B4%EC%96%B8%EC%8A%A4" aria-label="  서비스 개발 과정  사이언스 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>📊   서비스 개발 과정 : 사이언스</h2>
+<p><strong>index</strong>
+0. 데이터 EDA</p>
+<ol>
+<li>소설 카테고리를 위한 LDA 토픽 모델링</li>
+<li>소설, 노래, 배색 연결을 위한 감정 분류 모델</li>
+<li>cosin 유사도로 소설-노래, 소설-배색 연결</li>
+</ol>
+<hr>
+<h3 id="0-데이터-eda" style="position:relative;"><a href="#0-%EB%8D%B0%EC%9D%B4%ED%84%B0-eda" aria-label="0 데이터 eda permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>0. 데이터 EDA</h3>
+<ol>
+<li>소설 줄거리 및 노래 가사 글자 수 히스토그램</li>
+</ol>
+<ul>
+<li>소설 단어 빈도수 히스토그램 : 300~600개 글자수 사이가 가장 많았음.</li>
+</ul>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 584px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 62.22222222222222%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAABYlAAAWJQFJUiTwAAAB10lEQVQoz5WSXUsbQRSG/V+FgmC19cJG25vif+hlrxQtaQwmtXojiiCFgqXFRDdR2YAgVkxLtFUwxi9s1Fpt1SQr2Z3Zmc3uvmVmjRKTSD1whvk6D+97Zhpc14UIzkz8zV3iPK/Jtck4LMv6r+ScwzAMWdcgBoMQWKaB9YNzvBxLIJ09wX1CiKoAEkIlcOt3Dg97o3gWmoa6ugPHceXlu1KE4zi3gJSCUwObv3J4EoyhNRhD59AciMmvFZSLbyurAtq2LRVyqiNznENLQEFbfxwvBmfx80/+qsCta7UKKCYFTUOJUaSPLtAcUNAenkGTP4pR9bu8ZDtOTaU1gWJBqSkt754UJNAXikuVvn4FmaOzKuidQO+LMDCiY2HjQAKfhuLwhWfwyD+F7o9LYNyC47oSWvEg9YCcWyBFDV2fv6GlL4b2sAd8PjCLxtdRjM+v1+2hyJpAWtTwauIrHvRE8LhPkT1sDkyj6Y2Cjncq3s+vYfvwFGeFIooGhcmtCriu6zdAYeeykEdkeROD8RTeRpYwov5AePILhudW5Z7/0yLGEyv4oCaRSGWgJteQ3s1iL3uIvf0sCCEesNzYUsm+sVJi3kNws7wBuN45JZ41ARDOGGPX6gTrH/cbcYl1r6pvAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="소설 EDA hist"
+        title="소설 EDA hist"
+        src="/static/60e68fe4d117c56b180ed28ec9871d4f/e05eb/eda_1_novel.png"
+        srcset="/static/60e68fe4d117c56b180ed28ec9871d4f/e9ff0/eda_1_novel.png 180w,
+/static/60e68fe4d117c56b180ed28ec9871d4f/f21e7/eda_1_novel.png 360w,
+/static/60e68fe4d117c56b180ed28ec9871d4f/e05eb/eda_1_novel.png 584w"
+        sizes="(max-width: 584px) 100vw, 584px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<ul>
+<li>노래 가사 단어 빈도수 히스토그램 : 단어수 20~40개인 경우가 가장 많음.</li>
+</ul>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 572px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.44444444444444%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAAB4ElEQVQ4y42Sy0sbURTG/deEbupj4aYb12pXXXRfKAhGhSpuainFbV/4iC+MFVGwQUysqUrQaCqaybyqzDCZzORO5s4n98xDrTX6wWHOvYfzu9+de9qCIIAQYwyO48B1XbiuE4X75KjX6/B9H20CZlkWZFlGs9kk+EbhBMVzjXLP82i/VXDOYds2mSKgaZpQVRWx5raPsFsO1zy6wWNqNBp0eOJQ13XE11/cOcbB+d8QyAPabxVC4toJsFarRcDwtNlsESu7p3eADymuJQ5FUqlUoGlaVGDof7+MN1+ytG76PGrEf8H3gOJ1JEmCputUqDkueieW8WpqnV5NyOc8afwXeg8Yj0zs0LId9E1m8GxwBrmSBOXSCBtvNd+GPgisynJYYAwDH1bROTyP11NrePlxDScXMiFFL4/ctnwUAVSisTk8U/Di3Ty6RxfQkUqjZzyDjqEZfNv83XJsBCMBikRWFHLxKZNH+9vv6B5Joys1h56xFTxPpdE1NI3P63v4I6nQrky4DQbbccgx8zwaPQLGlg3DoP94fKFi6WcBG3sl5EpVpDdz2No/xfZRBV9/ZJE9LCNfLGMn/wtVVYdpGCjsH8AwTQSc3wDvit+kvkcf81KHZVwl2x5jYdn3k1zoGr5k1JUSffohAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="노래 EDA hist"
+        title="노래 EDA hist"
+        src="/static/3515e8fee00489098722b3f7fabbd8ec/a805e/eda_1_sing.png"
+        srcset="/static/3515e8fee00489098722b3f7fabbd8ec/e9ff0/eda_1_sing.png 180w,
+/static/3515e8fee00489098722b3f7fabbd8ec/f21e7/eda_1_sing.png 360w,
+/static/3515e8fee00489098722b3f7fabbd8ec/a805e/eda_1_sing.png 572w"
+        sizes="(max-width: 572px) 100vw, 572px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<ol start="2">
+<li>소설 줄거리 및 노래 가사 단어 분포 (상위 25개)</li>
+</ol>
+<ul>
+<li>소설 단어 개수 빈도 : 단어 개수가 가장 많은 단어들 중 카테고리로 분류하기 어려운 단어 상당수.</li>
+</ul>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 576px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 57.22222222222223%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABYlAAAWJQFJUiTwAAABp0lEQVQoz4WS3U/TUBjG+VOJsCiCkeyKzHjnhYmBeGF0icSAZuI+hCCGIaAboI4xuPCCEAgEowXWljM6XNuNfvxMu65uZLI3efKcj7y/8+TN6XNdF6+0ikCafYWcfE45FUdOvbimuK/TxFPK719SLXxDPzyirl1Sr9d9hsfqc13H36jKGcXMKNvvblFKRiglB0PtpCK+ijP9nGwnMJV9WuXFaTQa7cBmwvNzmblPY6QXh8hkR0hnh0O9/XiH1x8GyH0fx22BHMcj4DhOd6AiFB6uPuL+8hjRlRjR5VjTV2JM7sT5IX3FuNIDmB0m7Ar0XjtTFR7k5rn3ZZZRX3PcXc0Q21hEt/4BWgFa/t+EJ2WZ6FKegewat5fWiAS+KZ3697Zjd8B6AlVxwbP8MU9yEhP53zz+/IvprXI4+uvJegIr4oLigszWfJXSgkYhXUHaM4ImN0zVrhuBmtCQEgeoU8fI00cob35iiSt6ldffFfineola2EOs7yI2dhHFfUxDxzRNTMPwXdebe8MwfHnrWq3W+bGDVfhJbW9egdu23SHLsrqetc/1L8YpJvLY3f6rAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="소설 EDA top 25"
+        title="소설 EDA top 25"
+        src="/static/30937b51cd1f948cce3ac7c09c1ec284/533c1/eda_2_novel.png"
+        srcset="/static/30937b51cd1f948cce3ac7c09c1ec284/e9ff0/eda_2_novel.png 180w,
+/static/30937b51cd1f948cce3ac7c09c1ec284/f21e7/eda_2_novel.png 360w,
+/static/30937b51cd1f948cce3ac7c09c1ec284/533c1/eda_2_novel.png 576w"
+        sizes="(max-width: 576px) 100vw, 576px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<ul>
+<li>노래 가사 단어 개수 빈도 : 단어 개수가 가장 많은 단어들 중 노래 분류 작업에 적용하기 어려운 단어 상당수.</li>
+</ul>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 508px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 70.55555555555556%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAABYlAAAWJQFJUiTwAAAB00lEQVQ4y5WT208TQRSH+U99sjZoAPVFjcY3fTPxwUQwqS9qYiqkUSy9sSlGLNUHMK2FoqUUrBRLLzSw99nP7Gy3FysVTnJyfmc2v2/OTHYmHMfBTTeOyxWayx9prazRSmd62V7J9rKZStNILNNYStLKfEbXden1GRNSOAK3PfiS4ufsDarP71AN3aYauiXr/rObVGanqTydoqWE0XdKaMUC5sEvTMt2acNAxxGyKeWWWH19ibX5IJn5ANmFoOx3119yUt+iU8vh4Bn9MAxjdEIfWCgkiLwNshid4X30OpF3k8RTd9GNkz5BHkj08p9A0QWubsV5GAvwKDXDg1iQuQ/3aBzvyW9CWB7E6U/o6jOAXpPYznJVecx0+gn3MyGKrbIH627omwbreGAxz5X4GwKxMAvFnFyzhe2Pc3Fgavs7UwmFawmFZLnSnc4D/X3UcwHjm/tcXswzGf1God4ZAg7Gf4GeFmxs/uZV/IhIusmpOnxvFwLKXwHBXv6IfLjJj2Qb2+wDx+UYoEN9o0Ztboe2Uue8cQbQnQ8Ov5Y4fPGJzvouprAwDRPTNKXJsqwR7b7jkbc82FiGgXmqyqpqGrZtS7OqqgghJETTNKldsK8HgX8Ak/UfCgNdVbYAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="노래 EDA top 25"
+        title="노래 EDA top 25"
+        src="/static/a2246f81f66a54654889cbabff63d9d1/2fd48/eda_2_sing.png"
+        srcset="/static/a2246f81f66a54654889cbabff63d9d1/e9ff0/eda_2_sing.png 180w,
+/static/a2246f81f66a54654889cbabff63d9d1/f21e7/eda_2_sing.png 360w,
+/static/a2246f81f66a54654889cbabff63d9d1/2fd48/eda_2_sing.png 508w"
+        sizes="(max-width: 508px) 100vw, 508px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<ol start="3">
+<li>소설, 노래 형태소별 단어 빈도수 시각화</li>
+</ol>
+<ul>
+<li>소설 단어 형태소별 분포 : 명사형이 72.7%로 가장 많은 비율 차지.</li>
+</ul>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 426px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 78.88888888888889%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAABYlAAAWJQFJUiTwAAACn0lEQVQ4y3WUS08TURiGJyYk6sq4ce/v8De4dOHCnZGF8S+4MsilLbRoJCHBJYYYECNQaEtTiIEUYqdTCrSdmZZaLtVSK9B2hnYeM8MwvcmZnJxvZs558n63IwAYhoEz2sxG9RLttIZ2WqdRb7S2NA1nb8dZQLj+YK6lUolLGtSLVY4XcuQmd5HH4sjeOLmpPYqhn+h/tQ6oea4d2gI2DSoXFU6iBRSvRGY4hjwat2zFhHpE0kMx1A87VA/OeqAOsP3Hn/0S6ZEYmVGRjFe0lFnA6zkuIbtFlHcJtFKtB9ahsH5RIzURQx2VSLq32HoTIenaQvUlHLfN1YSa6o/m1RtcttWdiAVSQz9QfAlLjepNtJT5bKBPsmbGtN8nqJdrPVAB28j6U8jDIop5aMxW45WsOMouibxLJD8icuCKc+CWyA2K6OnOWDpA8zUzn0QeuQJeK5M9cXKTSbb9a0z7N5lZ3WAuEGZuJcLn5Qgb2XSrlGyVjstKYJ+Mo9AExpHdEtlPSSrRR3xfe8xAYpoXu3764zO8UmZx5yNommZNx+Vr4GEyz97wtpMExSuieHbJf9mgFrwHKwL68n3WV58xuDXN88QiX38nKRaOULNZR6WT5ZpWY2dqG9V9FXgTKLtTFJYW0EO3qC31ofsFCAhUVx6wHOknd162G6ZVjx11eKweIXk2yXoSqOMimTGFw8AkhAVKs7f5NXsXPXgHFgXYe2lDGtCeZSuY5mNDjzIFpIkoqbdRFN8BxdBrjKAAoT4IChhLAnrsKQ3jqu0No0l7+7Zarw16fn6Our5H+tshpfATmosC2pJAdfUhp9IAF1XdBjRvaL3/QK3bBijnw5RTHzk7jNDQq5QqDcrlcldBdwG7q92ym9bdRO/oVtXZy/8Az9x/qOWuwY0AAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="소설 EDA 형태소 1"
+        title="소설 EDA 형태소 1"
+        src="/static/3def52a316756b31859f8455c0cfa402/531e1/eda_3_1_novel.png"
+        srcset="/static/3def52a316756b31859f8455c0cfa402/e9ff0/eda_3_1_novel.png 180w,
+/static/3def52a316756b31859f8455c0cfa402/f21e7/eda_3_1_novel.png 360w,
+/static/3def52a316756b31859f8455c0cfa402/531e1/eda_3_1_novel.png 426w"
+        sizes="(max-width: 426px) 100vw, 426px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<ul>
+<li>소설 단어 형태소별 자주 등장하는 단어 (상위 10개)</li>
+</ul>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 68.33333333333333%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAABYlAAAWJQFJUiTwAAACuElEQVQ4y3WTX4scRRTF97OI4EtQgg8+GRYEBRF89M2P4YMPgoIPC4qfwBdfJCQEVyWQRAgbzW7Mmk2ymt2YzJ+dmZ2Z6un/3VXVXV3d/ZOpnt1ZFC8UdN2+53DuPXU32rblLGxtMVV1fj/7VTdgquZCfo0xRdEVrGLDAWyNShXeqWA6mrrvUpc0TY2WHqE/ZDY5QucjtIodMNWaSRTy6PiIoRD4eYa1lg3bWGa9KWJ7QvSzcMffnhKOIubiJbb3LgzegpN3aEcfkAd3sHnNV0/3uXzvNpsPdrh07zYf/f4rTVV1CoOJj7gxIdye41+fku4G6MKwEH1s7wq8fJXW+9wpk1pi04ytwwNeuXuTK7t3+fCP+3zy18FyZh2hP17gbZ8S/SQIbwpsatClwZv3sf33oP8GrdxxhKpQlHHM14cHXNq5xbfjQTf/qsIYw0ZZlYyOT1j8OCW4MSO9H9LSkmUKMetR9zfhZJO2OHLAXOVkwuPLxw9587df8E3p8qUxHeESvDjx8H44Jbg+I91dEjZobRCzAfbFZVh8RudrS5rn5MLji8f7fPzkIUVdd26fERamQAznbob+1SnZg8gp7AiH2OevQbDVEbYWVRRUccyn+3vc8b3uWQHVxZaDcWeK//0p8kniirJM480H2L9fh+S7lcIaqTU2TZ3CW75w2eaiwmViMfKYXxuT7gTYrHItS1ngewNs720o/1wpbBzh0pStp4/Yi4KOsG3XhMYaJi/GeNcmlD19viK5LBDT5zTD94HkfBOWLRdxzDeHBzyT+XrLrF2bkkQJ0SCkiDVxEqOUQilNEgeocI80DZFSkSQJUimsMRyLOWJZm+dkWYaU0s3Rtdw0DaapqJuaMAwpy3LdSgVpmqG1Iooi6pWry0espSSXkjRNnTq3yxcX/b/Rrs6/sm3L/6H+AeZKFEvoVtlHAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="소설 EDA 형태소 2"
+        title="소설 EDA 형태소 2"
+        src="/static/8a84c7f961260e79c98bd954812f93af/fcda8/eda_3_2_novel.png"
+        srcset="/static/8a84c7f961260e79c98bd954812f93af/e9ff0/eda_3_2_novel.png 180w,
+/static/8a84c7f961260e79c98bd954812f93af/f21e7/eda_3_2_novel.png 360w,
+/static/8a84c7f961260e79c98bd954812f93af/fcda8/eda_3_2_novel.png 590w"
+        sizes="(max-width: 590px) 100vw, 590px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<ul>
+<li>소설 형태소별 Wordcloud</li>
+</ul>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 720px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 25%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAYAAABFA8wzAAAACXBIWXMAABYlAAAWJQFJUiTwAAABAUlEQVQY022PS26DMAAFuf/lqrQNIiEEig3mY2OMMRCINFWkbipldk+zeRPxx7EfPI8n71jXjf1xvHX79vi3o+mh0FOP7BtMKOm9Q2rLdKw0XlN6j9KSwZeIyaHDxLoFhnlAuoDyNa2vkaPDLStRZXPiquDc5BT+TKxunM4FenJIk3NpC+5ZRa1SfnROPrT02iJMTKErkqHmQwmkuaLmiuheZ5yalC8hSZuUTCQk33eMHrkXGbL95CZKkqrkojMyV6Kc5Woy4qYkFoKLLRDuSm16omWX+K2je10OhmnWaDcSlo3WeowbmFeD2wb09sryrNtCNwbqZcGECbv0dMFifeAXXH55o768+/8AAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="소설 EDA 형태소 3"
+        title="소설 EDA 형태소 3"
+        src="/static/f3dcfd70503384a0556bcf71fbf65a56/37523/eda_3_3_novel.png"
+        srcset="/static/f3dcfd70503384a0556bcf71fbf65a56/e9ff0/eda_3_3_novel.png 180w,
+/static/f3dcfd70503384a0556bcf71fbf65a56/f21e7/eda_3_3_novel.png 360w,
+/static/f3dcfd70503384a0556bcf71fbf65a56/37523/eda_3_3_novel.png 720w,
+/static/f3dcfd70503384a0556bcf71fbf65a56/302a4/eda_3_3_novel.png 1080w,
+/static/f3dcfd70503384a0556bcf71fbf65a56/e8e04/eda_3_3_novel.png 1270w"
+        sizes="(max-width: 720px) 100vw, 720px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<ul>
+<li>노래 가사 단어 형태소별 분포 : 명사형이 61.7%로 가장 많은 비율 차지.</li>
+</ul>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 406px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 83.88888888888889%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAARCAYAAADdRIy+AAAACXBIWXMAABYlAAAWJQFJUiTwAAAC1UlEQVQ4y32U3U4TQRTHVzFe6Qv4CL6AVz6BL+AD+BLeGaOSaAPWQgkgFyYkKEQhGlRAWlqQj+5Xt+VjbQtSmpZaoSgUKLS7P7PTdm1pdJKTmZ1z9jf/c3JmJNu2aZgzjo6OKP4uirWzZ1UtbKvma+w1YpvXjSG5zvpP5UqZ3LcsuXCW5JiJObxGctQkE0hzmDlsAbvQZmCz07IssuEMq36DaJeC4dWIvlCJelX0LkXMOzPbWBWrDdqm0LItNieTaB6ZaI+K7F1Bfr6M0asR8+s169WFf+tD6p9pS41UM/IOqidCvC9K1Key6FlgybOA7lMEyOjRxBzrq0F/KPmWUrWkfHp8SnRII+arqXAs7o8KE7BezTVHqVOG9VerVMqVNpUCWEj9QO1eEQBHiWsOwFHo0zB8OoaYNWI9Onq3yuHOb1el3axwW/mO3q3U6iRgtZoZXhmtbx19UCPWL2P0qxj9CsaAiuaLcJAo/k3bbgJ+V7ZcoOGk7NfQu2TMsTTFjQ9MxQKMJCKMJxZ4l1pifHOZN+Y8odwazX3smADupnLI3cu1mvlVAUu8z3GS7IJ5iXz4FoPaWx6Zn3isjvAwMsITc4LX6cW2vhTAUqmE8jJC3KeJ2mxOZzlL3IeghBWUICRxEr7JaGSYzvgUz1cneLr+Hnl/k718gb39fRfqtk1y2WTlmUI6nKVi3sOelbDnLmGHLmOFOmBOohq6waQ8QOdGEH/yM6VKmfxu/gKwLrV8ViETi2HH7wgY4Q5OZzrIj1/l1+QVbAcactReY/rrA/T93Zb+a0nZtqri43BPo/jxOgQcoCTUVYNXqAYv12ABieqshJUZqkOqbY+F1LjcwgkUCynyX+9y/OUa5zMS1S8SdkDibLaD0tJtTgvherz1v7vsnCKkik3n7h8UEhxsjZI3PKRVL8c/depvQl0ZbbALr43tngyWG3ByDnsH541KtcEuAv8ACXq30heFSuQAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="노래 EDA 형태소 1"
+        title="노래 EDA 형태소 1"
+        src="/static/18469329c176e42e5853a1f09009e0cf/e33ef/eda_3_1_sing.png"
+        srcset="/static/18469329c176e42e5853a1f09009e0cf/e9ff0/eda_3_1_sing.png 180w,
+/static/18469329c176e42e5853a1f09009e0cf/f21e7/eda_3_1_sing.png 360w,
+/static/18469329c176e42e5853a1f09009e0cf/e33ef/eda_3_1_sing.png 406w"
+        sizes="(max-width: 406px) 100vw, 406px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<ul>
+<li>노래 가사 단어 형태소별 자주 등장하는 단어 (상위 10개)</li>
+</ul>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 618px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 63.33333333333333%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACpUlEQVQ4y2WTvWscVxTF9U+kShEIgbhPZQQ2KYILG1IlhITgziHpgjG4dmNUuAspkk4mRVJEkW3JuxhrbfAnsmVWYDvWSrs7u5PVaudzZ96befP1fmHfrFcGX3jDzD28wzl3zl1iXqpUOIFj3jV68cxKOHIy8gqqOfq2xMQh9f36Q2u01iwlScL45ZjD54cMt4eMd8b4Q49SQ2D/STJaYWpdIx2tIJzbFDkM3Am/v9zl1/aOOdf3XjOehoZ3KYojerd6DP8aYq/Z9P7o4+07+HFO8PobOPgAep9A9yPy8BZKlDzaf8Ny8wanWw2W725y6u4m/7q1uyXHdRjcGTBcG2L9bRG+CkmkYBpXTPcvQPcE+uBT8K6SFZBGEU/2O5zdanCm1eTbhy0eTMaEQtSE4TQ0hPY/NvamTSELsiJBSAg6P0L3Y/TRRWYTzPKCTAq2e12+bDX5otVgtdsxRLPRmRnOLFtNC3vdJj1Ka1AKvCAj7PwABx+ig99MP8sSMiHZ7nc5t9Xg863bbHu11VjKWqHne1h3LEYbI6NuVmkiEAmEnZ+g/xlavakJc4USgmdzhd8/vs84TQwm3yr0A5/+Zt8QlqpcEMYSpnvna8KiVqEyRS4TQ3iqeYOfd57OE6ON5eO/vNFjcn9ikmdAGeP6GVHnO/jv63nyNCrLKNOUHavPcmOdy+1nBimr6pjQ9Vx6N3tM29NFYJVKmLiKaO8rcC7Nu5q8KEijmOdWn5ONda68ai+inrxredQe4Xd9hBRIKfE8F5mU+INVEneDWOSkaUIQhoS+z8HhiF92X3BvYFGkKVEUmXtGYVVVlJSoXOF7PkopXNerleaY7AWBT54XeF7d11VlVk3FwigLw9CoMwrNxh6v56JmYL291Xv92Sm1fu/ajPB/o/e8yaS5T10AAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="노래 EDA 형태소 2"
+        title="노래 EDA 형태소 2"
+        src="/static/ed409e42eb8535caebe30410647717c6/6e6fb/eda_3_2_sing.png"
+        srcset="/static/ed409e42eb8535caebe30410647717c6/e9ff0/eda_3_2_sing.png 180w,
+/static/ed409e42eb8535caebe30410647717c6/f21e7/eda_3_2_sing.png 360w,
+/static/ed409e42eb8535caebe30410647717c6/6e6fb/eda_3_2_sing.png 618w"
+        sizes="(max-width: 618px) 100vw, 618px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<ul>
+<li>소설 형태소별 Wordcloud</li>
+</ul>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 720px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 25.555555555555554%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAYAAABFA8wzAAAACXBIWXMAABYlAAAWJQFJUiTwAAAA+0lEQVQY022L226DMBTA+P/vm6Z2G/cQLgmBExIgbVVPmvqwSfOjLWe8uN8fnGfiP2KMpFd7Pv+2n+eXzDoRnI9Y8YS9xyWH3Gb2dFA7Q+0t7TJhNkUfZsZo2G6BKQq9XbGmQ86JwXus38gqpSmbmc6PjD6nW3qGo2QKwpvS5LpALyXXtiY3Gr1W2KjJpeVrrGnbhmIaKLqSShmyYhypVMdkDeUwMKwOFRz9vHApNNdGoew7hSopTcNFKXQ7ULUfVENNU+V8Fh1539DMlmw9TmISbsnjd8/x2JFzYz8STgLjKji3sAaP3D2LCH6NbHEm3Re2KMSwYb0ge+QbZHB7UUDM0SQAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="노래 EDA 형태소 3"
+        title="노래 EDA 형태소 3"
+        src="/static/e2c98493a6feeb303dec6e799f013aee/37523/eda_3_3_sing.png"
+        srcset="/static/e2c98493a6feeb303dec6e799f013aee/e9ff0/eda_3_3_sing.png 180w,
+/static/e2c98493a6feeb303dec6e799f013aee/f21e7/eda_3_3_sing.png 360w,
+/static/e2c98493a6feeb303dec6e799f013aee/37523/eda_3_3_sing.png 720w,
+/static/e2c98493a6feeb303dec6e799f013aee/302a4/eda_3_3_sing.png 1080w,
+/static/e2c98493a6feeb303dec6e799f013aee/62da8/eda_3_3_sing.png 1262w"
+        sizes="(max-width: 720px) 100vw, 720px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<ol start="4">
+<li>감성 배색 히스토그램</li>
+</ol>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 720px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 41.66666666666667%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAABYlAAAWJQFJUiTwAAABbElEQVQoz1WSa2/TMBhG+///EELAD0ATaLAP7EPXLW1YUzsX32I7aZKD/KKVYemVfD0+euzdtm2s68r1emVZFsZxRCuNNZau7XDWEZznrc1hoG+OmEvNcDlhVE0yGrZV1ncFGGNEKY1uW1rd0jQXvA8E7/HeM+Usly3XK3MKeNMRTMdoe+knb2StiAlwDIFjdaQ6Hanr31RVhfOeEDzWWaZ5FoOHp5q6dWKyrBvr9q/meZYSYM4JdVEorem6Dq1bsU4pSgRlI2x8/fVCpa0Ay7n3rYxLbLuiGUIg5yyHrbWYwQjwrQpwiiN3jxWHZuBw7rBxElCxK7ASyQ3Y94NMlLwuStE0jWTonJPLxHBdeDi88uXHM5/uD9ztzwJ758iy3ID9DaiU4vx6ln6xvQHZ+Lk/8fH7ns/3T3z4tuekDNM0E2LChZGY0l+gMUZ0C6S8dMmzgP4zLL8hZ2yIuBAZrOesWlLKxJQJY5TH+wOZZmbTRd1lYAAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="감성배색 hist"
+        title="감성배색 hist"
+        src="/static/f8d62087a6b8b87e3ee97aadffd72506/37523/eda_color_hist.png"
+        srcset="/static/f8d62087a6b8b87e3ee97aadffd72506/e9ff0/eda_color_hist.png 180w,
+/static/f8d62087a6b8b87e3ee97aadffd72506/f21e7/eda_color_hist.png 360w,
+/static/f8d62087a6b8b87e3ee97aadffd72506/37523/eda_color_hist.png 720w,
+/static/f8d62087a6b8b87e3ee97aadffd72506/302a4/eda_color_hist.png 1080w,
+/static/f8d62087a6b8b87e3ee97aadffd72506/1132d/eda_color_hist.png 1158w"
+        sizes="(max-width: 720px) 100vw, 720px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<ol start="5">
+<li>감성 배색 단어 빈도수 Word Cloud</li>
+</ol>
+<ul>
+<li>감성배색유사어</li>
+</ul>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 622px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 56.111111111111114%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABYlAAAWJQFJUiTwAAACW0lEQVQozx2Q2Y7iSAAE/f9/NdqVpnd3aOg2BmzA91W+76PKJlZ0SvmYIWVow7oi+p6sH1DbglQRasuQSqC2HLnlTNPMOA5MamZcBtZ1ZFELi1yY1EKnVlo5s79eaH5RcY5ivuKYtCvp5ivNoNOOB9rxD/VkUE85VX+iWy5Uw4myP9BOZ4bFQsQZrptgWQHLLNHKqsNIBIco5sML+IpzTlHKvcgRY0Qxp2StIKlTnN5FL24kfYlXO9zqO2YeY+c5Rf5+NKKVZUdQR3jtE69+kHYO1zzhn8jlr8DkK4vRU4FTVzjtHasxcOsbYeeSDFee7Qkx3JiUz6JKNJF1hIlPkoakQ0wy2nxnHr8Dj8/I5ZI6mLlP0SUsq45cdYbpRDveqPoj7ahTDyeayWVVDVrdNeiGh+ULfoVP/vZtPouAzzKmlznz8sU0f9BPHzTDb/rpX4oxIR167KrkWaVcsgjRB8itQpvWnKvlY9oJfl7iZDnff+58/XfHMnzMo0UUhlgixExsoiqjnDKC8UEyOXijSTAYrNLn9VJo3ZxzswKuzwRXxKRNiHezcc4XnMsV52wRiBinrHDDkosZ8214hFmB5YQYlsfRsBBCsEwrWjkWHE4PTreIrH2yrb+Q25lF6kh5ZNuOZJVDlLW4YYZjpzxtH5EJgijj+UgxHzFxktIUHdqwduhXj7R+S7+zzAfm+ZtlvtDUCcbR5KY7WFcf+x7gWBHL2gOK12tnWBriTJBGJV3VowFItbG/FLy2Hw+89p/B/tqR64ZcFUpKtk0h5RvET995Q9Wm2Ledfd/5Hw/lNZR9vObEAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="감성배색유사어"
+        title="감성배색유사어"
+        src="/static/adfe0905d2f352d38363debf489124b4/604ec/eda_color_alikeword.png"
+        srcset="/static/adfe0905d2f352d38363debf489124b4/e9ff0/eda_color_alikeword.png 180w,
+/static/adfe0905d2f352d38363debf489124b4/f21e7/eda_color_alikeword.png 360w,
+/static/adfe0905d2f352d38363debf489124b4/604ec/eda_color_alikeword.png 622w"
+        sizes="(max-width: 622px) 100vw, 622px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<ul>
+<li>감성키워드</li>
+</ul>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 612px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 54.44444444444444%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABYlAAAWJQFJUiTwAAACVklEQVQozyWTi46rRgyGef+3qtqqPXu2u7lDgBAuwwBDuGRCgIEkX0X2lyxfZFuy/dvq55G0K5H3inrUVKNG9Q23aQAGeCk6o1H3DqU16qoZ5xltRrq3GNqh5z4ZFliN0XxeHDaVz74O+K+0+b4cuc439k6M4wfsXMHGy9j7ku1RcB8nnEtJUNccVMHvVNAOw0/DuKrppwfdQ5B1K4r+QDMGmGfN5uhjRx5u4hBIlzBNOImYyiwTSeRdEN5CzjqiHBXwwtqlGW6UYX+eODkh3j7EWZ8oVIWeaq4mojERrRE0RnCf7+8GyV3gt2fia86pjjiUAddxxHJkgSMlO9fjFAtErMjjiqS9EKiatn+yvVSsVcGXSvlWArsu8EqF62fsHcHeTjjlirzTWLfRECcFwTHk8681sZ+SnXKK2xWlU3Tvk98c1D2hHWracSTUNfGlwvYF57jAcQXNbTnMhLUssohKDh8e+18u/jZExSXNOKDHFGNcBhPynAW3UfN3GvFvGmJXBV5bYjeKtLsyzB2P14Tl+RmuJzlHiu9tSK6uPAG3uuCWFStZ8BFLUt2gTY+dFwRVxTqVHLKcVZoSXBrKXtKOJZaqJKLwSGPJ2ZNkSUmjWkRcECjFrkhx8pxzVXKuFesoxRY5/9gBX6eYTy/kGBXIW8DVVFh66shMRR4rnN8umz/3rP7Y4n35RF5G6ErOrmT14eHuE0I/o5AVzveZ2M1wdxHeJkH1Cdo0WK/Xa6HPG4/Hk8fjwfP5ZInP84Npmn+0md/20P98xJKzxBe/78Y3B5ea/wEzDzP32rdenwAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="감성키워드"
+        title="감성키워드"
+        src="/static/2fea533a17e2f7c5b7281638c06e27ea/8c76f/eda_color_keyword.png"
+        srcset="/static/2fea533a17e2f7c5b7281638c06e27ea/e9ff0/eda_color_keyword.png 180w,
+/static/2fea533a17e2f7c5b7281638c06e27ea/f21e7/eda_color_keyword.png 360w,
+/static/2fea533a17e2f7c5b7281638c06e27ea/8c76f/eda_color_keyword.png 612w"
+        sizes="(max-width: 612px) 100vw, 612px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<ol start="6">
+<li>감정 대화 말뭉치 히스토그램</li>
+</ol>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 720px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 36.11111111111111%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAABYlAAAWJQFJUiTwAAABPUlEQVQoz42Ru07DQBBF/dHUfAJ/QJcaKSVNOiREA1UUBEkU8Ct+78u7a3t90YwTCiosXXtX6zk6Mxvhn8888xuiSBDvd4gP7yi+D8hOH8hPnxBFDMwB0TSOcM5hpop5xjRNGIYB4zhyjDaw1jK07w2c7dF0EoN38M5esqwH7xFRcd/30Fqj6zrkWYY0TZDnZ6RphrIsoY1hoFIKxjqsn3fw47SY/3YwwxNwvBgaYyClRNu2qOsaTdOgbVoIIfic/lNSoGgV7h6ekDWSQWGZBQNJLlJKc0sUKiQLAnedQFVVbN1by6OwRuOQ1bhdbfC6Txdg+AOUSjGMNvQlQFWWqMoKeZ6zKY2ERCbv8LL7ws39I1abN2jrGUiwEMLSMi2uIeg110shMzpjixAQn2tsjwm2xxTJuYaQkuevLmI/MvkaI9Zyw7sAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="감정 대화 말뭉치 1"
+        title="감정 대화 말뭉치 1"
+        src="/static/c986cf5223d24b4cb24e4c8c13ec9714/37523/eda_talk_1.png"
+        srcset="/static/c986cf5223d24b4cb24e4c8c13ec9714/e9ff0/eda_talk_1.png 180w,
+/static/c986cf5223d24b4cb24e4c8c13ec9714/f21e7/eda_talk_1.png 360w,
+/static/c986cf5223d24b4cb24e4c8c13ec9714/37523/eda_talk_1.png 720w,
+/static/c986cf5223d24b4cb24e4c8c13ec9714/302a4/eda_talk_1.png 1080w,
+/static/c986cf5223d24b4cb24e4c8c13ec9714/cd138/eda_talk_1.png 1220w"
+        sizes="(max-width: 720px) 100vw, 720px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<ul>
+<li>Target은 emotion을 0: 기쁨, 1: 불안, 2: 슬픔, 3: 당황, 4: 상처, 5: 분노로 범주형 형태로 할당함.</li>
+</ul>
+<ol start="7">
+<li>감정 대화 말뭉치 분류 단어 시각화</li>
+</ol>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 720px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 41.11111111111111%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAABYlAAAWJQFJUiTwAAABrElEQVQoz1WSy28SURSH5y8zxu5d+le41GhIjKImrnRhbFzUJsborqQqtRJJp5YifU6hjwF12jItRYWxpdAZmIG59zPzQr13cc85+XLu7zwUSXSEjCzHhdaph+NFcRnHw0f+9TsXEqsz4mIg/+OUwEgcX4B/9ARRvoLcv4HbdcZweGNO+ENGB2n88mX8/Ue4PTHmFBkbI8/l7XEbbeka5BRac1fZmTY4a1gIRKxO4LouM/UG39RLIXeUuc7O9CE96yz8VElK1U/b3KnpPP5a4WRlgvrLeTbub3OSMyNVIuI06yepapWn+hKt4gTfp5ZZT2/wq9CMSk5Ao9Em+6nC6pyBrpaYLWZ5rb6jsLsWJ4zKqh38IPexwvp7A/3zMpmAW5hltVaOexgnHNbPkSkNeU+HwisWq8+4rT8n3/pCUHGScFj9jbi5if9wG1GaYn5vklt7k5SsrbAtStJoxx9wnjXpvyjiancZrKRRjQ90XCecVsLZnk03Y9J/k8fTUnRLD1AP89iei/QFyr8jDzT0201sc5He8Rr4w3ipogmPt0EGXB3bXMBpbgXyx9wfLvRHmBLehm4AAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="감정 대화 말뭉치 2"
+        title="감정 대화 말뭉치 2"
+        src="/static/830731c61fee60e8591ff1a0d9c82ce1/37523/eda_talk_2.png"
+        srcset="/static/830731c61fee60e8591ff1a0d9c82ce1/e9ff0/eda_talk_2.png 180w,
+/static/830731c61fee60e8591ff1a0d9c82ce1/f21e7/eda_talk_2.png 360w,
+/static/830731c61fee60e8591ff1a0d9c82ce1/37523/eda_talk_2.png 720w,
+/static/830731c61fee60e8591ff1a0d9c82ce1/5b587/eda_talk_2.png 1010w"
+        sizes="(max-width: 720px) 100vw, 720px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<hr>
+<h3 id="1-소설-카테고리-분류를-위한-lda-토픽-모델링" style="position:relative;"><a href="#1-%EC%86%8C%EC%84%A4-%EC%B9%B4%ED%85%8C%EA%B3%A0%EB%A6%AC-%EB%B6%84%EB%A5%98%EB%A5%BC-%EC%9C%84%ED%95%9C-lda-%ED%86%A0%ED%94%BD-%EB%AA%A8%EB%8D%B8%EB%A7%81" aria-label="1 소설 카테고리 분류를 위한 lda 토픽 모델링 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1. 소설 카테고리 분류를 위한 LDA 토픽 모델링</h3>
+<ol>
+<li>분석 흐름도</li>
+</ol>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 720px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 33.33333333333333%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAABYlAAAWJQFJUiTwAAABRUlEQVQoz12RW0/CQBCF+f8PPvgPTIxPGh9I9AlNvETxxYQEgwTk0loL3RValm67vXxmF2iIk0x2d2b2zMw5rbquOXbsCY1ziO/N3quqcv7fbK71L7IDEQEM3yEKOEBlWYZSijRNm3JjjHtrrZumLSElQkgiITBlBSpG914JphN07wVyTWYMvu8RfPskyYo8zxyAbbBYLJBSUhTFDrDQKXWqKOIVbgmt2Pa6jD8HpJ0rUGtX6Hkh1+0Hzs5vUWo35WazcYBhGLopHWD6K/B9Hy0jqCuM5Wct3Mpl/w2TZZii5PL6jvnc4+T0gv7HxH22Ux2oKMtyP+EmIVouKdKtC9jkzPMYjMYMp3NHRZ4b2jdPfH1N6dx3+Q6ihtfZbIYQ4kgUi1wWUFWNAEmSIETESsqG7J9Q8vjcYzjyGlEsYBzHbvWD6n8AaBfHSYZrMwAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="분석 흐름도"
+        title="분석 흐름도"
+        src="/static/dfb69cf17ccb9f607c9bfe8424837043/37523/LDA_analyze_flow.png"
+        srcset="/static/dfb69cf17ccb9f607c9bfe8424837043/e9ff0/LDA_analyze_flow.png 180w,
+/static/dfb69cf17ccb9f607c9bfe8424837043/f21e7/LDA_analyze_flow.png 360w,
+/static/dfb69cf17ccb9f607c9bfe8424837043/37523/LDA_analyze_flow.png 720w,
+/static/dfb69cf17ccb9f607c9bfe8424837043/302a4/LDA_analyze_flow.png 1080w,
+/static/dfb69cf17ccb9f607c9bfe8424837043/f43e4/LDA_analyze_flow.png 1120w"
+        sizes="(max-width: 720px) 100vw, 720px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<ol start="2">
+<li>LDA 분석 개요</li>
+</ol>
+<ul>
+<li>분석 데이터 : 소설 데이터
+<ul>
+<li>줄거리 : 텍스트 분석에서 활용할 데이터 (문자열)</li>
+<li>서평 : 텍스트 분석에서 활용할 데이터 (문자열)</li>
+<li>책 내용 일부 : 텍스트 분석에서 활용할 데이터 (문자열)</li>
+<li>데이터 양 : (레코드 수) 1,118개, (용량) 1.77MB</li>
+</ul>
+</li>
+<li>LDA
+<ul>
+<li>추출한 문서에 담긴 단어들의 주제(토픽)을 추출하는 ‘토픽모델링’ 기법 중 하나인 「잠재디리클레할당」 방법론</li>
+<li>LDA는 각 문서의 토픽 분포와 각 토픽 내의 단어 분포를 추정</li>
+<li>추출한 원문에는 다양한 내용이 담겨 있을 수 있는데 이러한 주제들을 일일이 수작업으로 분류하기 어렵기 때문에 LDA 같은 분류 방법을 적용해 전반적인 데이터의 구조를 먼저 파악할 수 있음</li>
+<li>LDA 기법은 단순히 주제만 분류하는 것이 아니라 주제에 포함되는 키워드를 보여주기 때문에 그 키워드들로 해당 주제를 해석하고 정의할 수 있음</li>
+</ul>
+</li>
+</ul>
+<ol start="3">
+<li>전처리 : 형태소 분리 및 불용어 처리</li>
+</ol>
+<ul>
+<li>Konlpy (한국어 정보처리를 위한 파이썬 패키지) 형태소 분리 모듈 사용
+<ul>
+<li>OKT : 오픈소스 한국어 분석기. 과거 트위터 형태소 분석기.</li>
+<li>한나눔 (Hannanum) : KAIST Semantic Web Research Center 개발.</li>
+<li>꼬꼬마 (kkma) : 서울대학교 IDS(Intelligent Data Systems) 연구실 개발.</li>
+<li>Komoran : Shineware 개발.</li>
+<li>MeCab : 일본어용 형태소 분석기를 한국어를 사용할 수 있도록 수정.</li>
+</ul>
+</li>
+<li>전처리 수행 : OKT 채택</li>
+</ul>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 720px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 22.77777777777778%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAYAAABFA8wzAAAACXBIWXMAABYlAAAWJQFJUiTwAAAA3klEQVQY001Q7ZKDIBDz/d/wrIq2KiAgH9K7mYqX3q515n5k2M0mS6DaYkCKEXKeIaWEkhJaK2j1gVbMm2WBc5Z1KSUcpaCUgn3fsb9e3P8eB6qkHjBKQjQ1xK3GQ3S4ixZD15xoG9xFh7EXGIcebf0FPY0wcoa3Bss8YRp65OBRfr5RWesQQoCzllPEGLE6B601vPfMUe+cO+t15ZTLp2beGPZR8spay0ZaQE8jEYmVOp9KBtKQibhrthjD3LWUtPn5REWbc86ckobbtvEFBOJo/h/EX2mu86qPvz98A6i/eGjk63xkAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="형태소 분리 모듈 선택"
+        title="형태소 분리 모듈 선택"
+        src="/static/15c0cad381061c8c7f1f859d16ee28e7/37523/LDA_pretreatment.png"
+        srcset="/static/15c0cad381061c8c7f1f859d16ee28e7/e9ff0/LDA_pretreatment.png 180w,
+/static/15c0cad381061c8c7f1f859d16ee28e7/f21e7/LDA_pretreatment.png 360w,
+/static/15c0cad381061c8c7f1f859d16ee28e7/37523/LDA_pretreatment.png 720w,
+/static/15c0cad381061c8c7f1f859d16ee28e7/302a4/LDA_pretreatment.png 1080w,
+/static/15c0cad381061c8c7f1f859d16ee28e7/8affb/LDA_pretreatment.png 1254w"
+        sizes="(max-width: 720px) 100vw, 720px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<ol start="4">
+<li>성능 개선 : 성능 평가 및 최적의 토픽 개수 채택</li>
+</ol>
+<ul>
+<li>LDA 성능 평가 지표 : Coherence Score (응집성 지수, c_v).
+<ul>
+<li>genism.models.coherencemodel 사용</li>
+<li>주제 모델에 대한 주제 일관성 계산.</li>
+<li>파라미터
+<ul>
+<li>model : 사전 훈련된 주제 모델. LdaMallet 사용.</li>
+<li>texts : 형태소 분리된 줄거리 / 서평 / 내용 일부 사용</li>
+<li>coherence : c_v 사용</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>성능 평가 과정 요약
+<ol>
+<li>단어를 정수 인코딩 값으로 변환 : gensim.corpora.dictionary</li>
+<li>5회 이하로 발생한 값 제거 : dictionary class에서 filter_extremes(no_below = 5)</li>
+<li>LDA 토픽 분석 진행 : gensim.models.wrappers.LdaMallet</li>
+<li>응집성 지수 값 계산 : CoherenceModel</li>
+</ol>
+<ul>
+<li>줄거리, 서평, 책 내용 여러 조합으로 데이터 바꿔가며, 토픽 개수 4~18개로 바꿔가며 유사성 점수 계산</li>
+</ul>
+</li>
+<li>데이터 조합 별 유사성 점수 시각화 : 책 소개 + 서평 조합과 10개 군집 채택</li>
+</ul>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 720px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 43.888888888888886%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAABYlAAAWJQFJUiTwAAABTklEQVQoz01Si47kMAjr//9md6SOtnfbaRIC5OGV6U41SIgoYENMlt476N/fO3IucR5jhPNcq2L/9x/mDjUHzVsLfx0H1nWFu0ftnBNLKSWK2pgo6hij/xFVuDdUa7A2YK0HKRudKaGaB4ZGIpLehLwnYIwJbRehmUG9YV6YsJi894vQO7xfjYhhAxYvZ8oQa/A50eeMZ5FQakWpGl0HfYxowsjpczX0MYJEnfUaTReCmwjK14r63OCmAXo/4zgOPB6PiNSN9/TzPLHvO7bnE9u2of3lFupix4Fz/UIpck/IaVh0ZsHPKyFJDQkufQVZKo4z45UKXimjql2EVTVGbtxwbLCjcQGmMBJ8aEhAyCECsQ77SBIThFk0lgEpd/K9ZW74096EKReotVtfxvvJFN84ZUpQVYjUSFK/IhVuFuTMMcZy3ON/esQa8jCS8BeUnMEIijGt2AAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="LDA Coherence Score"
+        title="LDA Coherence Score"
+        src="/static/efa35c45f8d4ad3b1470819f90e9c4ca/37523/LDA_cvscore.png"
+        srcset="/static/efa35c45f8d4ad3b1470819f90e9c4ca/e9ff0/LDA_cvscore.png 180w,
+/static/efa35c45f8d4ad3b1470819f90e9c4ca/f21e7/LDA_cvscore.png 360w,
+/static/efa35c45f8d4ad3b1470819f90e9c4ca/37523/LDA_cvscore.png 720w,
+/static/efa35c45f8d4ad3b1470819f90e9c4ca/302a4/LDA_cvscore.png 1080w,
+/static/efa35c45f8d4ad3b1470819f90e9c4ca/ae953/LDA_cvscore.png 1132w"
+        sizes="(max-width: 720px) 100vw, 720px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<ol start="5">
+<li>결과</li>
+</ol>
+<ul>
+<li>시각화에 사용한 모듈 : pyLDAvis.gensim_models 이용</li>
+</ul>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 720px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.99999999999999%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACZElEQVQ4y1WUV28TQRSF/R8RD0FCEUKUJyT+DU9IPAQeEBIS4oUgIInTNnGJo2CcQhx717vrsr23D824xFzpaHZm7pw5t8zWsizDsizCMMRxHGzbXiEIAuI4pqoqsjTFsSxcx8H3XDw/ZGCGDMYRfTNCt2KoKmppmjKZTCRUVZXQNBVNVTEMQxJXZUmaZ5i2xcA0MWwbw3a4NS36qsHt3Qh9bFOWJTUWluc5URRJRa4fSIi5IBMW2w5uq42+t4/+4xfG3j4zRUHrD1FnHnGaSd+aCEdg3foTn92ewdRPgPmeftpEebBB8/FTGu8+0v15yOXpBWd3FoabUJRzv5XCJXGS5XQ1m1Z/SpoXsFCot85oPNxg58176uOchuZzrgdcGR66HZEXcz+pUBxcahRkPd0hSHI5LxeO43aH00ebbH+ps/PXYberU78cc236rIuqJVlBZ2DhRek8V1lBsSApRRjV/NtstjjZfMbhSY/2KKA7cvljePSnIdnCXxKKynglqJ8+o299QGyJ5JaLvDpBjFuArigoT17w9fgGpW8jhIi8LccVIYuDnXqTxvcDuoZHXhSrMNSpx9DPMI6POXj+im/tIcrtDOVmimaHWEFCkhf3hMsKi4BjwA3TeaggQ/k9nBGKHB4dsffyNdvnI4Z2hBWkhEm+6JD7TpFVTpKEKAyoivubljk0nJBMXHR9w/nbLQ6vxnQGM25Mj57h4yXF/0VZNrVo6CRNV+0jSdf6M3I9ri4uUUc6uqZimibWbCafoud5kmPVNgKiOGJRjHJNFGYdVUVRFNJH5DjLc8SzFRD/g+W5f8hj1qeXuXnTAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="LDA visualize"
+        title="LDA visualize"
+        src="/static/2c89c2e3431fd4d05a125e658edf5b21/37523/LDA_visualize.png"
+        srcset="/static/2c89c2e3431fd4d05a125e658edf5b21/e9ff0/LDA_visualize.png 180w,
+/static/2c89c2e3431fd4d05a125e658edf5b21/f21e7/LDA_visualize.png 360w,
+/static/2c89c2e3431fd4d05a125e658edf5b21/37523/LDA_visualize.png 720w,
+/static/2c89c2e3431fd4d05a125e658edf5b21/5a190/LDA_visualize.png 800w"
+        sizes="(max-width: 720px) 100vw, 720px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<ul>
+<li>일부 군집에서 겹치는 모습으로 보임</li>
+<li>각각 분류의 단어를 확인하며 군집의 내용이 모두 상이한 것을 확인</li>
+<li>최종 분류된 토픽별 키워드</li>
+</ul>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 720px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 53.888888888888886%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABYlAAAWJQFJUiTwAAABF0lEQVQoz42SCYqEQAxF+/43FHHXFve1XRBN8wpSOMMMKHwqsTrP/KRf27bJuq6i5zRNMs+zETH6fD7S9724riuO44jnedI0jfi+L0EQyPv9lvM8hee1LIsp4KQ4z3OjOI7Nj6MoMnGSJOakmPdlWcpxHLYRYgMkAaba912GYZAsyyw8TVMrBdKhNoP+BHJBDoRCAIDvQHIsV1UlWvsvEGGBeRVFYS0CwTIipsPHQOyyEKAUA6ZjnaHO9xGQCwBYYxkAkS6GmI7ZLkt51CFLadv2h8W7beIwDJ9b5pINKkzt6pIQeV3Xcq+1wPvqdYaAsKjFWKQrtU7Oh7SWmVsg//Df4tHFIDpmDF3XyTiOJgZ0XZetIQb4BaT5Q3jKORQBAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="LDA keywords"
+        title="LDA keywords"
+        src="/static/76c6f4f99c8a84fa8a7efc0867eddd81/37523/LDA_topic_keyword.png"
+        srcset="/static/76c6f4f99c8a84fa8a7efc0867eddd81/e9ff0/LDA_topic_keyword.png 180w,
+/static/76c6f4f99c8a84fa8a7efc0867eddd81/f21e7/LDA_topic_keyword.png 360w,
+/static/76c6f4f99c8a84fa8a7efc0867eddd81/37523/LDA_topic_keyword.png 720w,
+/static/76c6f4f99c8a84fa8a7efc0867eddd81/b4098/LDA_topic_keyword.png 816w"
+        sizes="(max-width: 720px) 100vw, 720px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<ul>
+<li>최종 소설 테이블 일부</li>
+</ul>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 720px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 61.66666666666666%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAABYlAAAWJQFJUiTwAAAByUlEQVQoz02S6XLiMBCE/UTZQPCF5VOy5INwBdjK+z9Ib3XbpvZH12Ahtb7pUZQde6RHhzR3iLNOSjKr2tiz1LoLXLihqAYkuVU11QhTL/LjA8P8gvU3RHFusU8aKTNeSoteNZxeSI4OH3uzrBuPQ9ahH3/gpyeG01/tCfML/fRAR0Nu2MW1DE0zSUU9Ii8DGneR4eehQlL0OORWho07o+2vqO0Zpp1R2280/QVFMyEiTdV9o7KLinpC1Z1k7Ocn0sLjz1cpwrwcdBnXpekJN9xFSNFULX+lrQi3ykvKdkY/PsD/RXh0MiUFyUlJg5q0/ipiEcZHJ5OtbR42zYzp8ovp/IusDPj4KkXHi3jIT483JfNkfqSlcXRYh0LDXbzUhJM3XiEzO7ZMQtJmJoiMRBuliPuLoot4cDFssFunTUqGzwmyTWVYBpnzm1GQinLDD+xw129lmKwt7/8zYyU+N21TZrtxvuTY+askStLq+4ayPSHK3oT1+y3acFcmnNzWMte3KEhEMk6YpiIcH3o+eja7LcOkkQGp+L5omq4tJyK0ar0Lt0X+JsN2JebLeGe4icZskdPUlE2QoVrW0wlLbuG+EK7tLoYn/APlDKZjXNKubgAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="novel table"
+        title="novel table"
+        src="/static/b252dfe001ef65ef5b25585f91d03cb3/37523/LDA_novel_table.png"
+        srcset="/static/b252dfe001ef65ef5b25585f91d03cb3/e9ff0/LDA_novel_table.png 180w,
+/static/b252dfe001ef65ef5b25585f91d03cb3/f21e7/LDA_novel_table.png 360w,
+/static/b252dfe001ef65ef5b25585f91d03cb3/37523/LDA_novel_table.png 720w,
+/static/b252dfe001ef65ef5b25585f91d03cb3/f53a0/LDA_novel_table.png 1062w"
+        sizes="(max-width: 720px) 100vw, 720px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<hr>
+<h3 id="2-소설-노래-감성배색을-연결하기-위한-감성-분류-모델-구축" style="position:relative;"><a href="#2-%EC%86%8C%EC%84%A4-%EB%85%B8%EB%9E%98-%EA%B0%90%EC%84%B1%EB%B0%B0%EC%83%89%EC%9D%84-%EC%97%B0%EA%B2%B0%ED%95%98%EA%B8%B0-%EC%9C%84%ED%95%9C-%EA%B0%90%EC%84%B1-%EB%B6%84%EB%A5%98-%EB%AA%A8%EB%8D%B8-%EA%B5%AC%EC%B6%95" aria-label="2 소설 노래 감성배색을 연결하기 위한 감성 분류 모델 구축 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2. 소설-노래-감성배색을 연결하기 위한 감성 분류 모델 구축</h3>
+<ol>
+<li>감성 분류 모델 개요</li>
+</ol>
+<ul>
+<li>AI Hub 감성 대화 말뭉치
+<ul>
+<li>대화 응답 시나리오를 동반한 감성 텍스트 언어</li>
+<li>감정대분류 : 0:기쁨, 1:불안, 2:슬픔, 3:당황, 4:상처, 5:분노</li>
+<li>사람 응답 문장만 활용</li>
+</ul>
+</li>
+<li>분석 방법 : 사전 훈련된 NLP 모델 4가지를 활용한 전이학습
+<ul>
+<li>4가지의 언어모델은 스스로 라벨링을 하는 준지도 학습</li>
+<li>전이학습을 통해서 라벨이 주어지는 지도학습으로 전환
+<ul>
+<li>각각 언어모델에 NLP Task를 위한 추가적인 모델을 쌓아 이를 통해 분석하고자 하는 감정 분류 모델을 생성</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ol start="2">
+<li>활용한 사전 훈련 모델</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>모델명</th>
+<th>설명 요약</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/SKTBrain/KoBERT">Bert</a></td>
+<td>구글에서 2018년 개발한 NLP(자연어처리) 사전 훈련 기술</td>
+</tr>
+<tr>
+<td><a href="https://github.com/google-research/albert">Albert</a></td>
+<td>Bert 모델에서 파라미터의 개수를 감소시켜 학습시간을 단축한 기술</td>
+</tr>
+<tr>
+<td><a href="https://github.com/facebookresearch/fairseq/blob/main/examples/roberta/README.md">Roberta</a></td>
+<td>Bert 모델에서 학습단계의 hyper parameter들을 조정하여 성능을 높이는 방법</td>
+</tr>
+<tr>
+<td><a href="https://github.com/Beomi/KoELECTRA">KoElectra</a></td>
+<td>구글에서 2020년 개발한 NLP 사전 훈련 기술 (bert 보다 빠른 성능)</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>
+<p>Bert : generator에서 나온 token을 보고 discriminator에서 “real” token인지 “fake” token인지 판별하는 방법으로 학습성능을 테스트</p>
+<ul>
+<li>BERT는 Bidirectional(양방향) Encoder(문자를 숫자로 바꿔주는) Representations from Transformers의 약자이며 오픈소스로 공개된 구글의 Language Representation Model임</li>
+<li>단어를 하나씩 읽어가면서 다음 단어를 예측하는 일방향 모델인 GPT-1 모델의 문장처리의 한계를 극복하기 위해 탄생됨 - 한 두 문장의 학습데이터를 통해서 토큰 간의 상관관계와 문장 간의 상관관계를 학습하게 됨</li>
+</ul>
+</li>
+<li>
+<p>Albert</p>
+<ul>
+<li>ALBERT는 사전 훈련된 모델을 확장하는 데 있어 주요 장애물을 제거하는 두가지 매개변수 감소 기술을 통합함</li>
+<li>두 기술 모두 성능을 심각하게 저하시키지 않으면서 BERT에 대한 매개변수 수를 크게 줄여 매개변수 효율성을 개선함</li>
+</ul>
+</li>
+<li>
+<p>Roberta</p>
+<ul>
+<li>self-Supervised 기반의 학습 방식은 Pre-training에서 많은 시간/리소스가 소요되기 때문에 BERT 및 이후 접근법들을 엄밀하게 비교하기 힘들고, 어떤 Hyper Parameter가 결과에 많은 영향을 미쳤는지 검증하기 힘듦.</li>
+<li>BERT는 아직 Undertrain되어 있고, Pre-training 과정에서 Hyper-parameter의 튜닝으로 더 좋은 결과를 얻을 수 있음</li>
+<li>BERT에 비해 더 많은 데이터로 더 오래, 더 큰 배치로 학습을 진행함.</li>
+</ul>
+<ul>
+<li>전이학습 과정에서 프리즈를 328, 329개로 각각 설정해 2가지 모델로 만들었음.</li>
+</ul>
+</li>
+<li>
+<p>Koelectra</p>
+<ul>
+<li>ICLR 2020에서 구글 리서치 팀은 새로운 pre-training 기법을 적용한 language model, ELECTRA (Efficiently Learning an Encoder that Classifies Token Replacements Accurately)를 발표</li>
+<li>기존 BERT를 비롯한 많은 language model들은 입력을 마스크 토큰으로 치환하고 이를 치환 전의 원본 토큰으로 복원하는 masked language modeling 태스크를 통해 pre-training 진행</li>
+<li>ELECTRA는 Replaced Token Detection, 즉 generator에서 나온 token을 보고 discriminator에서 “real” token인지 “fake” token인지 판별하는 방법으로 학습</li>
+</ul>
+</li>
+</ol>
+<ol start="3">
+<li>감성 분류 모델 과정</li>
+</ol>
+<ul>
+<li>분석 흐름도</li>
+</ul>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 720px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 36.66666666666667%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAABYlAAAWJQFJUiTwAAABEUlEQVQoz2WSi46CMBBF+f9/RC0K6KJA6ZNXz4ZBo+s2mbRpcm9nzm2WUuJV21pi4Keumb0nDAO3qoIx4gaNbjtmZ4lm4KIUSwii+fTI5OJZYugdpVJMzuK6jqooSDESrcVpzRI8ozFiOAfPtz5L6wrriuwpMXvL5XSSLkzbyjnF8Db0jqD181Enmk+PLE0TbdNwv15hGhmNRuUHXN+j7w2nPGfZxjcG0/di6LXmWpZEa0hjpKlryqLAdi2ZsHt1SGI0A8XhbXg+HsUwuvfIXvfCdut60/zp8D9DS6WUcBKGSsnIftgRbKGEQXMry33kD30Shl8pb6DPeb4zfDw4Hw6sYU/cdHvKkzU0dSU/4TvlXyWlHbSLkmRAAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="분석 흐름도"
+        title="분석 흐름도"
+        src="/static/7105ecae0cca865cad6fede2f641f441/37523/classification_analyze_flow.png"
+        srcset="/static/7105ecae0cca865cad6fede2f641f441/e9ff0/classification_analyze_flow.png 180w,
+/static/7105ecae0cca865cad6fede2f641f441/f21e7/classification_analyze_flow.png 360w,
+/static/7105ecae0cca865cad6fede2f641f441/37523/classification_analyze_flow.png 720w,
+/static/7105ecae0cca865cad6fede2f641f441/302a4/classification_analyze_flow.png 1080w,
+/static/7105ecae0cca865cad6fede2f641f441/5a791/classification_analyze_flow.png 1248w"
+        sizes="(max-width: 720px) 100vw, 720px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<ol start="4">
+<li>각 사전 훈련 모델 예측 결과</li>
+</ol>
+<ul>
+<li>모델별 정확도</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>모델명</th>
+<th>정확도</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/SKTBrain/KoBERT">Bert</a></td>
+<td>0.47</td>
+</tr>
+<tr>
+<td><a href="https://github.com/google-research/albert">Albert</a></td>
+<td>0.52</td>
+</tr>
+<tr>
+<td><a href="https://github.com/facebookresearch/fairseq/blob/main/examples/roberta/README.md">Roberta</a></td>
+<td>0.53</td>
+</tr>
+<tr>
+<td><a href="https://github.com/facebookresearch/fairseq/blob/main/examples/roberta/README.md">Roberta</a></td>
+<td>0.53</td>
+</tr>
+<tr>
+<td><a href="https://github.com/Beomi/KoELECTRA">KoElectra</a></td>
+<td>0.51</td>
+</tr>
+</tbody>
+</table>
+<ol start="5">
+<li>모델 앙상블로 가중치 결정</li>
+</ol>
+<ul>
+<li>0~1 사이 값을 조정하며 모든 모델의 정확도를 계산해서 정확도가 가장 높은 가중치 채택.</li>
+<li>0.075<em>bert + 0.3</em>albert + 0.05<em>koelectra + 0.15</em>roberta328 + 0.425*roberta329
+<ul>
+<li>최종 정확도 0.55 (2% 상향)</li>
+</ul>
+</li>
+</ul>
+<ol start="6">
+<li>최종 벡터 생성 결과</li>
+</ol>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 720px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 49.44444444444444%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAABYlAAAWJQFJUiTwAAABlUlEQVQoz6WS646bQAyFef9XqxZCgHBPFgKTCRCuJQwEOJWdtOr/RTryjGU+fGy0+XeLMjtDJiHW+YmfPtq6zFBjj66uQOd5njFNE4ZhQN/3aNuW71VVoes6PB410lzgUTeo2xZV3aDpOlbbD9D+kud5YZhSil+u6xpxHMN1XWRZhvP5jMvlgsPhgC/dQBD4iKIIQRC8604nXHMBbd8B0qQUwwhKQOruf2DTNJBSQjcM/PrS4XkewyiSbMtCcs2g7duK16wwPUe8lgXrumIcR4YThMDL8u6e8gRNsxxCStzknSWLEuIm8WhaaGqoUaQh5LePVY0/X8q+79i3DUpNWNcX26VZpWnKlskunSlHd4p+GLHSLEOSXjlekgRXcYO2A9i2jTdJdsuyhGmasCzr38Bt22Ydj0fO6wcTtuPA/8yP6hzHQRjH7w7fwCcD7/c7dF3noiRJEIYhL4ZyhmEw1DCP/AHXPcHzXPi+D8exEUYfIGn5LISWQBbpt6Gl0AiKokCe5xBCsHJxwzdbzVmZEGxbyDv+AFVo7wTJQdBwAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="노래, 소설 테이블"
+        title="노래, 소설 테이블"
+        src="/static/bc74bb9bab2e1a79463d86a2048b91de/37523/classification_sing_novel_table.png"
+        srcset="/static/bc74bb9bab2e1a79463d86a2048b91de/e9ff0/classification_sing_novel_table.png 180w,
+/static/bc74bb9bab2e1a79463d86a2048b91de/f21e7/classification_sing_novel_table.png 360w,
+/static/bc74bb9bab2e1a79463d86a2048b91de/37523/classification_sing_novel_table.png 720w,
+/static/bc74bb9bab2e1a79463d86a2048b91de/302a4/classification_sing_novel_table.png 1080w,
+/static/bc74bb9bab2e1a79463d86a2048b91de/ae953/classification_sing_novel_table.png 1132w"
+        sizes="(max-width: 720px) 100vw, 720px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span>
+<span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 720px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 50.55555555555556%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAABYlAAAWJQFJUiTwAAABeElEQVQoz6WSbXOCMBCE/f8/ztGZWq0kvAgUVIQkvCiI3c4exbH9Wmby5Tb3ZPeOxdBa5JFConcYby3++y0e44C+a9A5g65xMMbier3ifD6jrmvcbjc5bdvCOSeaq2sUZQXXtM9TWYdr32NB6uPxhfs4oigKVFUljcvlEmVZYhgGOcfjUaDGGOgghKc0lFIIghC+72Pz/o7zpZyA9/tdmk6nkzRYa7FarQTOOvUkSSZ3zuHD87D3vB9ggCCYgMUrsO/7J7BpGgHSIevU4zhG13UCVNqHUhpaa0RRhDAIsN1uUZQvQM4pz3OBsJHAy+UideqHw2ECWitx6dDzPHHIyG+bze/IjDM75KzW67XA/wLtD1BpLSBxGIbY7na/HRI4O5wjvzrkDAk0ppLI+70H9cfhc4YcPC9nWSaL4O/CLXPrfIhAarxDXWaopy3T3byUZ+RxHGX4vEx3bOTLXADr1OcFdW2LLD8iTlPESYo0y5B+ZvDDCMY5fAP8u/Qk9CIj2QAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="배색 테이블"
+        title="배색 테이블"
+        src="/static/f318b5f9f8015d08f6803919b92248c7/37523/classification_color_table.png"
+        srcset="/static/f318b5f9f8015d08f6803919b92248c7/e9ff0/classification_color_table.png 180w,
+/static/f318b5f9f8015d08f6803919b92248c7/f21e7/classification_color_table.png 360w,
+/static/f318b5f9f8015d08f6803919b92248c7/37523/classification_color_table.png 720w,
+/static/f318b5f9f8015d08f6803919b92248c7/302a4/classification_color_table.png 1080w,
+/static/f318b5f9f8015d08f6803919b92248c7/0f246/classification_color_table.png 1118w"
+        sizes="(max-width: 720px) 100vw, 720px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<hr>
+<h2 id="--데이터를-보여줄-웹-구현" style="position:relative;"><a href="#--%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%A5%BC-%EB%B3%B4%EC%97%AC%EC%A4%84-%EC%9B%B9-%EA%B5%AC%ED%98%84" aria-label="  데이터를 보여줄 웹 구현 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>👩‍💻   데이터를 보여줄 웹 구현</h2>
+<hr>
+<h2 id="--분석을-통해-나온-결론" style="position:relative;"><a href="#--%EB%B6%84%EC%84%9D%EC%9D%84-%ED%86%B5%ED%95%B4-%EB%82%98%EC%98%A8-%EA%B2%B0%EB%A1%A0" aria-label="  분석을 통해 나온 결론 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>🏁   분석을 통해 나온 결론</h2>
+<hr>
+<h2 id="️-개선사항-및-느낀점" style="position:relative;"><a href="#%EF%B8%8F-%EA%B0%9C%EC%84%A0%EC%82%AC%ED%95%AD-%EB%B0%8F-%EB%8A%90%EB%82%80%EC%A0%90" aria-label="️ 개선사항 및 느낀점 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>❗️  개선사항 및 느낀점</h2>
+<hr>
+<div class="table-of-contents">
+<ul>
+<li>
+<p><a href="#%EF%B8%8F-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EB%B0%B0%EA%B2%BD-%EB%B0%8F-%EB%AA%A9%ED%91%9C">⛳️  프로젝트 배경 및 목표</a></p>
+<ul>
+<li><a href="#1-%EB%B0%B0%EA%B2%BD">1. 배경</a></li>
+<li><a href="#2-%EB%AA%A9%ED%91%9C">2. 목표</a></li>
+<li><a href="#3-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%A3%BC%EC%9A%94-%EA%B8%B0%EB%8A%A5">3. 프로젝트 주요 기능</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#--%EC%84%9C%EB%B9%84%EC%8A%A4-%EA%B0%9C%EB%B0%9C-%EA%B3%BC%EC%A0%95--%EC%97%94%EC%A7%80%EB%8B%88%EC%96%B4-%EC%9A%94%EC%95%BD">📄   서비스 개발 과정 : 엔지니어 (요약)</a></p>
+<ul>
+<li><a href="#1-%EC%8B%9C%EC%8A%A4%ED%85%9C-%EC%95%84%ED%82%A4%ED%85%8D%EC%B3%90">1. 시스템 아키텍쳐</a></li>
+<li><a href="#2-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%88%98%EC%A7%91">2. 데이터 수집</a></li>
+<li><a href="#3-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%A0%81%EC%9E%AC-%EB%B0%8F-%EC%B2%98%EB%A6%AC--hadoop---pyspark---mysql">3. 데이터 적재 및 처리 : hadoop -> pyspark -> mysql</a></li>
+<li><a href="#4-erd">4. ERD</a></li>
+<li><a href="#5-%EA%B2%80%EC%83%89%EC%97%94%EC%A7%84--mysql---logstash---elasticsearch---django---web">5. 검색엔진 : mysql -> logstash -> elasticsearch -> django -> web</a></li>
+<li><a href="#6-%EB%A1%9C%EA%B7%B8%EB%8D%B0%EC%9D%B4%ED%84%B0-%EB%8C%80%EC%8B%9C%EB%B3%B4%EB%93%9C--web---log---logstash---elasticsearch---kibana---dashboard">6. 로그데이터 대시보드 : web -> log -> logstash -> elasticsearch -> kibana -> dashboard</a></li>
+<li><a href="#7-%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4-%EC%84%A4%EA%B3%84%EC%84%9C">7. 프로세스 설계서</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#--%EC%84%9C%EB%B9%84%EC%8A%A4-%EA%B0%9C%EB%B0%9C-%EA%B3%BC%EC%A0%95--%EC%82%AC%EC%9D%B4%EC%96%B8%EC%8A%A4">📊   서비스 개발 과정 : 사이언스</a></p>
+<ul>
+<li><a href="#0-%EB%8D%B0%EC%9D%B4%ED%84%B0-eda">0. 데이터 EDA</a></li>
+<li><a href="#1-%EC%86%8C%EC%84%A4-%EC%B9%B4%ED%85%8C%EA%B3%A0%EB%A6%AC-%EB%B6%84%EB%A5%98%EB%A5%BC-%EC%9C%84%ED%95%9C-lda-%ED%86%A0%ED%94%BD-%EB%AA%A8%EB%8D%B8%EB%A7%81">1. 소설 카테고리 분류를 위한 LDA 토픽 모델링</a></li>
+<li><a href="#2-%EC%86%8C%EC%84%A4-%EB%85%B8%EB%9E%98-%EA%B0%90%EC%84%B1%EB%B0%B0%EC%83%89%EC%9D%84-%EC%97%B0%EA%B2%B0%ED%95%98%EA%B8%B0-%EC%9C%84%ED%95%9C-%EA%B0%90%EC%84%B1-%EB%B6%84%EB%A5%98-%EB%AA%A8%EB%8D%B8-%EA%B5%AC%EC%B6%95">2. 소설-노래-감성배색을 연결하기 위한 감성 분류 모델 구축</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#--%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%A5%BC-%EB%B3%B4%EC%97%AC%EC%A4%84-%EC%9B%B9-%EA%B5%AC%ED%98%84">👩‍💻   데이터를 보여줄 웹 구현</a></p>
+</li>
+<li>
+<p><a href="#--%EB%B6%84%EC%84%9D%EC%9D%84-%ED%86%B5%ED%95%B4-%EB%82%98%EC%98%A8-%EA%B2%B0%EB%A1%A0">🏁   분석을 통해 나온 결론</a></p>
+</li>
+<li>
+<p><a href="#%EF%B8%8F-%EA%B0%9C%EC%84%A0%EC%82%AC%ED%95%AD-%EB%B0%8F-%EB%8A%90%EB%82%80%EC%A0%90">❗️  개선사항 및 느낀점</a></p>
+</li>
+</ul>
+</div></div></div><div class="post-navigator"><div class="post-navigator-card-wrapper"><a class="post-card prev" href="/project/zero_false_one_true/"><div class="direction">이전 글</div><div class="title">문제해결 빅데이터 활용 프로젝트 : 대졸 구직자 취업에 영향을 미치는 변수분석 및 취업예측 모델</div></a></div><div class="post-navigator-card-wrapper"></div></div><div class="utterances"></div></main><footer class="page-footer-wrapper"><p class="page-footer">© <!-- -->2022<!-- --> <a href="https://github.com/mungdo">안문주</a> powered by<a href="https://github.com/zoomKoding/zoomkoding-gatsby-blog"> zoomkoding-gatsby-blog</a></p></footer><div class="dark-mode-button-wrapper"><button class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium dark-mode-button css-1yxmbwk" tabindex="0" type="button"><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeLarge dark-mode-icon css-6flbmm" focusable="false" viewBox="0 0 24 24" aria-hidden="true" data-testid="DarkModeIcon"><path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9c0-.46-.04-.92-.1-1.36-.98 1.37-2.58 2.26-4.4 2.26-2.98 0-5.4-2.42-5.4-5.4 0-1.81.89-3.42 2.26-4.4-.44-.06-.9-.1-1.36-.1z"></path></svg></button></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/project/boram3/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-0616fad1f708e5420168.js"],"app":["/app-889f0644be3e8780fa3b.js"],"component---cache-caches-gatsby-plugin-offline-app-shell-js":["/component---cache-caches-gatsby-plugin-offline-app-shell-js-5f4d6e6517138b0667ff.js"],"component---src-pages-404-js":["/component---src-pages-404-js-0f892ebcd010b6f91108.js"],"component---src-pages-about-js":["/component---src-pages-about-js-8d3b5b5f011b48040aeb.js"],"component---src-pages-index-js":["/component---src-pages-index-js-66fa20e8773286f91373.js"],"component---src-templates-blog-template-js":["/component---src-templates-blog-template-js-7e0f67ebc752626855c1.js"],"component---src-templates-category-template-js":["/component---src-templates-category-template-js-ed70fe8a3875146c144e.js"]};/*]]>*/</script><script src="/polyfill-0616fad1f708e5420168.js" nomodule=""></script><script src="/component---src-templates-blog-template-js-7e0f67ebc752626855c1.js" async=""></script><script src="/f9d3028dbef90a6e9b8db85387d63dd9f4edf538-852cf68f9be39a5a4bc9.js" async=""></script><script src="/app-889f0644be3e8780fa3b.js" async=""></script><script src="/framework-91ebf51d003c3c6f38be.js" async=""></script><script src="/webpack-runtime-f5f3382f227c26345aa2.js" async=""></script></body></html>
