@@ -1124,9 +1124,179 @@
       />
     </span></p>
 <hr>
-<h2 id="--데이터를-보여줄-웹-구현" style="position:relative;"><a href="#--%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%A5%BC-%EB%B3%B4%EC%97%AC%EC%A4%84-%EC%9B%B9-%EA%B5%AC%ED%98%84" aria-label="  데이터를 보여줄 웹 구현 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>👩‍💻   데이터를 보여줄 웹 구현</h2>
+<h3 id="3-감성-분류-벡터-유사도-계산으로-소설-노래-소설-배색-연결" style="position:relative;"><a href="#3-%EA%B0%90%EC%84%B1-%EB%B6%84%EB%A5%98-%EB%B2%A1%ED%84%B0-%EC%9C%A0%EC%82%AC%EB%8F%84-%EA%B3%84%EC%82%B0%EC%9C%BC%EB%A1%9C-%EC%86%8C%EC%84%A4-%EB%85%B8%EB%9E%98-%EC%86%8C%EC%84%A4-%EB%B0%B0%EC%83%89-%EC%97%B0%EA%B2%B0" aria-label="3 감성 분류 벡터 유사도 계산으로 소설 노래 소설 배색 연결 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>3. 감성 분류 벡터 유사도 계산으로 소설-노래, 소설-배색 연결</h3>
+<ul>
+<li>분석 데이터
+<ul>
+<li>소설 데이터 : 소설 줄거리 + 서평 + 책 내용 일부를 바탕으로 추출한 감정분류 벡터</li>
+<li>노래 데이터 : 노래 가사를 바탕으로 추출한 감정분류 벡터</li>
+<li>감성배색 데이터 : 감성배색 단어들을 바탕으로 추출한 감정분류 벡터</li>
+</ul>
+</li>
+<li>분석 방법 : 코사인 유사도 계산(내적 공간 두 벡터간 각도의 코사인 값을 이용해 측정된 벡터간의 유사한 정도)
+<ul>
+<li>소설 하나와 노래(배색) 전체에 대한 코사인 유사도 계산</li>
+<li>유사도 점수가 가장 높은 20개 목록 저장</li>
+<li>소설 전체에 위 과정을 반복하며 테이블로 저장</li>
+</ul>
+</li>
+</ul>
 <hr>
-<h2 id="--분석을-통해-나온-결론" style="position:relative;"><a href="#--%EB%B6%84%EC%84%9D%EC%9D%84-%ED%86%B5%ED%95%B4-%EB%82%98%EC%98%A8-%EA%B2%B0%EB%A1%A0" aria-label="  분석을 통해 나온 결론 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>🏁   분석을 통해 나온 결론</h2>
+<h2 id="--분석-내용-서비스-반영" style="position:relative;"><a href="#--%EB%B6%84%EC%84%9D-%EB%82%B4%EC%9A%A9-%EC%84%9C%EB%B9%84%EC%8A%A4-%EB%B0%98%EC%98%81" aria-label="  분석 내용 서비스 반영 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>👩‍💻   분석 내용 서비스 반영</h2>
+<ul>
+<li>서비스 플로우</li>
+</ul>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 720px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 50.55555555555556%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAABYlAAAWJQFJUiTwAAABi0lEQVQoz32SWXPiMBCE+f//LHkKWwu5CGCwDcH4tnVZ0peSOWL2YafK5bKm1dPT7Zn3ntvjvKfsJO/blGPe0LYtSin+rYCTyiCkxjk/noX7oWZ+8mGdR+iBrGxohcIYwzAMCKVpOoGx9kKmB5abA/OPHZ3Uj4TTydZ7ql6xPZzJ6p7rcNJzPaoOvYBRxvIVZ7zvjghlHgmD5E4oeqkx1l3XvwC8cyRJwjaKOJ2yuy2BMDrm4+Cg9oEwkCSnkkNWIY29N25edUKyWEU8/3mj6jV/1ynPizWN0HfcNIfZlCB46JwjTRLqqhrPjPPEp5K3TTL6GtBmsKMd07u3mv3K9aM/rTQsPrds4iPWgx4sn1HKy+uavGqpyoIizxGiHwmKTlMLTVkUSCkvCqcpm8EhtB3XD2ThHbxarhPKpqcocs55Tt9fCFffNbtzQxzvqap6ovAaRt0rnuZLXr/2DM6jBkuaVaz233TSPKz335VvzfAbrKKE+JiNA0Joq/jE/COibMUlLPeLnwYSQvkB5uEIbEfpjdEAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="서비스 플로우"
+        title="서비스 플로우"
+        src="/static/dee254c9f97fc3f7f052861a82e2ae89/37523/service_flow.png"
+        srcset="/static/dee254c9f97fc3f7f052861a82e2ae89/e9ff0/service_flow.png 180w,
+/static/dee254c9f97fc3f7f052861a82e2ae89/f21e7/service_flow.png 360w,
+/static/dee254c9f97fc3f7f052861a82e2ae89/37523/service_flow.png 720w,
+/static/dee254c9f97fc3f7f052861a82e2ae89/302a4/service_flow.png 1080w,
+/static/dee254c9f97fc3f7f052861a82e2ae89/8cdda/service_flow.png 1168w"
+        sizes="(max-width: 720px) 100vw, 720px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<ul>
+<li>메인 페이지</li>
+</ul>
+<p><img src="/a9cb44d8f0511e16bd67a5dbaf38dbfe/web_main.gif" alt="main 1"></p>
+<ul>
+<li>(메인 페이지) LDA 분석 결과로 새롭게 제시하는 카테고리 제안</li>
+</ul>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 720px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 40%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAABYlAAAWJQFJUiTwAAAA9UlEQVQoz3WQ66rDIBCE8/4vmLvRQIwEQXqImtXGLVqUnDb98bmrzKyjlRACpJRwnic8n8+CMQastaC1Tr025l21Bu/9lz4SzyrnHIIDtNYWAACFENg0DbZti3XTYF3XaU8pTZrjOIo+99FXWWvDJwAQlFJhmqYwMxYopQlCSOCcB+dc+OWrrjddb/x7PLDvexyGHruuS+ki27alJJ8eY8w7YVyuxGGxRiNjDGfG0jMzy7IUc9bmPn7fbcI8MP9hTJjrPM9f+n8Jfw2UUqYnE0JwGAYcxzHtY8I7TxnovU9Rr8Szfd9x4Quu64qc84JSCu882fcCNfBiwFMHqYkAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="main 2"
+        title="main 2"
+        src="/static/3400431a0311724d79b44ab881d44197/37523/web_main_analyze.png"
+        srcset="/static/3400431a0311724d79b44ab881d44197/e9ff0/web_main_analyze.png 180w,
+/static/3400431a0311724d79b44ab881d44197/f21e7/web_main_analyze.png 360w,
+/static/3400431a0311724d79b44ab881d44197/37523/web_main_analyze.png 720w,
+/static/3400431a0311724d79b44ab881d44197/302a4/web_main_analyze.png 1080w,
+/static/3400431a0311724d79b44ab881d44197/8ae78/web_main_analyze.png 1096w"
+        sizes="(max-width: 720px) 100vw, 720px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span>
+<span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 720px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 37.222222222222214%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAABYlAAAWJQFJUiTwAAABiUlEQVQoz22Oz0pbQRTG8w6+QvsEgusi3Re3PoFQunMpIroRLC7U0iK4cCfuBIUKClEXttiWklxtqslFiVG592Yy9+8kd86cT2asNNB+8M05M+fjN6cipSRrbQwxQPhjIQR1o4iCIKQkTaknJUVR5BxnmctYGWZ7ul5rTRUww2ogesiFQJIkaNQ8dLsCeaGgVIFfNQ/XLR9xLNGTEsndLeT9PbQxUHkGIu0YRISKHgwskRsf13l7foGrB8f85sUYn/+sswY4U4qnxid4dWaRvx/v8NH+Frc21/nz0iKHmWK/UedEhI5BRGyBjl6fXcDm23c4PKji1chL1L79QFHkEFJgcvQ1lqbnsLf9ARuf5tFce4/TlWX0+n10/N/IsvTvhqSf1m17HryzMwRBgP2dXcQyRvvmGkWe4eSwioZ3gU7bx9XVBYTfxPnXL+iXJTqdW5TlYAhI5C4PYYjLZgvDMobxP5XMkGn6T8YYg4rWGswMXZboK+UedaldfbbN2I9t/1QJPDR/tt3wEZrlAsajH7/wAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="main 3"
+        title="main 3"
+        src="/static/bbf684945874a7e1100ef4f455699ca3/37523/web_main_analyze2.png"
+        srcset="/static/bbf684945874a7e1100ef4f455699ca3/e9ff0/web_main_analyze2.png 180w,
+/static/bbf684945874a7e1100ef4f455699ca3/f21e7/web_main_analyze2.png 360w,
+/static/bbf684945874a7e1100ef4f455699ca3/37523/web_main_analyze2.png 720w,
+/static/bbf684945874a7e1100ef4f455699ca3/302a4/web_main_analyze2.png 1080w,
+/static/bbf684945874a7e1100ef4f455699ca3/8ae78/web_main_analyze2.png 1096w"
+        sizes="(max-width: 720px) 100vw, 720px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<ul>
+<li>책 검색 결과 페이지</li>
+</ul>
+<p><img src="/58990aabda951a352e6563f5695c507b/web_booksearch.gif" alt="booksearch"></p>
+<ul>
+<li>
+<p>해당 책과 유사한 감성의 배색 하단에 제시</p>
+</li>
+<li>
+<p>해당 책과 유사한 감성의 노래 우측에 제시</p>
+</li>
+<li>
+<p>로그인 및 회원가입</p>
+</li>
+</ul>
+<p><img src="/b0314266216eecad47647c6fd788a71f/web_login.gif" alt="login"></p>
+<ul>
+<li>마이페이지</li>
+</ul>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 720px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 56.111111111111114%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABYlAAAWJQFJUiTwAAACSElEQVQoz52SwU/TABTG64E/wLNoYO22rlvX0Y6NsQ3ZwqIJHLyYGBMP3vwTxMS/wAOytRsjQzTe5OBBjTEmJp4MmGxtGYIoHogpEZIlwIbQte8z1AQPckC/5JfvvZfv8F7ymJ+7u4f6+pa7fgTnoAuna9tO13EdAB77DpyNDk76U3H+1IyqlrqaVoJWLqM0/RCqqkKbmsK8Oo1arQytXMF0qYRKRcVxTi0VMTNTQbVYxNMZFY/mZ1GtVqFpKqpVDUxKjtrZQRHDYT9lUzIFOZb4S72U5nopkRBIiCmUSciUTys0Kkcol01SgGWJv3iBhv29FE+EiY/KlIxFKJuUiBH4kC3xIchhnsJ8AGy/D9FQALIQQEyRkUzEkc/lcGX0MsYLOYzlRyGJIsQgB1kIYmAwDjkmQQiFIPMhMGG/z1bYPsgiR4oQQIDz4WpGRDYewUBqBIWkhHCQhcL6IIl+DPAcgn4O4yMS0vEolOERFBJRCDyHoX4OTL2xbC/pX7DU+EyryyZMs4m11TWsNJswTQMrpgGzUf+N3sAn04Ch61htGmiaOkzTPMks1+tgfmy37Jev3+HDok7wdAAcWgC18T9iHtdm7fM951DIpGiv1cL8g3uYm7yOxbfPvEDXPoLjOH/hnjI7hnkyVzvqYRgay6Td/b099/61Cbd4K+8aS+9dAK7rOJ6fFeb5wgIivj7cvnkDnXYHrybv4MXdCXz9+Mbb0PV+/B9O3tnZ3jQMfavValmu61qbG2vWzvdvVqfdtgBYROT5WfkFl5qRe7xJ/H4AAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="mypage"
+        title="mypage"
+        src="/static/f76e8aef65e6860faf8f4ec12abaf3a9/37523/web_mypage.png"
+        srcset="/static/f76e8aef65e6860faf8f4ec12abaf3a9/e9ff0/web_mypage.png 180w,
+/static/f76e8aef65e6860faf8f4ec12abaf3a9/f21e7/web_mypage.png 360w,
+/static/f76e8aef65e6860faf8f4ec12abaf3a9/37523/web_mypage.png 720w,
+/static/f76e8aef65e6860faf8f4ec12abaf3a9/302a4/web_mypage.png 1080w,
+/static/f76e8aef65e6860faf8f4ec12abaf3a9/b79a5/web_mypage.png 1372w"
+        sizes="(max-width: 720px) 100vw, 720px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<ul>
+<li>고객 센터</li>
+</ul>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 720px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 72.22222222222221%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAABYlAAAWJQFJUiTwAAACcElEQVQ4y42R7UtTcRTH90f0IlIsnd5t98ltzqdNt7klYsyCEiQLCoIeoP9N8mE6czqloLeT1psMLRXBJ8Rturt7dz/xm3OiZXbg+zuXc7/nc8/vXIfmkYy2pib0ds1+ENII+b1ovVHu9/cQ1F34hkaIJkaJjY3TFYki3W1EkiSGIh3EfB60rjB9/X3EAyqKquKIdfuNbl2hpzdgPxvuYjAcorMvwqPhQd6Mj/Ly+VPejT3h7Ytx3r9+xeOhOLquMjbSx8NwgM5QhFg8RiLop9vvxaG6JEORFWSP21ZcbeieNtpVN7rqQXe7cLdKiPeKR8anqfi9XmTZg+KSUF3OmteN23kPZ0MjDr9PNjTFyYjstPv9KgNBF+GISqLLidRwi5ZmJ4FgCHdnkECHjio7iSstxDU3A70y/VGNRMhFR+ttmhvv4Eilksbs7CSfk5P28sIcK5k5MpkUX9IzpKYmSKWSZJYWmV/KsLSYZn4+yXJykpXUDJn0LAuLs3xKz/BxaoLp6Q84AIOzsMVxWjIol03KUFUBKIn6aYlisUilYvOvcFiWZViWSaVSsU9OTsjlvrKazfLt+w9W1zZYOyyylTf4ubnFxvo6u7u7mOUyRqmEaZpYlnVJ1Qlt28YWB3BwcMCvzU0K+Ty2ZYJdOR++HpUzP7WWeq5OeBUopjw6OiJfKNTM1JvFdW37sq4Firq4wvHxMYVCQaygBqlcqxuBhmGQy+XIZrPs7OxQKpWq5qt7Ote1wFqxWs3n81XY9vY2+/v7iI+cN/9NN+5Q7E+ADg8Pq88il02z3vBfwAvv5b8pgHt7e1WoyGK/F54/YQL4G+ufgsqRRYPaAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="customer center"
+        title="customer center"
+        src="/static/375cb596aa352f36d440859d9691ae41/37523/web_customer.png"
+        srcset="/static/375cb596aa352f36d440859d9691ae41/e9ff0/web_customer.png 180w,
+/static/375cb596aa352f36d440859d9691ae41/f21e7/web_customer.png 360w,
+/static/375cb596aa352f36d440859d9691ae41/37523/web_customer.png 720w,
+/static/375cb596aa352f36d440859d9691ae41/302a4/web_customer.png 1080w,
+/static/375cb596aa352f36d440859d9691ae41/9937c/web_customer.png 1156w"
+        sizes="(max-width: 720px) 100vw, 720px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
+<hr>
+<h2 id="--결론" style="position:relative;"><a href="#--%EA%B2%B0%EB%A1%A0" aria-label="  결론 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>🏁   결론</h2>
 <hr>
 <h2 id="️-개선사항-및-느낀점" style="position:relative;"><a href="#%EF%B8%8F-%EA%B0%9C%EC%84%A0%EC%82%AC%ED%95%AD-%EB%B0%8F-%EB%8A%90%EB%82%80%EC%A0%90" aria-label="️ 개선사항 및 느낀점 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>❗️  개선사항 및 느낀점</h2>
 <hr>
@@ -1158,13 +1328,14 @@
 <li><a href="#0-%EB%8D%B0%EC%9D%B4%ED%84%B0-eda">0. 데이터 EDA</a></li>
 <li><a href="#1-%EC%86%8C%EC%84%A4-%EC%B9%B4%ED%85%8C%EA%B3%A0%EB%A6%AC-%EB%B6%84%EB%A5%98%EB%A5%BC-%EC%9C%84%ED%95%9C-lda-%ED%86%A0%ED%94%BD-%EB%AA%A8%EB%8D%B8%EB%A7%81">1. 소설 카테고리 분류를 위한 LDA 토픽 모델링</a></li>
 <li><a href="#2-%EC%86%8C%EC%84%A4-%EB%85%B8%EB%9E%98-%EA%B0%90%EC%84%B1%EB%B0%B0%EC%83%89%EC%9D%84-%EC%97%B0%EA%B2%B0%ED%95%98%EA%B8%B0-%EC%9C%84%ED%95%9C-%EA%B0%90%EC%84%B1-%EB%B6%84%EB%A5%98-%EB%AA%A8%EB%8D%B8-%EA%B5%AC%EC%B6%95">2. 소설-노래-감성배색을 연결하기 위한 감성 분류 모델 구축</a></li>
+<li><a href="#3-%EA%B0%90%EC%84%B1-%EB%B6%84%EB%A5%98-%EB%B2%A1%ED%84%B0-%EC%9C%A0%EC%82%AC%EB%8F%84-%EA%B3%84%EC%82%B0%EC%9C%BC%EB%A1%9C-%EC%86%8C%EC%84%A4-%EB%85%B8%EB%9E%98-%EC%86%8C%EC%84%A4-%EB%B0%B0%EC%83%89-%EC%97%B0%EA%B2%B0">3. 감성 분류 벡터 유사도 계산으로 소설-노래, 소설-배색 연결</a></li>
 </ul>
 </li>
 <li>
-<p><a href="#--%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%A5%BC-%EB%B3%B4%EC%97%AC%EC%A4%84-%EC%9B%B9-%EA%B5%AC%ED%98%84">👩‍💻   데이터를 보여줄 웹 구현</a></p>
+<p><a href="#--%EB%B6%84%EC%84%9D-%EB%82%B4%EC%9A%A9-%EC%84%9C%EB%B9%84%EC%8A%A4-%EB%B0%98%EC%98%81">👩‍💻   분석 내용 서비스 반영</a></p>
 </li>
 <li>
-<p><a href="#--%EB%B6%84%EC%84%9D%EC%9D%84-%ED%86%B5%ED%95%B4-%EB%82%98%EC%98%A8-%EA%B2%B0%EB%A1%A0">🏁   분석을 통해 나온 결론</a></p>
+<p><a href="#--%EA%B2%B0%EB%A1%A0">🏁   결론</a></p>
 </li>
 <li>
 <p><a href="#%EF%B8%8F-%EA%B0%9C%EC%84%A0%EC%82%AC%ED%95%AD-%EB%B0%8F-%EB%8A%90%EB%82%80%EC%A0%90">❗️  개선사항 및 느낀점</a></p>
