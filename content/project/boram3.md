@@ -41,10 +41,10 @@ __본 프로젝트는 팀 활동으로 진행 되었고, 프로젝트 상에서 
 
 ## 📄  &nbsp;서비스 개발 과정 : 엔지니어 (요약)
 
-### 1. 시스템 아키텍쳐
+1. 시스템 아키텍쳐
 ![아키텍쳐](./boram_imgs/system_architecture.png)
 
-### 2. 데이터 수집
+2. 데이터 수집
 | 데이터 분류 | 출처 | 자료명 | 데이터 건수 | 최초 데이터 수집일 | 자료유형 |
 |----|------|-------------|-------|---------|------|
 | 소설 | 인터파크 | 인터파크 판매량순 도서 데이터 | 1,118건 | 2022. 04. 16~17 | csv |
@@ -62,23 +62,23 @@ __본 프로젝트는 팀 활동으로 진행 되었고, 프로젝트 상에서 
 - 배색 데이터 수집 이유
   - 배색에 대해서 느낄 수 있는 감성 언어가 제시되어 있는 데이터로 감정 분류 모델에 적용하기 위함.
 
-### 3. 데이터 적재 및 처리 : hadoop -> pyspark -> mysql
+3. 데이터 적재 및 처리 : hadoop -> pyspark -> mysql
 - 차후에 데이터 대량으로 수집하는 경우를 위해 하둡으로 데이터를 받고 스파크로 전처리 후 mysql에 저장
 
-### 4. ERD
+4. ERD
 ![ERD](./boram_imgs/ERD.png)
 
-### 5. 검색엔진 : mysql -> logstash -> elasticsearch -> django -> web
+5. 검색엔진 : mysql -> logstash -> elasticsearch -> django -> web
 - 자동 완성 기능을 활용하기 위해 elasticsearch 사용.
   - 합성어 어근만 저장하는 nori_discar를 사용.
 
-### 6. 로그데이터 대시보드 : web -> log -> logstash -> elasticsearch -> kibana -> dashboard
+6. 로그데이터 대시보드 : web -> log -> logstash -> elasticsearch -> kibana -> dashboard
 - Django logging module로 수집한 로그를 logstash를 통해 elasticsearch에 'log data' 인덱스로 저장
 - 웹서버 로그 데이터 시각화 : 서버 발생 이상 징후나 패턴을 찾아 웹 개선에 활용
 - Django에서 의도된 로그를 저장하고 DB에 저장된 회원 데이터를 시각화
   - 사용자 수, 성별, 연령대, 도서 검색 로그 데이터 시각화 등을 통해 마케팅 활용 및 개인화 추천 서비스로 발전 가능
 
-### 7. 프로세스 설계서
+7. 프로세스 설계서
 ![process design](./boram_imgs/process_design.png)
 
 
