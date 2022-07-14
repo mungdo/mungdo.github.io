@@ -138,6 +138,7 @@ __본 프로젝트는 팀 활동으로 진행 되었고, 프로젝트 상에서 
 
 ### 2. *종사상 지위 구분(정규직, 비정규직, 프리랜서 등)을 결정하는 변수 알아보기*
    ####
+[종사상 지위 모델 생성.ipynb](https://github.com/mungdo/zero_false_one_true/blob/main/%EB%AA%A8%EB%8D%B8%EC%83%9D%EC%84%B1/notebook/%EC%A2%85%EC%82%AC%EC%83%81%20%EC%A7%80%EC%9C%84%20%EB%AA%A8%EB%8D%B8%EC%83%9D%EC%84%B1.ipynb)
    1. 과정 요약
    - 전체 항목에서 필요한 독립변수만 선별
    - 응답 데이터와 모름/무응답 데이터 분리
